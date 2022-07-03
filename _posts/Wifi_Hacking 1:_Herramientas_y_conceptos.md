@@ -16,50 +16,18 @@ tags:
 
 ![]()
 
-Delivery is a quick and fun easy box where we have to create a MatterMost account and validate it by using automatic email accounts created by the OsTicket application. The admins on this platform have very poor security practices and put plaintext credentials in MatterMost. Once we get the initial shell with the creds from MatterMost we'll poke around MySQL and get a root password bcrypt hash. Using a hint left in the MatterMost channel about the password being a variation of PleaseSubscribe!, we'll use hashcat combined with rules to crack the password then get the root shell.
+Para comenzar con este tema aquí tenéis el primer artículo en el cual vamos a ver la herramienta principal que vamos a utilizar y los conceptos básicos que necesitaremos conocer antes de empezar a tocar cosas.
 
-## Portscan
+## Herramienta: tarjeta de red
 
-```
-Nmap scan report for 10.129.148.141
-Host is up (0.018s latency).
-Not shown: 65532 closed ports
-PORT     STATE SERVICE VERSION
-22/tcp   open  ssh     OpenSSH 7.9p1 Debian 10+deb10u2 (protocol 2.0)
-| ssh-hostkey: 
-|   2048 9c:40:fa:85:9b:01:ac:ac:0e:bc:0c:19:51:8a:ee:27 (RSA)
-|   256 5a:0c:c0:3b:9b:76:55:2e:6e:c4:f4:b9:5d:76:17:09 (ECDSA)
-|_  256 b7:9d:f7:48:9d:a2:f2:76:30:fd:42:d3:35:3a:80:8c (ED25519)
-80/tcp   open  http    nginx 1.14.2
-|_http-server-header: nginx/1.14.2
-|_http-title: Welcome
-8065/tcp open  unknown
-| fingerprint-strings: 
-|   GenericLines, Help, RTSPRequest, SSLSessionReq, TerminalServerCookie: 
-|     HTTP/1.1 400 Bad Request
-|     Content-Type: text/plain; charset=utf-8
-|     Connection: close
-|     Request
-|   GetRequest: 
-|     HTTP/1.0 200 OK
-|     Accept-Ranges: bytes
-|     Cache-Control: no-cache, max-age=31556926, public
-|     Content-Length: 3108
-|     Content-Security-Policy: frame-ancestors 'self'; script-src 'self' cdn.rudderlabs.com
-|     Content-Type: text/html; charset=utf-8
-|     Last-Modified: Sun, 09 May 2021 00:00:02 GMT
-|     X-Frame-Options: SAMEORIGIN
-|     X-Request-Id: fqrpd5m3ftgnzmxkbieezqadxo
-|     X-Version-Id: 5.30.0.5.30.1.57fb31b889bf81d99d8af8176d4bbaaa.false
-|     Date: Sun, 09 May 2021 00:01:31 GMT
-|     <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0"><meta name="robots" content="noindex, nofollow"><meta name="referrer" content="no-referrer"><title>Mattermost</title><meta name="mobile-web-app-capable" content="yes"><meta name="application-name" content="Mattermost"><meta name="format-detection" content="telephone=no"><link re
-|   HTTPOptions: 
-|     HTTP/1.0 405 Method Not Allowed
-|     Date: Sun, 09 May 2021 00:01:31 GMT
-|_    Content-Length: 0
-```
+La herramienta principal que vamos a necesitar es una tarjeta de red, es importante que tenga la opción de modo monitor, ya que va a ser esencial para capturar y transmitir los paquetes de datos que viajan por el aire y que vamos a mandar, manipular y leer en los ataques que veremos más adelante. `IMPORTANTE: no voy a explicar como poner la tarjeta de red en modo monitor, ya que hay varios tipos de tarjetas y cada una tiene su método, por eso buscarlo vosotros en google o en youtube.` 
+Es verdad que en algunos casos si estamos utilizando un ordenador de sobremesa quizás podemos usar la propia tarjeta de red que tenga el ordenador, pero por si acaso es recomendable comprar una externa de las que se conectan mediante USB.
 
-## Website
+Algunos modelos de tarjetas de red son:
+-TP-LINK TL-WN722N (con estas es importante saber que hacen chanel hoppig por lo que a la hora de hacer ataques de tipo `Evil Twin Attack` puede complicarlos un poco)
+-Alpha
+
+## Conceptos basicos
 
 The Delivery website is pretty basic, there's a link to a vhost called helpdesk.delivery.htb and a contact us section. We'll add this entry to our local host before proceeding further.
 
