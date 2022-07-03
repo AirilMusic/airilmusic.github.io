@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Wifi Hacking 1: herramientas y conceptos
+title: Wifi Hacking 1, herramientas y conceptos
 excerpt: "Este es el primer artículo sobre Wifi hacking y para introducirnos en el tema aquí expondré la herramienta principal que vamos a utilizar y los conceptos básicos que necesitaremos conocer."
 date: 2022-07-04
 classes: wide
