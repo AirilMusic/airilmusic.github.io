@@ -28,9 +28,9 @@ Algunos modelos de tarjetas de red son:
 
 -Alfa
 
-![](/assets/images/Wifi-Hacking/TPL-TL-WN722N)
+![](/assets/images/Wifi-Hacking/TPL-TL-WN722N.jpg)
 
-![](/assets/images/Wifi-Hacking/Alfa)
+![](/assets/images/Wifi-Hacking/Alfa.jpg)
 
 ## Conceptos basicos
 
