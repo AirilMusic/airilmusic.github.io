@@ -14,8 +14,6 @@ tags:
   - Wifi-Hacking
 ---
 
-![]()
-
 Para comenzar con este tema aquí tenéis el primer artículo en el cual vamos a ver la herramienta principal que vamos a utilizar y los conceptos básicos que necesitaremos conocer antes de empezar a tocar cosas.
 
 ## Herramienta: tarjeta de red
@@ -28,7 +26,11 @@ Algunos modelos de tarjetas de red son:
 
 -TP-LINK TL-WN722N (con estas es importante saber que hacen chanel hoppig por lo que a la hora de hacer ataques de tipo `Evil Twin Attack` puede complicarlos un poco)
 
--Alpha
+-Alfa
+
+![](/assets/images/Wifi-Hacking/TPL-TL-WN722N)
+
+![](/assets/images/Wifi-Hacking/Alfa)
 
 ## Conceptos basicos
 
