@@ -43,6 +43,12 @@ Y así de fácil, literalmente o lo automatizas o por memoria muscular lo haces 
 
 (no sé si es necesario aclararlo, pero yo lo he hecho en distintas consolas para que se viese más ordenado, pero se puede hacer todo seguido en la misma consola)
 
+
 ## VER REDES DISPONIBLES Y SU INFORMACIÓN
 
+Para esto primero tendremos que poner la tarjeta de red en modo monitor y luego utilizaremos el siguiente comando:
 
+```
+> airodump-ng {tarjeta}
+```
+Con esto estaremos a la escucha de todos los paquetes que se manden, entonces nos saldrá esta interfaz:
