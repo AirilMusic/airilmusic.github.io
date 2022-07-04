@@ -82,5 +82,9 @@ Con esto estaremos a la escucha de todos los paquetes que se manden, entonces no
  E8:1B:69:09:17:11  1A:73:BB:D3:29:12  -82    0 - 1e     0        1 
  ```
 
-Claro, aqui hay mucha informacion, pero hay que saber interpretarla:
+Claro, aqui hay mucha información, pero hay que saber interpretarla:
+
+# -Lo primero: Arriba estan las redes o mejor dicho los AP disponibles y abajo estan los clientes de dichas redes.
+
+# -
 
