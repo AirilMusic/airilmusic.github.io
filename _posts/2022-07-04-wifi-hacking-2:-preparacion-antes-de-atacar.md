@@ -41,6 +41,7 @@ Ejemplo:
 
 Y así de fácil, literalmente o lo automatizas o por memoria muscular lo haces en unos pocos segundos.
 
+(no sé si es necesario aclararlo, pero yo lo he hecho en distintas consolas para que se viese más ordenado, pero se puede hacer todo seguido en la misma consola)
 
 ## VER REDES DISPONIBLES Y SU INFORMACIÓN
 
