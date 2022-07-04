@@ -52,3 +52,35 @@ Para esto primero tendremos que poner la tarjeta de red en modo monitor y luego 
 > airodump-ng {tarjeta}
 ```
 Con esto estaremos a la escucha de todos los paquetes que se manden, entonces nos saldrá esta interfaz:
+```
+ CH 10 ][ Elapsed: 24 s ][ 2022-07-04 11:26 
+
+ BSSID              PWR  Beacons    #Data, #/s  CH   MB   ENC CIPHER  AUTH ESSID
+
+ D8:07:B6:20:CE:4B  -51      107        0    0   3  405   WPA2 CCMP   PSK  TP-LINK_CE4B                                                                                                     
+ 10:50:72:CB:23:E0  -64        0        1    0   1  130   WPA2 CCMP   PSK  MIWIFI_D6BD                                                                                                      
+ B0:95:75:EB:3E:E8  -87       55        3    0   1  130   WPA2 CCMP   PSK  Olalde Informatika                                                                                               
+ 02:95:75:EB:3E:E8  -84       50        3    0   1  130   WPA2 CCMP   PSK  Clientes Olalde                                                                                                  
+ 78:29:ED:C6:80:EA  -93       38      248    0  11  130   WPA2 CCMP   PSK  MOVISTAR_80E9                                                                                                    
+ B8:D5:26:84:D8:02  -80       59        1    0   2  130   WPA2 CCMP   PSK  MIWIFI_D802                                                                                                      
+ 2A:24:FF:01:72:08  -88        7        0    0  10  130   WPA2 CCMP   PSK  DIRECT-IB-BRAVIA                                                                                                 
+ 04:02:1F:ED:5A:F6  -93       10        0    0  10  130   WPA2 CCMP   PSK  HUAWEI-B310-5AF6                                                                                                 
+ 02:1E:42:3E:CB:F4  -93        3        0    0   6  130   WPA2 CCMP   PSK   AAD611                                                                                                          
+ 00:1E:42:3E:CB:F4  -93        2        0    0   6  130   OPN              WIFI LA UNION                                                                                                    
+ E8:1B:69:09:17:11  -77       80        1    0  10  130   WPA2 CCMP   PSK  Sercomm1710                                                                                                      
+ 78:94:B4:D3:04:25  -93        1        1    0  10  130   WPA2 CCMP   PSK  vodafone0424                                                                                                     
+ B8:BE:F4:6C:7C:27  -93       18        0    0  11  360   WPA2 CCMP   PSK  devolo-649                                                                                                       
+ E0:0E:E4:DD:96:30  -93        6        0    0   1  130   WPA2 CCMP   PSK  MIWIFI_8C14                                                                                                      
+ 4C:1B:86:02:24:96  -93       10        0    0   1  130   WPA2 CCMP   PSK  MiFibra-2494                                                                                                     
+
+ BSSID              STATION            PWR   Rate    Lost    Frames  Notes  Probes
+
+ (not associated)   F6:B9:12:76:76:D3  -90    0 - 1      0        1                                                                                                                          
+ 10:50:72:CB:23:E0  4C:02:20:EE:6D:FC  -68    0 - 1e     9       10         MIWIFI_D6BD                                                                                                      
+ B0:95:75:EB:3E:E8  14:C1:4E:9C:5C:3B  -94    0 - 1e     0        1                                                                                                                          
+ 78:29:ED:C6:80:EA  98:B8:BA:85:90:60  -86    0 - 1      4        5                                                                                                                          
+ E8:1B:69:09:17:11  1A:73:BB:D3:29:12  -82    0 - 1e     0        1 
+ ```
+
+Claro, aqui hay mucha informacion, pero hay que saber interpretarla:
+
