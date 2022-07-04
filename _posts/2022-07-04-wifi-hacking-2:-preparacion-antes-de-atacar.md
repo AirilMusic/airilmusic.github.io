@@ -84,7 +84,30 @@ Con esto estaremos a la escucha de todos los paquetes que se manden, entonces no
 
 Claro, aqui hay mucha información, pero hay que saber interpretarla:
 
--Lo primero: Arriba estan las redes o mejor dicho los AP disponibles y abajo estan los clientes de dichas redes.
+-Lo primero: `Arriba estan las redes o mejor dicho los AP disponibles y abajo estan los clientes de dichas redes`.
 
--
+-`SSID`: es el nombre de la red
 
+-`BSSID`: es la MAC del AP (router, movil que este compartiendo datos...)
+
+-`PwR`: es la calidad de la señal (si es -1 es error) y cuanto mas alto sea el numero, sigifica que el usuario esta mas lejos del AP
+
+-`Beacons`: es un paquete que no es de informacion, es como decir "hola, estoy aqui"
+
+-`Data`: paquetes enviados
+
+-`MB`: velociada maxima permitida por el AP
+
+-`Chanel`: es como en una radio, airodump usa channel hopping para saltar de los canales y ver que paquetes se mandan en cada uno
+
+-`ENC`: es el protocolo de seguridad de la red
+
+-`CIPHER`: es el protocolo de encriptacion
+
+-`STATION`: la MAC de los clientes, porque es importante, `abajo el BSSID es el del AP al que estan conectados`
+
+-`Rate`: es tasa de recepcion del cliente
+
+-`Lost`: son la catidad de paquetes perdidos
+
+-`Frames`: nuemero de paquetes enviados por el cliente al AP
