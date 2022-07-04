@@ -34,3 +34,15 @@ Algunos modelos de tarjetas de red son:
 
 ## Conceptos basicos
 
+IP:
+
+MAC:
+
+AP:
+
+INTERFAZ DE RED:
+
+HAND SHAKE:
+
+DICCIOINARIO:
+
