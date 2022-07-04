@@ -111,3 +111,19 @@ Claro, aqui hay mucha información, pero hay que saber interpretarla:
 -`Lost`: son la catidad de paquetes perdidos
 
 -`Frames`: nuemero de paquetes enviados por el cliente al AP
+
+
+Claro, con esto vemos lo de todas las redes, pero nosotros queremos centrarnos en una en concreto, así que vamos a filtrar esa red que nos interesa para solo centrarnos en esa.
+
+
+#Filtrar redes con airodump
+
+Esto es parecido a lo anterior, pero más especifico, así solo estaremos analizando esa red que nos interesa~o las redes que tengan ciertas caracteristicas que queramos.
+
+```
+#filtrar todas las redes que esten en un canal, es decir que solo nos muestre las redes de dicho canal
+> airodump-ng -c {canal} {tarjeta de red}
+
+
+
+```
