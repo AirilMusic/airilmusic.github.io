@@ -43,9 +43,9 @@ En esencia, las direcciones IP son el identificador que permite el envío de inf
 
 A grandes rasgos podemos hacer una distinción:
 
-´IP publica:´ es la ip que tenemos de cara a internet, es decir al exterior.
+`IP publica:` es la ip que tenemos de cara a internet, es decir al exterior.
 
-´-IP privada:´ es la ip que se nos asigna en una red, por ejemplo en una red wifi.
+`-IP privada:` es la ip que se nos asigna en una red, por ejemplo en una red wifi.
 
 MAC: Es como el DNI de un dispositivo, osea, el identificador, pero se puede falsificar, al 	hacer ataques de red lo recomendable es cambiar la dirección MAC, por lo que en el 	"Current Mac" saldrá la dirección modificada pero en "Permanent Mac" saldrá la 	original del dispositivo.
 
