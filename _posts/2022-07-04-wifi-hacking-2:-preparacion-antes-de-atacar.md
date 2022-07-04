@@ -124,6 +124,14 @@ Esto es parecido a lo anterior, pero más especifico, así solo estaremos analiz
 #filtrar todas las redes que esten en un canal, es decir que solo nos muestre las redes de dicho canal
 > airodump-ng -c {canal} {tarjeta de red}
 
+#filtrar una unica red
+> airodump-ng -c {canal} --essid {nombr	e de la red} {tarjeta de red}
 
-
+#filtrar por el BSSID de la red, es decir la MAC del AP
+> airodump-ng -c{canal} --bssid {MAC de la red} {tarjeta de red}
 ```
+
+Si nos centramos en una unica red podremos ver `arriba: la informacion de la red` y `abajo: los clientes, es decir los dispositivos conectados`.
+
+
+
