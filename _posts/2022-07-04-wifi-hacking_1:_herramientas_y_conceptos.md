@@ -53,6 +53,7 @@ AP: ´Acces Point´ es decir, el punto de acceso que tenemos a una red, por ejem
 
 INTERFAZ DE RED: Una interfaz de red es una interfaz de software para hardware de red. El kernel de Linux distingue entre dos tipos de interfaces de red: físicas y virtuales. … En la práctica, a menudo encontrará la interfaz eth0, que representa la tarjeta de red Ethernet. O de otras palabras menos exactas y por las que cualquiera que sepa del tema me matara: ´el nombre de la tarjeta de red´.
 
+![](/assets/images/Wifi-Hacking/interfaz_de_red.PNG)
 
 HAND SHAKE:
 
