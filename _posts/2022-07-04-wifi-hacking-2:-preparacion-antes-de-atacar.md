@@ -84,7 +84,7 @@ Con esto estaremos a la escucha de todos los paquetes que se manden, entonces no
 
 Claro, aqui hay mucha información, pero hay que saber interpretarla:
 
--Lo primero: `Arriba estan las redes o mejor dicho los AP disponibles y abajo estan los clientes de dichas redes`.
+-Lo primero: `Arriba estan las redes o mejor dicho los AP disponibles y abajo estan los clientes de dichas redes`
 
 -`SSID`: es el nombre de la red
 
