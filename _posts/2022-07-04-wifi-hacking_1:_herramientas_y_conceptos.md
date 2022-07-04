@@ -49,9 +49,9 @@ A grandes rasgos podemos hacer una distinción:
 
 MAC: Es como el DNI de un dispositivo, osea, el identificador, pero se puede falsificar, al 	hacer ataques de red lo recomendable es cambiar la dirección MAC, por lo que en el 	"Current Mac" saldrá la dirección modificada pero en "Permanent Mac" saldrá la 	original del dispositivo.
 
-AP: ´Acces Point´ es decir, el punto de acceso que tenemos a una red, por ejemplo un router o un móvil que esté compartiendo datos.
+AP: `Acces Point` es decir, el punto de acceso que tenemos a una red, por ejemplo un router o un móvil que esté compartiendo datos.
 
-INTERFAZ DE RED: Una interfaz de red es una interfaz de software para hardware de red. El kernel de Linux distingue entre dos tipos de interfaces de red: físicas y virtuales. … En la práctica, a menudo encontrará la interfaz eth0, que representa la tarjeta de red Ethernet. O de otras palabras menos exactas y por las que cualquiera que sepa del tema me matara: ´el nombre de la tarjeta de red´.
+INTERFAZ DE RED: Una interfaz de red es una interfaz de software para hardware de red. El kernel de Linux distingue entre dos tipos de interfaces de red: físicas y virtuales. … En la práctica, a menudo encontrará la interfaz eth0, que representa la tarjeta de red Ethernet. O de otras palabras menos exactas y por las que cualquiera que sepa del tema me matara: `el nombre de la tarjeta de red`.
 
 ![](/assets/images/Wifi-Hacking/Interfaz_de_red.PNG)
 
