@@ -138,4 +138,16 @@ Si nos centramos en una unica red podremos ver `arriba: la informacion de la red
 
 Claro, esto está muy bien, pero de alguna forma tenemos que descargar la información que estamos viendo, es decir, los paquetes que nos llegan, para luego poder utilizarlos para nuestro veneficio, ya sea para algunos ataques, para espiar a los que estén en esa red o bien para conseguir un `Handshake` que hayamos capturado para luego poder desencriptarlo y conseguir la contraseña.
 
+```
+# primero vamos a crear un directorio donde vamos a guardar las evidencias
+> mkdir {nombre del directorio}
+> cd !$ 
 
+# ahora vamos a guardar toda la informacion que iremos capturando a partir de ahora, esto se guardara en el archivo Captura.cap
+> airodump-ng -c {canal} -w Captura --bssid {mac del router} {tarjeta} 
+
+# ahora vamos a ver desde otra consola lo que pesa ese archivo, es decir, la cantidad de informacion que hemos capturado
+> watch -n {cada cuantos segundos quieres que se ejecute este comando} du -hc 	captura-01.cap
+```
+
+Esto es esencial para lo siguiente que vamos a ver, así que es importante que esto lo sepamos hacer bien.
