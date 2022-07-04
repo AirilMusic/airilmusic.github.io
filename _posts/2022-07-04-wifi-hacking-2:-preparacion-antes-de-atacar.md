@@ -134,4 +134,8 @@ Esto es parecido a lo anterior, pero más especifico, así solo estaremos analiz
 Si nos centramos en una unica red podremos ver `arriba: la informacion de la red` y `abajo: los clientes, es decir los dispositivos conectados`.
 
 
+## EXPORTAR EVIDENCIAS
+
+Claro, esto está muy bien, pero de alguna forma tenemos que descargar la información que estamos viendo, es decir, los paquetes que nos llegan, para luego poder utilizarlos para nuestro veneficio, ya sea para algunos ataques, para espiar a los que estén en esa red o bien para conseguir un `Handshake` que hayamos capturado para luego poder desencriptarlo y conseguir la contraseña.
+
 
