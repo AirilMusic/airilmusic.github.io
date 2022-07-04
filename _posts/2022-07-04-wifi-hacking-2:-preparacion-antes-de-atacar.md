@@ -35,4 +35,13 @@ Es importante hacer esto antes de efectuar cualquier ataque a una red, ya que si
 > macchanger -s {tarjeta}                   #(para ver la mac nueva)
 ```
 
+Ejemplo:
+
 ![](/assets/images/Wifi-Hacking/cambiando_mac.PNG)
+
+Y así de fácil, literalmente o lo automatizas o por memoria muscular lo haces en unos pocos segundos.
+
+
+## VER REDES DISPONIBLES Y SU INFORMACIÓN
+
+
