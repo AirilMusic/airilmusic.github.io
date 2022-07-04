@@ -69,3 +69,7 @@ y aplicar el filtro "eapol"
 DICCIOINARIO:
 Es un archivo que contiene un montón de palabras que se van a ir probando una tras otra cuando se está haciendo fuerza bruta mediante diccionario. Esto se puede utilizar para crackear contraseñas, encontrar rutas en la web, encontrar usuarios...
 Algunos diccionarios se hacen con las filtraciones masivas de contraseñas, pero no todos se hacen así.
+
+
+SNIFING / SNIFAR UNA RED:
+Esto consiste en capturar todos los paquetes, es decir, la información que se transmite en una red. De esta manera podremos ver y manipular esa información. Para esto una muy buena herramienta es `Wireshark`.
