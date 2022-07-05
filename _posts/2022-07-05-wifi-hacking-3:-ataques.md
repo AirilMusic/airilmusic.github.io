@@ -22,4 +22,11 @@ Vale, una vez visto lo anterior ya nos podemos poner manos a la obra con una par
 
 ## ATAQUE DE DEAUTENTICACIÓN DIRIGIDO
 
-Con este ataque basicamente `vamos a desconectar a un usuario` de la red que queramos, claro, p
+Con este ataque basicamente `vamos a desconectar a un usuario` de la red que queramos. Si vemos que `los frames estan aumentando, significa que el usuario esta activo` y por lo tanto se va a `reconectar` y ahi podrmemos capturar el `handshake`. Claro, tambien podemos querer que el usuario `no se pueda conectar` entonces podemos desconectarlo continuamente.
+
+```
+#Deautenticar / Desconectar a un usuario una vez
+> airplay -0 {paquetes que quieres emitirle (por ejemplo 10)} -e {nombre de la red} -c {MAC del cliente} {tarjeta de red en modo monitor}
+
+```
+
