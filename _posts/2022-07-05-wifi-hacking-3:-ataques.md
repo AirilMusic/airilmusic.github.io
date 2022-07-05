@@ -58,7 +58,19 @@ Para esto reemplazaremos la MAC del cliente víctima por la `broadcast MAC: FF:F
 ```
 
 
+## ATAQUE DE FALSA AUTENTICACIÓN
 
+Teoría: `no sirve para capturar handshakes`, ya que los `falsos clientes` no tienen la 	contraseña, pero `sirve para otro tipo de ataques que se verán más adelante`. Lo que	haces es engañar al router para que crea que se ha conectado un nuevo cliente.
+
+Primero con `macchanger -l` buscamos una mac de un dispositivo que pueda estar en esa red, por ejemplo un telefono huawei.
+
+```
+> aireplay-ng -1 0 -e {nombre de la red} -a {BSSID de la red} -h {Mac del dispositivo que hemos buscado}:{3 pares de caracteres para terminar la MAC, inventados}	{nombre de la tarjeta de red}
+```
+Y ahora si observamos la red veremos que se ha conectado un usuario que mientras no le hagamos ningún ataque no cambiará el número de frames.
+
+
+## CTF FRAME ATTACK: secuestro del ancho de banda
 
 
 
