@@ -7,7 +7,7 @@ classes: wide
 header:
   teaser: 
   teaser_home_page: true
-  icon: /assets/images/Wifi-Hacking/wifi2.webp
+  icon: /assets/images/Wifi-Hacking/wifi.webp
 categories:
   - Wifi-Hacking
 tags:  
