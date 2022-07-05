@@ -27,6 +27,7 @@ Con este ataque basicamente `vamos a desconectar a un usuario` de la red que que
 ```
 #Deautenticar / Desconectar a un usuario una vez
 > airplay -0 {paquetes que quieres emitirle (por ejemplo 10)} -e {nombre de la red} -c {MAC del cliente} {tarjeta de red en modo monitor}
-
 ```
 
+Ejemplo:
+![](/assets/images/Wifi-Hacking/Deauth-dirigido.PNG)
