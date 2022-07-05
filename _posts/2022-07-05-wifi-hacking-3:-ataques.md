@@ -18,5 +18,8 @@ Vale, una vez visto lo anterior ya nos podemos poner manos a la obra con una par
 
 ![](/assets/images/Wifi-Hacking/wifi-hacking.jpg)
 
+`(antes de nada hay que aclarar que todos estos ataques, capturar paquetes y todo eso... se puede hacer sin estar conectados a la red que queremos atacar, es decir que no necesitamos saber la contraseña, solo necesitaremos saberla para snifar la red, ya que la información viaja encriptada y sin la contraseña no podremos verla en texto claro)`
+
 ## ATAQUE DE DEAUTENTICACIÓN DIRIGIDO
 
+Con este ataque basicamente `vamos a desconectar a un usuario` de la red que queramos, claro, p
