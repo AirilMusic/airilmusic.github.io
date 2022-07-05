@@ -7,7 +7,7 @@ classes: wide
 header:
   teaser: 
   teaser_home_page: true
-  icon: ![](/assets/images/Wifi-Hacking/wifi.jpg)
+  icon: /assets/images/Wifi-Hacking/wifi.jpg
 categories:
   - Wifi-Hacking
 tags:  
