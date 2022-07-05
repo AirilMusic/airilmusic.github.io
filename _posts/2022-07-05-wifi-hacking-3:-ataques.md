@@ -20,19 +20,20 @@ Vale, una vez visto lo anterior ya nos podemos poner manos a la obra con una par
 
 `(antes de nada hay que aclarar que todos estos ataques, capturar paquetes y todo eso... se puede hacer sin estar conectados a la red que queremos atacar, es decir que no necesitamos saber la contraseña, solo necesitaremos saberla para snifar la red, ya que la información viaja encriptada y sin la contraseña no podremos verla en texto claro)`
 
+
 ## ATAQUE DE DEAUTENTICACIÓN DIRIGIDO
 
-Con este ataque basicamente `vamos a desconectar a un usuario` de la red que queramos. Si vemos que `los frames estan aumentando, significa que el usuario esta activo` y por lo tanto se va a `reconectar` y ahi podrmemos capturar el `handshake`. Claro, tambien podemos querer que el usuario `no se pueda conectar` entonces podemos desconectarlo continuamente.
+Con este ataque básicamente `vamos a desconectar a un usuario` de la red que queramos. Si vemos que `los frames están aumentando, significa que el usuario está activo` y por lo tanto, se va a `reconectar` y ahí podremos capturar el `handshake`. Claro, también podemos querer que el usuario `no se pueda conectar` entonces podemos desconectarlo continuamente.
 
 ```
 #Deautenticar / Desconectar a un usuario una vez
-> airplay -0 {paquetes que quieres emitirle (por ejemplo 10)} -e {nombre de la red} -c {MAC del cliente} {tarjeta de red en modo monitor}
+> aireplay -0 {paquetes que quieres emitirle (por ejemplo 10)} -e {nombre de la red} -c {MAC del cliente} {tarjeta de red en modo monitor}
 
 #Otra forma de hacerlo
-> aireplay --deauth 2000 -a {bssid de la red} -c {MAC victima} {tarjeta de red} (esta es 	otra opcion de hacerlo)
+> aireplay --deauth 2000 -a {bssid de la red} -c {MAC víctima} {tarjeta de red} (esta es 	otra opción de hacerlo)
 
 
-# IMPORTANTE: si queremos que ese cliente no se pueda conectar, en el numero de paquetes ponemos 0 y se estaran mandando paquetes de deautenticación uno tras otro hasta que tu hagas Control+C o cierres la consola.
+# IMPORTANTE: si queremos que ese cliente no se pueda conectar, en el número de paquetes ponemos 0 y se estarán mandando paquetes de deautenticación uno tras otro hasta que tú hagas Control+C o cierres la consola.
 ```
 
 Ejemplo:
@@ -42,9 +43,9 @@ Ejemplo:
 
 ## ATAQUE DE DEAUTENTICACIÓN GLOBAL
 
-Esto es lo mismo que el anterior pero para desconectar a todos los clientes, de esta forma `es mas probable conseguir uno o varios handshakes`. O tambien se puede utilizar para otros fines.
+Esto es lo mismo que el anterior, pero para desconectar a todos los clientes, de esta forma `es más probable conseguir uno o varios handshakes`. O también se puede utilizar para otros fines.
 
-Para esto reemplazaremos la MAC del cliente victima por la `broadcast MAC: FF:FF:FF:FF:FF:FF` y asi seleccionaremos `todos los clientes` para desconectarlos. Aunque aireplay-ng tiene una facilidad con la cual si no ponemos ninguna MAC, por defecto seleccionara todos los usuarios.
+Para esto reemplazaremos la MAC del cliente víctima por la `broadcast MAC: FF:FF:FF:FF:FF:FF` y asi seleccionaremos `todos los clientes` para desconectarlos. Aunque aireplay-ng tiene una facilidad con la cual si no ponemos ninguna MAC, por defecto seleccionará todos los usuarios.
 
 ```
 #Forma 1
@@ -53,7 +54,7 @@ Para esto reemplazaremos la MAC del cliente victima por la `broadcast MAC: FF:FF
 #Forma 2 (la que facilita aireplay)
 > aireplay-ng -0 10 -e {nombre de la red} {tarjeta de red}
 
-# IMPORTANTE: aqui tambien podemos hacer que no se puedan reconectar
+# IMPORTANTE: aquí también podemos hacer que no se puedan reconectar
 ```
 
 
