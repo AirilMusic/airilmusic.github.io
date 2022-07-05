@@ -30,11 +30,19 @@ Con este ataque basicamente `vamos a desconectar a un usuario` de la red que que
 
 #Otra forma de hacerlo
 > aireplay --deauth 2000 -a {bssid de la red} -c {MAC victima} {tarjeta de red} (esta es 	otra opcion de hacerlo)
+
+
+# IMPORTANTE: si queremos que ese cliente no se pueda conectar, en el numero de paquetes ponemos 0 y se estaran mandando paquetes de deautenticación uno tras otro hasta que tu hagas Control+C o cierres la consola.
 ```
 
 Ejemplo:
 
 ![](/assets/images/Wifi-Hacking/Deauth-dirigido.PNG)
+
+
+## ATAQUE DE DEAUTENTICACIÓN GLOBAL
+
+Esto es lo mismo que el anterior pero para desconectar a todos los clientes, de esta forma `es mas probable conseguir uno o varios handshakes`. O tambien se puede utilizar para otros fines.
 
 
 
