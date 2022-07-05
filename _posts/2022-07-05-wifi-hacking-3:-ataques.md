@@ -30,4 +30,5 @@ Con este ataque basicamente `vamos a desconectar a un usuario` de la red que que
 ```
 
 Ejemplo:
+
 ![](/assets/images/Wifi-Hacking/Deauth-dirigido.PNG)
