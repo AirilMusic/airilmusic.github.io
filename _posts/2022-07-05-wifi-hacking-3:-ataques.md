@@ -198,3 +198,7 @@ Una vez tengamos listo esto ya podremos lanzar el ataque:
 ## MICHAEL SHUTDOWN EXPLOITATION ATTACK
 
 Normalmente no funciona en routers nuevos y hay poca información sobre el mismo. Básicamente apagas el router y solo volverá a funcionar cuando se reinicie manualmente.
+
+```
+> mdk3 {tarjeta de red} m -t {BSSID del router}
+```
