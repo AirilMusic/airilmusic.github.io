@@ -204,6 +204,10 @@ Normalmente no funciona en routers nuevos y hay poca información sobre el mismo
 ```
 
 
+## ATAQUES GRACIOSOS
+
+Estos ataques son sobre todo para gastar bromas, aunque también se puede usar alguno para otros fines no tan "buenos".
+
 
 
 
