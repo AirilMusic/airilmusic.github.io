@@ -135,3 +135,10 @@ tcpreplay --intf1={tarjeta de red} --topspeed --loop=2000 {archivo.pcap} 2>/dev/
 
 Y asi capturaremos el ancho de banda, es decir lo tendremos para nosotros, durante 30 segundos.
 Claro, aqui desconectara a los otros usuarios, asi que es si lo que queremos es capturar los handshakes, tendremos que estar capturando paquetes.
+
+
+## BEACON FLOOD ATTACK
+
+Teoría: consiste en inundar un canal de paquetes beacon que son unos paquetes	emitidos por el punto de acceso para que otros canales puedan identificarlo y sean 	capaces de conectarse	al punto de acceso. Estos paquetes llevan información 	relevante del AP como en que canal esta, el BSSID...
+
+La idea es emitir un montó de paquetes beacon, pero con información falsa, asi dañamos el espectro de onda de las redes de un canal. Al anunciar tantas redes en el mismo canal, el canal se peta y los dispositivos se desconectan.
