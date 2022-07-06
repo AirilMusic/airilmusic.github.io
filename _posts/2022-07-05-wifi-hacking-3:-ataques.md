@@ -79,3 +79,12 @@ Primero exportamos todas las evidencias, pero no desconectamos a nadie:
 > airodump-ng -c 1 -w Captura --bssid {BSSID de la red} {tarjeta de red}
 ```
 
+Ahora habriremos la captura con wireshark:
+```
+> wireshark Captura-01.cap (o la captura que sea)
+```
+
+Vale, ahora toca una parte que no se muy bien como explicar, asi que me apoyare en imagenes.
+
+En wireshark: aplica filtro; wlan.fc.type_subtype==28 , luego clica en un paquete 	que quieras o te llame la atención y "Export Specified Packets" y guárdalo en el	formato "Wreshark/tcdump/... - cap", pero tienes que seleccionar la opción de "solo paquetes seleccionados".
+
