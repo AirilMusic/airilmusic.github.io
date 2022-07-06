@@ -111,4 +111,7 @@ En el archivo saldrán 3 líneas en hexadecimal, pero solo nos interesa la últi
 
 ![](/assets/images/Wifi-Hacking/ctf-attack-4.PNG)
 
+Ahora pasaremos el tiempo a hexadecimal, en este caso 30000 ms --> 75 30 
+PERO HAY QUE TENER CUIDADO porque a ese número le tenemos que dar la vuelta --> 30 75
+
 
