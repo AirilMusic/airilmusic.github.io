@@ -118,3 +118,20 @@ PERO HAY QUE TENER CUIDADO porque a ese número le tenemos que dar la vuelta -->
 Y lo pondremos donde el tiempo:
 
 ![](/assets/images/Wifi-Hacking/ctf-attack-5.PNG)
+
+Una vez hecho esto ya podemos guardar y cerrar el archivo, pero antes de continuar, vamos a comprobar que no de errores:
+
+```
+> wireshark {archivo.pcap} > /dev/null 2>&1 &
+```
+
+LAZAR EL ATAQUE:
+
+Una vez ya hemos hecho todo lo anterior, ya podremos desplegar el ataque:
+
+```
+tcpreplay --intf1={tarjeta de red} --topspeed --loop=2000 {archivo.pcap} 2>/dev/null
+```
+
+Y asi capturaremos el ancho de banda, es decir lo tendremos para nosotros, durante 30 segundos.
+Claro, aqui desconectara a los otros usuarios, asi que es si lo que queremos es capturar los handshakes, tendremos que estar capturando paquetes.
