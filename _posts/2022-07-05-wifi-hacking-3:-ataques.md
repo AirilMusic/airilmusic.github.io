@@ -193,3 +193,8 @@ Una vez tengamos listo esto ya podremos lanzar el ataque:
 ```
 > mdk3 {tarjeta de red} d -w whitelist -c {canal}
 ```
+
+
+## MICHAEL SHUTDOWN EXPLOITATION ATTACK
+
+Normalmente no funciona en routers nuevos y hay poca información sobre el mismo. Básicamente apagas el router y solo volverá a funcionar cuando se reinicie manualmente.
