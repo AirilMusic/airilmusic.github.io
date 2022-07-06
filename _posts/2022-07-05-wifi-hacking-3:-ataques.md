@@ -150,3 +150,9 @@ Para la primera opción necesitaremos hacer o tener un diccionario con nombres d
 ```
 > mdk3 {tarjeta de red} b -f redes.txt -a -s 1000 -c {canal a atacar}
 ```
+
+Y de la segunda forma, es decir que el nombre de las redes sea random:
+
+```
+> mdk3 {tarjeta de red} b -c {canal}
+```
