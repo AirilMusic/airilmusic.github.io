@@ -96,3 +96,9 @@ Luego clica en un paquete que quieras o te llame la atención y "Export Specifie
 
 Y guárdalo en el	formato "Wreshark/tcdump/... - cap", `pero tienes que seleccionar la opción de "solo paquetes seleccionados"`.
 
+![](/assets/images/Wifi-Hacking/ctf-attack-3.PNG)
+
+
+
+
+
