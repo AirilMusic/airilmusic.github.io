@@ -142,3 +142,11 @@ Claro, aqui desconectara a los otros usuarios, asi que es si lo que queremos es 
 Teoría: consiste en inundar un canal de paquetes beacon que son unos paquetes	emitidos por el punto de acceso para que otros canales puedan identificarlo y sean 	capaces de conectarse	al punto de acceso. Estos paquetes `llevan información relevante del AP` como en que canal esta, el BSSID...
 
 La idea es `emitir un montó de paquetes beacon`, pero `con información falsa`, asi `dañamos el espectro de onda de las redes de un canal`. Al anunciar tantas redes en el mismo canal, el canal se peta y los dispositivos se desconectan.
+
+Hay dos formas de hacerlo, poniendo a las redes los nombres que queramos o que sean aleatorios.
+
+Para la primera opción necesitaremos hacer o tener un diccionario con nombres de redes o con los nombres/palabras que queramos:
+
+```
+> mdk3 {tarjeta de red} b -f redes.txt -a -s 1000 -c {canal a atacar}
+```
