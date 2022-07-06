@@ -160,3 +160,30 @@ Y de la segunda forma, es decir que el nombre de las redes sea random:
 Mientras estemos haciendo el ataque, si miramos las redes disponibles, veremos un montón de redes con nombres random:
 
 ![](/assets/images/Wifi-Hacking/ctf-attack-6.png)
+
+
+## DISASSOCIATION AMOK MODE
+
+Es lo mismo que un desauth, pero podemos especificar a quienes no echar de una red o a quienes echar. Modos de ataque: `Whitelist; a estos no los echa`, `Blacklist; echa solo a estos`.
+
+Para hacerlo con una Blacklist:
+
+```
+> nano Blacklist 
+```
+
+Y ahí añadiremos la `MAC` de los usuarios que queramos desconectar.
+
+En caso de que lo queramos hacer con Whitelist:
+
+```
+> nano Whitelist
+```
+
+Y ahi añadiremos la `MAC` de los usuarios que no queramos desconectar.
+
+Una vez tengamos listo esto ya podremos lanzar el ataque:
+
+```
+> 
+```
