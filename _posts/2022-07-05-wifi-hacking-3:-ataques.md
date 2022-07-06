@@ -98,6 +98,16 @@ Y guárdalo en el	formato "Wreshark/tcdump/... - cap", `pero tienes que seleccio
 
 ![](/assets/images/Wifi-Hacking/ctf-attack-3.PNG)
 
+Entonces una vez tenemos el .pcap lo vamos a habrar con `ghex`:
+
+```
+# En caso de que no lo tengamos instalado:
+> apt install ghex -y 
+
+# para abrir el archivo:
+> ghex {nombre del archivode wireshark con el.pcap} > /dev/null 2>&1 & 
+```
+En el archivo saldrán 3 líneas en hexadecimal, pero solo nos interesa la última. Los últimos 4	pares son el FCS, los siguientes 6 pares son la MAC del objetivo. Los siguientes 2	pares son el tiempo.
 
 
 
