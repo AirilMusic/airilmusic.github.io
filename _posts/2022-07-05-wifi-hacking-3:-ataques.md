@@ -86,9 +86,13 @@ Ahora habriremos la captura con wireshark:
 
 Vale, ahora toca una parte que no se muy bien como explicar, asi que me apoyare en imagenes.
 
-En wireshark: aplica filtro; wlan.fc.type_subtype==28
+En wireshark: aplica filtro; wlan.fc.type_subtype==28 
 
 ![](/assets/images/Wifi-Hacking/ctf-attack-1.PNG)
 
-Luego clica en un paquete que quieras o te llame la atención y "Export Specified Packets" y guárdalo en el	formato "Wreshark/tcdump/... - cap", pero tienes que seleccionar la opción de "solo paquetes seleccionados".
+Luego clica en un paquete que quieras o te llame la atención y "Export Specified Packets" 
+
+![](/assets/images/Wifi-Hacking/ctf-attack-2.PNG)
+
+Y guárdalo en el	formato "Wreshark/tcdump/... - cap", `pero tienes que seleccionar la opción de "solo paquetes seleccionados"`.
 
