@@ -72,5 +72,7 @@ Y ahora si observamos la red veremos que se ha conectado un usuario que mientras
 
 ## CTF FRAME ATTACK: secuestro del ancho de banda
 
+Teoría: si dos clientes mandan paquetes parecidos al mismo tiempo pueden colisionar, así que en una red cada cliente tiene que pedir turno para hablar (RTS: request to send), por lo que si tú pides turno, pero para muchísimos paquetes seguidos puedes hacer que la mayoría de ancho de banda o todo este para ti, ya que tú tienes el turno de enviarle paquetes al router durante un tiempo que especifiques al efectuar el ataque. La duración se manda en microsegundos, desde el 0 hasta el 32767. Entonces, la idea como atacante es poner un valor bastante alto (30000). 	Aunque hay que poner primer número el más bajo y último el más alto (en hexadecimal). La idea es que cuando emitamos el ataque la red va a congestionar y la mayoría de dispositivos se van a desconectar.
+
 
 
