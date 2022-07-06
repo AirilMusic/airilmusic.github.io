@@ -159,4 +159,4 @@ Y de la segunda forma, es decir que el nombre de las redes sea random:
 
 Mientras estemos haciendo el ataque, si miramos las redes disponibles, veremos un montón de redes con nombres random:
 
-![](/assets/images/Wifi-Hacking/ctf-attack-6.PNG)
+![](/assets/images/Wifi-Hacking/ctf-attack-6.png)
