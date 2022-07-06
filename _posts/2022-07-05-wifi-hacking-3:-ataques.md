@@ -185,5 +185,5 @@ Y ahi añadiremos la `MAC` de los usuarios que no queramos desconectar.
 Una vez tengamos listo esto ya podremos lanzar el ataque:
 
 ```
-> 
+> mdk3 {tarjeta de red} d -w whitelist -c {canal}
 ```
