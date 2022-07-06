@@ -202,3 +202,16 @@ Normalmente no funciona en routers nuevos y hay poca información sobre el mismo
 ```
 > mdk3 {tarjeta de red} m -t {BSSID del router}
 ```
+
+
+
+
+
+
+
+
+## FORMAS DE EXPLOTACIÓN PASIVA
+
+Básicamente es escuchar el tráfico sin hacer ningún ataque, hasta conseguir un handshake.
+
+El lado bueno de esto es que no hacemos ruido, por lo que no se nos puede detectar, pero el lado malo es que tenemos que esperar hasta que un cliente se reconecte de forma normal.
