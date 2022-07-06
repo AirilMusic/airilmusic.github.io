@@ -180,6 +180,12 @@ En caso de que lo queramos hacer con Whitelist:
 > nano Whitelist
 ```
 
+Una vez tengamos listo esto ya podremos lanzar el ataque:
+
+```
+> mdk3 {tarjeta de red} d -b blacklist -c {canal}
+```
+
 Y ahi añadiremos la `MAC` de los usuarios que no queramos desconectar.
 
 Una vez tengamos listo esto ya podremos lanzar el ataque:
