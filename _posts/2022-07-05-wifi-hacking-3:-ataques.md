@@ -228,6 +228,15 @@ Con esto conseguimos los archivos.pcap para crackearlos sin necesidad de que cli
 ```
 
 
+## ATAQUES VIA HCXDUMPTOOL
+
+Con este ataque aunque la red no tenga clientes nos esta pillando el hash.
+
+```
+> hcxdumptool -i {tarjeta de red} -o Captura --enable_status=1
+```
+
+
 ## ATAQUES GRACIOSOS
 
 Estos ataques son sobre todo `para gastar bromas`, aunque también se puede usar alguno para otros fines no tan "buenos".
