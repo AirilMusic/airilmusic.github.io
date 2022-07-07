@@ -263,6 +263,11 @@ OPCION 2: (probar pin generico calculado por algoritmo)
 1. En el momento que el pin sea correcto en la consola aparecera la contraseña de la 	red en texto claro
 
 
+## ATAQUES A REDES OCULTAS - COMO DESCUBRIR Y COMPROMETER UNA RED OCULTA
+
+Si estas snifando el tráfico de una red, en el primer prove recuest de un cliente viaja el ESSID de la red en texto claro. También Aircrack lo suele encontrar de forma automática.
+
+
 ## ATAQUES GRACIOSOS
 
 Estos ataques son sobre todo `para gastar bromas`, aunque también se puede usar alguno para otros fines no tan "buenos".
