@@ -208,6 +208,7 @@ Normalmente no funciona en routers nuevos y hay poca información sobre el mismo
 
 Estos ataques son sobre todo para gastar bromas, aunque también se puede usar alguno para otros fines no tan "buenos".
 
+Para esto os recomiendo investigar sobre la herramienta Xerosploit, ya que nos permite un montón de ataques distintos. Pero no lo voy a explicar, ya que habría que explicar un montón de ataques distintos.
 
 
 
