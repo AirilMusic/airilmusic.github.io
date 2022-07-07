@@ -203,11 +203,30 @@ Normalmente no funciona en routers nuevos y hay poca información sobre el mismo
 > mdk3 {tarjeta de red} m -t {BSSID del router}
 ```
 
+
 ## EVIL TWIN ATTACK
 
 Consiste en que `al reautenticarse un usuario`, se confunda y `se conecte a una red falsa creada por nosotros`. Por lo tanto, mediante IP-tables podemos decir que `al abrir el navegador sea redirigido a una web falsa creada por nosotros para que meta sus credenciales de algún sitio que queramos`. (pequeño tip: para la plantilla de la web falsa podemos usar el código php original de las páginas de login que queramos falsificar, lo conseguimos mediante las herramientas de desarrollador de los buscadores). Y luego guardaremos esas credenciales en una base de datos configurada por MySQL. Después de esto el usuario sería `redirigido a un portal y de mientras se desmonta el AP del atacante y el usuario se reconecta al AP real`.
 
 Ya lo siento pero NO voy a explicar como hacerlo en la practica aqui, porque literalmente esto tendria para un articulo entero y me da mucha pereza.
+
+
+## ATAQUES A REDES SIN CLIENTES CON PKMID
+
+Con esto conseguimos los archivos.pcap para crackearlos sin necesidad de que clientes se reconecten proporcionando un handshake.
+
+```
+> cd /opt/bettercap
+
+> ./bettercap -iface {tarjeta de red}
+
+> wifi.recon on
+
+> wifi.show
+
+> wifi.assoc all
+```
+
 
 ## ATAQUES GRACIOSOS
 
@@ -222,6 +241,7 @@ Lo que si, pondré unas fotos hasta el menu de distintos ataques que podemos hac
 ![](/assets/images/Wifi-Hacking/xerosploit-2.PNG)
 
 ![](/assets/images/Wifi-Hacking/xerosploit-3.PNG)
+
 
 ## FORMAS DE EXPLOTACIÓN PASIVA
 
