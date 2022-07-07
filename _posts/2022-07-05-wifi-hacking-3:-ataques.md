@@ -245,6 +245,24 @@ Con este ataque aunque la red no tenga clientes nos esta pillando el hash.
 ```
 
 
+## ATAQUE A UNA RED POR WPS
+
+Si en una red el WPS (que es un protocolo de conectarse mas rapido) esta activo 	puedes entrar mediante un pin de 8 digitos en vez de usar la contraseña. 
+
+`PARA ESTO USAREMOS WPS PIN GENERATOR`
+
+OPCION 1:
+
+1. Introducir el canal o el tiempo
+
+2. Fijarse en aquellos AP que en la columna "Generico" tengan SI y seleccionarl la red
+
+
+OPCION 2: (probar pin generico calculado por algoritmo)
+
+1. En el momento que el pin sea correcto en la consola aparecera la contraseña de la 	red en texto claro
+
+
 ## ATAQUES GRACIOSOS
 
 Estos ataques son sobre todo `para gastar bromas`, aunque también se puede usar alguno para otros fines no tan "buenos".
