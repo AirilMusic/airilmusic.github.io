@@ -210,10 +210,13 @@ Estos ataques son sobre todo para gastar bromas, aunque también se puede usar a
 
 Para esto os recomiendo investigar sobre la herramienta Xerosploit, ya que nos permite un montón de ataques distintos. Pero no lo voy a explicar, ya que habría que explicar un montón de ataques distintos.
 
+Lo que si, pondré unas fotos hasta el menu de distintos ataques que podemos hacer:
 
+![](/assets/images/Wifi-Hacking/xerosploit-1.PNG)
 
+![](/assets/images/Wifi-Hacking/xerosploit-2.PNG)
 
-
+![](/assets/images/Wifi-Hacking/xerosploit-3.PNG)
 
 ## FORMAS DE EXPLOTACIÓN PASIVA
 
