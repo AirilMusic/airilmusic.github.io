@@ -14,3 +14,9 @@ categories:
 tags:  
   - 
 ---
+
+![](/assets/images/htb-writeup-jet/jet.PNG)
+
+Delivery is Hack The Box fortress.
+
+## PORT SCAN
