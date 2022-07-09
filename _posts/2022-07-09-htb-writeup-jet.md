@@ -133,6 +133,12 @@ rtt min/avg/max/mdev = 111.035/111.035/111.035/0.000 ms
 Para ver que sistema operativo corre en la máquina víctima le mandaremos una `traza ICMP`, aquí podremos ver ttl=63, pero realmente es `ttl=64`, es decir, es uma máquina `Linux`. Lo de que se le quita uno al ttl pasa porque la conexión con la máquina no es directa, sino que pasa por un nodo intermediario.
 
 
+## PUERTO 53: DNS
+
+Antes de empezar con la web, vamos a ver si encontramos algun dominio valido mediante los `DNS`, ya que el `puerto 53` esta abierto.
+
+
+
 ## WEB
 
 ![](/assets/images/htb-writeup-jet/web.PNG)
