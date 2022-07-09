@@ -18,7 +18,7 @@ tags:
 
 ![](/assets/images/htb-writeup-jet/jet.PNG)
 
-Delivery es una máquina de la sección Fortress de Hack The Box.
+Delivery es una máquina de la sección Fortress de Hack The Box en la que se pueden hackear un montón de cosas, así podemos practicar un montón de técnicas distintas en la misma máquina.
 
 ## PORT SCAN
 
@@ -246,6 +246,8 @@ Ahora tenemos las credenciales: `username: admin    |    password: Hackthesystem
 Introduciendo esas credenciales en el panel de login conseguimos entrar y nos encontramos con esto donde en la sección del chat podremos ver otra `flag`:
 
 ![](/assets/images/htb-writeup-jet/web-53-4.PNG)
+
+Como no pues vamos a seguir por aqui, que tiene pinta de que todavia se puede explotar mas. Si bajamos e la pagina nos encontramos con un apartado donde `podemos mandar email` y ya que esto consiste en hackear todo lo que podamos pues tiene pinta de que podremos hacer algo con eso.
 
 
 ## WEB: puerto 80 | http
