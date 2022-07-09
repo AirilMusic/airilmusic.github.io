@@ -243,6 +243,9 @@ Session completed
 
 Ahora tenemos las credenciales: `username: admin    |    password: Hackthesystem200`
 
+Introduciendo esas credenciales en el panel de login conseguimos entrar y nos encontramos con esto donde en la sección del chat podremos ver otra flag:
+
+![](/assets/images/htb-writeup-jet/web-53-4.PNG)
 
 
 ## WEB: puerto 80 | http
