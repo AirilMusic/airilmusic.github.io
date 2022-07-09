@@ -207,7 +207,9 @@ Referer: http://www.securewebinc.jet/dirb_safe_dir_rf9EmcEIx/admin/login.php
 Cookie: PHPSESSID=cff2hfr9uou4u70p2lqar4e8r6
 Upgrade-Insecure-Requests: 1
 
-username=&password=
+username=uwu&password=uwu
+
+
 
 
 ```
