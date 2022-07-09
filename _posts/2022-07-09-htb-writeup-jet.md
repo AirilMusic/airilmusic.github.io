@@ -234,10 +234,16 @@ Table: users
 Nos da ese `hash`, entonces ahora lo tenemos que guardar en un archivo llamado "hash" y lo vamos a romper con `john the reaper`
 
 ```
-> john --wordlist=rockyou.txt hash --format=Raw-SHA256
+> john --wordlist=rockyou.txt hash
 
-
+...
+Hackthesystem200 (admin)
+Session completed
 ```
+
+Ahora tenemos las credenciales: `username: admin    |    password: Hackthesystem200`
+
+
 
 ## WEB: puerto 80 | http
 
