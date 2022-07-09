@@ -169,6 +169,12 @@ Nos encontramos con esta web, y si bajamos nos encontramos con la `Flag`:
 
 ![](/assets/images/htb-writeup-jet/web-53-2.PNG)
 
+Pues ya que estamos aquí por si acaso, vamos a mirar el código, pero no sé...
+
+Vale, pues si, sí que había algo interesante, si vamos al final nos encontramos con estos dos enlaces, el primero no es demasiado interesante, pero el segundo sí.
+
+![](/assets/images/htb-writeup-jet/web-53-3.PNG)
+
 
 ## WEB
 
