@@ -190,7 +190,27 @@ Pero antes de intentar bypassear el login vamos a ver el código fuente del logi
 
 Vale, una ves hemos mirado el código ya podemos intentar bypassear el login. Como con `sqlmap` no me ha dejado hacer una `sql incection` en el panel del login, lo que haré sera capturar la petición con `burpsuite`, exportarla a un archivo llamado "login" y luego meter el archivo en sqlmap para que pruebe con ella.
 
+```
+> cat login         #este es el archivo donde he copiado la petición
 
+POST /dirb_safe_dir_rf9EmcEIx/admin/dologin.php HTTP/1.1
+Host: www.securewebinc.jet
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:99.0) Gecko/20100101 Firefox/99.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 19
+Origin: http://www.securewebinc.jet
+Connection: close
+Referer: http://www.securewebinc.jet/dirb_safe_dir_rf9EmcEIx/admin/login.php
+Cookie: PHPSESSID=cff2hfr9uou4u70p2lqar4e8r6
+Upgrade-Insecure-Requests: 1
+
+username=&password=
+
+
+```
 
 
 
