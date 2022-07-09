@@ -130,3 +130,8 @@ Si lo miramos poniendo la IP en el navegador, o añadiéndole el nombre jet.htb 
 
 En `Wappalizer` es raro pero no sale nada, asi que probare con `whatweb`
 
+```
+> whatweb http://10.13.37.10
+
+http://10.13.37.10/ [200 OK] Country[RESERVED][ZZ], HTML5, HTTPServer[Ubuntu Linux][nginx/1.10.3 (Ubuntu)], IP[10.13.37.10], Title[Welcome to nginx on Debian!], nginx[1.10.3]
+```
