@@ -317,6 +317,15 @@ www-data@jet:~$ find / -perm -4000 2>/dev/null
 
 Vemos el arvhivo `/home/leak` que parece interesante.
 
+Si lo ejecutamos nos leakeará un poquito de información y nos dara un campo de input:
+
+```
+www-data@jet:~$ /home/leak
+
+Oops, I'm leaking! 0x7ffda13a5490
+Pwn me ¯\_(ツ)_/¯ 
+>
+```
 
 ## WEB: puerto 80 | http
 
