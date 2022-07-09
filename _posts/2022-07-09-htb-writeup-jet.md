@@ -166,7 +166,7 @@ Ahí encontramos el dominio `www.securewebinc.jet`, así que lo agregamos al `/e
 
 ![](/assets/images/htb-writeup-jet/web-53.PNG)
 
-Nos encontramos con esta web, y si bajamos nos encontramos con la `Flag`:
+Nos encontramos con esta web, y si bajamos nos encontramos con la `flag`:
 
 ![](/assets/images/htb-writeup-jet/web-53-2.PNG)
 
@@ -186,7 +186,7 @@ eval(String.fromCharCode(102,117,110,99,116,105,111,110,32,103,101,116,83,116,97
 
 Pues a primera vista ya vemos un directorio que parece muy interesante: `/dirb_safe_dir_rf9EmcEIx/admin/stats.php` al cual si le quitamos el stats.php nos redirige a una página de `login` el cual obviamente vamos a intentar bypassear.
 
-Pero antes de intentar bypassear el login vamos a ver el código fuente del login y ahí nos encontramos con otra flag: `JET{s3cur3_js_w4s_not_s0_s3cur3_4ft3r4ll}`
+Pero antes de intentar bypassear el login vamos a ver el código fuente del login y ahí nos encontramos con otra `flag`: `JET{s3cur3_js_w4s_not_s0_s3cur3_4ft3r4ll}`
 
 Vale, una ves hemos mirado el código ya podemos intentar bypassear el login. Como con `sqlmap` no me ha dejado hacer una `sql incection` en el panel del login, lo que haré sera capturar la petición con `burpsuite`, exportarla a un archivo llamado "login" y luego meter el archivo en sqlmap para que pruebe con ella.
 
@@ -243,7 +243,7 @@ Session completed
 
 Ahora tenemos las credenciales: `username: admin    |    password: Hackthesystem200`
 
-Introduciendo esas credenciales en el panel de login conseguimos entrar y nos encontramos con esto donde en la sección del chat podremos ver otra flag:
+Introduciendo esas credenciales en el panel de login conseguimos entrar y nos encontramos con esto donde en la sección del chat podremos ver otra `flag`:
 
 ![](/assets/images/htb-writeup-jet/web-53-4.PNG)
 
@@ -252,7 +252,7 @@ Introduciendo esas credenciales en el panel de login conseguimos entrar y nos en
 
 ![](/assets/images/htb-writeup-jet/web.PNG)
 
-Pues ahí tenemos la `primera flag` uwu
+Pues ahí tenemos la `otra flag` uwu
 
 Si lo miramos poniendo la IP en el navegador, o añadiéndole el nombre jet.htb en el archivo `/etc/hosts` y luego poniendo `jet.htb` en el navegador nos va a salir lo mismo.
 
