@@ -120,3 +120,6 @@ Delivery es una máquina de la sección Fortress de Hack The Box.
 ```
 
 
+## WEB
+
+![](/assets/images/htb-writeup-jet/web.PNG)
