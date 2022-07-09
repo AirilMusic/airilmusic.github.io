@@ -183,8 +183,10 @@ eval(String.fromCharCode(102,117,110,99,116,105,111,110,32,103,101,116,83,116,97
 
 ![](/assets/images/htb-writeup-jet/jsnice.PNG)
 
+Pues a primera vista ya vemos un directorio que parece muy interesante: `/dirb_safe_dir_rf9EmcEIx/admin/stats.php` al cual si le quitamos el stats.php nos redirige a una página de `login` el cual obviamente vamos a intentar bypassear.
 
-## WEB
+
+## WEB: purto 80, 5555 y 7777
 
 ![](/assets/images/htb-writeup-jet/web.PNG)
 
