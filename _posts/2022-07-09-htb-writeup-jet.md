@@ -137,6 +137,31 @@ Para ver que sistema operativo corre en la máquina víctima le mandaremos una `
 
 Antes de empezar con la web, vamos a ver si encontramos algun dominio valido mediante los `DNS`, ya que el `puerto 53` esta abierto.
 
+```
+❯ dig @10.13.37.10 -x 10.13.37.10
+
+; <<>> DiG 9.16.27-Debian <<>> @10.13.37.10 -x 10.13.37.10
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN, id: 32264
+;; flags: qr aa rd; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+;; WARNING: recursion requested but not available
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;10.37.13.10.in-addr.arpa.	IN	PTR
+
+;; AUTHORITY SECTION:
+37.13.10.in-addr.arpa.	604800	IN	SOA	www.securewebinc.jet. securewebinc.jet. 3 604800 86400 2419200 604800
+
+;; Query time: 113 msec
+;; SERVER: 10.13.37.10#53(10.13.37.10)
+;; WHEN: Sat Jul 09 17:27:25 CEST 2022
+;; MSG SIZE  rcvd: 109
+```
+Ahi encontramos el dominio `www.securewebinc.jet`, asi que lo agregamos al `/etc/hosts` y lo pondremos en el navegador.
 
 
 ## WEB
