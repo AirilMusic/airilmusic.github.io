@@ -234,7 +234,7 @@ Table: users
 Nos da ese `hash`, entonces ahora lo tenemos que guardar en un archivo llamado "hash" y lo vamos a romper con `john the reaper`
 
 ```
-> john --wordlist=rockyou.txt hash
+> john --wordlist=rockyou.txt hash --format=Raw-SHA256
 
 
 ```
