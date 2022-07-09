@@ -187,6 +187,8 @@ Pues a primera vista ya vemos un directorio que parece muy interesante: `/dirb_s
 
 Pero antes de intentar bypassear el login vamos a ver el código fuente del login y ahí nos encontramos con otra flag: `JET{s3cur3_js_w4s_not_s0_s3cur3_4ft3r4ll}`
 
+Vale, una ves hemos mirado el código ya podemos intentar bypassear el login.
+
 
 ## WEB: puerto 80, 5555 y 7777
 
