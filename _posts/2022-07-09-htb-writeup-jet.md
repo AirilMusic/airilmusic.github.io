@@ -152,3 +152,15 @@ http://10.13.37.10/ [200 OK] Country[RESERVED][ZZ], HTML5, HTTPServer[Ubuntu Lin
 Pues empezamos bien, esa versión de nginx es vulnerable, he encontrado un exploit, pero en este caso no nos sirve, todo pinta a que esa página o va a aportarnos nada más, quizás hay alguna otra página o quizás hace `virtual host routing`, porque con `wfuzz` no vemos ningún directorio más (y eso que he probado con varias extensiones distintas: .php .html ...). Por si acaso miraré el código fuente de la página, pero sino pasaremos a otra cosa.
 
 En el código fuente de la página no hay nada interesante por lo que dudo que se pueda hacer más en esa página.
+
+
+Vale, siguiendo con la pagina web, por el puerto 5555 y por el pureto 7777 aparecen cosas distintas que es lo que nos estaba reportanto `nmap`.
+
+Por el puerto 5555:
+
+
+
+
+Por el puerto 7777:
+
+
