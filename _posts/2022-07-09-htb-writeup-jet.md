@@ -128,3 +128,5 @@ Pues ahí tenemos la `primera flag` uwu
 
 Si lo miramos poniendo la IP en el navegador, o añadiéndole el nombre jet.htb en el archivo `/etc/hosts` y luego poniendo `jet.htb` en el navegador nos va a salir lo mismo.
 
+En `Wappalizer` es raro pero no sale nada, asi que probare con `whatweb`
+
