@@ -120,7 +120,7 @@ Delivery es una máquina de la sección Fortress de Hack The Box.
 ```
 ## OS
 ```
->ping -c 1 10.13.37.10
+> ping -c 1 10.13.37.10
 
 PING 10.13.37.10 (10.13.37.10) 56(84) bytes of data.
 64 bytes from 10.13.37.10: icmp_seq=1 ttl=63 time=111 ms
