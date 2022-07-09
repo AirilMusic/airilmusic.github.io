@@ -158,9 +158,10 @@ Vale, siguiendo con la pagina web, por el puerto 5555 y por el pureto 7777 apare
 
 Por el puerto 5555:
 
+![](/assets/images/htb-writeup-jet/web-5555.PNG)
 
-
+Y vemos que está cargando y no para, por lo que podemos intuir que hay algún proceso corriendo por detrás que quizás podamos explotar.
 
 Por el puerto 7777:
 
-
+![](/assets/images/htb-writeup-jet/web-7777.PNG)
