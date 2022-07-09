@@ -255,6 +255,12 @@ Como no pues vamos a seguir por aqui, que tiene pinta de que todavia se puede ex
 
 Pongamos lo que pongamos nos dará ese error, así que vamos a capturar la petición y ver si podemos cambiar algo.
 
+La data esta `urlencodeada` por lo que si la decodificamos `Crtl + Shift + U` veremos lo siguiente:
+
+![](/assets/images/htb-writeup-jet/web-53-7.PNG)
+
+Vemos que está utilizando expresiones regulares, es decir `/i` por lo que ya vemos una forma de ejecutar comandos, si cambiamos el /i por `/e` podremos ejecutar comandos de forma remota, con lo cual nos podremos mandar una `reverse shell`.
+
 
 ## WEB: puerto 80 | http
 
