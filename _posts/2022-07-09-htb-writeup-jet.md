@@ -315,6 +315,8 @@ www-data@jet:~$ find / -perm -4000 2>/dev/null
 /bin/ping6
 ```
 
+Vemos el arvhivo `/home/leak` que parece interesante.
+
 
 ## WEB: puerto 80 | http
 
