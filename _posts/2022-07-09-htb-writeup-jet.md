@@ -185,11 +185,10 @@ eval(String.fromCharCode(102,117,110,99,116,105,111,110,32,103,101,116,83,116,97
 
 Pues a primera vista ya vemos un directorio que parece muy interesante: `/dirb_safe_dir_rf9EmcEIx/admin/stats.php` al cual si le quitamos el stats.php nos redirige a una página de `login` el cual obviamente vamos a intentar bypassear.
 
-Pero antes de intentar bypassear el login vamos a ver el codigo fuente del login y ahi nos encontramos con otra flag: `JET{s3cur3_js_w4s_not_s0_s3cur3_4ft3r4ll}`
+Pero antes de intentar bypassear el login vamos a ver el código fuente del login y ahí nos encontramos con otra flag: `JET{s3cur3_js_w4s_not_s0_s3cur3_4ft3r4ll}`
 
 
-
-## WEB: purto 80, 5555 y 7777
+## WEB: puerto 80, 5555 y 7777
 
 ![](/assets/images/htb-writeup-jet/web.PNG)
 
