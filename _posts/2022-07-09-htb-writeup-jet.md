@@ -190,7 +190,7 @@ Pero antes de intentar bypassear el login vamos a ver el código fuente del logi
 Vale, una ves hemos mirado el código ya podemos intentar bypassear el login.
 
 
-## WEB: puerto 80, 5555 y 7777
+## WEB: puerto 80 | http
 
 ![](/assets/images/htb-writeup-jet/web.PNG)
 
@@ -211,14 +211,17 @@ Pues empezamos bien, esa versión de nginx es vulnerable, he encontrado un explo
 En el código fuente de la página no hay nada interesante por lo que dudo que se pueda hacer más en esa página.
 
 
-Vale, siguiendo con la pagina web, por el puerto 5555 y por el pureto 7777 aparecen cosas distintas que es lo que nos estaba reportanto `nmap`.
+## PUERTO 5555
 
-Por el puerto 5555:
+Aquí también nos encontramos con otra web:
 
 ![](/assets/images/htb-writeup-jet/web-5555.PNG)
 
 Y vemos que está cargando y no para, por lo que podemos intuir que hay algún proceso corriendo por detrás que quizás podamos explotar.
 
-Por el puerto 7777:
+
+## PUERTO 7777
+
+Aquí también nos encontramos con otra web:
 
 ![](/assets/images/htb-writeup-jet/web-7777.PNG)
