@@ -490,4 +490,6 @@ JET{7h47s_7h3_sp1r17}
 
 Ya tendríamos la máquina terminada, pero si parchean lo del pwnkit o me apetece seguir con esto, pues algún día subiré como se explota lo que no he explotado, ya que tenía lo del pwkit.
 
+![](/assets/images/htb-writeup-jet/uwu.PNG)
+
 uwu
