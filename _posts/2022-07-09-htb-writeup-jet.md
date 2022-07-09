@@ -471,3 +471,23 @@ Y vemos que está cargando y no para, por lo que podemos intuir que hay algún p
 Aquí también nos encontramos con otra web:
 
 ![](/assets/images/htb-writeup-jet/web-7777.PNG)
+
+
+
+## ROOT
+
+Una vez tenemos una shell (es decir, cuando hemos conseguido la shell explotando el puerto 80 y tirando de ahí) ya simplemente es explotar la vulnerabilidad `pwnkit` y listo.
+
+Flags que quedan:
+
+```
+JET{r3p3at1ng_ch4rs_1n_s1mpl3_x0r_g3ts_y0u_0wn3d}
+JET{3sc4p3_s3qu3nc3s_4r3_fun}
+JET{h34p_f0r_73h_b4bi3z}
+JET{n3xt_t1m3_p1ck_65537}
+JET{7h47s_7h3_sp1r17}
+```
+
+Ya tendríamos la máquina terminada, pero si parchean lo del pwnkit o me apetece seguir con esto, pues algún día subiré como se explota lo que no he explotado, ya que tenía lo del pwkit.
+
+uwu
