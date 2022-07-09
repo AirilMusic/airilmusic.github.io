@@ -14,6 +14,9 @@ categories:
 tags:  
   - DNS
   - SQLi
+  - Buffer overflow
+  - Remote Code Execution
+  - Pwnkit
 ---
 
 ![](/assets/images/htb-writeup-jet/jet.PNG)
