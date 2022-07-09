@@ -118,6 +118,18 @@ Delivery es una máquina de la sección Fortress de Hack The Box.
 |     Show memo
 |_    Delete memo
 ```
+## OS
+```
+>ping -c 1 10.13.37.10
+
+PING 10.13.37.10 (10.13.37.10) 56(84) bytes of data.
+64 bytes from 10.13.37.10: icmp_seq=1 ttl=63 time=111 ms
+
+--- 10.13.37.10 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 111.035/111.035/111.035/0.000 ms
+```
+
 
 
 ## WEB
