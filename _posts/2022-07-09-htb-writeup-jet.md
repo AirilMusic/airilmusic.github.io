@@ -161,7 +161,13 @@ Antes de empezar con la web, vamos a ver si encontramos algun dominio valido med
 ;; WHEN: Sat Jul 09 17:27:25 CEST 2022
 ;; MSG SIZE  rcvd: 109
 ```
-Ahi encontramos el dominio `www.securewebinc.jet`, asi que lo agregamos al `/etc/hosts` y lo pondremos en el navegador.
+Ahí encontramos el dominio `www.securewebinc.jet`, así que lo agregamos al `/etc/hosts` y lo pondremos en el navegador.
+
+![](/assets/images/htb-writeup-jet/web-53.PNG)
+
+Nos encontramos con esta web, y si bajamos nos encontramos con la `Flag`:
+
+![](/assets/images/htb-writeup-jet/web-53-2.PNG)
 
 
 ## WEB
