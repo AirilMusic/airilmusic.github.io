@@ -12,7 +12,8 @@ categories:
   - hackthebox
   - infosec
 tags:  
-  - 
+  - DNS
+  - SQLi
 ---
 
 ![](/assets/images/htb-writeup-jet/jet.PNG)
