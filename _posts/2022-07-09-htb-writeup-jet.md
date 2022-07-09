@@ -188,7 +188,10 @@ Pues a primera vista ya vemos un directorio que parece muy interesante: `/dirb_s
 
 Pero antes de intentar bypassear el login vamos a ver el código fuente del login y ahí nos encontramos con otra flag: `JET{s3cur3_js_w4s_not_s0_s3cur3_4ft3r4ll}`
 
-Vale, una ves hemos mirado el código ya podemos intentar bypassear el login.
+Vale, una ves hemos mirado el código ya podemos intentar bypassear el login. Como con `sqlmap` no me ha dejado hacer una `sql incection` en el panel del login, lo que haré sera capturar la petición con `burpsuite`, exportarla a un archivo llamado "login" y luego meter el archivo en sqlmap para que pruebe con ella.
+
+
+
 
 
 ## WEB: puerto 80 | http
