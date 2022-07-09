@@ -249,6 +249,12 @@ Introduciendo esas credenciales en el panel de login conseguimos entrar y nos en
 
 Como no pues vamos a seguir por aqui, que tiene pinta de que todavia se puede explotar mas. Si bajamos e la pagina nos encontramos con un apartado donde `podemos mandar email` y ya que esto consiste en hackear todo lo que podamos pues tiene pinta de que podremos hacer algo con eso.
 
+![](/assets/images/htb-writeup-jet/web-53-5.PNG)
+
+![](/assets/images/htb-writeup-jet/web-53-6.PNG)
+
+Pongamos lo que pongamos nos dará ese error, así que vamos a capturar la petición y ver si podemos cambiar algo.
+
 
 ## WEB: puerto 80 | http
 
@@ -269,6 +275,7 @@ http://10.13.37.10/ [200 OK] Country[RESERVED][ZZ], HTML5, HTTPServer[Ubuntu Lin
 Pues empezamos bien, esa versión de nginx es vulnerable, he encontrado un exploit, pero en este caso no nos sirve, todo pinta a que esa página o va a aportarnos nada más, quizás hay alguna otra página o quizás hace `virtual host routing`, porque con `wfuzz` no vemos ningún directorio más (y eso que he probado con varias extensiones distintas: .php .html ...). Por si acaso miraré el código fuente de la página, pero sino pasaremos a otra cosa.
 
 En el código fuente de la página no hay nada interesante por lo que dudo que se pueda hacer más en esa página.
+
 
 
 ## PUERTO 5555
