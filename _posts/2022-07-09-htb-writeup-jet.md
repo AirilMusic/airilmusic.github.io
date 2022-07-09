@@ -123,3 +123,8 @@ Delivery es una máquina de la sección Fortress de Hack The Box.
 ## WEB
 
 ![](/assets/images/htb-writeup-jet/web.PNG)
+
+Pues ahí tenemos la `primera flag` uwu
+
+Si lo miramos poniendo la IP en el navegador, o añadiéndole el nombre jet.htb en el archivo `/etc/hosts` y luego poniendo `jet.htb` en el navegador nos va a salir lo mismo.
+
