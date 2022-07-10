@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Web Hacking: Prototipe Pollution Attack
+title: Web Hacking, Prototipe Pollution Attack
 excerpt: "En este artículo vamos a intentar entender en que se basa el ataque Prototype Pollution y como hacerlo, ya que es algo que no es muy conocido y es super interesante."
 date: 2022-07-10
 classes: wide
