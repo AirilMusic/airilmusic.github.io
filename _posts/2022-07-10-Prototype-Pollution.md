@@ -5,7 +5,7 @@ excerpt: "En este artículo vamos a intentar entender en que se basa el ataque P
 date: 2022-07-10
 classes: wide
 header:
-  teaser: /assets/images/web-hacking/prototype-pollution.png
+  teaser: /assets/images/web-hacking/prototype-pollution/prototype-pollution.png
   teaser_home_page: true
   icon: 
 categories:
@@ -14,7 +14,7 @@ tags:
   - Prototype-Pollution
 ---
 
-![](/assets/images/web-hacking/prototype-pollution.png)
+![](/assets/images/web-hacking/prototype-pollution/prototype-pollution.png)
 
 En un programa de `bug bounty` me he encontrado que una web tiene la version de `jQuery 3.2.1` y buscando que vulnerabilidades tiene esa versión me he encontrado con dos: `XSS` y `Prototype Pollution`
 Claro, en ese programa la vulnerabilidad de `XSS` no estaba en el scope, entonces me he decidido por el `Prototype Pollution`, y pensando que habría algún exploit y no seria del otro mundo, me he encontrado con esta vulnerabilidad que es muy compleja y no muchos entienden, así que a la vez que yo voy aprendiendo sobre ella se me ha ocurrido escribir este artículo con la finalidad de que tanto yo como cualquier otra persona pueda `entender en que consiste` y `como explotar esta vulnerabilidad`.
