@@ -25,3 +25,11 @@ Así que en este artículo veremos esta interesante y compleja vulnerabilidad.
 
 Esta vulnerabilidad `está presente` en webs que tengan `jQuery` de una `versión menor a la 3.4.0`, es decir, de que `desde jQuery 3.9.0 hacia abajo` son vulnerables a este ataque.
 
+
+## ¿ EN QUE CONSISTE ?
+
+
+## ¿ COMO EXPLOTAR LA VULNERABILIDAD ?
+
+
+## ¿ COMO ARREGLAR LA VULNERABILIDAD ?
