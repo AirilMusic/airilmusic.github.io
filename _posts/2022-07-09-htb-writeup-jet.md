@@ -12,6 +12,7 @@ categories:
   - hackthebox
   - infosec
 tags:  
+  - HTB
   - DNS
   - SQLi
   - Buffer overflow
