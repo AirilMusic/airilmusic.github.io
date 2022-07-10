@@ -5,9 +5,9 @@ excerpt: "En este artículo vamos a intentar entender en que se basa el ataque P
 date: 2022-07-10
 classes: wide
 header:
-  teaser: 
+  teaser: /assets/images/web-hacking/prototype-pollution.png
   teaser_home_page: true
-  icon: /assets/images/web-hacking/prototype-pollution.png
+  icon: 
 categories:
   - Web-Hacking
 tags:  
