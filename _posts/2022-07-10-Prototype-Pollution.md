@@ -35,7 +35,10 @@ Esta vulnerabilidad `está presente` en webs que tengan `jQuery` de una `versió
 
 Lo primero vamos a ver como funciona, esto es solo para entenderlo, no hace falta que lo repitais, para esto en la web tenemos que abrir la consola y :
 
-Primero nos crearemos un valor:
+![](/assets/images/web-hacking/explicacion-prototype-pollution-1.PNG)
+
+
+Primero crearemos una variable que la igualaremos a  { }:
 
 
 
