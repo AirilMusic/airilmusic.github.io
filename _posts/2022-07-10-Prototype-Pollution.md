@@ -28,9 +28,17 @@ Esta vulnerabilidad `está presente` en webs que tengan `jQuery` de una `versió
 
 ## ¿ EN QUE CONSISTE ?
 
-( Ya que en estos momentos no tengo el VIP de HTB, utilizaré fotos de un writeup hecho por S4vitar, dudo que leas esto pero gracias <3 )
 
 ## ¿ COMO EXPLOTAR LA VULNERABILIDAD ?
+
+( Ya que en estos momentos no tengo el VIP de HTB, utilizaré fotos de un writeup hecho por S4vitar, dudo que leas esto pero gracias <3 )
+
+Lo primero vamos a ver como funciona, esto es solo para entenderlo, no hace falta que lo repitais, para esto en la web tenemos que abrir la consola y :
+
+Primero nos crearemos un valor:
+
+
+
 
 
 ## ¿ COMO ARREGLAR LA VULNERABILIDAD ?
