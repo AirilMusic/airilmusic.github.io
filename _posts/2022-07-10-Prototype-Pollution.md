@@ -28,6 +28,7 @@ Esta vulnerabilidad `está presente` en webs que tengan `jQuery` de una `versió
 
 ## ¿ EN QUE CONSISTE ?
 
+( Ya que en estos momentos no tengo el VIP de HTB, utilizaré fotos de un writeup hecho por S4vitar, dudo que leas esto pero gracias <3 )
 
 ## ¿ COMO EXPLOTAR LA VULNERABILIDAD ?
 
