@@ -35,22 +35,7 @@ Primero vamos a `crear un objeto`:
 ```
 > obj = {airil: 1}
 
-airil: 1
-  - [[Prototype]]: Object
-  - constructor: ƒ Object()
-  - hasOwnProperty: ƒ hasOwnProperty()
-  - isPrototypeOf: ƒ isPrototypeOf()
-  - propertyIsEnumerable: ƒ propertyIsEnumerable()
-  - toLocaleString: ƒ toLocaleString()
-  - toString: ƒ toString()
-  - valueOf: ƒ valueOf()
-  - __defineGetter__: ƒ __defineGetter__()
-  - __defineSetter__: ƒ __defineSetter__()
-  - __lookupGetter__: ƒ __lookupGetter__()
-  - __lookupSetter__: ƒ __lookupSetter__()
-  - __proto__: (...)
-  - get __proto__: ƒ __proto__()
-  - set __proto__: ƒ __proto__()
+- airil: 1
 ```
 
 Ahora para acceder a esta propiedad podemos usar el `operador del punto` o `indexarlo` de la siguiente manera:
@@ -73,6 +58,63 @@ Ahora vamos a inspeccionar nuestro objeto y vamos a ver que tiene algunas `propi
 
 ```
 > obj
+
+- airil: 1
+  · [[Prototype]]: Object
+    - constructor: ƒ Object()
+    - hasOwnProperty: ƒ hasOwnProperty()
+    - isPrototypeOf: ƒ isPrototypeOf()
+    - propertyIsEnumerable: ƒ propertyIsEnumerable()
+    - toLocaleString: ƒ toLocaleString()
+    - toString: ƒ toString()
+    - valueOf: ƒ valueOf()
+    - __defineGetter__: ƒ __defineGetter__()
+    - __defineSetter__: ƒ __defineSetter__()
+    - __lookupGetter__: ƒ __lookupGetter__()
+    - __lookupSetter__: ƒ __lookupSetter__()
+    - __proto__: (...)
+    - get __proto__: ƒ __proto__()
+    - set __proto__: ƒ __proto__()
+```
+
+Esto pasa porque `cuando se crean nuevos objetos`, heredan `las propiedades de un objeto especial` (de hecho en lo que nos responde pone que es del "[[Prototype]]:") y ese objeto especial se puede llamar como el objeto prototipo, realmente es como cualquier otro objeto, asi que podemos verlo:
+
+```
+> Object.getPrototypeOf(obj)
+
+· {constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, …}
+  - constructor: ƒ Object()
+  - hasOwnProperty: ƒ hasOwnProperty()
+  - isPrototypeOf: ƒ isPrototypeOf()
+  - propertyIsEnumerable: ƒ propertyIsEnumerable()
+  - toLocaleString: ƒ toLocaleString()
+  - toString: ƒ toString()
+  - valueOf: ƒ valueOf()
+  - __defineGetter__: ƒ __defineGetter__()
+  - __defineSetter__: ƒ __defineSetter__()
+  - __lookupGetter__: ƒ __lookupGetter__()
+  - __lookupSetter__: ƒ __lookupSetter__()
+  - __proto__: (...)
+  - get __proto__: ƒ __proto__()
+  - set __proto__: ƒ __proto__()
+```
+
+Podemos ver que ambos objetos contienen las mismas cosas. Y si ponemos un numero en vez de "obj" nos da esto de vuelta:
+
+```
+> Object.getPrototypeOf(1)
+
+· Number {0, constructor: ƒ, toExponential: ƒ, toFixed: ƒ, toPrecision: ƒ, …}
+  - constructor: ƒ Number()
+  - toExponential: ƒ toExponential()
+  - toFixed: ƒ toFixed()
+  - toLocaleString: ƒ toLocaleString()
+  - toPrecision: ƒ toPrecision()
+  - toString: ƒ toString()
+  - valueOf: ƒ valueOf()
+  - [[Prototype]]: Object
+  - [[PrimitiveValue]]: 0
+```
 
 
 ## ¿ COMO EXPLOTAR LA VULNERABILIDAD ?
