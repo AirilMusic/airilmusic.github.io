@@ -30,10 +30,49 @@ Esta vulnerabilidad `está presente` en webs que tengan `jQuery` de una `versió
 
 Es importante saber que es una vulnerabilidad que `solo afecta a JavaScript`. Para explicarlo primero voy a utilizar la terminal del navegador.
 
-Primero vamos a crear un objeto:
+Primero vamos a `crear un objeto`:
 
+```
+> obj = {airil: 1}
 
+airil: 1
+  - [[Prototype]]: Object
+  - constructor: ƒ Object()
+  - hasOwnProperty: ƒ hasOwnProperty()
+  - isPrototypeOf: ƒ isPrototypeOf()
+  - propertyIsEnumerable: ƒ propertyIsEnumerable()
+  - toLocaleString: ƒ toLocaleString()
+  - toString: ƒ toString()
+  - valueOf: ƒ valueOf()
+  - __defineGetter__: ƒ __defineGetter__()
+  - __defineSetter__: ƒ __defineSetter__()
+  - __lookupGetter__: ƒ __lookupGetter__()
+  - __lookupSetter__: ƒ __lookupSetter__()
+  - __proto__: (...)
+  - get __proto__: ƒ __proto__()
+  - set __proto__: ƒ __proto__()
+```
 
+Ahora para acceder a esta propiedad podemos usar el `operador del punto` o `indexarlo` de la siguiente manera:
+
+```
+> obj.airil
+
+1
+```
+
+Y tambien sabemos que si intentamos acceder a una `propiedad que no existe` nos devolvera `indefinido`.
+
+```
+> obj.uwu
+
+undefined
+```
+
+Ahora vamos a inspeccionar nuestro objeto y vamos a ver que tiene algunas `propiedades` y `metodos` que `no hemos definido`.
+
+```
+> obj
 
 
 ## ¿ COMO EXPLOTAR LA VULNERABILIDAD ?
