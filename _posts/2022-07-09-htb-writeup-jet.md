@@ -1,7 +1,7 @@
 ---
 layout: single
 title: Jet - Hack The Box
-excerpt: "Delivery es una máquina de la sección Fortress de Hack The Box."
+excerpt: "Jet es una máquina de la sección Fortress de Hack The Box."
 date: 2022-07-09
 classes: wide
 header:
@@ -22,7 +22,7 @@ tags:
 
 ![](/assets/images/htb-writeup-jet/jet.PNG)
 
-Delivery es una máquina de la sección Fortress de Hack The Box en la que se pueden hackear un montón de cosas, así podemos practicar un montón de técnicas distintas en la misma máquina.
+Jet es una máquina de la sección Fortress de Hack The Box en la que se pueden hackear un montón de cosas, así podemos practicar un montón de técnicas distintas en la misma máquina.
 
 ## PORT SCAN
 
