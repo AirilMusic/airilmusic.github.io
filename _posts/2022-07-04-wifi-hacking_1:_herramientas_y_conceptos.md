@@ -61,7 +61,7 @@ En que consiste: tú estas como atacante desde fuera viendo el punto de acceso y
 
 Para ver si has conseguido hand shakes se puede hacer con wireshark, de esta forma:
 ```
-·wireshark captura-01.cap
+> wireshark captura-01.cap
 y aplicar el filtro "eapol"
 ```
 
