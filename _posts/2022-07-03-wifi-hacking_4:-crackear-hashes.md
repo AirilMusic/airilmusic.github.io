@@ -22,7 +22,7 @@ Todas las técnicas que veremos funcionan a base de `fuerza bruta`, es decir que
 
 `IMPORTANTE: no es raro que la contraseña sea un número de teléfono, por lo que no está mal probar con eso si no conseguimos resultado con otros diccionarios, si necesitas un diccionario con números de teléfono o alguna otra cosa puedes mirar este simple script que programé hace tiempo: https://github.com/AirilMusic/Pentesting-Hacking/blob/main/Passwords-and-Brute-Forcing/DictionaryCreator.py`
 
-##John the Reaper
+## John the Reaper
 
 Vamos a empezar explicando como hacerlo con esta conocida herramienta. Pero como John no está especializado en wifi hacking primero tenemos que preparar el hash, es decir, extraerlo del archivo .cap:
 
@@ -39,3 +39,13 @@ Una vez hecho esto ya podremos crackear la contraseña:
 ```
 > john --wordlist={diccionario.txt} miHash
 ```
+
+## Airckrack
+
+Ahora veremos como hacerlo con esta otra también conocida herramienta y la cual si es especializada en wifi hacking, por lo tanto, la captura no necesitará preparación previa:
+
+```
+> aircrack-ng -w {diccionario.txt} {captura.cap}
+```
+
+
