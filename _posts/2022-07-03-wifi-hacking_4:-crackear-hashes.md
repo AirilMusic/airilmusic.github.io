@@ -14,7 +14,7 @@ tags:
   - Wifi-Hacking
 ---
 
-![](/assets/images/wifi-hacking/cracking.JPG)
+![](/assets/images/Wifi-Hacking/cracking.jpg)
 
 Este es el último paso que tenemos que realizar si `lo que queremos lograr es la contraseña` de la red. Para esto hay varias técnicas y dentro de las mismas hay otras sub técnicas con las que podremos acelerar el proceso. Por eso aquí veremos todas, aunque `con cualquiera se puede lograr el mismo resultado`, vosotros elegid la que prefiráis.
 
