@@ -68,6 +68,6 @@ También veremos como hacerlo con esta herramienta que ya es bastante antigua, p
 
 ## TÉCNICAS DE ACELERACIÓN
 
-Las técnicas que hemos visto son bastante lentas, por lo que si no queremos estar varias horas con eso también podemos utilizar las siguientes técnicas que son considerablemente más rápidas.
+Las técnicas que hemos visto son bastante lentas, por lo que si no queremos estar varias horas con eso también podemos utilizar las siguientes técnicas que son `considerablemente más rápidas`.
 
-
+Para lograr esto necesitaremos tener un archivo de `contraseñas precomputadas`. De esta forma nos `ahorraremos pasos` del procedimiento, `aumentaando asi la velocidoad` de computo. Esto se hace con un ataque mediante base de datos.
