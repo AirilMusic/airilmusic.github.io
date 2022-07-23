@@ -28,8 +28,14 @@ Vamos a empezar explicando como hacerlo con esta conocida herramienta. Pero como
 
 ```
 # generar miCaptura.hccap, parte del paquete con las creds
-·aircrack-ng -J miCaptura Captura-01.cap (esto hace el hccap pero en binario)
+> aircrack-ng -J miCaptura Captura-01.cap (esto hace el hccap pero en binario)
 
 # genera hash de las creds
-·hccap2john miCaptura.hccap > miHash (esto lo pasa a json, solo falte desencriptarlo)
+> hccap2john miCaptura.hccap > miHash (esto lo pasa a json, solo falte desencriptarlo)
+```
+
+Una vez hecho esto ya podremos crackear la contraseña:
+
+```
+> john --wordlist={diccionario.txt} miHash
 ```
