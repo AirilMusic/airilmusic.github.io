@@ -60,3 +60,14 @@ También veremos como hacerlo con esta herramienta que ya es bastante antigua, p
 > pyrit -r Captura-01.cap -e {nombre del ap} -i diccionario.txt attack_passthrough 
 ```
 
+## Craking con Coupatty
+
+```
+> cowpatty -r {captura.cap} -f {diccionario.txt} -s {nombre del ap}
+```
+
+## TÉCNICAS DE ACELERACIÓN
+
+Las técnicas que hemos visto son bastante lentas, por lo que si no queremos estar varias horas con eso también podemos utilizar las siguientes técnicas que son considerablemente más rápidas.
+
+
