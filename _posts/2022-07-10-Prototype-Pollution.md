@@ -183,7 +183,7 @@ Pero hay otras formas de acceder al `Prototype`:
 > Object.prototype
 ```
 
-Y hay otras dos formas que utilizan `metodos especiales de Js` al llamar a nuestro objeto:
+Y hay otras dos formas que utilizan `métodos especiales de Js` al llamar a nuestro objeto:
 
 ```
 > obj.__proto__
@@ -193,9 +193,9 @@ Y hay otras dos formas que utilizan `metodos especiales de Js` al llamar a nuest
 > obj.constructor.prototype
 ```
 
-Esas tres ocpiones te daran el mismo resultado.
+Esas tres opciones te darán el mismo resultado.
 
-Asi podremos modificar o añadir propiedades a cualquier objeto. Por ejemplo:
+Así podremos `modificar o añadir propiedades` a cualquier objeto. Por ejemplo:
 
 ```
 > Object.prototype.new = 'added'
@@ -221,6 +221,35 @@ Asi podremos modificar o añadir propiedades a cualquier objeto. Por ejemplo:
   - get __proto__: ƒ __proto__()
   - set __proto__: ƒ __proto__()
 ```
+
+Y veremos qué hemos `añadido` una nueva propiedad.
+
+¿Pero qué pasa si intentamos `modificar` una propiedad `existente`?
+
+Por ejemplo, vamos a crear una función y vamos a intentar modificarla y luego ejecutarla:
+
+```
+> obj.toString()
+
+>Object.prototype.toString = 1
+
+> obj.toString()
+
+#Aqui nos dara un error diciendo que el string no es una funcion, eso es obvio
+```
+
+Pero que pasa si hacemos una función que por ejemplo ponga un pop-up de una alerta (pero puede ser cualquier otra cosa) y se lo añadimos a nuestro método `toString`:
+
+```
+> function hacked() {alert('hacked')}
+
+> Object.prototype.toString = hacked
+
+> obj.toString()
+```
+
+Pues nos aparece el pop up, esto significa que hemos conseguido modificarla y poder ejecutarla. Claro, aquí esto no supone un problema, pero si alguien de forma maliciosa `puede inyectar código` JavaScript, se pueden hacer cosas no tan inofensivas. 
+
 
 ## ¿ COMO EXPLOTAR LA VULNERABILIDAD ?
 
