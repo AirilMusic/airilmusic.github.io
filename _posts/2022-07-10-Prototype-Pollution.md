@@ -116,6 +116,76 @@ Podemos ver que ambos objetos contienen las mismas cosas. Y si ponemos un numero
   - [[PrimitiveValue]]: 0
 ```
 
+Y si probamos a poner un caracter o un string nos da algo parecido:
+
+```
+> Object.getPrototypeOf("a")
+
+· String {'', constructor: ƒ, anchor: ƒ, at: ƒ, big: ƒ, …}
+  - anchor: ƒ anchor()
+  - at: ƒ at()
+  - big: ƒ big()
+  - blink: ƒ blink()
+  - bold: ƒ bold()
+  - charAt: ƒ charAt()
+  - charCodeAt: ƒ charCodeAt()
+  - codePointAt: ƒ codePointAt()
+  - concat: ƒ concat()
+  - constructor: ƒ String()
+  - endsWith: ƒ endsWith()
+  - fixed: ƒ fixed()
+  - fontcolor: ƒ fontcolor()
+  - fontsize: ƒ fontsize()
+  - includes: ƒ includes()
+  - indexOf: ƒ indexOf()
+  - italics: ƒ italics()
+  - lastIndexOf: ƒ lastIndexOf()
+  - length: 0
+  - link: ƒ link()
+  - localeCompare: ƒ localeCompare()
+  - match: ƒ match()
+  - matchAll: ƒ matchAll()
+  - normalize: ƒ normalize()
+  - padEnd: ƒ padEnd()
+  - padStart: ƒ padStart()
+  - repeat: ƒ repeat()
+  - replace: ƒ replace()
+  - replaceAll: ƒ replaceAll()
+  - search: ƒ search()
+  - slice: ƒ slice()
+  - small: ƒ small()
+  - split: ƒ split()
+  - startsWith: ƒ startsWith()
+  - strike: ƒ strike()
+  - sub: ƒ sub()
+  - substr: ƒ substr()
+  - substring: ƒ substring()
+  - sup: ƒ sup()
+  - toLocaleLowerCase: ƒ toLocaleLowerCase()
+  - toLocaleUpperCase: ƒ toLocaleUpperCase()
+  - toLowerCase: ƒ toLowerCase()
+  - toString: ƒ toString()
+  - toUpperCase: ƒ toUpperCase()
+  - trim: ƒ trim()
+  - trimEnd: ƒ trimEnd()
+  - trimLeft: ƒ trimStart()
+  - trimRight: ƒ trimEnd()
+  - trimStart: ƒ trimStart()
+  - valueOf: ƒ valueOf()
+  - Symbol(Symbol.iterator): ƒ [Symbol.iterator]()
+  - [[Prototype]]: Object
+  [[PrimitiveValue]]: ""
+```
+
+Pero hay otras formas de acceder al `Prototype`:
+
+```
+> Object.prototype
+```
+
+Y hay otras dos formas que utilizan `metodos especiales de Js` al llamar a nuestro objeto:
+
+
 
 ## ¿ COMO EXPLOTAR LA VULNERABILIDAD ?
 
