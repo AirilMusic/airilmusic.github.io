@@ -20,6 +20,7 @@ En un programa de `bug bounty` me he encontrado que una web tiene la version de 
 Claro, en ese programa la vulnerabilidad de `XSS` no estaba en el scope, entonces me he decidido por el `Prototype Pollution`, y pensando que habría algún exploit y no seria del otro mundo, me he encontrado con esta vulnerabilidad que es muy compleja y no muchos entienden, así que a la vez que yo voy aprendiendo sobre ella se me ha ocurrido escribir este artículo con la finalidad de que tanto yo como cualquier otra persona pueda `entender en que consiste` y `como explotar esta vulnerabilidad`.
 Así que en este artículo veremos esta interesante y compleja vulnerabilidad.
 
+Cabe recalcar que esta vulnerabilidad es una vulnerabilidad muy grave, ya que permite `ejecutar código remoto (RCE)` o hacer ataques de `denegación de servicios (DOS)`.
 
 ## ¿ CUANDO PODEMOS EXPLOTAR ESTA VULNERABILIDAD ?
 
@@ -250,7 +251,7 @@ Pero que pasa si hacemos una función que por ejemplo ponga un pop-up de una ale
 
 Pues nos aparece el pop up, esto significa que hemos conseguido modificarla y poder ejecutarla. Claro, aquí esto no supone un problema, pero si alguien de forma maliciosa `puede inyectar código` JavaScript, se pueden hacer cosas no tan inofensivas. 
 
-Por eso la vulnerabilidad se llama `Prototype Pollution` porque los usuarios pueden `contaminar el prototype` injectandole codigo y asi modificar el funcionamiento de aplicaciones o sitios web.
+Por eso la vulnerabilidad se llama `Prototype Pollution` porque los usuarios pueden `contaminar el prototype` inyectándole código y así modificar el funcionamiento de aplicaciones o sitios web.
 
 
 ## ¿ COMO EXPLOTAR LA VULNERABILIDAD ?
