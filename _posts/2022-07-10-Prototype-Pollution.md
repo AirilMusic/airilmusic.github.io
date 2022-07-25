@@ -250,6 +250,8 @@ Pero que pasa si hacemos una función que por ejemplo ponga un pop-up de una ale
 
 Pues nos aparece el pop up, esto significa que hemos conseguido modificarla y poder ejecutarla. Claro, aquí esto no supone un problema, pero si alguien de forma maliciosa `puede inyectar código` JavaScript, se pueden hacer cosas no tan inofensivas. 
 
+Por eso la vulnerabilidad se llama `Prototype Pollution` porque los usuarios pueden `contaminar el prototype` injectandole codigo y asi modificar el funcionamiento de aplicaciones o sitios web.
+
 
 ## ¿ COMO EXPLOTAR LA VULNERABILIDAD ?
 
