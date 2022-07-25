@@ -185,7 +185,42 @@ Pero hay otras formas de acceder al `Prototype`:
 
 Y hay otras dos formas que utilizan `metodos especiales de Js` al llamar a nuestro objeto:
 
+```
+> obj.__proto__
+```
 
+```
+> obj.constructor.prototype
+```
+
+Esas tres ocpiones te daran el mismo resultado.
+
+Asi podremos modificar o añadir propiedades a cualquier objeto. Por ejemplo:
+
+```
+> Object.prototype.new = 'added'
+  'added'  
+  
+  
+> Object.prototype
+
+·{new: 'added', constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, …}
+  new: "added"
+  - constructor: ƒ Object()
+  - hasOwnProperty: ƒ hasOwnProperty()
+  - isPrototypeOf: ƒ isPrototypeOf()
+  - propertyIsEnumerable: ƒ propertyIsEnumerable()
+  - toLocaleString: ƒ toLocaleString()
+  - toString: ƒ toString()
+  - valueOf: ƒ valueOf()
+  - __defineGetter__: ƒ __defineGetter__()
+  - __defineSetter__: ƒ __defineSetter__()
+  - __lookupGetter__: ƒ __lookupGetter__()
+  - __lookupSetter__: ƒ __lookupSetter__()
+  - __proto__: (...)
+  - get __proto__: ƒ __proto__()
+  - set __proto__: ƒ __proto__()
+```
 
 ## ¿ COMO EXPLOTAR LA VULNERABILIDAD ?
 
