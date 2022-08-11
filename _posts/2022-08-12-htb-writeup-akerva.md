@@ -123,7 +123,6 @@ Total requests: 220560
 ID           Response   Lines    Word       Chars       Payload                                                                                                                     
 =====================================================================
 
-000000004:   200        144 L    577 W      10532 Ch    "#"                                                                                                            
 000000241:   301        9 L      28 W       315 Ch      "wp-content"                                                                                                                
 000000274:   401        14 L     54 W       458 Ch      "scripts"                                                                                                                                                                                                                                    
 000000786:   301        9 L      28 W       316 Ch      "wp-includes"                                                                                                               
