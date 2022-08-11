@@ -16,7 +16,7 @@ tags:
   - WordPress
 ---
 
-![](/assets/images/htb_writeup_akerva/akerva.PNG)
+![](/assets/images/htb_writeup_akerva/akerva2.png)
 Akerva es una máquina de la sección Fortress de Hack The Box en la que se pueden hackear un montón de cosas, así podemos practicar un montón de técnicas distintas en la misma máquina.
 
 ## PORT SCAN
