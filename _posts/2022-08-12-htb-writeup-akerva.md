@@ -155,3 +155,5 @@ ID           Response   Lines    Word       Chars       Payload
 000017049:   405        0 L      6 W        42 Ch       "xmlrpc"                                                                                                               
 000046026:   302        0 L      0 W        0 Ch        "wp-signup"                                                                                       
 ```
+
+He probado con un `Idor` en el directorio `/wp-admin`, ya que hacía un `redirect al login` y ha funcionado, he `bypasseado el login`, pero la página estaba en blanco, es muy raro, supongo que no irán por ahí los tiros. Así que no merece la pena explicar ahora esa vulnerabilidad, ya que me da un poco pereza y total, ya la explicaré en otro momento.
