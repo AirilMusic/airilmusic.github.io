@@ -57,4 +57,16 @@ Por otra parte, también vemos el `puerto 80` por lo que podemos suponer que tie
 
 Y también el `5000 http`, es decir, otro servicio `web`, pero en este vemos un que tiene una cosita bastante interesante que es `Werkzeug`, así que es algo que tenemos que tener en cuenta luego al ver a fondo ese puerto, ya que esa versión puede tener alguna vulnerabilidad.
 
-También `nmap` ya nos dice que es una máquina Linux, pero por si acaso vamos a mandarle una `traza ICMP` para mediante el `ttl: time to live` poder saber cuál es el sistema operativo `OS` con más exactitud. 
+También `nmap` ya nos dice que es una máquina Linux, pero por si acaso vamos a mandarle una `traza ICMP` para mediante el `ttl: time to live` poder saber cuál es el sistema operativo `OS` con más exactitud.
+
+```
+> ping -c 1 10.13.37.11
+
+PING 10.13.37.11 (10.13.37.11) 56(84) bytes of data.
+64 bytes from 10.13.37.11: icmp_seq=1 ttl=63 time=106 ms
+
+--- 10.13.37.11 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 105.970/105.970/105.970/0.000 ms
+```
+
