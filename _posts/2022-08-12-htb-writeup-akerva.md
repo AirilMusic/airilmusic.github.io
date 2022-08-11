@@ -82,3 +82,7 @@ Si vamos a su sitio web veremos esto:
 En un principio puede parecer que no hay gran cosa, pero si nos fijamos en la parte de abajo de la web tenemos una información muy útil. El gestor de contenido de la web es `WordPress` y si miramos con `Wappalizer` veremos lo mismo, es decir que ya sabemos por donde tirar.
 
 También es verdad que en la izquierda podemos ver unos nombres que quizás más adelante pudrían ser usuarios válidos, pero de momento no nos son de utilidad.
+
+Antes de empezar a hacer pruebas voy a mirar el código, aver si hay algún subdominio/directorio/... interesante y ya de paso a ver si hay alguna flag. Y resulta que no hay nada interesante, pero nos encontramos con la PRIMERA FLAG: ` `
+
+![](/assets/images/htb_writeup_akerva/flag-1.PNG)
