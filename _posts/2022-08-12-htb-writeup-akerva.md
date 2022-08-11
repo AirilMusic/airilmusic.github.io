@@ -86,3 +86,13 @@ También es verdad que en la izquierda podemos ver unos nombres que quizás más
 Antes de empezar a hacer pruebas voy a mirar el código, aver si hay algún subdominio/directorio/... interesante y ya de paso a ver si hay alguna flag. Y resulta que no hay nada interesante, pero nos encontramos con la PRIMERA FLAG: `AKERVA{Ikn0w_F0rgoTTEN#CoMmeNts}`
 
 ![](/assets/images/htb_writeup_akerva/flag-1.PNG)
+
+Ahora ya podemos empezar a hacer `reconocimiento` de la web a ver si encontramos algo interesante.
+
+Para empezar podemos mirar con `Wappalizer` y ahí encontramos un par de cosas interesantes:
+
+![](/assets/images/htb_writeup_akerva/wappalizer.PNG)
+
+Podemos ver que hay una base de datos, `MySQL` y sabiendo que el gestor es un `Wordpress`, pues huele mucho a que en algún punto es vulnerable a `SQL injection`. Ya que los Worpress son muy propensos a tener esa clase de vulnerabilidades.
+
+También podemos ver que tiene `JQuery`, pero no es de una versión vulnerable a `Prototype Pollution`, ya que el último artículo que hice fue sobre eso y me hacía ilusión XD, pero por si acaso voy a mirar a ver si es vulnerable a otras cosas. No, no parece tener ninguna vulnerabilidad asociada a esas versiones.
