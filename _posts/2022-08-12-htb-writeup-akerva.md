@@ -96,3 +96,13 @@ Para empezar podemos mirar con `Wappalizer` y ahí encontramos un par de cosas i
 Podemos ver que hay una base de datos, `MySQL` y sabiendo que el gestor es un `Wordpress`, pues huele mucho a que en algún punto es vulnerable a `SQL injection`. Ya que los Worpress son muy propensos a tener esa clase de vulnerabilidades.
 
 También podemos ver que tiene `JQuery`, pero no es de una versión vulnerable a `Prototype Pollution`, ya que el último artículo que hice fue sobre eso y me hacía ilusión XD, pero por si acaso voy a mirar a ver si es vulnerable a otras cosas. No, no parece tener ninguna vulnerabilidad asociada a esas versiones.
+
+También podemos probar con `Whatweb` a ver si vemos algo interesante:
+
+```
+> whatweb http://10.13.37.11/
+
+http://10.13.37.11/ [200 OK] Apache[2.4.29], Country[RESERVED][ZZ], HTML5, HTTPServer[Ubuntu Linux][Apache/2.4.29 (Ubuntu)], IP[10.13.37.11], JQuery, MetaGenerator[WordPress 5.4-alpha-47225], PoweredBy[@lydericlefebvre,WordPress], Script, Title[Root of the Universe &#8211; by @lydericlefebvre &amp; @akerva_fr], UncommonHeaders[link], WordPress, x-pingback[http://10.13.37.11/xmlrpc.php]
+```
+
+Pero no nos dice nada que no supiesemos :(
