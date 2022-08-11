@@ -110,6 +110,33 @@ Pero no nos dice nada que no supiesemos :(
 Pues vamos a intentar encontrar directorios con `Wfuzz`:
 
 ```
+❯ wfuzz -c --hc=404 -t 200 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt http://10.13.37.11/FUZZ
+
+********************************************************
+* Wfuzz 3.1.0 - The Web Fuzzer                         *
+********************************************************
+
+Target: http://10.13.37.11/FUZZ
+Total requests: 220560
+
+=====================================================================
+ID           Response   Lines    Word       Chars       Payload                                                                                                                     
+=====================================================================
+
+000000004:   200        144 L    577 W      10532 Ch    "#"                                                                                                            
+000000241:   301        9 L      28 W       315 Ch      "wp-content"                                                                                                                
+000000274:   401        14 L     54 W       458 Ch      "scripts"                                                                                                                                                                                                                                    
+000000786:   301        9 L      28 W       316 Ch      "wp-includes"                                                                                                               
+000000834:   301        9 L      28 W       308 Ch      "dev"                                                                                                                       
+000001073:   301        9 L      28 W       315 Ch      "javascript"                                                                                                                
+000007180:   301        9 L      28 W       313 Ch      "wp-admin"                                                                                                                  
+000011260:   301        9 L      28 W       312 Ch      "backups"                                                                                                                   
+000095524:   403        9 L      28 W       276 Ch      "server-status"       
+```
+
+Archivos .php :
+
+```
 ❯ wfuzz -c --hc=404 -t 200 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt http://10.13.37.11/FUZZ.php
 
 ********************************************************
