@@ -175,3 +175,31 @@ ID           Response   Lines    Word       Chars       Payload
 ```
 
 He probado con un `Idor` en el directorio `/wp-admin`, ya que hacía un `redirect al login` y ha funcionado, he `bypasseado el login`, pero la página estaba en blanco, es muy raro, supongo que no irán por ahí los tiros. Así que no merece la pena explicar ahora esa vulnerabilidad, ya que me da un poco pereza y total, ya la explicaré en otro momento.
+
+En el puerto que estaba por `UDP` hemos visto un directorio interesante: `/var/www/html/scripts/backup_every_17minutes.sh`. Solo se puede acceder a el por `POST`.
+
+```
+❯ curl -X POST http://10.13.37.11/scripts/backup_every_17minutes.sh
+
+#!/bin/bash
+#
+# This script performs backups of production and development websites.
+# Backups are done every 17 minutes.
+# AKERVA{IKNoW###VeRbTamper!nG_==}
+
+SAVE_DIR=/var/www/html/backups
+
+while true
+do
+         ARCHIVE_NAME=backup_$(date +%Y%m%d%H%M%S)
+         echo "Erasing old backups..."
+         rm -rf $SAVE_DIR/*
+
+         echo "Backuping..."
+         zip -r $SAVE_DIR/$ARCHIVE_NAME /var/www/html/*
+
+         echo "Done..."
+         sleep 1020
+done
+```
+Y ahí hay otra flag: `AKERVA{IKNoW###VeRbTamper!nG_==}`
