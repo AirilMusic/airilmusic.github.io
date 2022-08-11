@@ -73,4 +73,11 @@ rtt min/avg/max/mdev = 105.970/105.970/105.970/0.000 ms
 Vemos que el ttl = 63 aunque en la realidad es `ttl = 64` porque la conexión no es directa, sino que pasa por un host intermediario, lo cual le quita uno de ttl. Por lo que podemos saber que estamos ante una máquina Linux.
 
 
+## PUERTO 80
+
+Si vamos a su sitio web veremos esto:
+
+![](/assets/images/htb_writeup_akerva/web-80.PNG)
+
+En un principio puede parecer que no hay gran cosa, pero si nos fijamos en la parte de abajo de la web tenemos una información muy útil. El gestor de contenido de la web es `WordPress` y si miramos con `Wappalizer` veremos lo mismo, es decir que ya sabemos por donde tirar.
 
