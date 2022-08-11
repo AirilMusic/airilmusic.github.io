@@ -5,7 +5,7 @@ excerpt: "Akerva es una máquina de la sección Fortress de Hack The Box."
 date: 2022-08-12
 classes: wide
 header:
-  teaser: /assets/images/htb_writeup_akerva/akerva.png
+  teaser: 
   teaser_home_page: true
   icon: /assets/images/hackthebox.webp
 categories:
