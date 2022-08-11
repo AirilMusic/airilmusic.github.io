@@ -70,3 +70,7 @@ PING 10.13.37.11 (10.13.37.11) 56(84) bytes of data.
 rtt min/avg/max/mdev = 105.970/105.970/105.970/0.000 ms
 ```
 
+Vemos que el ttl = 63 aunque en la realidad es `ttl = 64` porque la conexión no es directa, sino que pasa por un host intermediario, lo cual le quita uno de ttl. Por lo que podemos saber que estamos ante una máquina Linux.
+
+
+
