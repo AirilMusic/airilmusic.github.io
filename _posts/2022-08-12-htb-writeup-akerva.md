@@ -16,4 +16,4 @@ tags:
   - 
 ---
 
-![](/assets/images/htb-writeup-akerva/Akerva.jpg)
+![](/assets/images/htb_writeup_akerva/Akerva.jpg)
