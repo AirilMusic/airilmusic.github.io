@@ -106,3 +106,26 @@ http://10.13.37.11/ [200 OK] Apache[2.4.29], Country[RESERVED][ZZ], HTML5, HTTPS
 ```
 
 Pero no nos dice nada que no supiesemos :(
+
+Pues vamos a intentar encontrar directorios con `Wfuzz`:
+
+```
+❯ wfuzz -c --hc=404 -t 200 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt http://10.13.37.11/FUZZ.php
+
+********************************************************
+* Wfuzz 3.1.0 - The Web Fuzzer                         *
+********************************************************
+
+Target: http://10.13.37.11/FUZZ.php
+Total requests: 220560
+
+=====================================================================
+ID           Response   Lines    Word       Chars       Payload                                                                                                                     
+=====================================================================
+                                                                                     
+000000475:   200        86 L     308 W      5036 Ch     "wp-login"                                                                                                                  
+000000015:   301        0 L      0 W        0 Ch        "index"                                                                                                                                                  
+000005002:   200        4 L      15 W       135 Ch      "wp-trackback"                                                                                                              
+000017049:   405        0 L      6 W        42 Ch       "xmlrpc"                                                                                                               
+000046026:   302        0 L      0 W        0 Ch        "wp-signup"                                                                                       
+```
