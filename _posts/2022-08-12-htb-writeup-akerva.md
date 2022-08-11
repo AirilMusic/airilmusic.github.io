@@ -21,6 +21,8 @@ Akerva es una máquina de la sección Fortress de Hack The Box en la que se pued
 
 ## PORT SCAN
 
+TCP:
+
 ```
 > nmap -sV -sC -Pn -n -T5 10.13.37.11 --open
 
@@ -72,6 +74,22 @@ rtt min/avg/max/mdev = 105.970/105.970/105.970/0.000 ms
 
 Vemos que el ttl = 63 aunque en la realidad es `ttl = 64` porque la conexión no es directa, sino que pasa por un host intermediario, lo cual le quita uno de ttl. Por lo que podemos saber que estamos ante una máquina Linux.
 
+UDP:
+
+```
+❯ sudo nmap -sU --open -T5 --top-ports 200 10.13.37.11
+Nmap scan report for 10.13.37.11
+PORT      STATE         SERVICE
+161/udp   open          snmp
+```
+
+Con `snmpbulkwalk` podemos ver la informacion que haya en ese puerto, y en este caso nos da una FLAG: `AKERVA{IkN0w_SnMP@@@MIsconfigur@T!onS}`
+
+```
+❯ snmpbulkwalk -v2c -c public 10.13.37.11 | grep AKERVA
+
+iso.3.6.1.2.1.25.4.2.1.5.1243 = STRING: "/var/www/html/scripts/backup_every_17minutes.sh AKERVA{IkN0w_SnMP@@@MIsconfigur@T!onS}
+```
 
 ## PUERTO 80
 
@@ -83,7 +101,7 @@ En un principio puede parecer que no hay gran cosa, pero si nos fijamos en la pa
 
 También es verdad que en la izquierda podemos ver unos nombres que quizás más adelante pudrían ser usuarios válidos, pero de momento no nos son de utilidad.
 
-Antes de empezar a hacer pruebas voy a mirar el código, aver si hay algún subdominio/directorio/... interesante y ya de paso a ver si hay alguna flag. Y resulta que no hay nada interesante, pero nos encontramos con la PRIMERA FLAG: `AKERVA{Ikn0w_F0rgoTTEN#CoMmeNts}`
+Antes de empezar a hacer pruebas voy a mirar el código, aver si hay algún subdominio/directorio/... interesante y ya de paso a ver si hay alguna flag. Y resulta que no hay nada interesante, pero nos encontramos otra FLAG: `AKERVA{Ikn0w_F0rgoTTEN#CoMmeNts}`
 
 ![](/assets/images/htb_writeup_akerva/flag-1.PNG)
 
