@@ -202,4 +202,4 @@ do
          sleep 1020
 done
 ```
-Y ahí hay otra flag: `AKERVA{IKNoW###VeRbTamper!nG_==}`
+Y ahí hay otra FLAG: `AKERVA{IKNoW###VeRbTamper!nG_==}`
