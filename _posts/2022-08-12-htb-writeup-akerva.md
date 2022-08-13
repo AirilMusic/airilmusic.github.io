@@ -291,3 +291,12 @@ if __name__ == '__main__':
     print(getattr(app, '__name__', getattr(app.__class__, '__name__')))
     app.run(host='0.0.0.0', port='5000', debug = True)
 ```
+
+
+## PUERTO 5000
+
+Al intentar ir a la web de este puerto nos pide un `user` y una `password`:
+
+![](/assets/images/htb_writeup_akerva/web5000-1.PNG)
+
+Si nos fijamos en el script que hemos visto antes podmeos ver que para el puerto 5000 el user es `aas` y la password es `AKERVA{1kn0w_H0w_TO_$Cr1p_T_$$$$$$$$}`.
