@@ -728,10 +728,12 @@ Para eso tenemos que introducir la infomación que ya sabemos:
 
 Entonces introducimos esa información y le damos a `decrypt`:
 
-![](/assets/images/htb_writeup_akerva/Cryto1.PNG)
+![](/assets/images/htb_writeup_akerva/Cryto1.png)
 
-![](/assets/images/htb_writeup_akerva/Crypto2.PNG)
+![](/assets/images/htb_writeup_akerva/Crypto2.png)
 
 Ahora en el final de esa cadena de texto podemos ver la FLAG: `AKERVA{IKNOOOWVIGEEENERRRE}`
+
+![](/assets/images/htb_writeup_akerva/uwu.PNG)
 
 uwu
