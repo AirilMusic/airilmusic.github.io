@@ -13,6 +13,8 @@ categories:
   - infosec
 tags:  
   - HTB
+  - TCP
+  - UDP
   - WordPress
 ---
 
