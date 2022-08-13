@@ -329,3 +329,5 @@ ID           Response   Lines    Word       Chars       Payload
 
 000003644:   200        52 L     186 W      1985 Ch     "console"         
 ```
+
+Si vamos a ese directorio nos encontramos con que esta bloqueado por un `PIN`.
