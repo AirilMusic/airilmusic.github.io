@@ -299,4 +299,7 @@ Al intentar ir a la web de este puerto nos pide un `user` y una `password`:
 
 ![](/assets/images/htb_writeup_akerva/web5000-1.PNG)
 
-Si nos fijamos en el script que hemos visto antes podmeos ver que para el puerto 5000 el user es `aas` y la password es `AKERVA{1kn0w_H0w_TO_$Cr1p_T_$$$$$$$$}`.
+Si nos fijamos en el script que hemos visto antes podemos ver que para el puerto 5000 el user es `aas` y la password es `AKERVA{1kn0w_H0w_TO_$Cr1p_T_$$$$$$$$}`. Así que las ponemos y nos deja entrar, aunque a primera vista no vemos nada interesante.
+
+![](/assets/images/htb_writeup_akerva/web5000-2.PNG)
+
