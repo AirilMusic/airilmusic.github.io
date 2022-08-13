@@ -311,3 +311,21 @@ Podemos ver que hay dos usuarios: `root` y `aas`. Y ya que nos hemos logueado co
 
 ![](/assets/images/htb_writeup_akerva/web5000-4.PNG)
 
+Ahora si buscamso posibles directorios con `Wfuzz` encontraremos el directorio `console`:
+
+```
+❯ wfuzz -c --hc=404 -t 200 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt http://10.13.37.11:5000/FUZZ
+
+********************************************************
+* Wfuzz 3.1.0 - The Web Fuzzer                         *
+********************************************************
+
+Target: http://10.13.37.11:5000/FUZZ
+Total requests: 220560
+
+=====================================================================
+ID           Response   Lines    Word       Chars       Payload                                                                                                                     
+=====================================================================
+
+000003644:   200        52 L     186 W      1985 Ch     "console"         
+```
