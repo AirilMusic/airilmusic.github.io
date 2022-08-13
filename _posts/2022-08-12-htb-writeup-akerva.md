@@ -212,7 +212,7 @@ Podemos conseguir algo parecido al ver la parte de `Date` en la respuesta al hac
 
 ```
 ❯ curl -I 10.13.37.11 | grep Date
-Date: Fri, 10 Jun 2022 01:03:01 GMT
+Date: Sat, 12 Aug 2022 14:16:27 GMT
 ```
 
-Con esa información ya podemos empezar a saber el nombre del archivo.zip: `backup_2022061001****.zip`. *** son los minutos y segundos, porque es probable que sean diferentes a cuando se hizo el backup.
+Con esa información ya podemos empezar a saber el nombre del archivo.zip: `backup_2022081314****.zip`. *** son los minutos y segundos, porque es probable que sean diferentes a cuando se hizo el backup.
