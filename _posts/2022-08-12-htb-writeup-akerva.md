@@ -206,6 +206,13 @@ done
 ```
 Y ahí hay otra FLAG: `AKERVA{IKNoW###VeRbTamper!nG_==}`
 
-Siguiendo con los scripts vulnerables antes tambien hemos visto un script que si lo analizamos crea un .zip comprimiendo cada 1020 segundos todo lo que esta en /var/www/html en /var/www/html/backups con el nombre iniciando con backup_ seguido de el año, mes, dia, hora, minuto y segundo en el que se creó.
+Siguiendo con los `scripts vulnerables` antes también hemos visto un script que si lo analizamos `crea un .zip` comprimiendo `cada 1020 segundos` todo lo que está en `/var/www/html en /var/www/html/backups` con el nombre iniciando con backup_ seguido del año, mes, día, hora, minuto y segundo en el que se creó.
 
 Podemos conseguir algo parecido al ver la parte de `Date` en la respuesta al hacerle un `curl`.
+
+```
+❯ curl -I 10.13.37.11 | grep Date
+Date: Fri, 10 Jun 2022 01:03:01 GMT
+```
+
+Con esa información ya podemos empezar a saber el nombre del archivo.zip: `backup_2022061001****.zip`. *** son los minutos y segundos, porque es probable que sean diferentes a cuando se hizo el backup.
