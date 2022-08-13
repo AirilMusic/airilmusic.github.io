@@ -330,4 +330,8 @@ ID           Response   Lines    Word       Chars       Payload
 000003644:   200        52 L     186 W      1985 Ch     "console"         
 ```
 
-Si vamos a ese directorio nos encontramos con que esta bloqueado por un `PIN`.
+Si vamos a ese directorio nos encontramos con que está bloqueado por un `PIN`. 
+
+En la fase de reconocimiento hemos visto que el puerto 5000 tenía `Werkzeug` y en `hacktricks` hay un `exploit` para esa versión. Si a ese exploit le cambiamos un par de cosas y lo ejecutamos, nos debería dar un pin válido.
+
+
