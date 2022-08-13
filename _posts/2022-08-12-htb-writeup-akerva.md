@@ -227,6 +227,17 @@ Total requests: 10000
 ID           Response   Lines    Word       Chars       Payload                      
 =====================================================================
 
-000000227:   200        9 L      42 W       493 Ch      "0226"
+000000227:   200        9 L      42 W       493 Ch      "1454"
 ```
+
+Una vez conociendo estos números ya podemos completar el nombre del archivo, y con hacer un `wget` a ese archivo ya podremos conseguir él .zip.
+
+```
+> wget http://10.13.37.11/backups/backup_20220813141454.zip
+Grabando a: «backup_20220813141454.zip»
+
+backup_20220813141454.zip      100%[=================================>]  21.05M
+```
+
+Y ya tendríamos el archivo.
 
