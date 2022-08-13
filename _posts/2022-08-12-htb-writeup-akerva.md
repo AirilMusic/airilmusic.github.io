@@ -307,7 +307,7 @@ También si nos damos cuenta, en el script podemos ver una función que podría 
 
 ![](/assets/images/htb_writeup_akerva/web5000-3.PNG)
 
-Podemos ver que hay dos usuarios: `root` y `aas`. Y ya que nos hemos logueado como aas podemos probar ahacer un lfi a ver si conseguimos ver su FLAG: `AKERVA{IKNOW#LFi_@_}`
+Podemos ver que hay dos usuarios: `root` y `aas`. Y ya que nos hemos logueado como aas podemos probar a hacer un lfi a ver si conseguimos ver su FLAG: `AKERVA{IKNOW#LFi_@_}`
 
 ![](/assets/images/htb_writeup_akerva/web5000-4.PNG)
 
