@@ -307,5 +307,7 @@ También si nos damos cuenta, en el script podemos ver una función que podría 
 
 ![](/assets/images/htb_writeup_akerva/web5000-3.PNG)
 
-Ya podríamos ver los usuarios existentes, pero para verlo más fácilmente vamos a filtrarlos desde la terminal:
+Podemos ver que hay dos usuarios: `root` y `aas`. Y ya que nos hemos logueado como aas podemos probar ahacer un lfi a ver si conseguimos ver su FLAG: `AKERVA{IKNOW#LFi_@_}`
+
+![](/assets/images/htb_writeup_akerva/web5000-4.PNG)
 
