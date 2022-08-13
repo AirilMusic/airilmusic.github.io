@@ -688,6 +688,7 @@ execve(SUDO_PATH, argv, env)
 ```
 
 Lo ejecutamos y nos convierte en el usuario `root`:
+
 FLAG: `AKERVA{IkNow_Sud0_sUckS!}`
 
 ```
@@ -700,4 +701,37 @@ root
 AKERVA{IkNow_Sud0_sUckS!}
 ```
 
+
 ## FLAG EXTRA: Cryptografia
+
+En el directorio `/root` también nos encontramos el archivo `secured_note.md` que contiene una cadena encriptada en `base64`. La decodeamos pero sigue encriptada:
+
+```
+root@Leakage:~# cat secured_note.md 
+R09BSEdIRUVHU0FFRUhBQ0VHVUxSRVBFRUVDRU9LTUtFUkZTRVNGUkxLRVJVS1RTVlBNU1NOSFNL
+UkZGQUdJQVBWRVRDTk1ETFZGSERBT0dGTEFGR1NLRVVMTVZPT1dXQ0FIQ1JGVlZOVkhWQ01TWUVM
+U1BNSUhITU9EQVVLSEUK
+
+@AKERVA_FR | @lydericlefebvre
+root@Leakage:~# echo "R09BSEdIRUVHU0FFRUhBQ0VHVUxSRVBFRUVDRU9LTUtFUkZTRVNGUkxLRVJVS1RTVlBNU1NOSFNLUkZGQUdJQVBWRVRDTk1ETFZGSERBT0dGTEFGR1NLRVVMTVZPT1dXQ0FIQ1JGVlZOVkhWQ01TWUVMU1BNSUhITU9EQVVLSEUK" | base64 -d
+GOAHGHEEGSAEEHACEGULREPEEECEOKMKERFSESFRLKERUKTSVPMSSNHSKRFFAGIAPVETCNMDLVFHDAOGFLAFGSKEULMVOOWWCAHCRFVVNVHVCMSYELSPMIHHMODAUKHE
+```
+
+Por lo que vamos a utilizar vigenere-cipher para decodear lo que nos queda.
+
+Para eso tenemos que introducir la infomación que ya sabemos:
+
+-No tenemo las letras `B,J,Q,X,Z` por lo que nuestro alphabet se reduce a `ACDEFGHIKLMNOPRSTUVWY`
+
+-Conocemos el principio de la flag: `AKERVA`
+
+
+Entonces introducimos esa información y le damos a `decrypt`:
+
+![](/assets/images/htb_writeup_akerva/Cryto1.PNG)
+
+![](/assets/images/htb_writeup_akerva/Crypto2.PNG)
+
+Ahora en el final de esa cadena de texto podemos ver la FLAG: `AKERVA{IKNOOOWVIGEEENERRRE}`
+
+uwu
