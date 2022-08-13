@@ -16,6 +16,10 @@ tags:
   - TCP
   - UDP
   - WordPress
+  - snmp
+  - LFI
+  - Werkzeug
+  - Cryptography
 ---
 
 ![](/assets/images/htb_writeup_akerva/akerva2.png)
