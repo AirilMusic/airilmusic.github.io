@@ -303,3 +303,9 @@ Si nos fijamos en el script que hemos visto antes podemos ver que para el puerto
 
 ![](/assets/images/htb_writeup_akerva/web5000-2.PNG)
 
+También si nos damos cuenta, en el script podemos ver una función que podría llegar a provocar un `LFI` con /file y el `gruapper` filename:
+
+![](/assets/images/htb_writeup_akerva/web5000-3.PNG)
+
+Ya podríamos ver los usuarios existentes, pero para verlo más fácilmente vamos a filtrarlos desde la terminal:
+
