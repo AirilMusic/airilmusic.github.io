@@ -728,7 +728,7 @@ Para eso tenemos que introducir la infomación que ya sabemos:
 
 Entonces introducimos esa información y le damos a `decrypt`:
 
-![](/assets/images/htb_writeup_akerva/Cryto1.png)
+![](/assets/images/htb_writeup_akerva/Crypto1.png)
 
 ![](/assets/images/htb_writeup_akerva/Crypto2.png)
 
