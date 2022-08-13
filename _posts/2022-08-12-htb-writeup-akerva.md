@@ -215,4 +215,18 @@ Podemos conseguir algo parecido al ver la parte de `Date` en la respuesta al hac
 Date: Sat, 12 Aug 2022 14:16:27 GMT
 ```
 
-Con esa información ya podemos empezar a saber el nombre del archivo.zip: `backup_2022081314****.zip`. *** son los minutos y segundos, porque es probable que sean diferentes a cuando se hizo el backup.
+Con esa información ya podemos empezar a saber el nombre del archivo.zip: `backup_2022081314****.zip`. **** son los minutos y segundos, porque es probable que sean diferentes a cuando se hizo el backup. Pero no hay problema ya que el resto lo podemos conseguir a `fuerza bruta` con `wfuzz`:
+
+```
+❯ wfuzz -c -u http://10.13.37.11/backups/backup_2022061001FUZZ.zip -w /usr/share/seclists/Fuzzing/4-digits-0000-9999.txt --hc 404
+
+Target: http://10.13.37.11/backups/backup_2022061001FUZZ.zip
+Total requests: 10000
+
+=====================================================================
+ID           Response   Lines    Word       Chars       Payload                      
+=====================================================================
+
+000000227:   200        9 L      42 W       493 Ch      "0226"
+```
+
