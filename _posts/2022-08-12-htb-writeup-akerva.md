@@ -205,3 +205,7 @@ do
 done
 ```
 Y ahí hay otra FLAG: `AKERVA{IKNoW###VeRbTamper!nG_==}`
+
+Siguiendo con los scripts vulnerables antes tambien hemos visto un script que si lo analizamos crea un .zip comprimiendo cada 1020 segundos todo lo que esta en /var/www/html en /var/www/html/backups con el nombre iniciando con backup_ seguido de el año, mes, dia, hora, minuto y segundo en el que se creó.
+
+Podemos conseguir algo parecido al ver la parte de `Date` en la respuesta al hacerle un `curl`.
