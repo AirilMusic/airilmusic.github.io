@@ -44,7 +44,7 @@ Este ejemplo es un `buffer overflow` o `buffer overrun` típico. Claro, si con e
 ![](/assets/images/web-hacking/Buffer-overflow/buffer-overflow.png)
 
 
-## Vulnerabilidad y Ataques:
+## VULNERABILIDAD y ATAQUES:
 
 Los `lenguajes de programación más propensos` a sufrir esta vulnerabilidad son `C` y `C++`, pero `lenguajes más modernos` como Java, Python o C# `tienen medidas` para dificultar la aparición de estas vulnerabilidades, pero pueden seguir habiéndolas.
 
@@ -60,3 +60,19 @@ Hay `muchas estrategias` para `explotar` el buffer overflow, pero las dos `más 
 -`Stack overflow attack`: esto es cuando intentamos meter en un buffer de un programa más datos de los que tiene asignados, esto casi siempre resulta en la corrupción de los datos adyacentes al bufer. Este es el más común de este tipo de ataques.
 
 -`Heap overflow attack`: Esto pasa cuando el buffer donde es guardada la información tiene mucha más memoria asignada de la necesaria. Para explotar esto se corrompen los datos almacenados para que la aplicación o la web sobreescriban las estructuras internas. Este tipo de ataques se dirigen a los datos del grupo de memoria abierto conocido como montón (heap).
+
+
+# DETECCIÓN
+
+El buffer overflow `suele ocurrir porque` los programadores `no detectan e impiden` que se `ponga más información de la permitida`. Para solucionarlo, los programadores deberían `prestarle más atención` sobre todo a las `líneas` del código `relacionadas con el buffer`.
+
+Ejemplos de `codigo vulnerable`:
+
+```
+variable $username [8]
+print “Enter Username:”
+getstring ($username)
+```
+
+El anterior código es vulnerable, ya que `le asigna 8 bytes` a la variable `$username`, pero `no pone` nada que `limite` que se puedan escribir más bytes. Es decir, que el programa está hecho para meter nombres como Paco, o como Manolito, pero si se mete un nombre como AntonioXXXXXXX el programa crasheará. Por desgracia o afortunadamente, depende como se mire, los `lenguajes como C o C++ no están preparados` para este tipo de errores, entonces si no se programa bien la aplicación la `información sobrante al buffer se escribirá en la memoria`, así por la cara.
+
