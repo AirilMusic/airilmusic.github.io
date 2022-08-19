@@ -37,9 +37,10 @@ Basicamente consiste en `escribir o descargar mas informacion en el buffer de lo
 
 
 ### Ejemplo:
-    Joe tiene una web donde los usuarios tienen que meter su nombre para acceder, la web tiene 8 bits de bufer de los nombres de usuario, porque no espera que nadie meta un nombre mayor a 8 letras. Pero Jane mete un nombre de 10 letras, entonces las primeras 8 entrarian en el buffer pero las siguientes 2 harian overflow. Para su sorpresa la web se conjelara y no dara como valido ningun otro input de nombre de usuario, causando una Denegacion de Servicio (DoS).
+   Joe tiene una web donde los usuarios tienen que meter su nombre para acceder, la web tiene 8 bits de bufer de los nombres de usuario, porque no espera que nadie meta un nombre mayor a 8 letras. Pero Jane mete un nombre de 10 letras, entonces las primeras 8 entrarian en el buffer pero las siguientes 2 harian overflow. Para su sorpresa la web se conjelara y no dara como valido ningun otro input de nombre de usuario, causando una Denegacion de Servicio (DoS).
 		
-    Este ejemplo es un buffer overflow o buffer overrun tipico. Claro, si con esto introducimos una funcion la copiamos en todos los demas buffers de alrededor, por lo tanto podriamos llegar a conseguir Arbitrari Code Execution (ejecucion arbitraria de comandos).
+   Este ejemplo es un buffer overflow o buffer overrun tipico. Claro, si con esto introducimos una funcion la copiamos en todos los demas buffers de alrededor, por lo tanto podriamos llegar a conseguir Arbitrari Code Execution (ejecucion arbitraria de comandos).
 
+![](/assets/images/web-hacking/Buffer-overflow/buffer-overflow.png)
 
 ## Vulnerabilidad y Ataques:
