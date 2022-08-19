@@ -35,3 +35,11 @@ Claro, si `le cuesta más descargarse que lo que le cuesta procesar` la informac
 
 Basicamente consiste en `escribir o descargar mas informacion en el buffer de lo que es capaz de retener`, esto se hace `con el fin de` que + `crashee`, o `corrompa` la informacion. Es como si unos ñiños a un deposito donde solo entran 10 litro intentan meter 5 mas, claro, el liquido se saldria del buffer que en este caso es el deposito, entonces 	haria buffer overflow.
 
+
+### Ejemplo:
+    Joe tiene una web donde los usuarios tienen que meter su nombre para acceder, la web tiene 8 bits de bufer de los nombres de usuario, porque no espera que nadie meta un nombre mayor a 8 letras. Pero Jane mete un nombre de 10 letras, entonces las primeras 8 entrarian en el buffer pero las siguientes 2 harian overflow. Para su sorpresa la web se conjelara y no dara como valido ningun otro input de nombre de usuario, causando una Denegacion de Servicio (DoS).
+		
+    Este ejemplo es un buffer overflow o buffer overrun tipico. Claro, si con esto introducimos una funcion la copiamos en todos los demas buffers de alrededor, por lo tanto podriamos llegar a conseguir Arbitrari Code Execution (ejecucion arbitraria de comandos).
+
+
+## Vulnerabilidad y Ataques:
