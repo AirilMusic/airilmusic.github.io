@@ -108,4 +108,4 @@ Claro, eso no se puede hacer siempre, porque puede suponer mucho trabajo rehacer
 
 ![](/assets/images/web-hacking/Buffer-overflow/eternalblue.png)
 
-Como extra y ya que es un exploit que utiliza este tipo de vulnerabilidad para tomar acceso de una maquina Windows antigua mediante SMBv1.
+Como extra y ya que es un exploit que utiliza este tipo de vulnerabilidad para tomar acceso de una máquina Windows antigua mediante SMBv1 se me ha ocurrido explicar este famoso exploit.
