@@ -22,7 +22,7 @@ Esta es una vulnerabilidad que afecta a contraseñas como a campos de texto, ya 
 
 
 # EN QUE SE BASA ESTA VULNERABILIDAD:
-## Bufer:
+## Buffer:
 
 Antes de entrar en una forma más técnica es por ejemplo como un contenedor de agua que se puede llenar o vaciar para que luego esa agua valla por ejemplo a un grifo (el contenedor es el buffer y el grifo es la información que se está procesando en ese momento).
 
@@ -30,4 +30,8 @@ Es lo que `se descarga en la RAM con anterioridad`, para luego ser procesado. Po
 
 Claro, si `le cuesta más descargarse que lo que le cuesta procesar` la información (en el ejemplo de youtube que veas el video más rápido de lo que le da tiempo a descargarse) hay `lag` y, por lo tanto, hay parones, pero claro, puede pasar lo contrario, que `el tiempo de descarga sea más rápido que el tiempo de procesado` por lo que eso `puede llenar más RAM` de la que se le ha dado por lo que eso causa o que `se congele la pantalla` o `se corrompa la información` o directamente que se `crashee` y a eso se le llama `buffer overflow`, ósea, que pete el bufer porque se llena.
 
+
+## Buffer overflow:
+
+Basicamente consiste en `escribir o descargar mas informacion en el buffer de lo que es capaz de retener`, esto se hace `con el fin de` que + `crashee`, o `corrompa` la informacion. Es como si unos ñiños a un deposito donde solo entran 10 litro intentan meter 5 mas, claro, el liquido se saldria del buffer que en este caso es el deposito, entonces 	haria buffer overflow.
 
