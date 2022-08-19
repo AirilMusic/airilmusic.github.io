@@ -109,3 +109,19 @@ Claro, eso no se puede hacer siempre, porque puede suponer mucho trabajo rehacer
 ![](/assets/images/web-hacking/Buffer-overflow/eternalblue.png)
 
 Como extra y ya que es un exploit que utiliza este tipo de vulnerabilidad para tomar acceso de una máquina Windows antigua mediante SMBv1 se me ha ocurrido explicar este famoso exploit.
+
+Primero, como dato curioso y de historia, tengo que mencionar que el `eternalblue` fue un `exploit` creado por la `NSA` y robado por el grupo de hackers `Shadow Breackers`.
+
+## Funcionamiento:
+
+
+
+
+## Explotación:
+
+Para esto es tan fácil como hacer un `search eternalblue` en `metasploit` y listo, y sino también hay muchos `exploits` públicos y privados en internet.
+
+
+## Prevención:
+
+Para prevenir esta vulnerabilidad es tan fácil como tener los equipos y los programas actualizados.
