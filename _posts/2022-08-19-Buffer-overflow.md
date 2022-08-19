@@ -5,7 +5,7 @@ excerpt: "En este artículo vamos a ver el ataque Buffer overflow, ya que es un 
 date: 2022-08-19
 classes: wide
 header:
-  teaser: /assets/images/web-hacking/Buffer-overflow/buffer-overflow-attack.png
+  teaser: /assets/images/web-hacking/Buffer-overflow/buffer-overflow-attacks.png
   teaser_home_page: true
   icon: 
 categories:
@@ -15,4 +15,4 @@ tags:
   - Buffer overflow
 ---
 
-![](/assets/images/web-hacking/Buffer-overflow/buffer-overflow-attack.png)
+![](/assets/images/web-hacking/Buffer-overflow/buffer-overflow-attacks.png)
