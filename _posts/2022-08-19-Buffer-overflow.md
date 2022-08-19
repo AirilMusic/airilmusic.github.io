@@ -88,13 +88,13 @@ Para `buscar` esta vulnerabilidad en el código: es importante entender como fun
 
 # MITIGAR LA VULNERABILIDAD
 
-Lo primero es la codificación segura, funciones de manejo seguro del buffer, revisión del código, detección de buffer overflow mientras se ejecuta el programa y detección de 	exploits a través del sistema operativo.
+Lo primero es la `codificación segura`, funciones de manejo seguro del buffer, `revisión del código`, `detección` de buffer overflow `mientras se ejecuta el programa` y `detección de exploits` a través del `sistema operativo`.
 
-También tenemos que testear nuestro código, pero simplemente con análisis estáticos o dinámicos no es suficiente, hay que hacer ambos, ya que sino puede dar cabida a falsos positivos o negativos. 
+También tenemos que `testear` nuestro código, pero simplemente con `análisis estáticos o dinámicos` no es suficiente, `hay que hacer ambos`, ya que sino puede dar cabida a falsos positivos o negativos. 
 
-Pero la forma más fácil de evitar este problema es simplemente no usar lenguajes vulnerables a este tipo de ataques, por ejemplo C o C++, ya que permiten acceso a memoria, y, en cambio, usar otros más seguros como Python, Java, C#, .NET...
+Pero la `forma más fácil de evitar` este problema es simplemente no usar `lenguajes vulnerables` a este tipo de ataques, por ejemplo `C` o `C++`, ya que `permiten acceso a memoria`, y, en cambio, `usar` otros más seguros como `Python`, `Java`, `C#`, `.NET`...
 
-Claro, eso no se puede hacer siempre, porque puede suponer mucho trabajo rehacer todo el código..., entonces hay que tener en cuenta estos puntos:
+Claro, eso no se puede hacer siempre, porque puede suponer mucho trabajo rehacer todo el código..., entonces hay que `tener en cuenta` estos puntos:
 
 ```
 · Comprobar los límites del buffer y que estén preparados para que no se pueda meter más datos de los permitidos.
