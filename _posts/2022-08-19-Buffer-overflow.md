@@ -46,8 +46,17 @@ Este ejemplo es un `buffer overflow` o `buffer overrun` típico. Claro, si con e
 
 ## Vulnerabilidad y Ataques:
 
-Los lenguajes de programación más propensos a sufrir esta vulnerabilidad son C y C++, pero lenguajes más modernos como Java, Python o C# tienen medidas para dificultar la aparición de estas vulnerabilidades, pero pueden seguir habiéndolas.
+Los `lenguajes de programación más propensos` a sufrir esta vulnerabilidad son `C` y `C++`, pero `lenguajes más modernos` como Java, Python o C# `tienen medidas` para dificultar la aparición de estas vulnerabilidades, pero pueden seguir habiéndolas.
 
-Esta vulnerabilidad se suele utilizar para tomar el control de alguna aplicación o sistema. Para eso se intenta hacer un buffer overflow para sobrescribir la memoria de la aplicación o la web para cambiar el path del programa, por lo que expone cierta información que lleva datos privados.
+Esta vulnerabilidad se suele utilizar para `tomar el control` de alguna aplicación o sistema. Para eso se intenta hacer un buffer overflow para `sobrescribir la memoria` de la aplicación o la web para cambiar el path del programa, por lo que expone cierta información que lleva datos privados.
 
 Claro, si conocemos el diseño de la memoria podemos mandar ciertas órdenes para inyectar comandos o código malicioso para obtener acceso.
+
+
+### Explotación
+
+Hay `muchas estrategias` para `explotar` el buffer overflow, pero las dos `más comunes` son:
+
+-`Stack overflow attack`: esto es cuando intentamos meter en un buffer de un programa más datos de los que tiene asignados, esto casi siempre resulta en la corrupción de los datos adyacentes al bufer. Este es el más común de este tipo de ataques.
+
+-`Heap overflow attack`: Esto pasa cuando el buffer donde es guardada la información tiene mucha más memoria asignada de la necesaria. Para explotar esto se corrompen los datos almacenados para que la aplicación o la web sobreescriban las estructuras internas. Este tipo de ataques se dirigen a los datos del grupo de memoria abierto conocido como montón (heap).
