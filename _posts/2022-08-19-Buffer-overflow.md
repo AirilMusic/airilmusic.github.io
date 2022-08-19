@@ -76,3 +76,14 @@ getstring ($username)
 
 El anterior código es vulnerable, ya que `le asigna 8 bytes` a la variable `$username`, pero `no pone` nada que `limite` que se puedan escribir más bytes. Es decir, que el programa está hecho para meter nombres como Paco, o como Manolito, pero si se mete un nombre como AntonioXXXXXXX el programa crasheará. Por desgracia o afortunadamente, depende como se mire, los `lenguajes como C o C++ no están preparados` para este tipo de errores, entonces si no se programa bien la aplicación la `información sobrante al buffer se escribirá en la memoria`, así por la cara.
 
+Para `buscar` esta vulnerabilidad en el código: es importante entender como funciona el código, luego tienes que `prestar especial atención a` donde estén programados `los inputs externos` y ver si es vulnerable o si tiene `funciones vulnerables`: `gets()`, `strcpy()`, `strcat()`, `printf()`. Estas funciones, si no se usan cuidadosamente, pueden abrir las puertas a ataques de este tipo.
+
+
+### Formas para buscar estas vulnerablidades:
+
+·`Estática`: `buscar` entre miles de líneas de `código`, pero puede ser una tarea enorme y que pasen desapercibidas un montón de vulnerabilidades, por lo que hay `programas` que `automatizan la búsqueda` de este tipo de vulnerabilidades en el código: `Checkmarx`, `Coverity`.
+
+·`Dinámica`: esto  consiste en `ejecutar el programa` y `probar de forma manual` o `automatizada` para ver si hay esta vulnerabilidad. Programas que lo automatizan: `Appknox`, `Veracode Dynamic Analysis`, `Netsparker`.
+
+
+# MITIGAR LA VULNERABILIDAD
