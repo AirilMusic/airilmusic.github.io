@@ -37,10 +37,17 @@ Básicamente consiste en `escribir o descargar más información en el buffer de
 
 
 ### Ejemplo:
-   Joe tiene una web donde los usuarios tienen que meter su nombre para acceder, `la web tiene 8 bits de bufer` de los nombres de usuario, porque no espera que nadie meta un nombre mayor a 8 letras. Pero Jane `mete un nombre de 10 letras`, entonces `las primeras 8 entrarían en el buffer` pero `las siguientes 2 harían overflow`. Para su sorpresa, la web se congelará y no dará como válido ningún otro input de nombre de usuario, causando una Denegación de Servicio (DoS).
+Joe tiene una web donde los usuarios tienen que meter su nombre para acceder, `la web tiene 8 bits de bufer` de los nombres de usuario, porque no espera que nadie meta un nombre mayor a 8 letras. Pero Jane `mete un nombre de 10 letras`, entonces `las primeras 8 entrarían en el buffer` pero `las siguientes 2 harían overflow`. Para su sorpresa, la web se congelará y no dará como válido ningún otro input de nombre de usuario, causando una Denegación de Servicio (DoS).
 		
-   Este ejemplo es un `buffer overflow` o `buffer overrun` típico. Claro, si con esto `introducimos una función en el overflow`, nuestra función `se copiará en los campos de código de alrededor`, por lo tanto, podríamos llegar a conseguir `Arbitrari Code Execution` (ejecución arbitraria de comandos).
+Este ejemplo es un `buffer overflow` o `buffer overrun` típico. Claro, si con esto `introducimos una función en el overflow`, nuestra función `se copiará en los campos de código de alrededor`, por lo tanto, podríamos llegar a conseguir `Arbitrari Code Execution` (ejecución arbitraria de comandos).
 
 ![](/assets/images/web-hacking/Buffer-overflow/buffer-overflow.png)
 
+
 ## Vulnerabilidad y Ataques:
+
+Los lenguajes de programación más propensos a sufrir esta vulnerabilidad son C y C++, pero lenguajes más modernos como Java, Python o C# tienen medidas para dificultar la aparición de estas vulnerabilidades, pero pueden seguir habiéndolas.
+
+Esta vulnerabilidad se suele utilizar para tomar el control de alguna aplicación o sistema. Para eso se intenta hacer un buffer overflow para sobrescribir la memoria de la aplicación o la web para cambiar el path del programa, por lo que expone cierta información que lleva datos privados.
+
+Claro, si conocemos el diseño de la memoria podemos mandar ciertas órdenes para inyectar comandos o código malicioso para obtener acceso.
