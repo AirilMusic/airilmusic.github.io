@@ -21,8 +21,8 @@ tags:
 Esta es una vulnerabilidad que afecta a contraseñas como a campos de texto, ya sea en aplicaciones o páginas web, como en aplicaciones y programas. También algunos exploits famosos como es el ethernalblue se basan en esta vulnerabilidad.
 
 
-## EN QUE SE BASA ESTA VULNERABILIDAD:
-# Bufer:
+# EN QUE SE BASA ESTA VULNERABILIDAD:
+## Bufer:
 
 Antes de entrar en una forma más técnica es por ejemplo como un contenedor de agua que se puede llenar o vaciar para que luego esa agua valla por ejemplo a un grifo (el contenedor es el buffer y el grifo es la información que se está procesando en ese momento).
 
