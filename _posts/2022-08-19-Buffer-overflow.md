@@ -1,7 +1,7 @@
 ---
 layout: single
 title: Buffer overflow
-excerpt: "En este artículo vamos a ver el ataque Buffer overflow, ya que es un concepto muy interesante, muy útil y en el que se basan exploits famosos como el ethernalblue."
+excerpt: "En este artículo vamos a ver el ataque Buffer overflow, ya que es un concepto muy interesante, muy útil y en el que se basan exploits famosos como el eternalblue."
 date: 2022-08-19
 classes: wide
 header:
@@ -13,12 +13,12 @@ categories:
   - APP-Hacking
 tags:  
   - Buffer overflow
-  - Ethernalblue
+  - Eternalblue
 ---
 
 ![](/assets/images/web-hacking/Buffer-overflow/buffer-overflow-attacks.png)
 
-Esta es una vulnerabilidad que afecta a contraseñas como a campos de texto, ya sea en aplicaciones o páginas web, como en aplicaciones y programas. También algunos exploits famosos como es el ethernalblue se basan en esta vulnerabilidad.
+Esta es una vulnerabilidad que afecta a contraseñas como a campos de texto, ya sea en aplicaciones o páginas web, como en aplicaciones y programas. También algunos exploits famosos como es el eternalblue se basan en esta vulnerabilidad.
 
 
 # EN QUE SE BASA ESTA VULNERABILIDAD:
@@ -103,3 +103,9 @@ Claro, eso no se puede hacer siempre, porque puede suponer mucho trabajo rehacer
 
 · Usar sistemas operativos modernos y actualizados.
 ```
+
+# ETERNALBLUE
+
+![](/assets/images/web-hacking/Buffer-overflow/eternalblue.png)
+
+Como extra y ya que es un exploit que utiliza este tipo de vulnerabilidad para tomar acceso de una maquina Windows antigua mediante SMBv1.
