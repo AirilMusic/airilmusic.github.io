@@ -110,7 +110,7 @@ Claro, eso no se puede hacer siempre, porque puede suponer mucho trabajo rehacer
 
 Como extra y ya que es un exploit que utiliza este tipo de vulnerabilidad para tomar acceso de una máquina Windows antigua mediante SMBv1 se me ha ocurrido explicar este famoso exploit.
 
-Primero, como dato curioso y de historia, tengo que mencionar que el `eternalblue` fue un `exploit` creado por la `NSA` y robado por el grupo de hackers `Shadow Breackers`.
+Primero, como dato curioso y de historia, tengo que mencionar que el `eternalblue` fue un `exploit` creado por la `NSA` y robado por el grupo de hackers `Shadow Breackers`. El `nombre` tecnico de este exploit es: `MS17-010`.
 
 ## Funcionamiento:
 
@@ -124,4 +124,4 @@ Para esto es tan fácil como hacer un `search eternalblue` en `metasploit` y lis
 
 ## Prevención:
 
-Para prevenir esta vulnerabilidad es tan fácil como tener los equipos y los programas actualizados.
+Para prevenir esta vulnerabilidad es tan fácil como tener los equipos y los programas `actualizados`.
