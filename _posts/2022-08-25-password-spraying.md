@@ -22,6 +22,17 @@ Este ataque lo hacemos cuando tenemos un `número de intentos limitados` para lo
 
 # EN QUE CONSISTE ESTA TÉCNICA:
 
+Como ya he mencionado `esta técnica la utilizamos` cuando `no` podemos hacer `fuerza bruta` porque tenemos un `número limitado de intentos` de ingresar contraseñas en un login. Hay que recalcar que `cuantos más usuarios` haya registrados, nuestra `posibilidad` de acierto es `mayor`.
+
+A diferencia de cuando utilizamos fuerza bruta, probamos un `número muy pequeño` de posibles `contraseñas`, normalmente utilizamos las más habituales, pero dependiendo cuál es el objetivo podemos utilizar otras. Y `probamos esas contraseñas` en `todos los usuarios` a ver si tenemos suerte y una funciona.
+
+Es `verdad que `a` veces` se suele utilizar ``una única contraseña`` para `minimizar el tiempo` que tardemos en encontrar un usuario y contraseña válido, `o` también para intentar `minimizar un poco el ruido` que hagamos, pero `si tenemos la posibilidad` de utilizar más de una contraseña `es recomendable utilizarlas` para aumentar nuestras posibilidades de acierto.
+
+Y en caso de no conocer los usuarios, sí que los podemos probar a fuerza bruta con un listado de posibles usuarios.
+
+`Entonces resumiendo: esta técnica consiste en tener un listado de usuarios (o posibles usuarios) y otro listado muy pequeño de contraseñas y probar esas pocas contraseñas en todos los usuarios.`
+
+Aquí dejo una foto en la que se explica bastante bien y de forma visual en que consiste esta técnica.
 
 ![](/assets/images/web-hacking/password-spraying/example.webp)
 
