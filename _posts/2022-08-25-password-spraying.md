@@ -42,4 +42,13 @@ Aquí dejo una foto en la que se explica bastante bien y de forma visual en que 
 
 # COMO PREVENIR ESTA TÉCNICA:
 
+Las formas de prevención de este ataque son bastante lógicas y son las mismas que para todos estos tipos de ataques a contraseñas:
+
+·Tener una contraseña robusta (que tenga números, letras minúsculas y mayúsculas, caracteres raros...)
+
+·Cambiar la contraseña de vez en cuando.
+
+·No utilizar la misma contraseña para todo.
+
+·Utilizar doble factor de autenticación.
 
