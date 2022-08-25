@@ -38,6 +38,9 @@ Aquí dejo una foto en la que se explica bastante bien y de forma visual en que 
 
 # COMO EXPLOTAR ESTA TÉCNICA:
 
+Por lo que he estado viendo, hay varias herramientas para este tipo de ataque; burpsuit, herramientas que hay en github...
+
+
 
 
 # COMO PREVENIR ESTA TÉCNICA:
