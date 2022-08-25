@@ -40,6 +40,11 @@ Aquí dejo una foto en la que se explica bastante bien y de forma visual en que 
 
 Por lo que he estado viendo, hay varias herramientas para este tipo de ataque; `burpsuit`, `herramientas que hay en github`... O incluso podríamos crar un `script` que lo haga, no sería muy complicado.
 
+Pero yo aquí solo voy a enseñar a hacer el ataque con `burpsuit`, para `webs`, ya que lo puedo probar con una máquina de HTB sin complicarme mucho.
+
+`(en esta explicación doy por hecho que ya sabes utilizar burpsuit, si no sabes primero aprende aunque sea como capturar peticiones (es muy simple) y luego ya vuelve aquí)`
+
+Para esto primero tendremos que capturar la petición del loguin:
 
 
 
