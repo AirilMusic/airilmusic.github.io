@@ -23,6 +23,7 @@ Este ataque lo hacemos cuando tenemos un `número de intentos limitados` para lo
 # EN QUE CONSISTE ESTA TÉCNICA:
 
 
+![](/assets/images/web-hacking/password-spraying/example.webp)
 
 # COMO EXPLOTAR ESTA TÉCNICA:
 
