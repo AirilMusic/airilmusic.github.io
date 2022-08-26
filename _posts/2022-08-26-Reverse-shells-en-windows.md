@@ -96,4 +96,18 @@ Entre todos los scripts que tiene, `hay uno` en concreto bastante famoso llamado
 
 ![](/assets/images/web-hacking/reverse-shell-windows/script.png)
 
+El script no es más que una `función en powershell`, por lo que tenemos dos opciones:
+
+```
+· Descargar y cargar el script de forma local, y posteriormente ejecutar la función con los argumentos para una reverse shell.
+· Cargar el script de forma remota y que en la misma acción donde lo carga, posteriormente ejecute la función con los argumentos para la reverse shell, todo en un paso.
+```
+
 ## ConPtyShell
+
+ConPtyShell es una herramienta la cual `nos permite obtener una shell completamente interactiva` en sistemas Windows. Esto quiere decir que podemos hacer `Ctrl+C` sin peligro a perder la shell o podemos recuperar comandos usados previamente usando la flechita hacia arriba. Su repositorio oficial lo podéis encontrar en este enlace: `https://github.com/antonioCoco/ConPtyShell`
+
+La forma de `ejecutarlo` es la misma que con el script anterior, ya que ambos son scripts en `powershell`.
+
+
+
