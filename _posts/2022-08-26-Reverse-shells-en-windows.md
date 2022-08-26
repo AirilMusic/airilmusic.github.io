@@ -30,4 +30,14 @@ Para esto utilizaremos el siguiente `comando` estando en `root`:
 listening on [any] 443 ...
 ```
 
+## FORMA MEJORADA
+
+Por lo que he estado viendo hay un comando que funciona mejor ya que nos permite utilizar atajos de teclado como `Ctl+L`:
+
+```
+> rlwrap nc -nlvp 443
+listening on [any] 443 ...
+```
+
 ![](/assets/images/web-hacking/reverse-shell-windows/)
+
