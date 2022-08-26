@@ -52,6 +52,14 @@ Luego cambaremos el tipo de ataque a `Claster Bomb` y si no nos ha marcado los c
 
 ![](/assets/images/web-hacking/password-spraying/attack-2.PNG)
 
+Ahora vamos a `Payload` y configuramos el primer campo metiendole la lista de `usuarios`:
+
+![](/assets/images/web-hacking/password-spraying/attack-3.PNG)
+
+Y en el segundo campo hacemos lo mismo pero con las contraseñas:
+
+![](/assets/images/web-hacking/password-spraying/attack-4.PNG)
+
 
 # COMO PREVENIR ESTA TÉCNICA:
 
