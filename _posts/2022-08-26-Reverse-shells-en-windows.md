@@ -72,6 +72,8 @@ windows/shell_reverse/tcp                            Connect back to attacker an
 windows/x64/shell_reverse/tcp                        Connect back to attacker and spawn a command shell (Windows x64)
 ```
 
+Si la máquina victima es de `32 bits` usaremos el primero y si es de `64` usaremos el segundo.
+
 ## Powershell Reverse Shell One-Liner
 
 ## Nishang
