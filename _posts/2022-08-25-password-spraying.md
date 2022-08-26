@@ -46,6 +46,11 @@ Pero yo aquí solo voy a enseñar a hacer el ataque con `burpsuit`, para `webs`,
 
 Para esto primero tendremos que capturar la petición del loguin y en burpsuit la mandaremos al `intruder` con `Ctl + I`:
 
+![](/assets/images/web-hacking/password-spraying/attack-1.PNG)
+
+Luego cambaremos el tipo de ataque a `Claster Bomb` y si no nos ha marcado los campos de la `user` y el `password`, los marcamos nosotros:
+
+![](/assets/images/web-hacking/password-spraying/attack-2.PNG)
 
 
 # COMO PREVENIR ESTA TÉCNICA:
