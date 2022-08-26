@@ -5,7 +5,7 @@ excerpt: "En este artículo vamos a ver las formas que hay de mandarnos reverse 
 date: 2022-08-26
 classes: wide
 header:
-  teaser: /assets/images/web-hacking/password-spraying/password-spraying.jpg
+  teaser: /assets/images/web-hacking/reverse-shell-windows/portada.PNG
   teaser_home_page: true
   icon: 
 categories:
