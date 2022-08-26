@@ -30,4 +30,4 @@ Para esto utilizaremos el siguiente `comando` estando en `root`:
 listening on [any] 443 ...
 ```
 
-![](/assets/images/web-hacking/reverse-shell-windows/netcat.PNG)
+![](/assets/images/web-hacking/reverse-shell-windows/)
