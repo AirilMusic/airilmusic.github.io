@@ -41,3 +41,13 @@ listening on [any] 443 ...
 
 ![](/assets/images/web-hacking/reverse-shell-windows/)
 
+# MANDARNOS UNA REVERSE SHELL
+## Nc.exe
+
+## Msfvenom
+
+## Powershell Reverse Shell One-Liner
+
+## Nishang
+
+## ConPtyShell
