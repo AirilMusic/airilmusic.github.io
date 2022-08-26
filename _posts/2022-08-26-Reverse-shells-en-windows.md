@@ -14,3 +14,5 @@ tags:
   - Windows
   - Reverse shell
 ---
+
+![](/assets/images/web-hacking/reverse-shell-windows/portada.PNG)
