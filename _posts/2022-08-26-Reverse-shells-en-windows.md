@@ -39,8 +39,6 @@ Por lo que he estado viendo hay un comando que funciona mejor ya que nos permite
 listening on [any] 443 ...
 ```
 
-![](/assets/images/web-hacking/reverse-shell-windows/)
-
 # MANDARNOS UNA REVERSE SHELL
 ## Nc.exe
 
@@ -91,5 +89,11 @@ En `Powershell` que es un lenguaje muy potente que maneja `Windows` hay un coman
 No es muy recomendable utilizar este metodo para obtener acceso desde una `webshell` o desde una `cmd`, pero `es muy util para Rubber Duckys`.
 
 ## Nishang
+
+Nishang es un `repositorio` el cual contiene una gran cantidad de `scripts` de powershell usados para la seguridad ofensiva. Su repositorio oficial es el que podéis visitar en este enlace: `https://github.com/samratashok/nishang`
+
+Entre todos los scripts que tiene, `hay uno` en concreto bastante famoso llamado `Invoke-PowerShellTcp.ps1`, el cual, como no, `nos invoca una reverse shell con una powershell`:
+
+![](/assets/images/web-hacking/reverse-shell-windows/script.PNG)
 
 ## ConPtyShell
