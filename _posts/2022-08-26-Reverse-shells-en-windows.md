@@ -94,6 +94,6 @@ Nishang es un `repositorio` el cual contiene una gran cantidad de `scripts` de p
 
 Entre todos los scripts que tiene, `hay uno` en concreto bastante famoso llamado `Invoke-PowerShellTcp.ps1`, el cual, como no, `nos invoca una reverse shell con una powershell`:
 
-![](/assets/images/web-hacking/reverse-shell-windows/script.PNG)
+![](/assets/images/web-hacking/reverse-shell-windows/script.png)
 
 ## ConPtyShell
