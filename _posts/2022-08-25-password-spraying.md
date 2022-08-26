@@ -44,7 +44,7 @@ Pero yo aquí solo voy a enseñar a hacer el ataque con `burpsuit`, para `webs`,
 
 `(en esta explicación doy por hecho que ya sabes utilizar burpsuit, si no sabes primero aprende aunque sea como capturar peticiones (es muy simple) y luego ya vuelve aquí)`
 
-Para esto primero tendremos que capturar la petición del loguin:
+Para esto primero tendremos que capturar la petición del loguin y en burpsuit la mandaremos al `intruder` con `Ctl + I`:
 
 
 
