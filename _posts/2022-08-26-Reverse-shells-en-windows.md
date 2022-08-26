@@ -5,7 +5,7 @@ excerpt: "En este artículo vamos a ver las formas que hay de mandarnos reverse 
 date: 2022-08-26
 classes: wide
 header:
-  teaser: /assets/images/web-hacking/reverse-shell-windows/portada.PNG
+  teaser: /assets/images/web-hacking/reverse-shell-windows/netcat.PNG
   teaser_home_page: true
   icon: 
 categories:
@@ -15,4 +15,8 @@ tags:
   - Reverse shell
 ---
 
-![](/assets/images/web-hacking/reverse-shell-windows/portada.PNG)
+He hecho este artículo ya que las `reverse shells` en `Windows` son diferentes a Linux y ya que he empezado a aprender Hacking para Windows, ya que en linux ya soy capaz de resolver maquinas sin ayuda pues se me ha ocurrido hacer este post.
+
+# PONERNOS A LA ESCUCHA: 
+
+![](/assets/images/web-hacking/reverse-shell-windows/netcat.PNG)
