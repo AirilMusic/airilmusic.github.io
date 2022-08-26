@@ -56,10 +56,15 @@ Ahora vamos a `Payload` y configuramos el primer campo metiendole la lista de `u
 
 ![](/assets/images/web-hacking/password-spraying/attack-3.PNG)
 
-Y en el segundo campo hacemos lo mismo pero con las contraseñas:
+Y en el segundo campo hacemos lo mismo pero con las `contraseñas`:
 
 ![](/assets/images/web-hacking/password-spraying/attack-4.PNG)
 
+Ahora ya le damos a `Start attack` y ya debería empezar el ataque, y nos mostrará algo asi si encuentra la contraseña (no debo de tener bien configurado el burpsuit o yo que se y se queda en negro, pero pondré otro ejemplo de como se debería ver), `Sabemos que es el resultado valido porque tiene el Leght mas alto)`:
+
+![](/assets/images/web-hacking/password-spraying/attack-5.PNG)
+
+Y ya estaría uwu.
 
 # COMO PREVENIR ESTA TÉCNICA:
 
