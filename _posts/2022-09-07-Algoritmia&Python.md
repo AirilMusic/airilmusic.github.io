@@ -7,7 +7,7 @@ classes: wide
 header:
   teaser: 
   teaser_home_page: true
-  icon: /assets/images/Algoritmia/portada.png
+  icon: /assets/images/Algoritmia/portada.jpg
 categories:
   - Scripting
   - Programaccion
@@ -15,4 +15,4 @@ tags:
   - Python
 ---
 
-![](/assets/images/Wifi-Hacking/cracking.jpg)
+![](/assets/images/Algoritmia/portada.jpg)
