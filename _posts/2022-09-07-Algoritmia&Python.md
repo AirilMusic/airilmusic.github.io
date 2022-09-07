@@ -5,7 +5,7 @@ excerpt: "Visto que en 5 meses más o menos hay de nuevo Olimpiadas informática
 date: 2022-09-07
 classes: wide
 header:
-  teaser: 
+  teaser: /assets/images/Algoritmia/portada.jpg
   teaser_home_page: true
   icon: /assets/images/Algoritmia/portada.jpg
 categories:
@@ -14,5 +14,3 @@ categories:
 tags:  
   - Python
 ---
-
-![](/assets/images/Algoritmia/portada.jpg)
