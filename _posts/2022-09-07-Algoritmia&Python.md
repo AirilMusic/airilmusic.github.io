@@ -31,11 +31,18 @@ tags:
 ## Forma lógica:
 
 ```
-def primeListTo (x)
-    primeList = []
-    for i in range(1, x + 1):
-        for a in range(2, int(i/2)+1):
-             if (i % a) == 0:
-                primeList.append(i)
-                break
+numMax == 10000 #el numero maximo que se quiere analizar, es decir, que se listaran los primos desde el numero 2 hasta ese
+prime = []
+for i in range(2, numMax + 1):
+	     posPrimo= True
+ 
+	    for uwu in range(2, int(i / 2)):
+		    if i % uwu == 0:
+			    posPrimo = False
+			    break
+ 
+	    if posPrimo:
+		    prime.append(i)
+ 
+print(prime)
 ```
