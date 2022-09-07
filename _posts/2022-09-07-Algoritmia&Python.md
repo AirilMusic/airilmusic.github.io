@@ -7,7 +7,7 @@ classes: wide
 header:
   teaser: /assets/images/Algoritmia/portada.jpg
   teaser_home_page: true
-  icon: /assets/images/Algoritmia/portada.jpg
+  icon: 
 categories:
   - Scripting
   - Programaccion
