@@ -39,12 +39,3 @@ def primeListTo (x)
                 primeList.append(i)
                 break
 ```
-
-## Una forma un poco mas rápida:
-
-```
-from itertools import islice
-
-array = [x for x in islice(prime_generator(), 10)]
-```
-
