@@ -32,8 +32,8 @@ tags:
 
 ```
 numMax == 10000 #el numero maximo que se quiere analizar, es decir, que se listaran los primos desde el numero 2 hasta ese
-prime = []
-for i in range(2, numMax + 1):
+prime = [2, ]
+for i in range(3, numMax + 1):
 	     posPrimo= True
  
 	    for uwu in range(2, int(i / 2)):
