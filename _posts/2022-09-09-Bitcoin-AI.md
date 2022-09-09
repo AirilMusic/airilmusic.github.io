@@ -141,3 +141,6 @@ Al principio las primeras predicciones eran muy buenas, pero no tuve en cuenta p
 ![](/assets/images/Bitcoin-AI/resultado1.PNG)
 
 ![](/assets/images/Bitcoin-AI/resultado2.PNG)
+
+Luego a medida que fuí metiendo mas datos fue empeorando, y termino de empeorar cuando de repente bajo el precio de bitcoin bastante.
+
