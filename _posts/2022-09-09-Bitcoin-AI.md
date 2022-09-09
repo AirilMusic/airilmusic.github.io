@@ -48,5 +48,7 @@ Las seis del medio son `capas ocultas`, es decir, son capas que hay entre el inp
 
 # EXPLICACIÓN TÉCNICA:
 
-Para esto vamos a utilizar la librería `Tensorflow`, que es una `librería de Python` que facilita mucho el trabajo con redes neuronales.
+Para esto vamos a utilizar la librería `Tensorflow`, que es una `librería de Python` que facilita mucho el trabajo con redes neuronales. Y también vamos a utilizar la librería `NumPy` para que el `dataset` este hecho por `matrices`.
+
+
 
