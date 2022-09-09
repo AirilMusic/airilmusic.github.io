@@ -30,6 +30,8 @@ Esto se me ocurrió porque es un proyecto `"simple"` para empezar a poner en pr�
   -Problemas y Soluciones
   
   -Resultado
+  
+  -Siguientes proyectos
 ``` 
 
 # EXPLICACIÓN
@@ -152,3 +154,16 @@ Y luego al hacer pruebas me di cuenta de que el número óptimo de días anterio
 
 Y pues así va, mi intención es hacerle todavía más mejoras, y si veo que va bien, pues quizás la publico en algún lado.
 
+## SIGUIENTES PROYECTOS:
+
+```
+  -Pium Pium AI: una IA con Unity (asset: ML-Agents, y también pytorch para la programación) en la que hay dos equipos de dos jugadores y el objetivo es disparar a los rivales para matarlos.
+  
+  -Reconocimiento de enfermedades según los síntomas (esa es la parte de IA y luego dependiendo la enfermedad y los síntomas que te recomiende que hacer).
+  
+  -Y ya después meterme con algo más complicado, es decir, reconocimiento de imágenes con redes neuronales convolucionales.
+```
+
+Pium Pium AI:
+
+![](/assets/images/Bitcoin-AI/PiumPiumAI.PNG)
