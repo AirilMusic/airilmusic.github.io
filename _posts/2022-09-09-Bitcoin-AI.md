@@ -159,7 +159,7 @@ Y pues así va, mi intención es hacerle todavía más mejoras, y si veo que va 
 ```
   -Pium Pium AI: una IA con Unity (asset: ML-Agents, y también pytorch para la programación) en la que hay dos equipos de dos jugadores y el objetivo es disparar a los rivales para matarlos.
   
-  -Reconocimiento de enfermedades según los síntomas (esa es la parte de IA y luego dependiendo la enfermedad y los síntomas que te recomiende que hacer).
+  -Reconocimiento de enfermedades según los síntomas (esa es la parte de IA y luego dependiendo la enfermedad y los síntomas que te recomiende que hacer). (este es un conjunto de múltiples scripts, la IA se encargará de decir cuál es la enfermedad según los síntomas, pero el resto serán scripts normales en python)
   
   -Y ya después meterme con algo más complicado, es decir, reconocimiento de imágenes con redes neuronales convolucionales.
 ```
