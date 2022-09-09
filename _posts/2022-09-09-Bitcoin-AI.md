@@ -125,3 +125,17 @@ print("Es probable que el precio ronde los: ", resultado, " $\n\n\n\n")
 ```
 
 # PROBLEMAS Y SOLUCIONES
+
+El problema más interesante y más curioso (por eso lo pongo el primero) es que `no siempre es mejor tener muchos datos`, es decir, bitcoin puede subir y bajar por acciones inesperadas (que un famoso apoye o este en contra del bitcoin...) por lo tanto, hay veces que la IA se vuelve loca cuando cae el precio de golpe. Para esto lo que he hecho es poner un límite de datos máximos en el dataset, es decir, los datos óptimos son desde entre 10 y 30 días atras.
+
+El segundo problema más común en muchas IA-s y que me ha dado algún problemita es que `los datasets son muy sensibles` es decir, que al mínimo fallo peta.
+
+Algo parecido también pasa con el número de capas, por ejemplo, no sé porque, pero `si pongo una capa más también peta` y todavía no sé porque pasa.
+
+Y otro problema que puede haber es uno que he mencionado anteriormente, es decir: `las neuronas muertas`. Para esto hay otras funciones de activación que no se quedan en 0 como por ejemplo `Elu`, `LeakyReLU`...
+
+# RESULTADO
+
+Al principio las primeras predicciones eran muy buenas, pero no tuve en cuenta porque todavía no conocía ese problema y era porque apenas había 30 días de datos.
+
+
