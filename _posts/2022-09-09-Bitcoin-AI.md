@@ -138,4 +138,6 @@ Y otro problema que puede haber es uno que he mencionado anteriormente, es decir
 
 Al principio las primeras predicciones eran muy buenas, pero no tuve en cuenta porque todavía no conocía ese problema y era porque apenas había 30 días de datos.
 
+![](/assets/images/Bitcoin-AI/resultado1.PNG)
 
+![](/assets/images/Bitcoin-AI/resultado2.PNG)
