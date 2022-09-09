@@ -124,4 +124,4 @@ resultado = model.predict([newday])
 print("Es probable que el precio ronde los: ", resultado, " $\n\n\n\n") 
 ```
 
-
+# PROBLEMAS Y SOLUCIONES
