@@ -112,7 +112,7 @@ historyR = model.fit(day, price, epochs = 2500, verbose=False)
 print("Trainning ended uwu")
 ```
 
-Por último ya podemos hacer predicciones:
+Por último ya podemos hacer `predicciones`:
 
 ```
 print("Predicting...")
