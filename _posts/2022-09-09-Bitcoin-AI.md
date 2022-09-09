@@ -102,5 +102,26 @@ Ahora vamos a compilarlo (al ser simple nos es suficiente con el optimizador `Ad
 model.compile(optimizer = tf.keras.optimizers.Adam(0.1), loss = 'mean_squared_error')
 ```
 
+Para `entrenar` la red neuronal tendremos que utilizar la función `model.fit()` de la siguiente manera: `model.fit(datasetA, datasetB, epoch = número_de_vueltas, vervose = False)`. El `número de vueltas` es las veces que la red neuronal repasará los datasets completos para entrenarse, y ponemos `vervose = False` para que no nos ponga mucha información innecesaria por consola, pero si queremos ver por ejemplo en que vuelta va podemos ponerlo en True.
+
+```
+print("\nStarting training...")
+
+historyR = model.fit(day, price, epochs = 2500, verbose=False)
+
+print("Trainning ended uwu")
+```
+
+Por último ya podemos hacer predicciones:
+
+```
+print("Predicting...")
+
+newday = int(input("Day (next to 2022-06-16, example: 63): "))
+
+resultado = model.predict([newday])
+
+print("Es probable que el precio ronde los: ", resultado, " $\n\n\n\n") 
+```
 
 
