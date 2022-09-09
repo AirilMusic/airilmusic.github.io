@@ -144,3 +144,11 @@ Al principio las primeras predicciones eran muy buenas, pero no tuve en cuenta p
 
 Luego a medida que fuí metiendo mas datos fue empeorando, y termino de empeorar cuando de repente bajo el precio de bitcoin bastante.
 
+![](/assets/images/Bitcoin-AI/resultado3.PNG)
+
+Y luego al hacer pruebas me di cuenta de que el número óptimo de días anteriores para el entrenamiento era entre 10 y 30 y la mejora es abrumadora.
+
+![](/assets/images/Bitcoin-AI/resultado4.PNG)
+
+Y pues así va, mi intención es hacerle todavía más mejoras, y si veo que va bien, pues quizás la publico en algún lado.
+
