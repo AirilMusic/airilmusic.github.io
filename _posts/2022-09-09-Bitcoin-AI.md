@@ -20,7 +20,7 @@ Este es el primer proyecto que he hecho con redes neuronales y trata de predecir
 
 Esto se me ocurrió porque es un proyecto '"simple"' para empezar a poner en práctica lo que voy aprendiendo sobre redes neuronales. Básicamente debería funcionar con la gráfica del precio del bitcoin, pero al ponerlo en práctica no es tan simple.
 
-## ÍNDICE:
+## ÍNDICE
 
 '''
   -Explicación simple (teórica)
@@ -32,3 +32,8 @@ Esto se me ocurrió porque es un proyecto '"simple"' para empezar a poner en pr�
   -Resultado
 ''' 
 
+# EXPLICACIÓN
+
+Al ser mi 'primera' red neuronal es muy 'simple'. Básicamente es una red neuronal simple con un único 'input (el día)' y con un único 'output (el precio del bitcoin en dólares)'. Y cogiendo de 'referencia los días anteriores' aprende el comportamiento del bitcoin y es capaz de 'predecir' el de los siguientes dos días.
+
+## ESTRUCTURA
