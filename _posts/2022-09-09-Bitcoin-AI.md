@@ -24,8 +24,11 @@ Esto se me ocurrió porque es un proyecto '"simple"' para empezar a poner en pr�
 
 '''
   -Explicación simple (teórica)
+  
   -Explicación técnica (código)
+  
   -Problemas y Soluciones
+  
   -Resultado
 ''' 
 
