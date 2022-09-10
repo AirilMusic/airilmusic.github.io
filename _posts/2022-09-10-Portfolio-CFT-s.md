@@ -12,7 +12,7 @@ categories:
 tags:  
 ---
 
-Aparte de los CTF-s hechos, desde el 18-08-2022 estoy en un equipo de CTF-s formado solo por chicas llamado Valquirias y ya he participado en una competición/evento de criptografía con ellas uwu.
+Aparte de los CTF-s hechos, desde el 18-08-2022 estoy en un equipo de CTF-s formado solo por chicas llamado Valquirias (en el momento que escribí esto éramos tan solo 6 chicas) y ya he participado en una competición/evento de criptografía con ellas uwu.
 
 # ENTORNO DE TRABAJO
 
