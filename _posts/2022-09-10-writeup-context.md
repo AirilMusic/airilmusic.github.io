@@ -16,7 +16,7 @@ tags:
   - 
 ---
 
-![](/assets/images/writeup-context/context2.PNG)
+![](/assets/images/writeup-context/context2.jpg)
 
 Context es una máquina de la sección Fortress de Hack The Box en la que se pueden hackear un montón de cosas, así podemos practicar un montón de técnicas distintas en la misma máquina.
 
