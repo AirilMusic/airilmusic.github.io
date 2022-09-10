@@ -90,5 +90,12 @@ OS:
 Ya hemos visto que probablemente será una máquina `Windows`, pero vamos a comprobarlo. Para esto vamos a mandarle una `traza ICMP` y segun el `ttl` de la respuesta vamos a saber que `sistema operativo` tiene.
 
 ```
+❯ ping -c 1 10.13.37.12
 
+PING 10.13.37.12 (10.13.37.12) 56(84) bytes of data.
+64 bytes from 10.13.37.12: icmp_seq=1 ttl=127 time=105 ms
+
+--- 10.13.37.12 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 105.403/105.403/105.403/0.000 ms
 ```
