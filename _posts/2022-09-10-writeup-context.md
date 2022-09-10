@@ -87,7 +87,7 @@ Y también vemos que hay un servidor corriendo en el puerto `3389/tcp` por lo qu
 
 OS:
 
-Ya hemos visto que probablemente será una máquina `Windows`, pero vamos a comprobarlo. Para esto vamos a mandarle una `traza ICMP` y segun el `ttl` de la respuesta vamos a saber que `sistema operativo` tiene.
+Ya hemos visto que probablemente será una máquina `Windows`, pero vamos a comprobarlo. Para esto vamos a mandarle una `traza ICMP` y según el `ttl` de la respuesta vamos a saber que `sistema operativo` tiene.
 
 ```
 ❯ ping -c 1 10.13.37.12
@@ -99,3 +99,9 @@ PING 10.13.37.12 (10.13.37.12) 56(84) bytes of data.
 1 packets transmitted, 1 received, 0% packet loss, time 0ms
 rtt min/avg/max/mdev = 105.403/105.403/105.403/0.000 ms
 ```
+
+Vemos que el ttl = 127 aunque en la realidad es `ttl = 128` porque la conexión no es directa, sino que pasa por un host intermediario, lo cual le quita uno de ttl. Por lo que podemos saber que estamos ante una máquina `Windows`.
+
+(También he hecho un escaneo de los puertos que hay por el protocolo UDP, pero como no hay ningún puerto abierto he decidido no ponerlo aquí ya que no es interesante)
+
+(Y no voy a probar el eternalblue, ya que nmap no lo detecta y al ser un fortress dudo que sea un windows antiguo)
