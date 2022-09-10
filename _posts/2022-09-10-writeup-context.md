@@ -111,3 +111,10 @@ Vemos que el ttl = 127 aunque en la realidad es `ttl = 128` porque la conexión 
 Si vamos a la web encontramos esto:
 
 ![](/assets/images/writeup-context/web-1.PNG)
+
+Si clicamos donde pone lo de contacto, cuando nos redirija encontraremos que hace mención a un login de admin, y así podemos encontrar ese login que veremos más tarde.
+
+Volviendo a la página principal no encontramos gran cosa, pero primero vamos a ver el `código` de la página, a ver si encontramos algo interesante o `virtual host routing` es decir, que haya varios servidores en el mismo host... Pero no encontramos nada de eso, lo que sí que encontramos es la primera FLAG: `CONTEXT{s3cur1ty_thr0ugh_0bscur1ty}`
+
+
+
