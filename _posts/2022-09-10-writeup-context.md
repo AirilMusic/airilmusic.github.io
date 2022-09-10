@@ -145,4 +145,10 @@ ID           Response   Lines    Word       Chars       Payload
 000071101:   200        99 L     209 W      2883 Ch     "PRODUCTS"  
 ```
 
+Principalmente, me llama la atención el directorio `/Home/staff` vamos y vemos unos cuantos nombres que probablemente nos sirvan para `usernames` en algún lado.
+
+![](/assets/images/writeup-context/web-staff.PNG)
+
+También si vamos al `código` no encontramos gran cosa. Pero lo que sí que encontramos es la primera FLAG: `CONTEXT{s3cur1ty_thr0ugh_0bscur1ty}`
+
 ![](/assets/images/writeup-context/web-code.PNG)
