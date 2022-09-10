@@ -110,4 +110,10 @@ Hard:
 
 # OVER THE WIRE
 
-![](/assets/images/Portfolio-CTF-s/Overthewire bandit terminado uwu.png)
+![](/assets/images/Portfolio-CTF-s/Overthewire-bandit-terminado-uwu.png)
+
+![](/assets/images/Portfolio-CTF-s/Overthewire-natas-terminado-uwu.png)
+
+![](/assets/images/Portfolio-CTF-s/Overthewire-natas-terminado-uwu-2.png)
+
+![](/assets/images/Portfolio-CTF-s/Overthewire-leviathan-terminado-uwu.png)
