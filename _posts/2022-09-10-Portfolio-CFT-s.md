@@ -123,3 +123,5 @@ Hard:
 # HACKERONE
 
 Esta es una plataforma de Bug Bounty, pero también tiene un apartado de CTF-s. También diré en esta plataforma me invitaron a un programa de Bug Bounty privado uwu.
+
+![](/assets/images/Portfolio-CTF-s/HackerOne.PNG)
