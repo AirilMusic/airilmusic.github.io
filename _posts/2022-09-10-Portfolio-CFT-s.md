@@ -108,3 +108,6 @@ Hard:
   -Phoenix
 ```
 
+# OVER THE WIRE
+
+![](/assets/images/Portfolio-CTF-s/Overthewire bandit terminado uwu.png)
