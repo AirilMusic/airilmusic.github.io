@@ -114,7 +114,7 @@ Si vamos a la web encontramos esto:
 
 Si clicamos donde pone lo de contacto, cuando nos redirija encontraremos que hace mención a un login de admin, y así podemos encontrar ese login que veremos más tarde.
 
-Volviendo a la página principal no encontramos gran cosa, pero primero vamos a ver el `código` de la página, a ver si encontramos algo interesante o `virtual host routing` es decir, que haya varios servidores en el mismo host... Pero no encontramos gran cosa. Lo que si, si nos fijamos, la mayoria de cosas estan en un directorio `/Home` por lo que vamos a hacer `wfuzzing` a ese directorio para ver que encontramos.
+Volviendo a la página principal no encontramos gran cosa, pero primero vamos a ver el `código` de la página, a ver si encontramos algo interesante o `virtual host routing` es decir, que haya varios servidores en el mismo host... Pero no encontramos gran cosa. Lo que si, si nos fijamos, la mayoría de cosas están en un directorio `/Home` por lo que vamos a hacer `wfuzzing` a ese directorio para ver que encontramos.
 
 ```
 
