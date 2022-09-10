@@ -117,7 +117,32 @@ Si clicamos donde pone lo de contacto, cuando nos redirija encontraremos que hac
 Volviendo a la página principal no encontramos gran cosa, pero primero vamos a ver el `código` de la página, a ver si encontramos algo interesante o `virtual host routing` es decir, que haya varios servidores en el mismo host... Pero no encontramos gran cosa. Lo que si, si nos fijamos, la mayoría de cosas están en un directorio `/Home` por lo que vamos a hacer `wfuzzing` a ese directorio para ver que encontramos.
 
 ```
+❯ wfuzz -c --hc=404 -t 200 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt https://10.13.37.12/Home/FUZZ
 
+********************************************************
+* Wfuzz 3.1.0 - The Web Fuzzer                         *
+********************************************************
+
+Target: https://10.13.37.12/Home/FUZZ
+Total requests: 220560
+
+=====================================================================
+ID           Response   Lines    Word       Chars       Payload                                                                                                                     
+=====================================================================
+
+000000042:   200        99 L     209 W      2883 Ch     "products"
+000000029:   200        59 L     245 W      2455 Ch     "privacy"
+000000025:   200        63 L     145 W      2070 Ch     "contact"
+000000245:   200        74 L     177 W      2137 Ch     "staff"
+000000592:   200        63 L     145 W      2070 Ch     "Contact"
+000000496:   200        99 L     209 W      2883 Ch     "Products"
+000000616:   200        59 L     245 W      2455 Ch     "Privacy"
+000000659:   200        78 L     232 W      2548 Ch     "Index"
+000002614:   200        74 L     177 W      2137 Ch     "Staff"
+000005085:   200        78 L     232 W      2548 Ch     "INDEX"
+000023314:   200        63 L     145 W      2070 Ch     "CONTACT"
+000043401:   200        59 L     245 W      2455 Ch     "PRIVACY"                                                                 
+000071101:   200        99 L     209 W      2883 Ch     "PRODUCTS"  
 ```
 
 ![](/assets/images/writeup-context/web-code.PNG)
