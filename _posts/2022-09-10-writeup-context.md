@@ -78,3 +78,17 @@ Host script results:
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 86.48 seconds
 ```
+
+El puerto `443/tcp` está abierto, y tiene corriendo el servicio `open ssl` es decir que es una `web https`.
+
+También vemos que hay una `Base de datos` en el puerto `1433/tcp` y viendo que tanto en ese puerto como en los siguientes está corriendo un servicio de `Microsoft` da a entender que la máquina es `Windows`, pero eso lo comprobaremos más adelante.
+
+Y también vemos que hay un servidor corriendo en el puerto `3389/tcp` por lo que probablemente es otra `web`.
+
+OS:
+
+Ya hemos visto que probablemente será una máquina `Windows`, pero vamos a comprobarlo. Para esto vamos a mandarle una `traza ICMP` y segun el `ttl` de la respuesta vamos a saber que `sistema operativo` tiene.
+
+```
+
+```
