@@ -22,3 +22,5 @@ Context es una máquina de la sección Fortress de Hack The Box en la que se pue
 
 ## PORT SCAN
 
+TCP:
+
