@@ -12,6 +12,8 @@ categories:
 tags:  
 ---
 
+Aparte de los CTF-s hechos, desde el 18-08-2022 estoy en un equipo de CTF-s formado solo por chicas llamado Valquirias y ya he participado en una competición/evento de criptografía con ellas uwu.
+
 # ENTORNO DE TRABAJO
 
 Se que no tiene que ver con los CTF-s, pero puede ser interesante.
@@ -117,3 +119,7 @@ Hard:
 ![](/assets/images/Portfolio-CTF-s/Overthewire-natas-terminado-uwu-2.png)
 
 ![](/assets/images/Portfolio-CTF-s/Overthewire-leviathan-terminado-uwu.png)
+
+# HACKERONE
+
+Esta es una plataforma de Bug Bounty, pero también tiene un apartado de CTF-s. También diré en esta plataforma me invitaron a un programa de Bug Bounty privado uwu.
