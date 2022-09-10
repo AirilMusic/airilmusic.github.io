@@ -105,3 +105,9 @@ Vemos que el ttl = 127 aunque en la realidad es `ttl = 128` porque la conexión 
 (También he hecho un escaneo de los puertos que hay por el protocolo UDP, pero como no hay ningún puerto abierto he decidido no ponerlo aquí ya que no es interesante)
 
 (Y no voy a probar el eternalblue, ya que nmap no lo detecta y al ser un fortress dudo que sea un windows antiguo)
+
+## PUERTO 443
+
+Si vamos a la web encontramos esto:
+
+![](/assets/images/writeup-context/web-1.PNG)
