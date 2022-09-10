@@ -12,6 +12,14 @@ categories:
 tags:  
 ---
 
+# ENTORNO DE TRABAJO
+
+Se que no tiene que ver con los CTF-s, pero puede ser interesante.
+
+Como sistema operativo utilizo `Parrot Security`, que básicamente es una distribución de `Linux` basada en `Debian` para Pentesting. Pero `no es el Parrot por defecto`, sino que lo modifique con `bspwm` para no tener escritorio y `controlar todo por consola`. Aparte de otras implementaciones como que me muestre mi IP privada tanto de la red como de la VPN de HTB, sortcuts, la barra en la que se muestran que escritorios están activos... Y alguna cosa de `seguridad` como `modificar los permisos` y tener `Firefox` que utiliza `Duck Duck Go` que está enjaulado con `Firejail` para que al estar enjaulado si descargo algún archivo malicioso que no pueda infectar mi máquina. 
+
+![](/assets/images/Portfolio-CTF-s/EntornoTrabajo.png)
+
 # HACK THE BOX
 
 Lo primero: XD
