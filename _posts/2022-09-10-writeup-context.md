@@ -116,5 +116,11 @@ Si clicamos donde pone lo de contacto, cuando nos redirija encontraremos que hac
 
 Volviendo a la página principal no encontramos gran cosa, pero primero vamos a ver el `código` de la página, a ver si encontramos algo interesante o `virtual host routing` es decir, que haya varios servidores en el mismo host... Pero no encontramos nada de eso, lo que sí que encontramos es la primera FLAG: `CONTEXT{s3cur1ty_thr0ugh_0bscur1ty}`
 
+![](/assets/images/writeup-context/web-code.PNG)
 
+Pero si nos fijamos la mayoria de cosas estan en un directorio `/Home` por lo que vamos a hacer `wfuzzing` a ese directorio para ver que encontramos.
+
+```
+
+```
 
