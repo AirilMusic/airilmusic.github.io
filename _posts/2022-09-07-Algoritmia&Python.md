@@ -9,7 +9,6 @@ header:
   teaser_home_page: true
   icon: 
 categories:
-  - Scripting
   - Programaccion
 tags:  
   - Python
