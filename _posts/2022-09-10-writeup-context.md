@@ -164,3 +164,9 @@ Pues asi lo primero que me llama la atención es que podemos añadir cosas, así
 ```
 '+(select db_name())+'
 ```
+
+![](/assets/images/writeup-context/admin-sqli-1.PNG)
+
+Y vemos que es vulnerable y nos muestra el nombre de la base de datos:
+
+![](/assets/images/writeup-context/admin-sqli-2.PNG)
