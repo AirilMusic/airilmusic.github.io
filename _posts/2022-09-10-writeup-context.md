@@ -200,3 +200,9 @@ Y tambien de la misma forma podemos encontrar una FLAG: `CONTEXT{d0_it_st0p_it_b
 ![](/assets/images/writeup-context/admin-sqli-6.PNG)
 
 Haciendo `Wfuzzing` a la web principal (osea al directorio principal `https://10.13.37.12/`) encontramos el directorio `/owa` que parece un servidor de `outlook` y hay un loguin, por lo que podemos probar con las credenciales que ya tenemos: usuario `abbie.buckfast` y la contraseña `AMkru$3_f'/Q^7f?`
+
+![](/assets/images/writeup-context/owa-1.PNG)
+
+Y nos da acceso.
+
+
