@@ -15,6 +15,8 @@ tags:
   - TCP
   - SQLi
   - Windows
+  - Deserialization
+  - msfvenom
 ---
 
 ![](/assets/images/writeup-context/context2.jpg)
