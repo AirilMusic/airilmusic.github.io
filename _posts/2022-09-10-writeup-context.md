@@ -213,4 +213,10 @@ Le damos y nos deja entrar `sin proporcionar contraseña`.
 
 Ahora si miramos en mensajes enviados podemos entontrar otra FLAG: `CONTEXT{wh00000_4re_y0u?}`
 
+Además en inbox podemos ver un mensaje y un zip que podemos descargar:
+
+![](/assets/images/writeup-context/owa-3.PNG)
+
+
+
 
