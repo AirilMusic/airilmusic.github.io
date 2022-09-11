@@ -15,6 +15,8 @@ tags:
   - Python
 ---
 
+(según valla utilizando nuevos algoritmos en ejercicios iré añadiendo mas aquí)
+
 # SUMATORIOS
 
 ```
