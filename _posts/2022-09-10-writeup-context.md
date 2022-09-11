@@ -24,6 +24,8 @@ Context es una máquina de la sección Fortress de Hack The Box en la que se pue
 
 TCP:
 
+(Por cierto, que en los writeups anteriores no lo puse y quizas es interesante. No tomo `medidas de seguridad` para hacer `menos ruido` y ser `menos detectable` porque es un CTF que no es Insane, pero sino lo primero seria que el parametro `-T 5` obviamente seria entre `-T 0` a `-T 3` y `fragmetaria` los paquetes en `paquetes de 8 bites` que se irian mandando poco a poco cocn el parametro `-ff` (a la vez que utilizaria una `vpn` o `vps` para cambiarme la ip))
+
 ```
  > nmap -sV -sC -Pn -T5 -n --open 10.13.37.12
 
