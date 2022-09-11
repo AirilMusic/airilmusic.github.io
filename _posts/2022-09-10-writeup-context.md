@@ -364,9 +364,9 @@ out: PE32 executable (DLL) (console) Intel 80386 Mono/.Net assembly, for MS Wind
 
 Revisando con ayuda de `dnSpy` las funciones podemos ver `BackupClients`:
 
-![](/assets/images/writeup-context/dnSpy1.PNG)
+![](/assets/images/writeup-context/dnSpy1.png)
 
 Dentro podemos ver `credenciales` entonces simplemente nos conectamos:
 
-![](/assets/images/writeup-context/dnSpy2.PNG)
+![](/assets/images/writeup-context/dnSpy2.png)
 
