@@ -160,3 +160,7 @@ A demás, vemos que un poco más abajo hace referencia al directorio `/Admin` qu
 Y nos las acepta, no sé porque me ha hecho un redirect a la página principal, pero voy a `/Admin` y ya me manda para `/Admin/Management`. Pues ya estamos dentro, si fuese un CTF normal aquí seria donde habría que buscar una forma de mandarnos una reverse shell, pero es un Fortress así que no creo que todavía se pueda.
 
 Pues asi lo primero que me llama la atención es que podemos añadir cosas, así que lo primero que voy a intentar sera una `SQL injection`. 
+
+```
+'+(select db_name())+'
+```
