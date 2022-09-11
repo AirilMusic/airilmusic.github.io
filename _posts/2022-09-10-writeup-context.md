@@ -213,10 +213,36 @@ Le damos y nos deja entrar `sin proporcionar contraseña`.
 
 Ahora si miramos en mensajes enviados podemos entontrar otra FLAG: `CONTEXT{wh00000_4re_y0u?}`
 
-Además en inbox podemos ver un mensaje y un zip que podemos descargar:
+Además en inbox podemos ver un mensaje y un `zip` que podemos descargar:
 
 ![](/assets/images/writeup-context/owa-3.PNG)
 
+Después de descargar y unzipear el archivo en una carpeta podemos ver un `_ViewStart.cshtml`. Analizando el contenido podemos pensar en un ataque de `deseralización en la cookie Profile`.
 
+```
+❯ cat _ViewStart.cshtml
 
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
 
+@using System.Text;
+@using System.Web.Script.Serialization;
+@{ 
+    if (0 != Context.Session.Keys.Count) {
+        if (null != Context.Request.Cookies.Get("Profile")) {
+            try {
+                byte[] data = Convert.FromBase64String(Context.Request.Cookies.Get("Profile")?.Value);
+                string str = UTF8Encoding.UTF8.GetString(data);
+
+                SimpleTypeResolver resolver = new SimpleTypeResolver();
+                JavaScriptSerializer serializer = new JavaScriptSerializer(resolver);
+
+                object obj = (serializer.Deserialize(str, typeof(object)) as Profile);
+                // TODO: create profile to change the language and font of the website 
+            } catch (Exception e) {
+            }
+        }
+    }
+}
+```
