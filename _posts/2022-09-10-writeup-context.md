@@ -205,4 +205,8 @@ Haciendo `Wfuzzing` a la web principal (osea al directorio principal `https://10
 
 Y nos da acceso.
 
+Una vez hemos entrado, en la parte superior derecha hay un icono de usuario, clicamos y ahí nos podemos cambiar a `otro buzón`, entonces clicamos ahí y luego con tal de poner una letra y darle a autocompletar vemos `otro usuario`:
 
+![](/assets/images/writeup-context/owa-2.PNG)
+
+Le damos y nos deja entrar `sin proporcionar contraseña`.
