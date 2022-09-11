@@ -210,3 +210,7 @@ Una vez hemos entrado, en la parte superior derecha hay un icono de usuario, cli
 ![](/assets/images/writeup-context/owa-2.PNG)
 
 Le damos y nos deja entrar `sin proporcionar contraseña`.
+
+Ahora si miramos en mensajes enviados podemos entontrar otra FLAG: `CONTEXT{wh00000_4re_y0u?}`
+
+
