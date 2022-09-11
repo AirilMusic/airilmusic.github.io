@@ -156,3 +156,5 @@ También si vamos al `código` no encontramos gran cosa. Pero lo que sí que enc
 ![](/assets/images/writeup-context/web-code.PNG)
 
 A demás, vemos que un poco más abajo hace referencia al directorio `/Admin` que para entrar nos tenemos que loguear (no nos hace un redirect, por lo que `no parece vulnerable a Idor`) pero antes de probar algunos ataques como `Idor` o `SQLi` nos podemos fijar en otra cosa. En el mismo mensaje donde está la flag también encontramos unas credenciales `jay.teignton:admin` así que vamos a probarlas.
+
+Y nos las acepta, no sé porque me ha hecho un redirect a la página principal, pero voy a `/Admin` y ya me manda para `/Admin/Management`. Pues ya estamos dentro, si fuese un CTF normal aquí seria donde habría que buscar una forma de mandarnos una reverse shell, pero es un Fortress así que no creo que todavía se pueda.
