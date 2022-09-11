@@ -408,4 +408,17 @@ Podemos ver que la `contraseña` se compone por la `fecha mas la cadena "-thisis
 
 ![](/assets/images/writeup-context/dnSpy4.png)
 
+Podemos comprobarlo con el `parametro password` que se nos indica en la función:
 
+```
+PS C:\ProgramData> date
+30 July 2022 01:26:14
+PS C:\ProgramData> .\netcat.exe 127.0.0.1 7734 -v
+netcat.exe : WEB.TEIGNTON.HTB [127.0.0.1] 7734 (?) open
+password=2022-07-30-thisisleet
+OK
+```
+
+Además de password vemos un `parámetro command` donde podemos `ejecutar un binario`.
+
+![](/assets/images/writeup-context/dnSpy5.png)
