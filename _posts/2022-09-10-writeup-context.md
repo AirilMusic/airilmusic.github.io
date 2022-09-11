@@ -154,3 +154,5 @@ Principalmente, me llama la atención el directorio `/Home/staff` vamos y vemos 
 También si vamos al `código` no encontramos gran cosa. Pero lo que sí que encontramos es la primera FLAG: `CONTEXT{s3cur1ty_thr0ugh_0bscur1ty}`
 
 ![](/assets/images/writeup-context/web-code.PNG)
+
+A demás, vemos que un poco más abajo hace referencia al directorio `/Admin` que para entrar nos tenemos que loguear (no nos hace un redirect, por lo que `no parece vulnerable a Idor`) pero antes de probar algunos ataques como `Idor` o `SQLi` nos podemos fijar en otra cosa. En el mismo mensaje donde está la flag también encontramos unas credenciales `jay.teignton:admin` así que vamos a probarlas.
