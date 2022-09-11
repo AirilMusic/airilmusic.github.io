@@ -10,9 +10,9 @@ header:
   icon: 
 categories:
   - AI
+  - Programacion
 tags:  
   - Python
-  - Tensorflow
   - Virtual Network
 ---
 
