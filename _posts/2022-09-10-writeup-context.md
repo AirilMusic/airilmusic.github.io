@@ -256,3 +256,6 @@ ew0KICAgICdfX3R5cGUnOidTeXN0ZW0uV2luZG93cy5EYXRhLk9iamVjdERhdGFQcm92aWRlciwgUHJl
 
 pc1@windows C:\CTF\ysoserial>
 ```
+
+Iniciamos sesión de nuevo en /Admin y con `EditThisCookie` o desde las `herramientas de desarrollador` nos cambiamos la cookie Profile a una con la data serializada.
+
