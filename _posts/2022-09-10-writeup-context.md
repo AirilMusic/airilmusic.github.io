@@ -13,7 +13,8 @@ categories:
 tags:  
   - HTB
   - TCP
-  - 
+  - SQLi
+  - Windows
 ---
 
 ![](/assets/images/writeup-context/context2.jpg)
