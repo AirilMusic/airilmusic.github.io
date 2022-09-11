@@ -397,3 +397,15 @@ PS C:\Users\jay.teignton\Documents> Select-String CONTEXT WindowsService.exe
 sion1.0.0.0FInternalNameWindowsService.exeHLegalCopyrightCopyright ©
 PS C:\Users\jay.teignton\Documents>
 ```
+
+Hay un servicio corriendo en el puerto `7734` al que podemos conectarnos con `netcat`.
+
+Analizando el `.exe` con `dnSpy` podemos ver TCPServer con algunas cosas.
+
+![](/assets/images/writeup-context/dnSpy3.png)
+
+Podemos ver que la `contraseña` se compone por la `fecha mas la cadena "-thisisleet"`
+
+![](/assets/images/writeup-context/dnSpy4.png)
+
+
