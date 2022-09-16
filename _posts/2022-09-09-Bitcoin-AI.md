@@ -93,6 +93,8 @@ model = tf.keras.Sequential([
     
     tf.keras.layers.Dense(1000, activation = tf.nn.relu),
     
+    tf.keras.layers.Dropout(0.2), #(NOTA: esto lo he puesto una semana después de terminar este artículo, por eso no aparece ni en el diagrama ni en la explicación de la estructura) Esto lo usamos para evitar problemas el overfiting y por las pocas pruebas que he hecho los resultados son ahun mas precisos, asi que uwu.
+    
     tf.keras.layers.Dense(1)
 
 ])
@@ -135,6 +137,8 @@ El segundo problema más común en muchas IA-s y que me ha dado algún problemit
 Algo parecido también pasa con el número de capas, por ejemplo, no sé porque, pero `si pongo una capa más también peta` y todavía no sé porque pasa.
 
 Y otro problema que puede haber es uno que he mencionado anteriormente, es decir: `las neuronas muertas`. Para esto hay otras funciones de activación que no se quedan en 0 como por ejemplo `Elu`, `LeakyReLU`...
+
+Otro problema es el `overfiting` y el `underfiting` es decir, que o memorice en vez de aprender o que no sea lo suficientemente precisa. Para esto podemos hacer dos cosas. 1.`Reservar parte del dataset para examinar la red` 2.`Utilizar una capa Dropout`.
 
 # RESULTADO
 
