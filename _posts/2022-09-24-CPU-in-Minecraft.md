@@ -70,8 +70,6 @@ Entonces lo que he hecho ha sido hacer lo mismo pero en el juego. Generalmente s
 
 ![](/assets/images/CPU/fulladders1.png)
 
-![](/assets/images/CPU/2022_09_24_19_26_29.mp4)
-
 # RELOJ
 
 
