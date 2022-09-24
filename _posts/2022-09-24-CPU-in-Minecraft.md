@@ -82,6 +82,12 @@ Ahora vamos a pasar esto a Minecraft:
 
 ![](/assets/images/CPU/A2.png)
 
+Ahí estoy utilizando 2 columnas de Full Adders (para que se vea mas claro el proceso), pero no es necesario, podemos directamente `injectar +1 en el carry in de los full adders` que es lo que haré en la ALU para compactarla. También aqui he tenido el problema de que no se porque no funciona del todo bien, pero eso lo explicaré con la ALU, porque ese problemita lo he solucionado ahí.
+
+## COMPARADOR
+
+
+
 # RELOJ
 
 
