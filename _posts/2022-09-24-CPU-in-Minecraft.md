@@ -70,6 +70,18 @@ Entonces lo que he hecho ha sido hacer lo mismo pero en el juego. Generalmente s
 
 ![](/assets/images/CPU/fulladders1.png)
 
+## MÓDULO A2
+
+Esta es la forma óptima de hacer `restas en binario` ya que nos permite hace restas con resultados positivos, negativos o 0.
+
+Hay `dos formas` de hacer esto, pero voy a explicar la mas compleja pero que para este caso es `la mas simple`.
+
+Tenemos `dos números en binario`, uno lo dejamos sin tocar, pero al otro le vamos a hacer un `complemento a1`, osea, lo vamos a invertir, es decir, que todos los `0 se conviertan en 1 y viceversa`. Si no hiciesemos nada mas y sumasemos los dos numeros se haría una resta, pero tendría `+0 y -0`, pera que eso no pase ahora le tendremos que hacer un `complemento a2` es decir, que le vamos a `sumar 1`. Y aquí ya podemos `sumar ambos números` y ya estaría.
+
+Ahora vamos a pasar esto a Minecraft:
+
+![](/assets/images/CPU/A2.png)
+
 # RELOJ
 
 
