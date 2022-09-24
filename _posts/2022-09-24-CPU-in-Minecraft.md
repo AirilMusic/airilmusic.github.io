@@ -68,7 +68,7 @@ Con este circuito logramos hacer `sumas` en `binario`. A continuación dejo un e
 
 Entonces lo que he hecho ha sido hacer lo mismo pero en el juego. Generalmente se utilizan dos formas de hacer esto, una es con `antorchas de redstone` (que son un objeto que permiten `invertir la señal`) o también se puede hacer con `comparadores` que es otro objeto con el que se pueden `comparar intensidades` o `hacer restas de intensidades`. En la primera CPU utilicé la primera form, pero en esta he optado por la segunda, ya que permite hacer el circuito mas limpio y compacto.
 
-![](/assets/images/CPU/fulladder1.png)
+![](/assets/images/CPU/fulladders1.png)
 
 # RELOJ
 
