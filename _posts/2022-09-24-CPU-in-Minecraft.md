@@ -27,3 +27,45 @@ Esta Es la segunda CPU que hago en Minecraft. La primera que hice fue bastante s
 ![](/assets/images/CPU/oldcpu.png)
 
 https://www.youtube.com/watch?v=lzufHP3hNGU
+
+# ÍNDICE
+ 
+```
+  -ALU
+  
+  -RELOJ
+  
+  -MEMORIAS
+      ·Texts
+      ·RAM
+      ·Files
+      ·...
+   
+  -PROGRAMAS
+      ·Calculadora
+      ·Juegos
+      ·Editor de texto
+      ·...
+  
+  -GRAFICOS
+      ·Pantalla
+      ·Tarjeta grafica
+      ·...
+      
+```
+
+# ALU
+
+
+# RELOJ
+
+
+# MEMORIAS
+
+
+# PROGRAMAS
+
+
+# GRAFICOS
+
+
