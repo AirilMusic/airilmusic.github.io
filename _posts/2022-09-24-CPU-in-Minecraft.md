@@ -128,6 +128,8 @@ Claro, esto no lo puedo dejar así porque no serviría para nada. Lo primero que
 
 ![](/assets/images/CPU/memoria1.png)
 
+En la foto hay un sitio donde pone `select`, eso es porque `cada bite del mismo byte` estaran en la misma columna, es decir, `uno encima del otro` y `se desbloqueará esa columna`. Y cada archivo estara en la misma fila. Luego `a su lado estara el siguiente archivo` de texto y asi hasta 10. 
+
 # PROGRAMAS
 
 
