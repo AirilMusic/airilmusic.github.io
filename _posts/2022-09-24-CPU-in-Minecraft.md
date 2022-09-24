@@ -86,7 +86,17 @@ Ahí estoy utilizando 2 columnas de Full Adders (para que se vea mas claro el pr
 
 ## COMPARADOR
 
+Como los `números negativos en vinario son los positivos invertidos`, nos puede dar problemas al interpretar negativos como números enormes, por lo que necesitamos un output que nos diga si es `positivo o negativo`. Para eso lo que hay que hacer es `comparar cual de los números es mas grande`. Si `el primero es mayor al segundo` entonces es `positivos`, pero `sino es negativo`.
 
+![](/assets/images/CPU/comparador1.png)
+
+(es el output que vemos arriba del todo en la ALU)
+
+## ALU COMPLETA
+
+Una vez `juntados todos los módulos` y `quitada la primera columna de full adders del módulo a2`, queda así:
+
+![](/assets/images/CPU/ALU1.png)
 
 # RELOJ
 
