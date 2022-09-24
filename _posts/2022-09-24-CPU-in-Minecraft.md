@@ -5,9 +5,9 @@ excerpt: "Esta es la explicación parte por parte de la segunda CPU que estoy ha
 date: 2022-09-24
 classes: wide
 header:
-  teaser: /assets/images/writeup-context/context.PNG
+  teaser: 
   teaser_home_page: true
-  icon: /assets/images/hackthebox.webp
+  icon: 
 categories:
   - computación
 tags:  
@@ -24,6 +24,6 @@ Esta Es la segunda CPU que hago en Minecraft. La primera que hice fue bastante s
 
 `Primera CPU:`
 
-
+![](/assets/images/CPU/oldcpu.png)
 
 https://www.youtube.com/watch?v=lzufHP3hNGU
