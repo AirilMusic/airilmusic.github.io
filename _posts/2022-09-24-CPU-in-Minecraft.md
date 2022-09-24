@@ -35,7 +35,7 @@ https://www.youtube.com/watch?v=lzufHP3hNGU
   
   -RELOJ
   
-  -MEMORIAS
+  -MEMÓRIAS
       ·Texts
       ·RAM
       ·Files
@@ -47,9 +47,9 @@ https://www.youtube.com/watch?v=lzufHP3hNGU
       ·Editor de texto
       ·...
   
-  -GRAFICOS
+  -GRÁFICOS
       ·Pantalla
-      ·Tarjeta grafica
+      ·Tarjeta gráfica
       ·...
       
 ```
@@ -114,7 +114,7 @@ Claro, hay un problema, `en los últimos 4 digitos todos los numeros son siempre
 
 ![](/assets/images/CPU/reloj2.png)
 
-# MEMORIAS
+# MEMÓRIAS
 
 ## Textos
 
@@ -128,11 +128,11 @@ Claro, esto no lo puedo dejar así porque no serviría para nada. Lo primero que
 
 ![](/assets/images/CPU/memoria1.png)
 
-En la foto hay un sitio donde pone `select`, eso es porque `cada bite del mismo byte` estaran en la misma columna, es decir, `uno encima del otro` y `se desbloqueará esa columna`. Y cada archivo estara en la misma fila. Luego `a su lado estara el siguiente archivo` de texto y asi hasta 10. 
+En la foto hay un sitio donde pone `select`, eso es porque `cada bite del mismo byte` estarán en la misma columna, es decir, `uno encima del otro` y `se desbloqueará esa columna`. Y cada archivo estará en la misma fila. Luego `a su lado estara el siguiente archivo` de texto y asi hasta 10. 
 
 # PROGRAMAS
 
 
-# GRAFICOS
+# GRÁFICOS
 
 
