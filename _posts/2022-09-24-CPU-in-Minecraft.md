@@ -116,6 +116,17 @@ Claro, hay un problema, `en los últimos 4 digitos todos los numeros son siempre
 
 # MEMORIAS
 
+## Textos
+
+Voy a poner `un máximo de 10 slots en los que puedas añadir, borrar, editar o leer textos`.
+
+Estos textos tendrán un máximo de `40 caracteres` (quizás mas). Para eso voy a utilizar un concepto de memória bastante básico, basicamente si quiero que almacene informacion activo el `dropper` y meta un item en el `hopper`, de esta forma se mantendra en el hopper hasta que lo desbloqueemos, y eso lo podemos detectar:
+
+![](/assets/images/CPU/memoria1,2.png)
+
+Claro, esto no lo puedo dejar así porque no serviría para nada. Lo primero que hay que hacer es `detectar en que byte del texto esta`, para eso utilizamos la parte de la derecha, que hace que al utilizar un byte `ese byte se bloquee y se desbloquee el siguiente`. Luego tenemos que `ver si ese byte esta desbloqueado` y si lo esta que `se escriba o se lea ahi la información`, para eso esta la parte de la izquierda.
+
+![](/assets/images/CPU/memoria1.png)
 
 # PROGRAMAS
 
