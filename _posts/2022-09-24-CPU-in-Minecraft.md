@@ -100,6 +100,10 @@ Una vez `juntados todos los módulos` y `quitada la primera columna de full adde
 
 Vale, como he dicho antes `al hacer restas da algún problemita` cuando hago restas con resultado negativo va bien, pero con positivos no `(resultado = número que debería salir - 1)`. Por lo que decidí aprobechar el comparador para otra función a parte de la original, es decir, si `el resultado de una resta` será `positivo le hace +1`, pero `sino no` y funciona así que uwu. 
 
+## IMPLEMENTACIONES EXTRA
+
+Con esto me refiero a `multiplicaciones, divisiones...`. Esto lo `añadiré en el programa de calculadora`, ya que `no lo necesito para operaciones matematicas y logicas basicas de la CPU`.
+
 # RELOJ
 
 
