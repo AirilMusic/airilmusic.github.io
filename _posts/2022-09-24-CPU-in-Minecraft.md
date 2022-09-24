@@ -106,6 +106,13 @@ Con esto me refiero a `multiplicaciones, divisiones...`. Esto lo `añadiré en e
 
 # RELOJ
 
+Esto se puede utilizar como `reloj o como cronometro`. Da horas desde las 00:00.00 hasta las 23:59.59, es decir `horas, minutos y segundos`.
+
+![](/assets/images/CPU/reloj1.png)
+
+Claro, hay un problema, `en los últimos 4 digitos todos los numeros son siempre iguales` es decir, que van o de 0 a 5, o de 0 a 9. Pero, `en los primeros dos no`, osea, `en el primero puede ir de 0 a 2` y hay todo normal, `pero en el segundo` va cuando en el `primero digito es 0, entonces va de 0 a 9`, `cuando es 1, lo mismo`, pero `cuando es 2, entonces irá de 0 a 3`, por lo que hay que contemplar esos 3 casos, pera eso lo que he hecho es `un contador de 3 que limitará el número maximo antes de que vuelva a 0`.
+
+![](/assets/images/CPU/reloj2.png)
 
 # MEMORIAS
 
