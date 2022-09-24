@@ -56,6 +56,19 @@ https://www.youtube.com/watch?v=lzufHP3hNGU
 
 # ALU
 
+Este es uno de los `componentes mas importantes` de una CPU, la `ALU` es la `Unidad Aritmetica Lógica` de la CPU, es decir, la parte que se encarga de los `calculos y las operaciones logicas`.
+
+En la ALU que he hecho hay 3 partes importantes: `Full Adders`, `Modulo A2` y un `comparador`.
+
+## FULL ADDERS
+
+Con este circuito logramos hacer `sumas` en `binario`. A continuación dejo un esquema de como es el circuito con puertas lógicas:
+
+![](/assets/images/CPU/full-adder-circuit.png)
+
+Entonces lo que he hecho ha sido hacer lo mismo pero en el juego. Generalmente se utilizan dos formas de hacer esto, una es con `antorchas de redstone` (que son un objeto que permiten `invertir la señal`) o también se puede hacer con `comparadores` que es otro objeto con el que se pueden `comparar intensidades` o `hacer restas de intensidades`. En la primera CPU utilicé la primera form, pero en esta he optado por la segunda, ya que permite hacer el circuito mas limpio y compacto.
+
+![](/assets/images/CPU/fulladder1.png)
 
 # RELOJ
 
