@@ -130,6 +130,10 @@ Claro, esto no lo puedo dejar así porque no serviría para nada. Lo primero que
 
 En la foto hay un sitio donde pone `select`, eso es porque `cada bite del mismo byte` estarán en la misma columna, es decir, `uno encima del otro` y `se desbloqueará esa columna`. Y cada archivo estará en la misma fila. Luego `a su lado estara el siguiente archivo` de texto y asi hasta 10. 
 
+Tras unos cuantos cambios y algunos apaños para solucionar un par de problemitas que había y juntar varios módulos, queda así:
+
+![](/assets/images/CPU/memorias2.png)
+
 # PROGRAMAS
 
 
