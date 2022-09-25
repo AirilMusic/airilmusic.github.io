@@ -134,6 +134,16 @@ Tras unos cuantos cambios y algunos apaños para solucionar un par de problemita
 
 ![](/assets/images/CPU/memorias2.png)
 
+Y la `memoria de un archivo de texto` quedaría así:
+
+![](/assets/images/CPU/memorias3.png)
+
+![](/assets/images/CPU/memorias4.png)
+
+Y ya la de los `10 espacios para archivos` así:
+
+![](/assets/images/CPU/memorias5.png)
+
 # PROGRAMAS
 
 
