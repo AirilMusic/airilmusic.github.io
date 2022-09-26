@@ -36,7 +36,7 @@ https://www.youtube.com/watch?v=lzufHP3hNGU
   -RELOJ
   
   -MEMÓRIAS
-      ·Texts
+      ·ROM (texts)
       ·RAM
       ·Files
       ·...
@@ -116,7 +116,7 @@ Claro, hay un problema, `en los últimos 4 digitos todos los numeros son siempre
 
 # MEMÓRIAS
 
-## Textos
+## ROM (Textos)
 
 Voy a poner `un máximo de 10 slots en los que puedas añadir, borrar, editar o leer textos`.
 
