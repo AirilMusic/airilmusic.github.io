@@ -153,6 +153,26 @@ Y ya la de los `10 espacios para archivos` así:
 
 ![](/assets/images/CPU/memorias5.png)
 
+Ya lo he terminado, así que voy a explicar un poco lo que le he añadido:
+
+Primero he puesto un sistema de `select de memoria`, es decir, para activar una unica memoria de las 10 posibles, para eso su input esta aquí abajo:
+
+![](/assets/images/CPU/memorias7.png)
+
+Con el input del select `bloqueo el output` de las memórias que no están seleccionadas y a la vez me llevo la señal al otro lado para `bloquear el input` de la memória, para que no modificar las que no están seleccionadas:
+
+![](/assets/images/CPU/memorias6.png)
+
+Entonces luego ya `conecto todos los inputs` de las memórias (ya que si no estan seleccionadas no se pueden modificar), `conecto los resets con el cable rojo` (que se me ha olvidado ponerlo pero también se bloquean) y pongo `un cable que dirá a las memórias cuando se han modificado` una vez, para poder dar espacio y que no se escriba nada en ese byte. Y a su vez también por el otro lado `conecto los outputs` de las memórias.
+
+![](/assets/images/CPU/memorias8.png)
+
+Y ya una vez terminada la `ROM`, quedaría así:
+
+![](/assets/images/CPU/memorias9.png)
+
+(ya lo siento porque me haya extendido tanto en esta parte pero esque llevo 4 días metiendole muchísimas horas y es mas complicado de lo que parece)
+
 # PROGRAMAS
 
 
