@@ -20,7 +20,7 @@ Voy a ir actualizando este post según valla avanzando con la CPU, ya que es un 
 
 
 
-Esta Es la segunda CPU que hago en Minecraft. La primera que hice (a principios de 4º de la ESO) fue bastante simple y muy cutre, pero mi intención es hacer una bien hecha, por lo tanto estoy creando esta.
+Esta Es la segunda CPU que hago en Minecraft. La primera que hice (a principios de 4º de la ESO) fue bastante simple y muy cutre, pero mi intención es hacer una bien hecha, por lo tanto estoy creando esta (a principios de 2º de Bachillerato).
 
 `Primera CPU:`
 
@@ -32,6 +32,11 @@ https://www.youtube.com/watch?v=lzufHP3hNGU
  
 ```
   -ALU
+      ·Full Adders
+      ·Complemento A2
+      ·Comparador
+      ·ALU entera
+      ·Implementaciones extra
   
   -RELOJ
   
@@ -45,13 +50,15 @@ https://www.youtube.com/watch?v=lzufHP3hNGU
       ·Calculadora
       ·Juegos
       ·Editor de texto
-      ·...
   
   -GRÁFICOS
       ·Pantalla
       ·Tarjeta gráfica
-      ·...
-      
+  
+  -TECLADO
+      ·Teclado y Encoder
+      ·Serialización de datos
+      ·Decoder
 ```
 
 # ALU
@@ -150,5 +157,8 @@ Y ya la de los `10 espacios para archivos` así:
 
 
 # GRÁFICOS
+
+
+# TECLADO
 
 
