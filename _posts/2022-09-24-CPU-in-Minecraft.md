@@ -20,7 +20,7 @@ Voy a ir actualizando este post según valla avanzando con la CPU, ya que es un 
 
 
 
-Esta Es la segunda CPU que hago en Minecraft. La primera que hice fue bastante simple y muy cutre, pero mi intención es hacer una bien hecha, por lo tanto estoy creando esta.
+Esta Es la segunda CPU que hago en Minecraft. La primera que hice (a principios de 4º de la ESO) fue bastante simple y muy cutre, pero mi intención es hacer una bien hecha, por lo tanto estoy creando esta.
 
 `Primera CPU:`
 
