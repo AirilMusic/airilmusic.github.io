@@ -41,7 +41,7 @@ https://www.youtube.com/watch?v=lzufHP3hNGU
   -RELOJ
   
   -MEMÓRIAS
-      ·ROM (texts)
+      ·ROM
       ·RAM
       ·Files
       ·...
@@ -123,9 +123,9 @@ Claro, hay un problema, `en los últimos 4 digitos todos los numeros son siempre
 
 # MEMÓRIAS
 
-## ROM (Textos)
+## ROM
 
-Voy a poner `un máximo de 10 slots en los que puedas añadir, borrar, editar o leer textos`.
+Voy a poner `un máximo de 10 slots en los que puedas añadir, borrar, editar o leer textos`. (En este caso voy a utilizar esta memória solo para textos, pero que la podría utilizar para almacenar cualquier otro tipo de datos)
 
 Estos textos tendrán un máximo de `40 caracteres` (quizás mas). Para eso voy a utilizar un concepto de memória bastante básico, basicamente si quiero que almacene informacion activo el `dropper` y meta un item en el `hopper`, de esta forma se mantendra en el hopper hasta que lo desbloqueemos, y eso lo podemos detectar:
 
