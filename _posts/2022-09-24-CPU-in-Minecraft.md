@@ -5,7 +5,7 @@ excerpt: "Esta es la explicación parte por parte de la segunda CPU que estoy ha
 date: 2022-09-24
 classes: wide
 header:
-  teaser: 
+  teaser: /assets/images/CPU/oldcpu.png
   teaser_home_page: true
   icon: 
 categories:
