@@ -177,8 +177,15 @@ Y una pequeña cosa extra, `para poder mandar datos a la RAM` hay que hacer un p
 
 ![](/assets/images/CPU/memorias10.png)
 
+Y vistos algunos fallos he hecho algún que otro apaño mas, pero no quiero escribir mas XD
+
 ## RAM
 
+La idea es tener `una memória en la que puedas gardar cosas temporalmente`, entonces conectare `los outputs de las otras memórias al input de la ram`, y `el otput de esta, al input de las memórias` (para por ejemplo la opción de pegar texto ya copiado). También tengo que tener en cuenta la cantidad de caracteres y algunas cosas más, pero no me quiero extender.
+
+La Ram estará posicionada en ese sitio, ya que esta cerca de las otras memórias y no estorba demasiado:
+
+![](/assets/images/CPU/ram1.png)
 
 
 # PROGRAMAS
