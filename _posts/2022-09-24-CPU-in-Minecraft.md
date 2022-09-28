@@ -187,6 +187,9 @@ La Ram estará posicionada en ese sitio, ya que esta cerca de las otras memória
 
 ![](/assets/images/CPU/ram1.png)
 
+Y pues ya todo conectado:
+
+![](/assets/images/CPU/ram2.png)
 
 # PROGRAMAS
 
