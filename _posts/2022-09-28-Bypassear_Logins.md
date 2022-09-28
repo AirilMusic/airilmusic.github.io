@@ -40,6 +40,7 @@ Pongo esto como el primer método de bypassing, porque es mi favorito, es super 
 
 ## No SQLi
 
+## COOKIE HIJACKING
 
 ## SHELL SHOCK
 
