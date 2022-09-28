@@ -5,7 +5,7 @@ excerpt: "En este artículo vamos a ver distintas formas de bypassear un login."
 date: 2022-09-28
 classes: wide
 header:
-  teaser: /assets/images/web-hacking/login-bypass/portada.jpg
+  teaser: /assets/images/login-bypass/portada.jpg
   teaser_home_page: true
   icon: 
 categories:
@@ -14,4 +14,4 @@ tags:
   - SQLi
 ---
 
-![](/assets/images/web-hacking/login-bypass/portada.jpg)
+![](/assets/images/login-bypass/portada.jpg)
