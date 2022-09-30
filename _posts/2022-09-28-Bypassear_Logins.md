@@ -87,7 +87,7 @@ ID           Response   Lines    Word       Chars       Payload
 Primero hice Wfuzzing a su web, y uy, el directorio `/wp-admin` da `301` (entre otros) y si intentamos acceder `nos redirige a un login`, asi que apesta a `IDOR`. Por lo tanto voy a intentar `capturar la petición` con `burpsuit` de cuando intento acceder a `/wp-admin`.
 
 
-
+WORKING PROGRESS
 
 
 ## PORQUE PASA ESTO Y COMO EVITARLO
