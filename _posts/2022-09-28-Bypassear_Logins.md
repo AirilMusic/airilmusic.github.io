@@ -18,7 +18,7 @@ tags:
 
 En este artículo vamos a ver `distintas formas que hay para bypassear un login`, es decir, formas para pasar un login sin necesidad de introducir credenciales, o en su defecto encontrar unas credenciales válidas con las que poder conectarnos con la cuenta de otro usuario.
 
-## OSINT
+# OSINT
 
 Puede parecer gracioso pero `no es raro encontrar credenciales validas en internet`. 
 
@@ -32,13 +32,19 @@ Y otro consejo: buscar la web en `shodan`, ya que puedes encontrar información 
 
 ![](/assets/images/login-bypass/shodan.PNG)
 
-## IDOR
+# IDOR
 
 Pongo esto como el primer método de bypassing, porque es mi favorito, es super gracioso, porque `es absurdo a mas no poder`. Y no es tan conocido, por ejemplo en bug bounty pasa una cosa bastante graciosa que es que la mayoría de personas buscan XSS o SQLi, pero se olvidan de esta vulnerabilidad tan graciosa. Y por otra parte, hace unos meses le esneñé esta vuln a un amigo que es programador de backend y se sorprendio porque no la conocia y es muy absurda. 
 
 Primero explicaré como se hace y luego el porqué: 
 
 ## COMO EXPLOTAR ESTA VULNERABILIDAD  
+
+Hay `dos formas`, `la básica`, y la menos común de encontrar, pero que no por ello tiene menos importancia:
+
+Por ejemplo, nos hemos registrado en una web y queremos cambiar la información del perfil. Para eso, hacemos clic en `http://online-service.thm/profile?user_id=1305` y vemos nuestra información. Pero claro, podemos cambiarnos el `id` a otro. En este punto `si la web esta bien hecha no nos debería dejar`, pero `si no se ha tenido en cuenta que esto pues podríamos acceder a la información de otro perfil`. 
+
+Y `la forma un poco mas compleja`, `mas común` y que es `mas peligrosa`, ya que `nos permite acceso total`: 
 
 Esta vulnerabilidad sobre todo se da cuando `intentamos entrar` a un directorio (por ejemplo /admin) y `nos redirige` a un login. Entonces la forma mas facil de detectarla es hacer `Wfuzzing` a una web y ver si nos redirige. Sobre todo si el codigo de `la respuesta de la web` es `301` es bastante probable que `sea vulnerable`.
 
@@ -76,18 +82,19 @@ Primero hice Wfuzzing a su web, y uy, el directorio `/wp-admin` da `301` (entre 
 
 ## PORQUE PASA ESTO Y COMO EVITARLO
 
+Esta vulnerabilidad puede ocurrir cuando un servidor web recibe `input del usuario` para recuperar objetos (archivos, datos, documentos…). Si se pone mucha `confianza en los datos suministrados` en la petición, y `no se validan en la parte de servidor` para `confirmar que el objeto pertenece al usuario que lo pide`, puede darse una `IDOR`.
 
 
-## SQLi
+# SQLi
 
-## No SQLi
+# No SQLi
 
-## COOKIE HIJACKING
+# COOKIE HIJACKING
 
-## SHELL SHOCK
+# SHELL SHOCK
 
-## PADDING ORACLE ATTACK con PADDBUSTER
+# PADDING ORACLE ATTACK con PADDBUSTER
 
-## BIT FLIPPER ATTACK para PADDING ORACLE ATTACK
+# BIT FLIPPER ATTACK para PADDING ORACLE ATTACK
 
 
