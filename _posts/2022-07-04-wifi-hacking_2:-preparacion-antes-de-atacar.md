@@ -32,6 +32,8 @@ Es importante hacer esto antes de efectuar cualquier ataque a una red, ya que si
 
 > ifconfig {tarjeta} down                   #(para darla de baja)
 
+> iwconfig                                  # para ver las redes que estan en down
+
 > macchanger -s {tarjeta}                   #(para ver la mac nueva)
 ```
 
