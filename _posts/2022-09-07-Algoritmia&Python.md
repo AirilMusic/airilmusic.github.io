@@ -31,7 +31,7 @@ tags:
 
 ## Forma lógica:
 
-```
+```py
 numMax == 10000 #el numero maximo que se quiere analizar, es decir, que se listaran los primos desde el numero 2 hasta ese
 prime = [2, ]
 for i in range(3, numMax + 1):
