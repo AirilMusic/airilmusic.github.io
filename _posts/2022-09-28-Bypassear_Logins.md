@@ -114,6 +114,8 @@ Le damos de nuevo a `Forward` y:
 
 ![](/assets/images/login-bypass/IDOR-7.PNG)
 
+(no se ve nada porque en esa máquina es un rabit hole, pero en hemos logrado acceso, en caso de que hubiese algo tendriamos acceso a eso, y eso es lo que importa)
+
 Y aquí esta lo gracioso y absurdo de este ataque. `Hemos conseguido acceso` a un directorio en el cual no deberíamos estar XD. Claro, ahora `según hagamos alguna acción` nos va a `detectar` y nos va a mandar al `redirect`, asi que mientras no tengamos un usuario con la capacidad de estar ahí, deberemos `hacer esto para cada cosa que hagamos`.
 
 ## PORQUE PASA ESTO Y COMO EVITARLO
