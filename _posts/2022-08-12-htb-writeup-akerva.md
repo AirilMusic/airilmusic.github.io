@@ -183,7 +183,7 @@ He probado con un `Idor` en el directorio `/wp-admin`, ya que hacía un `redirec
 
 En el puerto que estaba por `UDP` hemos visto un directorio interesante: `/var/www/html/scripts/backup_every_17minutes.sh`. Solo se puede acceder a el por `POST`.
 
-```
+```sh
 ❯ curl -X POST http://10.13.37.11/scripts/backup_every_17minutes.sh
 
 #!/bin/bash
