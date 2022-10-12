@@ -16,6 +16,8 @@ tags:
   - IDOR
 ---
 
+# WORKING PROGRESS
+
 En este artículo vamos a ver `distintas formas que hay para bypassear un login`, es decir, formas para pasar un login sin necesidad de introducir credenciales, o en su defecto encontrar unas credenciales válidas con las que poder conectarnos con la cuenta de otro usuario.
 
 # OSINT
@@ -108,7 +110,7 @@ Claro, nosotros no queremos que nos haga un redirect, porque eso significa el co
 
 ![](/assets/images/login-bypass/IDOR-6.png)
 
-Y aquí esta lo gracioso y absurdo de este ataque. `Hemos conseguido acceso` a un directorio en el cual no deberíamos estar XD. Claro, ahora según hagamos alguna acción nos va a detectar y nos va a mandar al redirect, asi que mientras no tengamos un usuario con la capacidad de estar ahí, deberemos hacer esto para cada cosa que hagamos.
+Y aquí esta lo gracioso y absurdo de este ataque. `Hemos conseguido acceso` a un directorio en el cual no deberíamos estar XD. Claro, ahora `según hagamos alguna acción` nos va a `detectar` y nos va a mandar al `redirect`, asi que mientras no tengamos un usuario con la capacidad de estar ahí, deberemos `hacer esto para cada cosa que hagamos`.
 
 ## PORQUE PASA ESTO Y COMO EVITARLO
 
