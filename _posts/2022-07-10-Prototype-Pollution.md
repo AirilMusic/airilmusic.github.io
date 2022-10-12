@@ -103,7 +103,7 @@ Ahora vamos a inspeccionar nuestro objeto y vamos a ver que tiene algunas `propi
 
 Esto pasa porque `cuando se crean nuevos objetos`, heredan `las propiedades de un objeto especial` (de hecho en lo que nos responde pone que es del "[[Prototype]]:") y ese objeto especial se puede llamar como el objeto prototipo, realmente es como cualquier otro objeto, asi que podemos verlo:
 
-```
+```php
 > Object.getPrototypeOf(obj)
 
 · {constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, …}
@@ -125,7 +125,7 @@ Esto pasa porque `cuando se crean nuevos objetos`, heredan `las propiedades de u
 
 Podemos ver que ambos objetos contienen las mismas cosas. Y si ponemos un numero en vez de "obj" nos da esto de vuelta:
 
-```
+```php
 > Object.getPrototypeOf(1)
 
 · Number {0, constructor: ƒ, toExponential: ƒ, toFixed: ƒ, toPrecision: ƒ, …}
@@ -142,7 +142,7 @@ Podemos ver que ambos objetos contienen las mismas cosas. Y si ponemos un numero
 
 Y si probamos a poner un caracter o un string nos da algo parecido:
 
-```
+```php
 > Object.getPrototypeOf("a")
 
 · String {'', constructor: ƒ, anchor: ƒ, at: ƒ, big: ƒ, …}
@@ -203,17 +203,17 @@ Y si probamos a poner un caracter o un string nos da algo parecido:
 
 Pero hay otras formas de acceder al `Prototype`:
 
-```
+```php
 > Object.prototype
 ```
 
 Y hay otras dos formas que utilizan `métodos especiales de Js` al llamar a nuestro objeto:
 
-```
+```php
 > obj.__proto__
 ```
 
-```
+```php
 > obj.constructor.prototype
 ```
 
@@ -221,7 +221,7 @@ Esas tres opciones te darán el mismo resultado.
 
 Así podremos `modificar o añadir propiedades` a cualquier objeto. Por ejemplo:
 
-```
+```php
 > Object.prototype.new = 'added'
   'added'  
   
@@ -252,7 +252,7 @@ Y veremos qué hemos `añadido` una nueva propiedad.
 
 Por ejemplo, vamos a crear una función y vamos a intentar modificarla y luego ejecutarla:
 
-```
+```php
 > obj.toString()
 
 >Object.prototype.toString = 1
@@ -264,7 +264,7 @@ Por ejemplo, vamos a crear una función y vamos a intentar modificarla y luego e
 
 Pero que pasa si hacemos una función que por ejemplo ponga un pop-up de una alerta (pero puede ser cualquier otra cosa) y se lo añadimos a nuestro método `toString`:
 
-```
+```php
 > function hacked() {alert('hacked')}
 
 > Object.prototype.toString = hacked
