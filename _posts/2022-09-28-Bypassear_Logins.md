@@ -105,13 +105,6 @@ Esta vulnerabilidad puede ocurrir cuando un servidor web recibe `input del usuar
 
 # PADDING ORACLE ATTACK con PADDBUSTER
 
-```py
-
-for i in range(10):
-  print (uwu)
-
-```
-
 # BIT FLIPPER ATTACK para PADDING ORACLE ATTACK
 
 # PASSWORD SPRAYING
