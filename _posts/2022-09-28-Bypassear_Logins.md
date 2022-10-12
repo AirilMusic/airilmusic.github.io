@@ -90,7 +90,7 @@ Primero hice Wfuzzing a su web, y uy, el directorio `/wp-admin` da `301` (entre 
 
 Antes de nada necesitamos `modificar` la `configuración` de burpsuit `para interceptar la respuesta del lado del servidor`. Así que nos vamos a la configuración y cambiamos estas dos opciones:
 
-![](/assets/images/login-bypass/IDOR-3.png)
+![](/assets/images/login-bypass/IDOR-3.PNG)
 
 Y ahora ya podemos continuar.
 
