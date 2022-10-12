@@ -110,6 +110,10 @@ Claro, nosotros no queremos que nos haga un redirect, porque eso significa el co
 
 ![](/assets/images/login-bypass/IDOR-6.PNG)
 
+Le damos de nuevo a `Forward` y:
+
+![](/assets/images/login-bypass/IDOR-7.PNG)
+
 Y aquí esta lo gracioso y absurdo de este ataque. `Hemos conseguido acceso` a un directorio en el cual no deberíamos estar XD. Claro, ahora `según hagamos alguna acción` nos va a `detectar` y nos va a mandar al `redirect`, asi que mientras no tengamos un usuario con la capacidad de estar ahí, deberemos `hacer esto para cada cosa que hagamos`.
 
 ## PORQUE PASA ESTO Y COMO EVITARLO
