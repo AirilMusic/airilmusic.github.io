@@ -86,9 +86,29 @@ ID           Response   Lines    Word       Chars       Payload
 
 Primero hice Wfuzzing a su web, y uy, el directorio `/wp-admin` da `301` (entre otros) y si intentamos acceder `nos redirige a un login`, asi que apesta a `IDOR`. Por lo tanto voy a intentar `capturar la petición` con `burpsuit` de cuando intento acceder a `/wp-admin`.
 
+Antes de nada necesitamos `modificar` la `configuración` de burpsuit `para interceptar la respuesta del lado del servidor`. Así que nos vamos a la configuración y cambiamos estas dos opciones:
 
-WORKING PROGRESS
+![](/assets/images/login-bypass/IDOR-3.png)
 
+Y ahora ya podemos continuar.
+
+Primero voy a intentar acceder sin usar el `proxy para burp`, para que veais el `redirect`:
+
+![](/assets/images/login-bypass/IDOR-2.png)
+
+Vemos que nos hace redirect al login, por lo tanto vamos a intentar acceder sin proporcionar credenciales. Para eso lo primero que tenemos que hacer es `activar el proxy con foxy proxy` y `capturar la petición` al intentar acceder a `/wp-admin`:
+
+![](/assets/images/login-bypass/IDOR-4.png)
+
+Una vez capturada le daremos a `Forward` y veremos que nos pone la `respuesta del servidor`. Vemos que nos pone `302 Found`:
+
+![](/assets/images/login-bypass/IDOR-5.png)
+
+Claro, nosotros no queremos que nos haga un redirect, porque eso significa el codigo 302 (osea, todos los 300 algo), por lo tanto `vamos a cambiarlo` a ver que pasa:
+
+![](/assets/images/login-bypass/IDOR-6.png)
+
+Y aquí esta lo gracioso y absurdo de este ataque. `Hemos conseguido acceso` a un directorio en el cual no deberíamos estar XD. Claro, ahora según hagamos alguna acción nos va a detectar y nos va a mandar al redirect, asi que mientras no tengamos un usuario con la capacidad de estar ahí, deberemos hacer esto para cada cosa que hagamos.
 
 ## PORQUE PASA ESTO Y COMO EVITARLO
 
