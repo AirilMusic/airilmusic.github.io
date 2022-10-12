@@ -246,7 +246,7 @@ Y ya tendríamos el archivo.
 
 Al descomprimirlo podremos ver un archivo en var/www/html/dev/ que tiene la FLAG: `AKERVA{1kn0w_H0w_TO_$Cr1p_T_$$$$$$$$}`
 
-```
+```py
 var/www/html/dev ❯ cat space_dev.py
 
 #!/usr/bin/python
@@ -359,7 +359,7 @@ El siguiente también es dinámico, pero con otro lfi a `/etc/machine-id` tambi�
 
 En mi caso el script quedaría asi, pero en tu caso tienes que cambiar los últimos dos valores a los tuyos, ya que son dinámicos:
 
-```
+```py
 import hashlib
 from itertools import chain
 probably_public_bits = [
@@ -443,7 +443,7 @@ Vemos que la `vesión de sudo es antigua`, entonces podríamos intetar explotar 
 
 Para eso he encontrado este `exploit`:
 
-```
+```py
 import os,subprocess,sys
 from ctypes import cdll, c_char_p, POINTER, c_int, c_void_p
 
