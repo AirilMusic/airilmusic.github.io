@@ -80,7 +80,7 @@ undefined
 
 Ahora vamos a inspeccionar nuestro objeto y vamos a ver que tiene algunas `propiedades` y `metodos` que `no hemos definido`.
 
-```
+```php
 > obj
 
 - airil: 1
