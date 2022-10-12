@@ -20,6 +20,20 @@ tags:
 
 En este artículo vamos a ver `distintas formas que hay para bypassear un login`, es decir, formas para pasar un login sin necesidad de introducir credenciales, o en su defecto encontrar unas credenciales válidas con las que poder conectarnos con la cuenta de otro usuario.
 
+## ÍNDICE
+
+```
+  - OSINT
+  - IDOR
+  - SQLi
+  - No SQLi
+  - COOKIE HIJACKING
+  - SHELL SHOCK
+  - PADDING ORACLE ATTACK con PADDBUSTER
+  - BIT FLIPPER ATTACK para PADDING ORACLE ATTACK
+  - PASSWORD SPRAYING
+```
+
 # OSINT
 
 Puede parecer gracioso pero `no es raro encontrar credenciales validas en internet`. 
