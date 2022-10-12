@@ -79,8 +79,8 @@ ID           Response   Lines    Word       Chars       Payload
 000000786:   301        9 L      28 W       316 Ch      "wp-includes"
 000000834:   301        9 L      28 W       308 Ch      "dev"
 000001073:   301        9 L      28 W       315 Ch      "javascript"
-000007180:   301        9 L      28 W       313 Ch      "wp-admin"                                                                                                   
-000011260:   301        9 L      28 W       312 Ch      "backups"                                                                                                   
+000007180:   301        9 L      28 W       313 Ch      "wp-admin"                                                                                             
+000011260:   301        9 L      28 W       312 Ch      "backups"                                                                                               
 000095524:   403        9 L      28 W       276 Ch      "server-status"      
 ```
 
@@ -107,4 +107,5 @@ Esta vulnerabilidad puede ocurrir cuando un servidor web recibe `input del usuar
 
 # BIT FLIPPER ATTACK para PADDING ORACLE ATTACK
 
+# PASSWORD SPRAYING
 
