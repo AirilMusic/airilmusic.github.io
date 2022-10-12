@@ -399,7 +399,7 @@ shell.interactive()
 
 El `exploit/playload` se veria asi:
 
-```
+```py
 #!/usr/bin/python3
 from pwn import *
 
