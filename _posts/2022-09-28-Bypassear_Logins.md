@@ -265,6 +265,15 @@ Ver las columnas de una tabla de esa otra BBDD:
 
 ## PREVENCIÓN
 
+Aunque se podrían `sanear las entradas` usando métodos como `mysqli_real_escape_string`, es más recomendable la `utilización de sentencias preparadas o parametrizadas`. Las sentencias preparadas te permitirán ejecutar la misma sentencia con gran eficiencia.
+
+`Tips` para incrementar la seguridad:
+
+```
+  - 
+```
+
+
 # No SQLi
 
 # COOKIE HIJACKING
