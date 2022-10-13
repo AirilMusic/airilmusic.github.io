@@ -139,6 +139,8 @@ Esta vulnerabilidad puede ocurrir cuando un servidor web recibe `input del usuar
 
 # SQLi
 
+Probablemente haré un artículo solo para esto, porque es un tema muy extenso. Por eso aquí lo explicaré un poco por encima y aunque pondre algún ejemplo de como sería de forma manual, pero sobre todo voy a explicar como realizar este ataque con `sqlmap`.
+
 # No SQLi
 
 # COOKIE HIJACKING
