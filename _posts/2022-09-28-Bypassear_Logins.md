@@ -145,6 +145,8 @@ Esta vulnerabilidad puede ocurrir cuando un servidor web recibe `input del usuar
 
 # SQLi
 
+![](/assets/images/login-bypass/sql-injection.svg)
+
 `El siguiente artículo será sobre esto`, ya que es `un tema muy extenso` que no me parece adecuado explicarlo entero aquí, ya que abarca demasiado. Por lo que aquí solo explicaré en que consiste y un poco por encima como funciona este ataque y como ya he mencionado me adentraré a fondo en el en el siguiente artículo.
 
 ## QUE ES Y PORQUE PASA?
