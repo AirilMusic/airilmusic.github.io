@@ -318,6 +318,8 @@ Antes de ver como robar cookies de otros usuarios para poder logearnos como ello
 
 ## HTML injection
 
+
+
 ## Cross Site Scripting (XSS)
 
 ## Cookie Hijacking
