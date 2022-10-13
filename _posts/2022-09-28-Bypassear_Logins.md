@@ -139,7 +139,9 @@ Esta vulnerabilidad puede ocurrir cuando un servidor web recibe `input del usuar
 
 # SQLi
 
-Probablemente haré un artículo solo para esto, porque es un tema muy extenso. Por eso aquí lo explicaré un poco por encima y aunque pondre algún ejemplo de como sería de forma manual, pero sobre todo voy a explicar como realizar este ataque con `sqlmap`.
+Con dice el nombre, `inyectamos código SQL en un input` o campo que tenga acceso a una `base de datos` para así poder interactuar con la BBDD de forma directa, es decir, la BBDD interpretará literalmente la consulta y asi tendremos total acceso a ella, pudiendo ver su contenido... Algo que de otra forma no podríamos hacer. 
+
+`Ejemplo`: hay una página de login donde hay dos campos, user y password (sin tener en cuenta las cookies, la url... que también pueden servir). Claro, nosotros podemos meter esos datos y compará si ese user coincide con esa contraseña, pero si la web `no sanitiza el input` del usuario, permite que se pueda "engañar" a la web y que `en vez de mandarle un user, que le mande nuestra consula SQL`, así la BBDD `interpretará nuestra consulta y nos devolverá lo que nosotros queramos`, por ejemplo; el nombre de la base de datos, de las tablas... (pudiendo ver usuarios, contraseñas, correos electronicos...).
 
 # No SQLi
 
