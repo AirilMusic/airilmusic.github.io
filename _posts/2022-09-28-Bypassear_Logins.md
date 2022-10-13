@@ -27,7 +27,7 @@ En este artículo vamos a ver `distintas formas que hay para bypassear un login`
   - IDOR
   - SQLi
   - No SQLi
-  - COOKIE HIJACKING
+  - COOKIE HIJACKING (HTML injectio y XSS)
   - SHELL SHOCK
   - PADDING ORACLE ATTACK con PADDBUSTER
   - BIT FLIPPER ATTACK para PADDING ORACLE ATTACK
@@ -313,6 +313,15 @@ luego `donde el user y password lo reemplazaremos por` lo siguiente:
 ```
 
 # COOKIE HIJACKING
+
+Antes de ver como robar cookies de otros usuarios para poder logearnos como ellos sin sus credenciales, debemos ver que es el HTML injection y el Cross Site Scripting (XSS).
+
+## HTML injection
+
+## Cross Site Scripting (XSS)
+
+## Cookie Hijacking
+
 
 # SHELL SHOCK
 
