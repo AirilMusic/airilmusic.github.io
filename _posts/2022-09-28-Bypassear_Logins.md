@@ -16,7 +16,7 @@ tags:
   - IDOR
 ---
 
-# WORKING PROGRESS
+# WORK IN PROGRESS
 
 En este artículo vamos a ver `distintas formas que hay para bypassear un login`, es decir, formas para pasar un login sin necesidad de introducir credenciales, o en su defecto encontrar unas credenciales válidas con las que poder conectarnos con la cuenta de otro usuario.
 
