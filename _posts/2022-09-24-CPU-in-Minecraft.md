@@ -14,7 +14,7 @@ tags:
   - computación
 ---
 
-# WORKING PROGRESS
+# WORK IN PROGRESS
 
 Voy a ir actualizando este post según valla avanzando con la CPU, ya que es un proyecto complicado que me llevará su tiempo.
 
