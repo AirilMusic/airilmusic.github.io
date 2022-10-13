@@ -182,6 +182,28 @@ La aplicación no implementa ninguna defensa contra los ataques de inyección SQ
 https://insecure-website.com/products?category=Gifts'--
 ```
 
+Esto da como resultado la consulta SQL:
+
+```
+SELECT * FROM products WHERE category = 'Gifts'--' AND released = 1
+```
+
+La clave aquí es que la secuencia de doble guión es un indicador de comentario en SQL, y significa que el resto de la consulta se interpreta como un comentario. Esto elimina efectivamente el resto de la consulta, por lo que ya no incluye . Esto significa que se muestran todos los productos, incluidos los productos no lanzados. `--AND released = 1`
+
+Yendo más allá, un atacante puede hacer que la aplicación muestre todos los productos de cualquier categoría, incluidas las categorías que no conoce:
+
+```
+https://insecure-website.com/products?category=Gifts'+OR+1=1--
+```
+
+Esto da como resultado la consulta SQL:
+
+```
+SELECT * FROM products WHERE category = 'Gifts' OR 1=1--' AND released = 1
+```
+
+La consulta modificada devolverá todos los artículos en los que la categoría sea Regalos o 1 sea igual a 1. Como siempre es verdadero, la consulta devolverá todos los elementos. `1=1`
+
 ## PREVENCIÓN
 
 # No SQLi
