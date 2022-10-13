@@ -287,6 +287,15 @@ Aunque se podrían `sanear las entradas` usando métodos como `mysqli_real_escap
 
 Esto se basa en un concepto que hemos visto antes que era que si la respuesta era `algo o sino 1=1` se bypasseaba el login porque se cumplia lo de 1=1, pero esta vez tenemos que decir que `la contraseña es distinta a algo`, entonces `interpreta como valido` y bypassea el login.
 
+`Hay dos formas`, si no funciona la primera hay que probar la segunda:
+
+`PRIMERA:`
+En esta no tocaremos la petición mas que para `cambiar` un poco la parte de las `credenciales`. Siempre que tenga un `formato parecido` cambiaremos la linea por la siguiente (vale admin o cualquier otro usuario que sepamos que existe):
+
+```
+user=admin&password[$ne]=uwu
+```
+
 # COOKIE HIJACKING
 
 # SHELL SHOCK
