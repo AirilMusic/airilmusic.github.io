@@ -18,7 +18,7 @@ tags:
 
 # WORK IN PROGRESS
 
-En este artículo vamos a ver `distintas formas que hay para bypassear un login`, es decir, formas para pasar un login sin necesidad de introducir credenciales, o en su defecto encontrar unas credenciales válidas con las que poder conectarnos con la cuenta de otro usuario.
+En este artículo vamos a ver `distintas formas que hay para bypassear un login`, es decir, formas para pasar un login sin necesidad de introducir credenciales, o en su defecto encontrar unas credenciales válidas con las que poder conectarnos con la cuenta de otro usuario. (`NOTA:` también voy a poner `algunos ataques que aunque no son exactamente al panel del loggin`, también sirven para conseguir un usuario de `administrador` con el que tomar el control de la web)
 
 ## ÍNDICE
 
@@ -32,6 +32,12 @@ En este artículo vamos a ver `distintas formas que hay para bypassear un login`
   - PADDING ORACLE ATTACK con PADDBUSTER
   - BIT FLIPPER ATTACK para PADDING ORACLE ATTACK
   - PASSWORD SPRAYING
+  - SSTI
+  - CLICKJAKING
+  - BUFFER OVERFLOW
+  - TYPE JUGGLIN ATTACK
+  - DESERIALIZATION ATTACK with Node.js
+  - XML --> XXE
 ```
 
 # OSINT
@@ -277,8 +283,9 @@ Aunque se podrían `sanear las entradas` usando métodos como `mysqli_real_escap
   5- No proporcionar mayor información de la necesaria.
 ```
 
-
 # No SQLi
+
+Esto se basa en un concepto que hemos visto antes que era que si la respuesta era `algo o sino 1=1` se bypasseaba el login porque se cumplia lo de 1=1, pero esta vez tenemos que decir que `la contraseña es distinta a algo`, entonces `interpreta como valido` y bypassea el login.
 
 # COOKIE HIJACKING
 
