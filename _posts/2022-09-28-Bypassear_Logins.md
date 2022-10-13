@@ -320,7 +320,23 @@ Antes de ver como robar cookies de otros usuarios para poder logearnos como ello
 
 ## HTML injection
 
+Esto sobre todo lo usamos para `comprobar` si una web es `vulnerable a XSS`.
 
+Para esto buscaremos un directorio donde nos permita `escribir` texto y que `lo muestre` (como con un print) y `escribiremos` alguna de las siguientes opciones:
+
+(en este caso el texto se pondra mas grande)
+
+```
+<h1> Holi </h1>
+```
+
+(el texto se desplazara)
+
+```
+<marquee> Holi </marquee>
+```
+
+Si ha funcionado el texto se verá para todos como lo hayamos puesto. Claro, esto lo podemos hacer con comandos maliciosos en vez de una tonteria como esta, y en ese caso si que puede ser peligroso.
 
 ## Cross Site Scripting (XSS)
 
