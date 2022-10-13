@@ -28,6 +28,7 @@ En este artículo vamos a ver `distintas formas que hay para bypassear un login`
   - SQLi
   - No SQLi
   - COOKIE HIJACKING (HTML injectio y XSS)
+  - CSRF
   - SHELL SHOCK
   - PADDING ORACLE ATTACK con PADDBUSTER
   - BIT FLIPPER ATTACK para PADDING ORACLE ATTACK
@@ -364,6 +365,32 @@ Ahora escriviremos en un sitio donde sepamos que lo van a `ver otras personas` (
 ```
 
 Ahora la idea es que sin estar autenticado, con la extension de google `Edit this cookie` podremos `cambiarnos la cookie` por la que se nos muestre en el servidor http de la consola y pues se nos `cambiaria la sesión a la del propietario de la cookie capturada`.
+
+# CSRF (Cross Site Request Forgery)
+
+Consiste en que cuando un usuario acceda a una web desde una `url` que mediante `ingenieria social` se le hace clicar, se apliquen `cambios para esa cuenta`. Es decir, que clicando en una url que le mandemos se le cambie la contraseña a la que nosotros queramos.
+
+Primero tendremos que `capturar una petición` con burpsuite, en un directorio donde puedas `logearte` (osea, meter user y password).
+
+Al loguearte tienes que `interceptar` con burpsuit la petición que se manda por `POST`, y nosotros lo que intentaremos es que se mande por `GET`, hacemos `Control + R` para mandarlo al repeater, hacemos `click derecho` y le damos a `change request method` para que se ponga como `GET`, entonces ahora la información esta viajando `en la propia url como parametro`, entonces si le damos a `Go` y `funciona` con GET igual que funcionaba con POST, osea que ponga password updated seria `vulnerable`, y eso es muy peligroso, así que si `mandamos la url a alguien` con un `acortador de link` y usamos `ingenieria social` para que alguien se meta podriamos cambiarlo la contraseña a la víctima.
+
+`IMPORTANTE` aclarar que al conseguir la url maliciosa en burpsuite nos saldrá algo parecido a lo siguiente:
+
+```
+/change_pass.php?password=hola123&confirm_password=hola123&submit=submit 
+```
+
+Entonces copiamos eso y `lo añadimos a la url` (sin directorios adicionales) osea:
+
+```
+http://hacked.com/{la url maliciosa que hemos conseguido en burpsuit}
+
+http://hacked.com/change_pass.php?password=hola123&confirm_password=hola123&submit=submit 
+```
+
+`IMPORTANTE:` y por Último tenemos que pasar esa url por un `acortador de links` para que no se vea que es una url maliciosa.
+
+Y cuando la víctima cae en la trampa el redirect pasa tan rápido que es imposible darse cuenta, aunque en algunas webs pone que la contraseña se ha cambiado.
 
 # SHELL SHOCK
 
