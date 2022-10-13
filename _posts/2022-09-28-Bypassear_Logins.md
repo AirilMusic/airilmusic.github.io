@@ -270,7 +270,11 @@ Aunque se podrían `sanear las entradas` usando métodos como `mysqli_real_escap
 `Tips` para incrementar la seguridad:
 
 ```
-  - 
+  1- No confiar en el input del usuario, filtrar el input para bloquear caracteres que puedan estar en consultas SQL (/`'%&="|!¡;:.,)
+  2- Bloquear palabras en el input como SELECT, FROM, WHERE...
+  3- Verificar y filtrar parametros que no solo sean inputs, por ejemplo logins, sino que también: parámetros de entrada y campos tipo hidden de las páginas web, coockies, url...
+  4- No utilizar sentencias SQL construidas dinámicamente.
+  5- No proporcionar mayor información de la necesaria.
 ```
 
 
