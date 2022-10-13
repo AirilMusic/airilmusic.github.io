@@ -147,6 +147,39 @@ Con dice el nombre, `inyectamos código SQL en un input` o campo que tenga acces
 
 ## COMO EFECTUAR ESTE ATAQUE
 
+Para explicar un poco por encima `como funcionan las consultas SQL`, poruqe `lo mas importante` que tenemos que saber es `como funcionan las BBDD`  y `como funcionan las cunsultas SQL`. Y ver como utilizarlas para realizar este ataque voy a poner un ejemplo muy básico (`nota:` los ataques que se hacen en un entorno real son mas complicados, pero eso lo explicaré en otro artículo, porque sino este sera demasiado largo)
+
+Ejemplo consultas SQL:
+
+Considere una aplicación de compras que muestre productos en diferentes categorías. Cuando el usuario hace clic en la categoría Regalos, su navegador solicita la URL:
+
+```
+https://insecure-website.com/products?category=Gifts
+```
+
+Esto hace que la aplicación realice una consulta SQL para recuperar detalles de los productos relevantes de la base de datos:
+
+```
+SELECT * FROM products WHERE category = 'Gifts' AND released = 1
+```
+
+Esta consulta SQL pide a la base de datos que devuelva:
+
+```
+  - todos los detalles (*)
+  - de la tabla de productos
+  - donde la categoría es Regalos
+  - y liberado es 1.
+```
+
+La restricción se está utilizando para ocultar los productos que no se liberan. Para productos inéditos, presumiblemente . `released = 1released = 0`
+
+La aplicación no implementa ninguna defensa contra los ataques de inyección SQL, por lo que un atacante puede construir un ataque como:
+
+```
+https://insecure-website.com/products?category=Gifts'--
+```
+
 ## PREVENCIÓN
 
 # No SQLi
