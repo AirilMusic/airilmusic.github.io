@@ -562,5 +562,12 @@ Los `motores de plantillas` están diseñados para `combinar plantillas con un m
 
 Cuando `la validación de entrada no se maneja correctamente` en el lado del servidor, se puede `ejecutar una carga útil de inyección de plantilla maliciosa` del lado del servidor en el servidor, lo que puede resultar en la `ejecución remota de código`.
 
+## HERRAMIENTA AUTOMATIZADA
+
+WORK IN PROGRESS
+
+https://www.cobalt.io/blog/a-pentesters-guide-to-server-side-template-injection-ssti
+
+
 ## PREVENCIÓN
 
