@@ -564,7 +564,11 @@ Cuando `la validación de entrada no se maneja correctamente` en el lado del ser
 
 ## HERRAMIENTA AUTOMATIZADA
 
-WORK IN PROGRESS
+TPLmap:
+
+```
+https://github.com/epinna/tplmap
+```
 
 https://www.cobalt.io/blog/a-pentesters-guide-to-server-side-template-injection-ssti
 
