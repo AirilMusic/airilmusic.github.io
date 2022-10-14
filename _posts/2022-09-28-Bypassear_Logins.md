@@ -570,8 +570,7 @@ TPLmap:
 https://github.com/epinna/tplmap
 ```
 
-https://www.cobalt.io/blog/a-pentesters-guide-to-server-side-template-injection-ssti
-
+Esta herramienta esta hecha `especificamente para esta vulnerabilidad`. Utiliza varias `técnicas de escape de espacios aislados` para obtener acceso al sistema operativo.
 
 ## PREVENCIÓN
 
