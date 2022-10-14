@@ -438,6 +438,10 @@ Una cosa rara que pasa en el `cifrado cvc` nos `registramos` con `{nombre de usu
 
 Pero lo vamos a hacer de una forma mas lógica, con un `bit flipper attack`:
 
+Nos registramos con un `nombre parecido a admin`, por ejemplo `bdmin` y tenemos que `interceptar esa petición` con burpsuit, luego le damos a Control + I para mandarlo al intruder, vamos a Intruder --> Position y a la peticion que he mos mandado al intruder y le damos a clear. Seleccionamos la coockie y le damos a Add.
+
+La idea es que como solo hemos cambiado un caracter y el cifrado es cvc, osea, 	que lo encripta por bloques, solamente el primer bloque sera distinto, lo demas sera 	igual, entonces podemos probar las posibles variaciones del primer bloque para 	mediante pruebas conseguir la misma coockie encriptada que usaria el user admin haciendo menos intentos que si probasemos con todas las convinaciones de la coockie completa.
+
 
 # PASSWORD SPRAYING
 
