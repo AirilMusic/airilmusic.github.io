@@ -534,13 +534,13 @@ Para conseguir `Remote Code Execution` mediante esta vulnerabilidad:
 {{ self._TemplateReference__context.cycler.__init__.__globals__.os.popen('id').read() }}
 ```
 
-Ahora si `cambiamos` el parametro `id` por un comando podremos tener `ejecucion remota de comandos`.
+Ahora si `cambiamos` el parametro `id` por un comando podremos tener `ejecución remota de comandos`.
 
 ```
 https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Template%20Injection#jinja2---basic-injection
 ```
 
-En ese repositorio de github tambien hay cosas interesantes para otros ataques.
+En ese repositorio de github también hay cosas interesantes para otros ataques.
 
 ## PORQUE PASA ESTO?
 
