@@ -536,7 +536,7 @@ Para probar si un campo es vulnerable podemos poner: `{{7*7}}` y si la respuesta
 
 Para conseguir `Remote Code Execution` mediante esta vulnerabilidad:
 
-![](/assets/images/login-bypass/ssti-command.jpg)
+![](/assets/images/login-bypass/ssti-command.png)
 
 Ahora si `cambiamos` el parametro `id` por un comando podremos tener `ejecución remota de comandos`.
 
