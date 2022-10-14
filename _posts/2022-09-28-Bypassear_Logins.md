@@ -57,7 +57,7 @@ Y otro consejo: buscar la web en `shodan`, ya que puedes encontrar información 
 
 # IDOR
 
-Pongo esto como el primer método de bypassing, porque es mi favorito, es super gracioso, porque `es absurdo a mas no poder`. Y no es tan conocido, por ejemplo en bug bounty pasa una cosa bastante graciosa que es que la mayoría de personas buscan XSS o SQLi, pero se olvidan de esta vulnerabilidad tan graciosa. Y por otra parte, hace unos meses le esneñé esta vuln a un amigo que es programador de backend y se sorprendio porque no la conocia y es muy absurda. 
+Pongo esto como el primer método de bypassing, porque es mi favorito, es super gracioso, porque `es absurdo a mas no poder`. Y no es tan conocido, por ejemplo en bug bounty pasa una cosa bastante graciosa que es que la mayoría de personas buscan `XSS` o `SQLi`, pero se olvidan de esta vulnerabilidad tan graciosa. Y por otra parte, hace unos meses le esneñé esta vuln a un amigo que es programador de backend y se sorprendio porque no la conocia y es muy absurda. 
 
 Primero explicaré como se hace y luego el porqué: 
 
@@ -430,6 +430,7 @@ Nos dará una `lista de bloques vulnerables`, `la recomendada` es la que tenga `
 
 Con esto hacemos un `cookie hijacking` entonces pegamos la cookie que nos haya dado padbuster en `Edit this coockie` y listo
 
+ES IMPORTANTE ACLARAR QUE `PADBUSTER TARDA MUCHO` asi que aprobecha a merendar, echarte la siesta o hacer cualquier cosa XD
 
 # BIT FLIPPER ATTACK para PADDING ORACLE ATTACK
 
