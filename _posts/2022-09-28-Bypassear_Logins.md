@@ -434,5 +434,10 @@ ES IMPORTANTE ACLARAR QUE `PADBUSTER TARDA MUCHO` asi que aprobecha a merendar, 
 
 # BIT FLIPPER ATTACK para PADDING ORACLE ATTACK
 
+Una cosa rara que pasa en el `cifrado cvc` nos `registramos` con `{nombre de usuario existente}=` nos `logueariamos como ese usuario`, y si el usuario {nombre de usuario existente}= existe, tendríamos que `añadirle otro =` y si existe pues más de lo mismo, claro, así nos podríamos loguear como admins XD: `admin=`
+
+Pero lo vamos a hacer de una forma mas lógica, con un `bit flipper attack`:
+
+
 # PASSWORD SPRAYING
 
