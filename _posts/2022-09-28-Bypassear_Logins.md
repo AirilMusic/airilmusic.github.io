@@ -442,6 +442,15 @@ Nos registramos con un `nombre parecido a admin`, por ejemplo `bdmin` y tenemos 
 
 La idea es que como solo hemos cambiado un caracter y el `cifrado es cvc`, osea, que lo encripta por bloques, `solamente el primer bloque sera distinto`, lo demas será igual, entonces podemos probar las posibles variaciones del primer bloque para mediante pruebas `conseguir la misma cookie encriptada que usaria el user admin haciendo menos intentos` que si probasemos con todas las convinaciones de la cookie completa.
 
+Ahora tenemos que `cambiar el primer bloque`, para que coincida con la cookie del usuario admin.
+
+Para eso vamos a `payloads` y donde pone `Payload type` seleccionamos el ataque `Bit flipper`, en `Format of original data:` clicamos en `Literal value` y queremos que lo haga en todos los bits, asi que `seleccionamos todos`.
+
+Ahora vamos a `Options` y en `Grep-Extract` le damos a `Add`, le damos a `Refetch response`, seleccionamos y copiamos `You are currently logged in as bdmin!` para luego saber cuando nos logueamos como admin, le damos a `Ok` y luego le damos a `Start attack`.
+
+En la nueva pestaña quenos ha abierto tendremos que ir mirando en la parte donde pone `<p>\n\x09<center>` veremos cuando pone `You are currently logged in as admin!` así que `clicamos ahí` y en `Request podremos` `ver la cookie` de sesión de admin, así que la copiamos, vamos al panel de inicio de sesion de la web y nos la cambiamos con `Edit this coockie`.
+
+Si no nos deja podemos `hacer de nuevo la petición como bdmin` e interceptarla, luego `cambiamos la coockie` de esa peticion por la que habiamos conseguido de admin y le damos a `Forward`. Y listo, ya estaríamos logeados como admin. 
 
 # PASSWORD SPRAYING
 
