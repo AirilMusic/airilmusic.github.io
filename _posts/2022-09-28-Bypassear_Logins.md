@@ -528,6 +528,10 @@ Las formas de prevención de este ataque son bastante lógicas y son las mismas 
 Esto pasa cuando tenemos un campo en el que podemos `escribir texto` y nos da una `respuesta`, un mensaje, un login...
 Para probar si un campo es vulnerable podemos poner: `{{7*7}}` y si la respuesta da `49` significa que `es vulnerable`.
 
+## QUE ES ESTO?
+
+`SSTI` es una vulnerabilidad en la que el atacante `inyecta inputs maliciosos` en una plantilla para `ejecutar comandos` en el lado del servidor. Esta vulnerabilidad se produce cuando `el input del usuario no válida` está incrustada en el motor de plantillas, lo que generalmente puede conducir a la `ejecución remota de código (RCE)`
+
 ## COMO EXPLOTAR LA VULNERABILIDAD
 
 Para conseguir `Remote Code Execution` mediante esta vulnerabilidad:
@@ -546,4 +550,17 @@ En ese repositorio de github también hay cosas interesantes para otros ataques.
 
 ## PORQUE PASA ESTO?
 
+Los `motores de plantillas` están diseñados para `combinar plantillas con un modelo de datos` para producir documentos de resultados que ayudan a rellenar datos dinámicos en páginas web. Los motores de plantillas `se pueden utilizar para mostrar información` sobre usuarios, productos, etc. Algunos de los motores de plantillas más populares se pueden enumerar de la siguiente manera:
+
+```
+	· PHP – Smarty, Ramitas
+	· Java – Velocidad, Freemaker
+	· Python – JINJA, Mako, Tornado
+	· JavaScript – Jade, Rabia
+	· Rubí – Líquido
+```
+
+Cuando `la validación de entrada no se maneja correctamente` en el lado del servidor, se puede `ejecutar una carga útil de inyección de plantilla maliciosa` del lado del servidor en el servidor, lo que puede resultar en la `ejecución remota de código`.
+
+## PREVENCIÓN
 
