@@ -536,9 +536,7 @@ Para probar si un campo es vulnerable podemos poner: `{{7*7}}` y si la respuesta
 
 Para conseguir `Remote Code Execution` mediante esta vulnerabilidad:
 
-```
-#{{ self._TemplateReference__context.cycler.__init__.__globals__.os.popen('id').read() }}
-```
+![](/assets/images/login-bypass/ssti-command.jpg)
 
 Ahora si `cambiamos` el parametro `id` por un comando podremos tener `ejecución remota de comandos`.
 
