@@ -577,3 +577,11 @@ Esta herramienta esta hecha `especificamente para esta vulnerabilidad`. Utiliza 
 - `Sanitizar:` sanitiza la entrada del usuario antes de pasarla a las plantillas para minimizar las vulnerabilidades de cualquier mensaje malicioso.
 
 - `Sandboxing:` En caso de que `el uso de caracteres riesgosos sea una necesidad empresarial`, se recomienda `utilizar un sandbox dentro de un entorno seguro`.
+
+# CLICKJAKING
+
+Explicar esto me da mas pereza que explicar SQLi, porque la mayoría van a ser capturas de pantalla XD
+
+
+
+
