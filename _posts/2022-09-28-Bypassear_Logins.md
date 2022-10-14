@@ -460,7 +460,7 @@ Esto va a ser un poco copia pega del artículo que ya hice, pero bueno XD
 
 Este ataque lo hacemos cuando tenemos un `número de intentos limitados` para loguearnos en algún lugar, es decir, cuando nos bloquean los intentos o nos hacen esperar después de 3 o 5 intentos (puede ser un número distinto), por lo tanto, `no` podemos hacer `fuerza bruta` de las contraseñas `(hay que tener en cuenta que al igual que la fuerza bruta, solo es recomendable recurrir a esta técnica cuando no nos queda nada más por intentar, ya que al igual que la fuerza bruta hacemos mucho ruido, por lo que somos bastante detectables)`. Este ataque se puede resumir en cinco palabras: `pocas contraseñas para muchos usuarios`.
 
-# EN QUE CONSISTE ESTA TÉCNICA:
+## EN QUE CONSISTE ESTA TÉCNICA:
 
 Como ya he mencionado `esta técnica la utilizamos` cuando `no` podemos hacer `fuerza bruta` porque tenemos un `número limitado de intentos` de ingresar contraseñas en un login. Hay que recalcar que `cuantos más usuarios` haya registrados, nuestra `posibilidad` de acierto es `mayor`.
 
@@ -476,7 +476,7 @@ Aquí dejo una foto en la que se explica bastante bien y de forma visual en que 
 
 ![](/assets/images/web-hacking/password-spraying/example.webp)
 
-# COMO EXPLOTAR ESTA TÉCNICA:
+## COMO EXPLOTAR ESTA TÉCNICA:
 
 Por lo que he estado viendo, hay varias herramientas para este tipo de ataque; `burpsuit`, `herramientas que hay en github`... O incluso podríamos crar un `script` que lo haga, no sería muy complicado.
 
@@ -506,7 +506,7 @@ Ahora ya le damos a `Start attack` y ya debería empezar el ataque, y nos mostra
 
 Y ya estaría uwu.
 
-# COMO PREVENIR ESTA TÉCNICA:
+## COMO PREVENIR ESTA TÉCNICA:
 
 Las formas de prevención de este ataque son bastante lógicas y son las mismas que para todos estos tipos de ataques a contraseñas:
 
