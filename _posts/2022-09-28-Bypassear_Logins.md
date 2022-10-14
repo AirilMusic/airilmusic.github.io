@@ -523,6 +523,8 @@ Las formas de prevención de este ataque son bastante lógicas y son las mismas 
 
 # SSTI (Server Side Template Injection)
 
+![](/assets/images/login-bypass/ssti.webp)
+
 Esto pasa cuando tenemos un campo en el que podemos `escribir texto` y nos da una `respuesta`, un mensaje, un login...
 Para probar si un campo es vulnerable podemos poner: `{{7*7}}` y si la respuesta da `49` significa que `es vulnerable`.
 
