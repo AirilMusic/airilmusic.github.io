@@ -538,6 +538,8 @@ Para conseguir `Remote Code Execution` mediante esta vulnerabilidad:
 
 ![](/assets/images/login-bypass/ssti-command.png)
 
+(lo siento por no ponerlo en texto, esque lo he intentado de un par de formas pero no se porque Github Pages no lo quiere mostrar)
+
 Ahora si `cambiamos` el parametro `id` por un comando podremos tener `ejecución remota de comandos`.
 
 ```
