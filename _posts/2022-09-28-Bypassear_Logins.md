@@ -412,6 +412,23 @@ Le damos a `Forward` y se supone que ganaríamos `acceso al sistema`, si no func
 
 # PADDING ORACLE ATTACK con PADDBUSTER
 
+Esto basicamente es la explotación de un algoritmo de encriptacion (`cifrado cvc`). Consiste en que un texto claro lo separa en `bloques` para `encriptarlos individualmente`, por lo tanto tendremos que`saber el numero de bloques` para poder desencriptarlos, juntarlos y tener el texto. `Si no sabemos el numero de bloques` podemos probar uno a uno a `fuerza bruta`.
+
+Ejemplo: tenemos un campo de inicion de sesion y uno de registro.
+
+(Creo que no lo he explicado antes y es importante, cuando pongo {parámetro} tienes que reemplazarlo por el parámetro especificado y eliminar las llaves, es decir {ip} = 10.0.2.14) 
+
+```
+> padbuster {url en el directorio de registro} {mi coockie de sesion} {numero de bloques} -coockie "auth={micoockie de sesion}" -encoding 0
+```
+
+Nos dará una `lista de bloques vulnerables`, `la recomendada` es la que tenga `**`, la seleccionamos escribiendo el `id`. irá probando uno a uno los bytes, de 8 a 1 e irá desencriptando los bloques, luego los junta y da el mensaje, en este caso que estamos con una pajina de loguin `nos dara` algo parecido a `user={nuestro nombre del usuario}` (aunque puede ser diferente), claro, ya sabemos como se computan los `permisos en base a las cookies`, así que vamos a usarlo para `loguearnos como admin`.
+
+```
+> padbuster {url en el directorio de registro} {mi coockie de sesion} {numero de bloques} -coockie "auth={micoockie de sesion}" -encoding 0 -plaintext user=admin"
+```
+
+Con esto hacemos un `cookie hijacking` entonces pegamos la cookie que nos haya dado padbuster en `Edit this coockie` y listo
 
 
 # BIT FLIPPER ATTACK para PADDING ORACLE ATTACK
