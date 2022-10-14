@@ -571,3 +571,6 @@ https://www.cobalt.io/blog/a-pentesters-guide-to-server-side-template-injection-
 
 ## PREVENCIÓN
 
+- `Sanitizar:` sanitiza la entrada del usuario antes de pasarla a las plantillas para minimizar las vulnerabilidades de cualquier mensaje malicioso.
+
+- `Sandboxing:` En caso de que `el uso de caracteres riesgosos sea una necesidad empresarial`, se recomienda `utilizar un sandbox dentro de un entorno seguro`.
