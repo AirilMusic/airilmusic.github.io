@@ -325,13 +325,13 @@ Esto sobre todo lo usamos para `comprobar` si una web es `vulnerable a XSS`.
 
 Para esto buscaremos un directorio donde nos permita `escribir` texto y que `lo muestre` (como con un print) y `escribiremos` alguna de las siguientes opciones:
 
-(en este caso el texto se pondra mas grande)
+(en este caso el texto se pondrá mas grande)
 
 ```
 <h1> Holi </h1>
 ```
 
-(el texto se desplazara)
+(el texto se desplazará)
 
 ```
 <marquee> Holi </marquee>
