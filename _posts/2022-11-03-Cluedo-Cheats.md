@@ -756,5 +756,11 @@ Y pues ya estaria uwu
 
 ## EXPORTAR A .EXE
 
+Primero si no lo tenemos instalamos el paquete para compilarlo en un `.exe`:
+
 ![](/assets/images/Algoritmia/exe-prob1.PNG)
+
+
+
+
 
