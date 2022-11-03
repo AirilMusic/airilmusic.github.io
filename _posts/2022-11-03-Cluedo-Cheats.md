@@ -459,8 +459,34 @@ Por lo que `podríamos comparar las probabilidades` de que una carta salga `en o
             allSuspicious.remove(playerList[i].suspicious)
 ```
 
+Y ya por último vemos que probabilidad es mayor y la guardamos con su respectiva carta:
+
+```py
+        if playerList[i].place == "":
+            placeKey = max(playerList[i].placesProbabilitys)
+            placeValue = playerList[i].placesProbabilitys[placeKey]
+            playerList[i].mostProbablePlace = {placeKey:placeValue}
+        
+        if playerList[i].weaphon == "":
+            weaphonKey = max(playerList[i].weaphonsProbabilitys)
+            weaphonValue = playerList[i].weaphonsProbabilitys[weaphonKey]
+            playerList[i].mostProbableWeaphon = {weaphonKey:weaphonValue}
+        
+        if playerList[i].suspicious == "":
+            suspiciousKey = max(playerList[i].suspiciousProbabilitys)
+            suspiciousValue = playerList[i].suspiciousProbabilitys[suspiciousKey]
+            playerList[i].mostProbableSuspicious = {suspiciousKey:suspiciousValue}
+```
+
+Y luego `llamo a esta función` para que al principio todas las `probabilidades` de los jugadores esten a `0` o a la `probabilidad del principio`:
+
+```py
+updateProbabilitys() # this is for set all stadistics to 0 or initial probabilitys...
+print("")
+```
 
 ### FIN DE LA EXPLICACIÓN DETALLADA DE LA FUNCIÓN
+
 
 
 
