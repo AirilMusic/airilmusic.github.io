@@ -356,7 +356,108 @@ Una vez ya tenemos la lista de posibles cartas ya podemos ver la `probabilidad` 
 
 ![](/assets/images/Algoritmia/arbol-probs.png)
 
-Por lo que `podríamos comparar las probabilidades` de que una carta salga `en otros jugadores` y segun eso luego sacar las probabilidades de que un jugador tenga x carta. Creo que no se entiende así que lo explicaré un poquito mejor. Todas las cartas del mismo grupo de un jugador tienen `la misma probabilidad` (por ejemplo 0,25), entonces para lo que nos sirve todas son iguales. Así que ahora hacemos la `suma` de que cada carta de esas salga en todos los jugadores y lo `dividimos` entre el numero maximo que nos podría salir, es decir, el numero de jugadores. Con esto nos da una `probabilidad`, y hora eso lo tenemos que pasar a la probabilidad que ya tenemos de esa carta y compararla con lo mismo de las otras cartas. Para eso lo que he hecho es `restarle` a la probabilidad original el contrario de la probabilidad que hemos conseguido con la suma. Asi las probabilidades del inicio que eran iguales ahora `son distintas`, pero ya `no son de 0-1`, por lo que hay que `volver a pasarlas` a esa "escala". Para eso he hecho lo siguiente:  `probabilidad/sumaDeProbabilidades` (esas probabilidades son el resultado de la resta y la suma es la suma de todas esas)
+Por lo que `podríamos comparar las probabilidades` de que una carta salga `en otros jugadores` y segun eso luego sacar las probabilidades de que un jugador tenga x carta. Creo que no se entiende así que lo explicaré un poquito mejor. Todas las cartas del mismo grupo de un jugador tienen `la misma probabilidad` (por ejemplo 0,25), entonces para lo que nos sirve todas son iguales. Así que ahora hacemos la `suma` de que cada carta de esas salga en todos los jugadores y lo `dividimos` entre el `numero maximo` que nos podría salir, es decir, el `numero de jugadores`. Con esto nos da una `probabilidad`, y hora eso lo tenemos que pasar a la probabilidad que ya tenemos de esa carta y `compararla` con lo mismo de las otras cartas. Para eso lo que he hecho es `restarle` a la probabilidad original el contrario de la probabilidad que hemos conseguido con la suma. Así las probabilidades del inicio que eran iguales ahora `son distintas`, pero ya `no son de 0-1`, por lo que hay que `volver a pasarlas` a esa "escala". Para eso he hecho lo siguiente:  `probabilidad/sumaDeProbabilidades` (esas probabilidades son el resultado de la resta y la suma es la suma de todas esas)
+
+(pequeña aclaración, eso que he dicho solo se hace `si no sabemos la carta que tiene`, sino directamente la carta es la que sabemos y la probabilidad es 1)
+
+```py
+    for i in range(playersNum):
+        if playerList[i].place == "":
+            suma1 = 0
+            placesProbs = []
+            for a in range(len(playerList[i].posiblePlaces)): #calculate probability
+                suma = 0.0
+                for u in range(playersNum):
+                    if playerList[i].posiblePlaces[a] in playerList[u].posiblePlaces:
+                        suma += (1/len(playerList[u].posiblePlaces))
+                        
+                suma = 1 - (suma/playersNum)
+                probability = 1/len(playerList[i].posiblePlaces)
+                
+                if len(playerList[i].noCards) > 0:
+                    if probability > suma:
+                        probability -= suma
+                    if probability < 0:
+                        probability = 0.01
+                else:
+                    probability -= suma
+                suma1 += probability
+                if suma1 == 0:
+                    suma1 = 1
+                
+                placesProbs.append(probability)
+                
+            for a in range(len(playerList[i].posiblePlaces)): #round to 0-1
+                cardProbability = placesProbs[a]/suma1
+                playerList[i].placesProbabilitys.update({playerList[i].posiblePlaces[a] : cardProbability})
+        else:
+            playerList[i].mostProbablePlace = {playerList[i].place:1}
+            allPlaces.remove(playerList[i].place)
+            
+        if playerList[i].weaphon == "":
+            suma2 = 0
+            weaphonsProbs = []
+            for a in range(len(playerList[i].posibleWeaphons)): #calculate probability
+                suma = 0.0
+                for u in range(playersNum):
+                    if playerList[i].posibleWeaphons[a] in playerList[u].posibleWeaphons:
+                        suma += (1/len(playerList[u].posibleWeaphons))
+                        
+                suma = 1 - (suma/playersNum)
+                probability = 1/len(playerList[i].posibleWeaphons)
+                
+                if len(playerList[i].noCards) > 0:
+                    if probability > suma:
+                        probability -= suma
+                    if probability < 0:
+                        probability = 0.01
+                else:
+                    probability -= suma
+                suma2 += probability
+                if suma2 == 0:
+                    suma2 = 1
+                
+                weaphonsProbs.append(probability)
+            
+            for a in range(len(playerList[i].posibleWeaphons)): #round to 0-1
+                cardProbability = weaphonsProbs[a]/suma2
+                playerList[i].weaphonsProbabilitys.update({playerList[i].posibleWeaphons[a] : cardProbability})
+        else:
+            playerList[i].mostProbableWeaphon = {playerList[i].weaphon:1}
+            allWeaphons.remove(playerList[i].weaphon)
+            
+        if playerList[i].suspicious == "":
+            suma3 = 0
+            suspiciousProbs = []
+            for a in range(len(playerList[i].posibleSuspicious)): #calculate probability
+                suma = 0.0
+                for u in range(playersNum):
+                    if playerList[i].posibleSuspicious[a] in playerList[u].posibleSuspicious:
+                        suma += (1/len(playerList[u].posibleSuspicious))
+                        
+                suma = 1 - (suma/playersNum)
+                probability = 1/len(playerList[i].posibleSuspicious)
+                
+                if len(playerList[i].noCards) > 0:
+                    if probability > suma:
+                        probability -= suma
+                    if probability < 0:
+                        probability = 0.01
+                else:
+                    probability -= suma
+                suma3 += probability
+                if suma3 == 0:
+                    suma3 = 1
+                
+                suspiciousProbs.append(probability)
+            
+            for a in range(len(playerList[i].posibleSuspicious)): #round to 0-1
+                cardProbability = suspiciousProbs[a]/suma3
+                playerList[i].suspiciousProbabilitys.update({playerList[i].posibleSuspicious[a] : cardProbability})
+        else:
+            playerList[i].mostProbableSuspicious = {playerList[i].suspicious:1}
+            allSuspicious.remove(playerList[i].suspicious)
+```
 
 
 ### FIN DE LA EXPLICACIÓN DETALLADA DE LA FUNCIÓN
