@@ -315,10 +315,10 @@ def updateProbabilitys():
 Lo primero que hace la función es `resetear` las posibles cartas que tiene cada jugador a 0:
 
 ```py
-for i in range(playersNum):
-        playerList[i].posiblePlaces = [] #reset
-        playerList[i].posibleWeaphons = []
-        playerList[i].posibleSuspicious = []
+        for i in range(playersNum):
+                playerList[i].posiblePlaces = [] #reset
+                playerList[i].posibleWeaphons = []
+                playerList[i].posibleSuspicious = []
 ```
 
 Luego `reduce el numero de posibles cartas` y las añade a las listas que ha reseteado, para eso lo que hace es primero `mirar si hay alguna carta que sabemos que tiene el jugador` y `si no sabemos que carta tiene` (del lugar, arma o sospechoso) mira si las cartas de las listas de todas las cartas estan en la lista de cartas que no tiene ese jugador `player[i].noCards` y `si no estan` en esa lista `las añade a las listas de posibles cartas` de ese jugador:
