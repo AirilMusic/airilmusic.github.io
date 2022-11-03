@@ -352,8 +352,11 @@ Luego `reduce el numero de posibles cartas` y las añade a las listas que ha res
                     playerList[i].posibleSuspicious.append(allSuspicious[a])
 ```
 
+Una vez ya tenemos la lista de posibles cartas ya podemos ver la `probabilidad` de que cada jugador tenga x carta. Claro, hay un problema, si lo que hacemos es `1/posiblesCartas` todas las cartas (bueno, de cada grupo: lugar/arma/sospechoso) `tendran la misma probabilidad`. Pero eso no es del todo verdad, ya que podemos saber que `una carta tiene mas probabilidad de que la tenga otro jugador`. Claro, si lo pasamos a un arbol de probabilidades sabemos las probabilidades de las ramas del fina, pero nos faltan las primeras ramas:
 
+## FOTO DEL ARBOL DE PROBABILIDADES ################################
 
+Por lo que `podríamos comparar las probabilidades` de que una carta salga `en otros jugadores` y segun eso luego sacar las probabilidades de que un jugador tenga x carta. Creo que no se entiende así que lo explicaré un poquito mejor. Todas las cartas del mismo grupo de un jugador tienen `la misma probabilidad` (por ejemplo 0,25), entonces para lo que nos sirve todas son iguales. Así que ahora hacemos la `suma` de que cada carta de esas salga en todos los jugadores y lo `dividimos` entre el numero maximo que nos podría salir, es decir, el numero de jugadores. Con esto nos da una `probabilidad`, y hora eso lo tenemos que pasar a la probabilidad que ya tenemos de esa carta y compararla con lo mismo de las otras cartas.
 
 
 ### FIN DE LA EXPLICACIÓN DETALLADA DE LA FUNCIÓN
