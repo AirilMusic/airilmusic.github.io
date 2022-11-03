@@ -769,3 +769,15 @@ auto-py-to-exe
 Y en el navegador se nos abrirá esto:
 
 ![](/assets/images/Algoritmia/auto-py-to-exe.PNG)
+
+Ahora `seleccionamos el archivo.py`, y si queremos le podemos poner un icono...
+
+Le damos a `Convert py to exe` y se nos creara una carpeta llamada `output` y ahi estara el .exe
+
+![](/assets/images/Algoritmia/cluedo-exe.PNG)
+
+Ejecutamos el .exe y listo
+
+![](/assets/images/Algoritmia/uwu-cluedo.png)
+
+uwu
