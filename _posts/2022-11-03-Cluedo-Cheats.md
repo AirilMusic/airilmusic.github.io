@@ -760,11 +760,12 @@ Primero si no lo tenemos instalamos el paquete para compilarlo en un `.exe`:
 
 ![](/assets/images/Algoritmia/exe-prob1.PNG)
 
-Luego para abrirlo, en el cmd:
+Luego para abrirlo, en el `cmd`:
 
 ```
 auto-py-to-exe
 ```
 
+Y en el navegador se nos abrirá esto:
 
-
+![](/assets/images/Algoritmia/auto-py-to-exe.PNG)
