@@ -778,6 +778,6 @@ Le damos a `Convert py to exe` y se nos creara una carpeta llamada `output` y ah
 
 Ejecutamos el .exe y listo
 
-![](/assets/images/Algoritmia/uwu-cluedo.png)
+![](/assets/images/Algoritmia/uwu-cluedo-.png)
 
 uwu
