@@ -5,7 +5,7 @@ excerpt: "Explicación de un programa que he hecho que dice las probabilidades d
 date: 2022-11-03
 classes: wide
 header:
-  teaser: /assets/images/Algoritmia/portada.jpg
+  teaser: /assets/images/Algoritmia/cluedo-portada.png
   teaser_home_page: true
   icon: 
 categories:
@@ -13,4 +13,5 @@ categories:
 tags:  
   - Python
 ---
+
 
