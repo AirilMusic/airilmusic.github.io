@@ -459,7 +459,7 @@ Por lo que `podríamos comparar las probabilidades` de que una carta salga `en o
             allSuspicious.remove(playerList[i].suspicious)
 ```
 
-Y ya por último vemos que probabilidad es mayor y la guardamos con su respectiva carta:
+Y ya por último vemos que probabilidad es `mayor` y la guardamos con su respectiva carta:
 
 ```py
         if playerList[i].place == "":
