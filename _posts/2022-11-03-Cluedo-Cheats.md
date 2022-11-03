@@ -510,7 +510,7 @@ Ahora vamos hay que poner una opción que permita `ver las probabilidades y esta
 
 Primero nos tiene que preguntar el jugador que queremos ver. Para eso nos pone un menu, pero claro, el usuario puede poner como input el numero o el nombre, por lo que hay que preveer ambas opciones. Tambien hay que poner una opción que permita ver cual es el principal sospechoso y sus probabilidades, por lo que lo pondre despues de los jugadores. Y por último que según lo que hayamos elegido nos muestro las probabilidades de eso.
 
-![](/assets/images/Algoritmia/show-probs.png)
+![](/assets/images/Algoritmia/show-probs.PNG)
 
 ```py
    elif option.lower() == "show":
