@@ -154,7 +154,7 @@ player10.name = names[9]
 playerList = (player1, player2, player3, player4, player5, player6, player8, player9, player10)
 ```
 
-Ahora lo que hice fue crear una `función` que actualize las estadisticas y probabilidades de todos los jugadores.
+Ahora lo que hice fue crear una `función` que `actualize` las `estadisticas y probabilidades` de todos los jugadores.
 
 ```py
 def updateProbabilitys(): #0 update all, 1 update place, 2 update weaphon, 3 update suspicious
@@ -305,3 +305,8 @@ def updateProbabilitys(): #0 update all, 1 update place, 2 update weaphon, 3 upd
 updateProbabilitys()
 print("")
 ```
+
+### EXPLICACION DETALLAD DE LA FUNCIÓN
+
+
+### FIN DE LA EXPLICACIÓN DETALLADA DE LA FUNCIÓN
