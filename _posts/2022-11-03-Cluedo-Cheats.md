@@ -754,4 +754,4 @@ Y ahora ya ponemos los errores, osea, si no ha metido el input bien y luego le h
 
 Y pues ya estaria uwu
 
-
+![](/assets/images/Algoritmia/uwu-probs.png)
