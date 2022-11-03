@@ -308,5 +308,58 @@ print("")
 
 ### EXPLICACION DETALLAD DE LA FUNCIÓN
 
+```py
+def updateProbabilitys():
+```
+
+Lo primero que hace la función es `resetear` las posibles cartas que tiene cada jugador a 0:
+
+```py
+for i in range(playersNum):
+        playerList[i].posiblePlaces = [] #reset
+        playerList[i].posibleWeaphons = []
+        playerList[i].posibleSuspicious = []
+```
+
+Luego `reduce el numero de posibles cartas` y las añade a las listas que ha reseteado, para eso lo que hace es primero `mirar si hay alguna carta que sabemos que tiene el jugador` y `si no sabemos que carta tiene` (del lugar, arma o sospechoso) mira si las cartas de las listas de todas las cartas estan en la lista de cartas que no tiene ese jugador `player[i].noCards` y `si no estan` en esa lista `las añade a las listas de posibles cartas` de ese jugador:
+
+```py
+        if playerList[i].place != "":
+            playerList[i].posiblePlaces = [playerList[i].place]
+        else:
+            for a in range(len(allPlaces)):
+                if allPlaces[a] in playerList[i].noCards:
+                    pass
+                else:
+                    playerList[i].posiblePlaces.append(allPlaces[a])
+
+        if playerList[i].weaphon != "":
+            playerList[i].posibleWeaphons = [playerList[i].weaphon]
+        else:
+            for a in range(len(allWeaphons)):
+                if allWeaphons[a] in playerList[i].noCards:
+                    pass
+                else:
+                    playerList[i].posibleWeaphons.append(allWeaphons[a])
+        
+        if playerList[i].suspicious != "":
+            playerList[i].posibleSuspicious = [playerList[i].suspicious]
+        else:
+            for a in range(len(allSuspicious)):
+                if allSuspicious[a] in playerList[i].noCards:
+                    pass
+                else:
+                    playerList[i].posibleSuspicious.append(allSuspicious[a])
+```
+
+
+
+
 
 ### FIN DE LA EXPLICACIÓN DETALLADA DE LA FUNCIÓN
+
+
+
+
+
+
