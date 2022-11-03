@@ -74,3 +74,82 @@ while True:
     else:
         allSuspicious.append(add.lower())
 ```
+
+Ahora lo que he hecho ha sido crear un `objeto: player` y con un for meterlo 10 veces en una `lista`. Luego modifico el `atributo: name` para ponerles el nombre de cada jugador y así no tener que memorizar en que posición esta cada uno, sino que puedo filtrarlo por eso o mostrarlos en un menu.
+
+```py
+p = []
+
+for i in range(10):
+    class player():
+        name = str(i)
+        
+        place = ""
+        weaphon = ""
+        suspicious = ""
+        
+        noCards = [] #cartas que no tiene el jugador
+        
+        posiblePlaces = []
+        posibleWeaphons = []
+        posibleSuspicious = []
+        
+        placesProbabilitys = {}
+        weaphonsProbabilitys = {}
+        suspiciousProbabilitys = {}
+        
+        mostProbablePlace = {"" : 0.0}
+        mostProbableWeaphon = {"" : 0.0}
+        mostProbableSuspicious = {"" : 0.0}
+    
+    p.append(player)
+    
+    for a in range (len(allPlaces) - 1):
+        p[i].placesProbabilitys.update({allPlaces[a]:0.0})
+    for a in range (len(allWeaphons) - 1):
+        p[i].weaphonsProbabilitys.update({allWeaphons[a]:0.0})
+    for a in range (len(allSuspicious) - 1):
+        p[i].suspiciousProbabilitys.update({allSuspicious[a]:0.0})
+
+player1 = p[0]
+player2 = p[1]
+player3 = p[2]
+player4 = p[3]
+player5 = p[4]
+player6 = p[5]
+player7 = p[6]
+player8 = p[7]
+player9 = p[8]
+player10 = p[9]
+
+print("")
+
+while True:
+    playersNumT = input("How many players are playing (Max: 10): ")
+    if playersNumT.isnumeric():
+        if int(playersNumT) < 10 and int(playersNumT) >= 1:
+            playersNum = int(playersNumT)
+            break
+noPlaying = 10-playersNum
+
+names = []
+for i in range(playersNum):
+    question = "Name of the player" + str(i + 1) + ": "
+    names.append(str(input(question)).lower())
+
+for i in range(noPlaying):
+    names.append("0")
+    
+player1.name = names[0]
+player2.name = names[1]
+player3.name = names[2]
+player4.name = names[3]
+player5.name = names[4]
+player6.name = names[5]
+player7.name = names[6]
+player8.name = names[7]
+player9.name = names[8]
+player10.name = names[9]
+
+playerList = (player1, player2, player3, player4, player5, player6, player8, player9, player10)
+```
