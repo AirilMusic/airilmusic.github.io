@@ -683,7 +683,53 @@ Primero nos tiene que preguntar el jugador que queremos ver. Para eso nos pone u
                 print("Shomething is WRONG!\nTry Again\n")
 ```
 
+Y ahora tenemos que añadir la opcion de poder `modificar lo que sabemos de cada jugador`, ya sea para añadirle una carta que sabemos que tiene como una que sabemos que no tiene.
 
+Para esto primero tenemos que saber que queremos hacer, añadir una carta que sabemos que tiene o una que sabemos que no tiene. Luego seleccionamos al jugador. Metemos la carta y en caso de que sepamos que tiene esa carta tenemos que especificar que tipo de carta es (lugar/arma/sospechoso).
+
+![](/assets/images/Algoritmia/add-probs.PNG)
+
+![](/assets/images/Algoritmia/add-probs-2.PNG)
+
+```py
+            elif option.lower() == "card that a player doesn't have" or option == "2":
+                print("Select Player:")
+                for i in range(playersNum):
+                    print(str(i + 1), "-", str(playerList[i].name))
+                
+                playeradd = input("Player: ")
+                
+                playNum = 1
+                
+                if playeradd.lower() == player1.name.lower() or playeradd == "1":
+                    playNum = 1
+                if playeradd.lower() == player2.name.lower() or playeradd == "2":
+                    playNum = 2
+                if playeradd.lower() == player3.name.lower() or playeradd == "3":
+                    playNum = 3
+                if playeradd.lower() == player4.name.lower() or playeradd == "4":
+                    playNum = 4
+                if playeradd.lower() == player5.name.lower() or playeradd == "5":
+                    playNum = 5
+                if playeradd.lower() == player6.name.lower() or playeradd == "6":
+                    playNum = 6
+                if playeradd.lower() == player7.name.lower() or playeradd == "7":
+                    playNum = 7
+                if playeradd.lower() == player8.name.lower() or playeradd == "8":
+                    playNum = 8
+                if playeradd.lower() == player9.name.lower() or playeradd == "9":
+                    playNum = 9
+                if playeradd.lower() == player10.name.lower() or playeradd == "10":
+                    playNum = 10
+                
+                card = input("\nCard: ")
+                
+                playerList[playNum - 1].noCards.append(card)
+
+                print("Card ", card , " has been added to player ", playerList[playNum -1].name)
+                updateProbabilitys()                    
+                break
+```
 
 
 
