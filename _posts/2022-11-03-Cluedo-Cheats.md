@@ -75,7 +75,7 @@ while True:
         allSuspicious.append(add.lower())
 ```
 
-Ahora lo que he hecho ha sido crear un `objeto: player` y con un for meterlo 10 veces en una `lista`. Luego modifico el `atributo: name` para ponerles el nombre de cada jugador y así no tener que memorizar en que posición esta cada uno, sino que puedo filtrarlo por eso o mostrarlos en un menu.
+Ahora lo que he hecho ha sido crear una `clase: player` y con un `for` meterlo 10 veces en una `lista`. Luego modifico el `atributo: name` para ponerles el nombre de cada jugador y así no tener que memorizar en que posición esta cada uno, sino que puedo filtrarlo por eso o mostrarlos en un menu y luego `instancio las clases en objetos` y los meto en otra lista.
 
 ```py
 p = []
@@ -152,4 +152,156 @@ player9.name = names[8]
 player10.name = names[9]
 
 playerList = (player1, player2, player3, player4, player5, player6, player8, player9, player10)
+```
+
+Ahora lo que hice fue crear una `función` que actualize las estadisticas y probabilidades de todos los jugadores.
+
+```py
+def updateProbabilitys(): #0 update all, 1 update place, 2 update weaphon, 3 update suspicious
+    for i in range(playersNum):
+        playerList[i].posiblePlaces = []
+        playerList[i].posibleWeaphons = []
+        playerList[i].posibleSuspicious = []
+       
+        if playerList[i].place != "":
+            playerList[i].posiblePlaces = [playerList[i].place]
+        else:
+            for a in range(len(allPlaces)):
+                if allPlaces[a] in playerList[i].noCards:
+                    pass
+                else:
+                    playerList[i].posiblePlaces.append(allPlaces[a])
+
+        if playerList[i].weaphon != "":
+            playerList[i].posibleWeaphons = [playerList[i].weaphon]
+        else:
+            for a in range(len(allWeaphons)):
+                if allWeaphons[a] in playerList[i].noCards:
+                    pass
+                else:
+                    playerList[i].posibleWeaphons.append(allWeaphons[a])
+        
+        if playerList[i].suspicious != "":
+            playerList[i].posibleSuspicious = [playerList[i].suspicious]
+        else:
+            for a in range(len(allSuspicious)):
+                if allSuspicious[a] in playerList[i].noCards:
+                    pass
+                else:
+                    playerList[i].posibleSuspicious.append(allSuspicious[a])
+                    
+    for i in range(playersNum):
+        if playerList[i].place == "":
+            suma1 = 0
+            placesProbs = []
+            for a in range(len(playerList[i].posiblePlaces)): #calculate probability
+                suma = 0.0
+                for u in range(playersNum):
+                    if playerList[i].posiblePlaces[a] in playerList[u].posiblePlaces:
+                        suma += (1/len(playerList[u].posiblePlaces))
+                        
+                suma = 1 - (suma/playersNum)
+                probability = 1/len(playerList[i].posiblePlaces)
+                
+                if len(playerList[i].noCards) > 0:
+                    if probability > suma:
+                        probability -= suma
+                    if probability < 0:
+                        probability = 0.01
+                else:
+                    probability -= suma
+                suma1 += probability
+                if suma1 == 0:
+                    suma1 = 1
+                
+                placesProbs.append(probability)
+                
+            for a in range(len(playerList[i].posiblePlaces)): #round to 0-1
+                cardProbability = placesProbs[a]/suma1
+                playerList[i].placesProbabilitys.update({playerList[i].posiblePlaces[a] : cardProbability})
+        else:
+            playerList[i].mostProbablePlace = {playerList[i].place:1}
+            allPlaces.remove(playerList[i].place)
+            
+        if playerList[i].weaphon == "":
+            suma2 = 0
+            weaphonsProbs = []
+            for a in range(len(playerList[i].posibleWeaphons)): #calculate probability
+                suma = 0.0
+                for u in range(playersNum):
+                    if playerList[i].posibleWeaphons[a] in playerList[u].posibleWeaphons:
+                        suma += (1/len(playerList[u].posibleWeaphons))
+                        
+                suma = 1 - (suma/playersNum)
+                probability = 1/len(playerList[i].posibleWeaphons)
+                
+                if len(playerList[i].noCards) > 0:
+                    if probability > suma:
+                        probability -= suma
+                    if probability < 0:
+                        probability = 0.01
+                else:
+                    probability -= suma
+                suma2 += probability
+                if suma2 == 0:
+                    suma2 = 1
+                
+                weaphonsProbs.append(probability)
+            
+            for a in range(len(playerList[i].posibleWeaphons)): #round to 0-1
+                cardProbability = weaphonsProbs[a]/suma2
+                playerList[i].weaphonsProbabilitys.update({playerList[i].posibleWeaphons[a] : cardProbability})
+        else:
+            playerList[i].mostProbableWeaphon = {playerList[i].weaphon:1}
+            allWeaphons.remove(playerList[i].weaphon)
+            
+        if playerList[i].suspicious == "":
+            suma3 = 0
+            suspiciousProbs = []
+            for a in range(len(playerList[i].posibleSuspicious)): #calculate probability
+                suma = 0.0
+                for u in range(playersNum):
+                    if playerList[i].posibleSuspicious[a] in playerList[u].posibleSuspicious:
+                        suma += (1/len(playerList[u].posibleSuspicious))
+                        
+                suma = 1 - (suma/playersNum)
+                probability = 1/len(playerList[i].posibleSuspicious)
+                
+                if len(playerList[i].noCards) > 0:
+                    if probability > suma:
+                        probability -= suma
+                    if probability < 0:
+                        probability = 0.01
+                else:
+                    probability -= suma
+                suma3 += probability
+                if suma3 == 0:
+                    suma3 = 1
+                
+                suspiciousProbs.append(probability)
+            
+            for a in range(len(playerList[i].posibleSuspicious)): #round to 0-1
+                cardProbability = suspiciousProbs[a]/suma3
+                playerList[i].suspiciousProbabilitys.update({playerList[i].posibleSuspicious[a] : cardProbability})
+        else:
+            playerList[i].mostProbableSuspicious = {playerList[i].suspicious:1}
+            allSuspicious.remove(playerList[i].suspicious)
+                
+        if playerList[i].place == "":
+            placeKey = max(playerList[i].placesProbabilitys)
+            placeValue = playerList[i].placesProbabilitys[placeKey]
+            playerList[i].mostProbablePlace = {placeKey:placeValue}
+        
+        if playerList[i].weaphon == "":
+            weaphonKey = max(playerList[i].weaphonsProbabilitys)
+            weaphonValue = playerList[i].weaphonsProbabilitys[weaphonKey]
+            playerList[i].mostProbableWeaphon = {weaphonKey:weaphonValue}
+        
+        if playerList[i].suspicious == "":
+            suspiciousKey = max(playerList[i].suspiciousProbabilitys)
+            suspiciousValue = playerList[i].suspiciousProbabilitys[suspiciousKey]
+            playerList[i].mostProbableSuspicious = {suspiciousKey:suspiciousValue}
+
+updateProbabilitys()
+print("")
 ```
