@@ -731,5 +731,27 @@ Para esto primero tenemos que saber que queremos hacer, añadir una carta que sa
                 break
 ```
 
+Y ahora ya ponemos los errores, osea, si no ha metido el input bien y luego le he puesto que espere un poco para que te de tiempo a ver los datos (y le he puesto un pequeño efecto de que la velocidad de desplacamiento va aumentando):
+
+```py
+            else:
+                print("Something is WRONG!\nTry Again\n")
+    
+    else:
+        print("Something is WRONG!\nTry Again")
+    
+    time.sleep(3)
+    print("")
+    time.sleep(0.05)
+    print("")
+    time.sleep(0.025)
+    print("")
+    time.sleep(0.01)
+    print("")
+    time.sleep(0.005)
+    print("")
+```
+
+Y pues ya estaria uwu
 
 
