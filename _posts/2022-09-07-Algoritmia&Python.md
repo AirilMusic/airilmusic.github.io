@@ -18,7 +18,9 @@ tags:
 
 # SUMATORIOS
 
-```
+(también son útiles para números triangulares)
+
+```py
 1 + 2 + 3 + ... + n                    -->              x = (n * (n + 1))/2
 1^2 + 2^2 + 3^2 + ... + n^2            -->              x = (n * (n + 1) * (2 * n + 1))/6
 1^3 + 2^3 + 3^3 + ... + n^3            -->              x = ((n**2) * ((n + 1)**2))/4
@@ -46,4 +48,18 @@ for i in range(3, numMax + 1):
 		    prime.append(i)
  
 print(prime)
+```
+
+# PRIMEROS X CARACTERES
+
+Para mostrar los primeros x caracteres de un string o un numero (para string hay que hacer un par de pequeños cambios):
+
+```py
+num = str(n)
+nums = []
+
+for i in num:
+    nums.append(i)
+    
+print(int(str(nums[0] + nums[1] + nums[2] + nums[3] + nums[4] + nums[5] + nums[6] + nums[7] + nums[8] + nums[9])))
 ```
