@@ -52,7 +52,7 @@ print(prime)
 
 # PRIMEROS X CARACTERES
 
-Para mostrar los primeros x caracteres de un string o un numero (para string hay que hacer un par de pequeños cambios):
+Para mostrar los primeros x caracteres de un string o un número (para string hay que hacer un par de pequeños cambios):
 
 ```py
 num = str(n)
