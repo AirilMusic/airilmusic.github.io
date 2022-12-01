@@ -20,6 +20,27 @@ Vale, una vez visto lo anterior ya nos podemos poner manos a la obra con una par
 
 `(antes de nada hay que aclarar que todos estos ataques, capturar paquetes y todo eso... se puede hacer sin estar conectados a la red que queremos atacar, es decir que no necesitamos saber la contraseña, solo necesitaremos saberla para snifar la red, ya que la información viaja encriptada y sin la contraseña no podremos verla en texto claro)`
 
+## ATAQUE A REDES CON WPS
+
+(Esto lo estoy escribiendo bastantes meses despues de terminar este artículo) Mas adelante explico otra forma en la que también se puede hacer esto, pero es mas complejo, pero como es una forma en la que podemos conseguir una `password` rapidamente lo voy a explicar de otra forma aquí.
+
+El protocolo `WPS` sirve para que los dispositivos se conecten a una red de forma mas rapida, para esto en vez de usar una contraseña, utiliza un `PIN de 8 digitos` que se crea con un `algoritmo`. Claro, nosotros podemos hacer otros algoritmos que automaticen la prediccion de esos PINS, y aquí voy a explicar una herramienta con lo que podemos hacerlo.
+
+Con `wifite` podemos automatizar este y otros ataques.
+
+Para ver todas las redes disponibles:
+
+```
+> wifite
+```
+
+Para ver solo las redes con `WPS` activo:
+
+```
+> wifite -wps
+```
+
+Ahora hacemso `Ctr + C`, indicamos cual es la red que queremos atacar y empezara a probar ataques empezando por el del WPS y si consigue la contraseña nos la mostrará.
 
 ## ATAQUE DE DEAUTENTICACIÓN DIRIGIDO
 
