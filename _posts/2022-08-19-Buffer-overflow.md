@@ -18,6 +18,8 @@ tags:
 
 ![](/assets/images/web-hacking/Buffer-overflow/buffer-overflow-attacks.png)
 
+# ||||||| CUANDO ESTUDIE EN PROFUNDIDAD ESTE TEMA EXPLICARE COMO EXPLOTAR ESTA VULNERABILIDAD DE UNA FORMA MAS TÉCNICA |||||||
+
 Esta es una vulnerabilidad que afecta a contraseñas como a campos de texto, ya sea en aplicaciones o páginas web, como en aplicaciones y programas. También algunos exploits famosos como es el eternalblue se basan en esta vulnerabilidad.
 
 
