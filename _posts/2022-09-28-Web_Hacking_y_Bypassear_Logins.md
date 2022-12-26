@@ -1,7 +1,7 @@
 ---
 layout: single
-title: Bypassear Logins
-excerpt: "En este artículo vamos a ver distintas formas de bypassear un login."
+title: Web Hacking y Bypassear Logins
+excerpt: "En este artículo vamos a ver distintas formas de bypassear un login y otros ataques de web hacking."
 date: 2022-09-28
 classes: wide
 header:
@@ -39,6 +39,7 @@ En este artículo vamos a ver `distintas formas que hay para bypassear un login`
   - TYPE JUGGLIN ATTACK
   - DESERIALIZATION ATTACK with Node.js
   - XML --> XXE
+  - HTTP REQUEST SMUGGLING ATTACK 
 ```
 
 # OSINT
@@ -585,3 +586,13 @@ Explicar esto me da mas pereza que explicar SQLi, porque la mayoría van a ser c
 
 
 
+
+
+
+
+
+
+# HTTP REQUEST SMUGGLING ATTACK
+// notas para cuando haga esto, versiones vulnerables de nginx: 1.18.0 1.19.0
+https://medium.com/numen-cyber-labs/http-request-smuggling-how-to-detect-and-attack-c71f6c483e3d
+https://portswigger.net/web-security/request-smuggling
