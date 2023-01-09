@@ -692,9 +692,9 @@ Por ejemplo:
 ```php
 $x = "5";
 if ($x == 5) {
-  echo "x es igual a 5";
+	echo "x es igual a 5";
 } else {
-  echo "x no es igual a 5";
+	echo "x no es igual a 5";
 }
 ```
 
@@ -705,9 +705,9 @@ Pero en este otro código:
 ```php
 $x = "5e3";
 if ($x == 500) {
-  echo "x es igual a 500";
+	echo "x es igual a 500";
 } else {
-  echo "x no es igual a 500";
+	echo "x no es igual a 500";
 }
 ```
 
