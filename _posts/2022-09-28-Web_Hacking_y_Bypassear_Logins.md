@@ -685,7 +685,7 @@ Las vulnerabilidades `Type jugglin` (también conocidas como confusión de tipos
 
 ## ¿PORQUE PASA ESTO?
 
-El "type juggling" es un comportamiento en PHP en el que el intérprete PHP convierte automáticamente una variable de un tipo a otro, dependiendo del contexto en el que se utiliza. Esto puede llevar a resultados inesperados y potencialmente puede ser explotado por atacantes.
+El `type juggling` es un comportamiento en PHP en el que el `intérprete PHP convierte automáticamente una variable de un tipo a otro`, dependiendo del contexto en el que se utiliza. Esto puede llevar a resultados inesperados y potencialmente puede ser explotado por atacantes.
 
 Por ejemplo:
 
@@ -698,7 +698,7 @@ if ($x == 5) {
 }
 ```
 
-En este caso, PHP convertirá automáticamente la cadena "5" a un entero y realizará una comparación con el entero 5. Como resultado, el código mostrará "x es igual a 5"
+En este caso, PHP convertirá automáticamente la cadena "5" a un entero y realizará una comparación con el entero 5. Como resultado, el código mostrará `"x es igual a 5"`
 
 Pero en este otro código:
 
@@ -711,9 +711,9 @@ if ($x == 500) {
 }
 ```
 
-En este caso, PHP intentará de nuevo convertir la cadena "5e3" a un entero, pero fallará porque la cadena no es una representación válida de un entero. Sin embargo, PHP intentará entonces convertir la cadena a un float, y en este caso la conversión tendrá éxito, resultando en el valor 5000.0. Como resultado, la comparación evaluará como falsa y el código mostrará "x no es igual a 500".
+En este caso, `PHP intentará de nuevo convertir la cadena "5e3" a un entero`, pero `fallará` porque la cadena no es una representación válida de un entero. Sin embargo, `PHP intentará entonces convertir la cadena a un float`, y en este caso `la conversión tendrá éxito`, resultando en el valor 5000.0. Como resultado, `la comparación evaluará como falsa` y el código mostrará "x no es igual a 500".
 
-El type juggling puede ser explotado por atacantes de varias maneras. Por ejemplo, un atacante podría intentar pasar una cadena que se asemeja a un entero o a un valor booleano a una función que espera un tipo diferente, intentando saltarse las comprobaciones de validación o manipular el comportamiento de la función.
+El type juggling puede ser `explotado` por atacantes de `varias maneras`. Por ejemplo, un atacante `podría intentar pasar una cadena que se asemeja a un entero o a un valor booleano a una función que espera un tipo diferente`, intentando saltarse las comprobaciones de validación o manipular el comportamiento de la función.
 
 Para prevenir ataques de type juggling, es importante asegurarse de que su código compruebe y maneje de manera explícita los tipos de variables esperados y utilice funciones como `is_int()`, `is_float()` y `is_bool()` para asegurarse de que las variables tengan el tipo correcto. También es buena idea utilizar operadores de comparación estrictos (por ejemplo, `===` en lugar de `==`) en la medida de lo posible, ya que estos operadores no realizan coerción de tipos.
 
