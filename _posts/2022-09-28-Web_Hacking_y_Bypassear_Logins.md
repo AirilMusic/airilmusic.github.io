@@ -610,7 +610,15 @@ He probado con el fortress `akerava` ya que tiene un panel de login, pero result
 
 ![](/assets/images/login-bypass/clickjaking-2.JPG)
 
+Ahora arrastramos las casillas de los inputs al panel de login, es importante saber que lo que estamos viendo como `gmail` o `password` el usuario no lo va a ver, pero hay que ajustar bien las casillas para que la víctima no se de cuenta.
+
 ![](/assets/images/login-bypass/clickjaking-3.JPG)
+
+Le damos a `View` y ya estaria listo, seria copiar la `url` y mandarsela a la víctima.
+
+En este caso nos muestra una notificacion mostrandonos nuestras credenciales, porque es para testear la web, pero podríamos `modificar el script` para que `nos mande por gmail` a nosotros las `credenciales`.
+
+También es importante saber que la web es una copia exacta de la original y va a funcionar como tal.
 
 ![](/assets/images/login-bypass/clickjaking-4.JPG)
 
