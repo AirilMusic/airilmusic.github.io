@@ -602,8 +602,17 @@ Y se nos abrira la herramienta en el navegador:
 
 ![](/assets/images/login-bypass/clickjaking-1.JPG)
 
+Ahora en la parte de configuración pondremos la `url` de la web que queremos atacar.
 
+Luego le damos a `Load` y si nos carga es que esa web es vulnerable a clickjaking.
 
+He probado con el fortress `akerava` ya que tiene un panel de login, pero resulta que no es vulnerable asi que lo voy a tener que hacer cutre con mi web y como no tengo un panel de login en mi web pues mo lo voy a tener que invetar, así que ya lo siento por esta cutrada:
+
+![](/assets/images/login-bypass/clickjaking-2.JPG)
+
+![](/assets/images/login-bypass/clickjaking-3.JPG)
+
+![](/assets/images/login-bypass/clickjaking-4.JPG)
 
 
 # BUFFER OVERFLOW ATTACK
