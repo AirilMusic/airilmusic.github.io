@@ -61,6 +61,8 @@ Y otro consejo: buscar la web en `shodan`, ya que puedes encontrar información 
 
 Pongo esto como el primer método de bypassing, porque es mi favorito, es super gracioso, porque `es absurdo a mas no poder`. Y no es tan conocido, por ejemplo en bug bounty pasa una cosa bastante graciosa que es que la mayoría de personas buscan `XSS` o `SQLi`, pero se olvidan de esta vulnerabilidad tan graciosa. Y por otra parte, hace unos meses le esneñé esta vuln a un amigo que es programador de backend y se sorprendio porque no la conocia y es muy absurda. 
 
+![](/assets/images/login-bypass/idor_vs_xss.JPG)
+
 Primero explicaré como se hace y luego el porqué: 
 
 ## COMO EXPLOTAR ESTA VULNERABILIDAD  
