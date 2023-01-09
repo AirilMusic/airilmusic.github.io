@@ -784,6 +784,17 @@ Tambien hay que tener en cuenta que con lenguajes de programación estaticos ten
 
 # DESERIALIZATION ATTACK with Node.js
 
+Este ataque consiste en explotar un servicio web que funciona bajo un puerto de la máquina víctima.
+
+## ¿COMO FUNCIONA?
+
+
+
+## COMO EXPLOTAR LA VULNERABILIDAD
+
+
+
+## PREVENCIÓN
 
 
 
