@@ -600,7 +600,7 @@ Para esto utilizaremos la herramienta que nos bajaremos clonando el siguiente re
 
 Y se nos abrira la herramienta en el navegador:
 
-![](/assets/images/login-bypass/)
+![](/assets/images/login-bypass/clickjaking-1.JPG)
 
 
 
