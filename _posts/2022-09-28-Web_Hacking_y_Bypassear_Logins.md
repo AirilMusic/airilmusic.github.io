@@ -787,12 +787,15 @@ Tambien hay que tener en cuenta que con lenguajes de programación estaticos ten
 
 ![](/assets/images/login-bypass/deserialization.png)
 
-La deserialización es el proceso de convertir una secuencia de bytes en un objeto para que la aplicación web pueda usarla de la manera prevista.
+La deserialización es el proceso de `convertir una secuencia de bytes en un objeto` para que la aplicación web pueda usarla de la manera prevista.
+
+Aquí vamos a ver como explotarlo cuando la aplicación web utiliza `node.js` pero esto se puede intentar hacer `en cualquier aplicación web en la que se serialice y se deserialice` información, obviamente de forma distinta a como vamos a verlo aquí.
 
 ## ¿COMO FUNCIONA?
 
+Los ataques de deserialización ocurren cuando un atacante envía datos serializados maliciosos a una aplicación que luego deserializa y ejecuta esos datos. En el caso de Node.js, esto puede suceder si una aplicación está utilizando una biblioteca de serialización/deserialización insegura o si una aplicación está deserializando datos de una fuente no confiable.
 
-
+Un atacante puede aprovechar una vulnerabilidad de deserialización para ejecutar código malicioso en la aplicación, acceder a información confidencial almacenada en la aplicación o realizar otras acciones malintencionadas. Es importante que las aplicaciones utilicen bibliotecas de serialización/deserialización seguras y verifiquen la confiabilidad de los datos que deserializan para evitar ataques de deserialización.
 
 ## COMO EXPLOTAR LA VULNERABILIDAD
 
