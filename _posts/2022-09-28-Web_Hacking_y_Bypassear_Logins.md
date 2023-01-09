@@ -807,15 +807,15 @@ Este ataque consiste en explotar un servicio web que funciona bajo un puerto de 
 Podemos hacer unas cuantas cosas para prevenir este tipo de ataques:
 
 ```
-·Utilice una biblioteca de serialización/deserialización segura: Hay varias opciones disponibles, como JSON.stringify y JSON.parse en JavaScript nativo y bibliotecas como "safe-json-parse" y "json-parse-better-errors".
+	·Utilice una biblioteca de serialización/deserialización segura: Hay varias opciones disponibles, como JSON.stringify y JSON.parse en JavaScript nativo y bibliotecas como "safe-json-parse" y "json-parse-better-errors".
 
-·Verifique la confiabilidad de los datos que deserializa: Asegúrese de que los datos que está deserializando provienen de una fuente confiable y no han sido alterados de alguna manera.
+	·Verifique la confiabilidad de los datos que deserializa: Asegúrese de que los datos que está deserializando provienen de una fuente confiable y no han sido alterados de alguna manera.
 
-·Realice una revisión de seguridad regular de su código: Asegúrese de revisar regularmente su código en busca de vulnerabilidades de seguridad, incluyendo vulnerabilidades de deserialización.
+	·Realice una revisión de seguridad regular de su código: Asegúrese de revisar regularmente su código en busca de vulnerabilidades de seguridad, incluyendo vulnerabilidades de deserialización.
 
-·Utilice un marco de seguridad: Algunos marcos de aplicaciones web, como Express.js, proporcionan medidas de seguridad incorporadas para proteger contra ataques de deserialización.
+	·Utilice un marco de seguridad: Algunos marcos de aplicaciones web, como Express.js, proporcionan medidas de seguridad incorporadas para proteger contra ataques de deserialización.
 
-·Utilice técnicas de entrada de validación y sanitización: Asegúrese de validar y sanitizar todos los datos de entrada para evitar que los atacantes inyecten datos maliciosos en su aplicación.
+	·Utilice técnicas de entrada de validación y sanitización: Asegúrese de validar y sanitizar todos los datos de entrada para evitar que los atacantes inyecten datos maliciosos en su aplicación.
 ```
 
 
