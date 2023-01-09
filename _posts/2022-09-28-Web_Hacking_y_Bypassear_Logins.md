@@ -40,6 +40,7 @@ En este artículo vamos a ver `distintas formas que hay para bypassear un login`
   - DESERIALIZATION ATTACK with Node.js
   - XML --> XXE
   - HTTP REQUEST SMUGGLING ATTACK 
+  - PROTOTIPE POLLUTION
 ```
 
 # OSINT
