@@ -586,6 +586,23 @@ Esta herramienta esta hecha `especificamente para esta vulnerabilidad`. Utiliza 
 
 Explicar esto me da mas pereza que explicar SQLi, porque la mayoría van a ser capturas de pantalla XD
 
+Para esto utilizaremos la herramienta que nos bajaremos clonando el siguiente repositorio de github:
+
+*https://github.com/sensepost/jack.git*
+
+```
+> git clone https://github.com/sensepost/jack.git
+
+> cd jack/
+
+> x-www-browser index.thml
+```
+
+Y se nos abrira la herramienta en el navegador:
+
+![](/assets/images/login-bypass/)
+
+
 
 
 
