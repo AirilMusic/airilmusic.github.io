@@ -780,9 +780,9 @@ Si no pusiesemos los `corchetes` seria una petición normal mediante `curl` para
 
 Lo primero que tenemos que hacer para prevenir esto es `testear` que los recursos se inicialicen y se acceda a ellos con el tipo y los permisos previestos, mientras desarrollamos la aplicación web.
 
-Tambien hay que tener en cuenta
+Tambien hay que tener en cuenta que con lenguajes de programación estaticos tenemos que tener mas cuidado con las conversiones de tipos de variables y es recomendable que se utilicen funciones y formas lo mas estrictas posibles para evitar conversiones inesperadas.
 
-
+# DESERIALIZATION ATTACK with Node.js
 
 
 
