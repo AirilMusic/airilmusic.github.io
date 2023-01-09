@@ -719,6 +719,48 @@ Para prevenir ataques de type juggling, es importante asegurarse de que su códi
 
 ## COMO EXPLOTAR LA VULNERABILIDAD
 
+Hay varias formas de hacer este ataque, por lo que yo solo voy a mostrar un ejemplo. Para eso primero voy a explicar como montar un laboratorio de pruebas para esta vuln.
+
+### LAVORATORIO DE PRUEBAS
+
+```
+> service apache2 start
+
+> nano login.php
+```
+
+Y en ese archivo ponemos el siguiente código:
+
+```php
+<html>
+	<font color="red"><h1><marquee>Secure Login Page</marquee></h1></font>
+	<hr>
+	<body style="background-color:powderblue;">
+		<center><form method="POST" name="<?php basename($_SERVER['PHP_SELF']); ?>">
+			Usuario: <input type="text" name="usuario" id="password" size="30">
+			&nbsp;
+			Password: <input type="password" name="password" id="password" size="30">
+			<input type="submit" value="Login">
+		</form></center>
+	<?php
+		$USER = "admin";
+		$PASSWORD = "3st4p4ssw0rd!3simp0siblederomper!$2020..";
+		
+		if(isset($_POST['usuario']) && isset($_POST['password'])){
+			if($_POST['usuario'] == $USER){
+				if(strcmp($_POST['password'], $PASSWORD) == 0){
+					echo "Acceso garantizado! El PIN es 4671";
+				} else { echo "La password es incorrecta!"; }
+			} else { echo "El usuario es incorrecto!"; }
+		}
+	?>
+	</body>
+</html>
+```
+
+### EXPLOTACIÓN
+
+
 
 ## PREVENCIÓN
 
