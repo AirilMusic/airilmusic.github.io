@@ -680,11 +680,20 @@ Claro, eso no se puede hacer siempre, porque puede suponer mucho trabajo rehacer
 
 ```
 
+# TYPE JUGGLIN ATTACK
+Las vulnerabilidades `Type jugglin` (también conocidas como confusión de tipos) son una clase de vulnerabilidad en la que `un objeto se inicializa o se accede a él como el tipo incorrecto`, lo que permite a un atacante `eludir potencialmente la autenticación` o socavar la seguridad del tipo de una aplicación, lo que puede conducir a la ejecución de código arbitrario `Arbitrary code execution (ACE)`.
+
+## ¿PORQUE PASA ESTO?
 
 
+## COMO EXPLOTAR LA VULNERABILIDAD
 
 
+## PREVENCIÓN
 
+Lo primero que tenemos que hacer para prevenir esto es `testear` que los recursos se inicialicen y se acceda a ellos con el tipo y los permisos previestos, mientras desarrollamos la aplicación web.
+
+Tambien hay que tener en cuenta
 
 
 # HTTP REQUEST SMUGGLING ATTACK
