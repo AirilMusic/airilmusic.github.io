@@ -1010,7 +1010,7 @@ Los documentos XSS pueden tener tipos especificos definidos por dos estandares: 
 
 Los documentos definidos con `DTD` son `vulnerables` a `XXE`. 
 
-El siguiente ejemplo utiliza una `DTD` llamada `mytype`. Esta `DTD` `define una entidad XML` llamada `name`. Cuando este elemento es `llamado en el output`, el analizador de sintaxis de XML `lee el DTD` y `lo replaca por un valor numérico`. 
+El siguiente ejemplo utiliza una `DTD` llamada `mytype`. Esta `DTD` `define una entidad XML` llamada `name`. Cuando este elemento es `llamado en el output`, el analizador de sintaxis (parser) de XML `lee el DTD` y `lo replaca por un valor numérico`. 
 
 ```
 |                   Request                   |
@@ -1035,7 +1035,7 @@ El siguiente ejemplo utiliza una `DTD` llamada `mytype`. Esta `DTD` `define una 
 | Hello John and welcome to my website!       |
 ```
 
-Ahora vamos a ver como en base a esto podemos hacer el ataque `billion laughs attack` si el analizador de sintaxsis de XML `no limita la cantidad de memoria` que puede utilizar, este ataque es una `técnica recursiva para sobrecargar la memoria` de la web víctima. Asi podemos hacer `denegaciones de servicio` y `buffer overflows`.
+Ahora vamos a ver como en base a esto podemos hacer el ataque `billion laughs attack` si el analizador de sintaxsis (parser) de XML `no limita la cantidad de memoria` que puede utilizar, este ataque es una `técnica recursiva para sobrecargar la memoria` de la web víctima. Asi podemos hacer `denegaciones de servicio` y `buffer overflows`.
 
 ```
 |                      Request                      |
@@ -1067,7 +1067,9 @@ Ahora vamos a ver como en base a esto podemos hacer el ataque `billion laughs at
 
 ### XXE SSRF Attack
 
+Este es un ataque similar al anterior con el que podemos lograr hacer el ataque `server side request forgery (SSRF)`. Para eso el atacante `utiliza entidades XML externas`.
 
+Un atacante puede `ejecutar comandos a nivel de sistema` mediante el analizador de sintaxis (parser) de XML. La mayoría de analizadores de sintaxis (parsers) procesan entidades externas de forma predeterminada, por lo que el servidor ejecuta las entidades XML maliciosas como codigo del sistema. 
 
 ### Blin XXE Vulnerability
 
