@@ -63,6 +63,17 @@ Y otro consejo: buscar la web en `shodan`, ya que puedes encontrar información 
 
 ![](/assets/images/login-bypass/shodan.PNG)
 
+## Domain Zone Transfere
+
+Con esta vulnerabilidad podemos `recopilar un monton de información` de la web que estamos testeando.
+
+La vulnerabilidad `domain zone transfer` se refiere a una técnica utilizada para `copiar la configuración completa de un servidor DNS` (Domain Name System) a otro servidor. Esto se logra mediante el uso del `protocolo DNS`, que permite a los servidores DNS intercambiar información sobre los registros de nombres de dominio en una zona específica.
+
+Un atacante puede realizar una `domain zone transfer no autorizada` (`AXFR`) para `obtener información confidencial` sobre una red o para descubrir oportunidades para ataques adicionales. Por ejemplo, un atacante podría utilizar la información obtenida de una transferencia de zona de dominio no autorizada para identificar dominios de una web, todos los dispositivos conectados a una red, así como sus direcciones IP y configuraciones.
+
+Al ser un vulnerabilidad de `DNS` esto suele ir por el puerto `53/tcp` o por el `53/udp`.
+
+
 # IDOR
 
 Pongo esto como el primer método de bypassing, porque es mi favorito, es super gracioso, porque `es absurdo a mas no poder`. Y no es tan conocido, por ejemplo en bug bounty pasa una cosa bastante graciosa que es que la mayoría de personas buscan `XSS` o `SQLi`, pero se olvidan de esta vulnerabilidad tan graciosa. Y por otra parte, hace unos meses le esneñé esta vuln a un amigo que es programador de backend y se sorprendio porque no la conocia y es muy absurda. 
