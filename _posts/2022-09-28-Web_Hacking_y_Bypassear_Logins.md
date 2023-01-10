@@ -73,6 +73,24 @@ Un atacante puede realizar una `domain zone transfer no autorizada` (`AXFR`) par
 
 Al ser un vulnerabilidad de `DNS` esto suele ir por el puerto `53/tcp` o por el `53/udp`.
 
+Listar `sub-dominios`:
+
+```
+> dig @{ip victima} {dominio web} axfr
+```
+
+Listar los servidores `DNS`:
+
+```
+> dig @{ip victima} {dominio web (por ejemplo google.com)} ns
+```
+
+Listar los servidores de correo:
+
+```
+> dig @{ip victima} {dominio web} mx
+```
+
 
 # IDOR
 
