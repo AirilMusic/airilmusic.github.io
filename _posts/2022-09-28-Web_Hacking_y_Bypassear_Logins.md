@@ -986,10 +986,12 @@ Si una aplicación web `acepta XML como input` y nos `devuelve un output`, una p
 
 |                Request                |
 |---------------------------------------|
+|```
 | POST http://example.com/xml HTTP/1.1  |
 | <mytype>                              |
-| Hello and welcome to my website!      |
+|   Hello and welcome to my website!    |
 | </mytype>                             |
+|```
 
 
 
