@@ -24,6 +24,7 @@ En este artículo vamos a ver `distintas formas que hay para bypassear un login`
 
 ```
   - OSINT
+  	·Técnicas básicas
   	·Sodan
 	·Domain zone transfer
   - IDOR
@@ -41,6 +42,9 @@ En este artículo vamos a ver `distintas formas que hay para bypassear un login`
   - TYPE JUGGLIN ATTACK
   - DESERIALIZATION ATTACK with Node.js
   - XML External Entity Injection (XXE)
+  	· Billion Laughs Attack 
+	· XXE SSRF Attack
+	· Blind XXE Vulnerability
   - HTTP REQUEST SMUGGLING ATTACK 
   - PROTOTIPE POLLUTION
 ```
