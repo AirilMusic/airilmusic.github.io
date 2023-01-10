@@ -24,6 +24,8 @@ En este artículo vamos a ver `distintas formas que hay para bypassear un login`
 
 ```
   - OSINT
+  	·Sodan
+	·Domain zone transfer
   - IDOR
   - SQLi
   - No SQLi
@@ -978,6 +980,24 @@ Hay varios ataques distintos, voy a explicar tres:
 · Blind XXE Vulnerability
 ```
 
+### Billion Laughs Attack
+
+Si una aplicación web `acepta XML como input` y nos `devuelve un output`, una petición se veria algo parecido a esto:
+
+|                Request                |
+|---------------------------------------|
+| POST http://example.com/xml HTTP/1.1  |
+| <mytype>                              |
+| Hello and welcome to my website!      |
+| </mytype>                             |
+
+
+
+### XXE SSRF Attack
+
+
+
+### Blin XXE Vulnerability
 
 
 
