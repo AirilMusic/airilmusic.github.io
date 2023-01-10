@@ -38,7 +38,7 @@ En este artículo vamos a ver `distintas formas que hay para bypassear un login`
   - BUFFER OVERFLOW
   - TYPE JUGGLIN ATTACK
   - DESERIALIZATION ATTACK with Node.js
-  - XML --> XXE
+  - XML External Entity Injection (XXE)
   - HTTP REQUEST SMUGGLING ATTACK 
   - PROTOTIPE POLLUTION
 ```
@@ -924,6 +924,25 @@ Podemos hacer unas cuantas cosas para prevenir este tipo de ataques:
 
 ·Utilice técnicas de entrada de validación y sanitización: Asegúrese de validar y sanitizar todos los datos de entrada para evitar que los atacantes inyecten datos maliciosos en su aplicación.
 ```
+
+# XML EXTERNAL ENTITY INJECTION (XXE)
+
+![](/assets/images/login-bypass/XXE.png)
+
+Esta es una vulnerabilidad que permite que el atacante interfiera con el procesamiento de datos XML de una aplicación web.
+
+XML es un formato muy popular que utilizan los desarrolladores para transferir datos entre el navegador web y el servidor, por lo tanto es una vulnerabilidad muy común.
+
+## ¿EN QUE CONSISTE?
+
+
+
+## COMO EXPLOTARLO
+
+
+
+## PREVENCIÓN
+
 
 
 
