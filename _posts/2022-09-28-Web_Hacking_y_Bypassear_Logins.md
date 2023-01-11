@@ -1160,6 +1160,8 @@ Hay varias formas de prevenirlo, es verdad que en cada lenguaje de programación
 
 ![](/assets/images/login-bypass/HTTP-REQUEST-SMUGGLIN-ATTACK.png)
 
+Esta es una técnica para `interferir` con la forma en la que un sitio web procesa las secuencias de `peticiones`. Esta es una vulnerabilidad crítica, porque permite al atacante `eludir controles de seguridad`, `obtener acceso a datos confidenciales` o `comprometer directamente a otros usuarios`.
+
 // notas para cuando haga esto, versiones vulnerables de nginx: 1.18.0 1.19.0
 https://medium.com/numen-cyber-labs/http-request-smuggling-how-to-detect-and-attack-c71f6c483e3d
 https://portswigger.net/web-security/request-smuggling
