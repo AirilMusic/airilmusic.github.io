@@ -1157,6 +1157,9 @@ Hay varias formas de prevenirlo, es verdad que en cada lenguaje de programación
 
 <a id="17"></a>
 # HTTP REQUEST SMUGGLING ATTACK
+
+![](/assets/images/login-bypass/HTTP-REQUEST-SMUGGLIN-ATTACK.png)
+
 // notas para cuando haga esto, versiones vulnerables de nginx: 1.18.0 1.19.0
 https://medium.com/numen-cyber-labs/http-request-smuggling-how-to-detect-and-attack-c71f6c483e3d
 https://portswigger.net/web-security/request-smuggling
