@@ -41,36 +41,6 @@ En este artículo vamos a ver `distintas formas que hay para bypassear un login`
 - [HTTP REQUEST SMUGGLING ATTACK](#17)
 - [PROTOTIPE POLLUTION](#18)
 
-```
-  - OSINT
-  	·Técnicas básicas
-  	·Sodan
-	·Domain zone transfer
-  - IDOR
-  - SQLi
-  - No SQLi
-  - COOKIE HIJACKING (HTML injectio y XSS)
-  	· HTML injection
-	· XSS
-	· Cookie hijaking
-  - CSRF
-  - SHELL SHOCK
-  - PADDING ORACLE ATTACK con PADDBUSTER
-  - BIT FLIPPER ATTACK para PADDING ORACLE ATTACK
-  - PASSWORD SPRAYING
-  - SSTI
-  - CLICKJAKING
-  - BUFFER OVERFLOW
-  - TYPE JUGGLIN ATTACK
-  - DESERIALIZATION ATTACK with Node.js
-  - XML External Entity Injection (XXE)
-  	· Billion Laughs Attack 
-	· XXE SSRF Attack
-	· Blind XXE Vulnerability
-  - HTTP REQUEST SMUGGLING ATTACK 
-  - PROTOTIPE POLLUTION
-```
-
 <a id="1"></a>
 # OSINT
 
