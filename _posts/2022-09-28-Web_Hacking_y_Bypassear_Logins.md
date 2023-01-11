@@ -31,6 +31,9 @@ En este artículo vamos a ver `distintas formas que hay para bypassear un login`
   - SQLi
   - No SQLi
   - COOKIE HIJACKING (HTML injectio y XSS)
+  	· HTML injection
+	· XSS
+	· Cookie hijaking
   - CSRF
   - SHELL SHOCK
   - PADDING ORACLE ATTACK con PADDBUSTER
@@ -1138,8 +1141,17 @@ Una vulnerabilidad `XXE blind` significa que la aplicación `procesa entidades X
 
 ## PREVENCIÓN
 
+Hay varias formas de prevenirlo, es verdad que en cada lenguaje de programación hay formas distintas de prevenirlos, pero hay unas cuantas medidas que podemos tomar usemos el lenguaje que usemos:
 
-
+```
+· Desabilitar manualmente los DTDs
+· Utiliza filtros para que bloqueen codigo XML malicioso
+· Utiliza herramientas de seguridad como: Firewalls de aplicaciones web (WAF)
+· Valida todos los inputs
+· Utiliza autenticaciones y cifrados
+· Limita el trafico de salida
+· Limita las comunicaciones DNS
+```
 
 # HTTP REQUEST SMUGGLING ATTACK
 // notas para cuando haga esto, versiones vulnerables de nginx: 1.18.0 1.19.0
