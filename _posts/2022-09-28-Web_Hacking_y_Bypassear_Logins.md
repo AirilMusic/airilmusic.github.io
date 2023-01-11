@@ -1134,7 +1134,7 @@ Esto e puede hacer con `cualquier archivo` de la máquina víctima donde este ho
 
 ### Blin XXE Vulnerability
 
-
+Una vulnerabilidad `XXE blind` significa que la aplicación `procesa entidades XML` externas de `manera insegura`, pero `no las devuelve en sus respuestas`. Esto significa que los atacantes tendrán que usar técnicas avanzadas para detectar la vulnerabilidad y explotarla. Los atacantes aún pueden exfiltrar datos utilizando XXE ciega, por ejemplo, haciendo que el servidor se conecte a una URL controlada por el atacante.
 
 ## PREVENCIÓN
 
