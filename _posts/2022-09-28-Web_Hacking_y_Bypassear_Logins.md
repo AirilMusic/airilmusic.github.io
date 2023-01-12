@@ -32,9 +32,7 @@ tags:
   - Deserialization Attack
 ---
 
-# WORK IN PROGRESS
-
-En este artículo vamos a ver `distintas formas que hay para bypassear un login`, es decir, formas para pasar un login sin necesidad de introducir credenciales, o en su defecto encontrar unas credenciales válidas con las que poder conectarnos con la cuenta de otro usuario. (`NOTA:` también voy a poner `algunos ataques que aunque no son exactamente al panel del loggin`, también sirven para conseguir un usuario de `administrador` con el que tomar el control de la web)
+En este artículo vamos a ver distintas `vulnerabilidades y ataques` a aplicacciones web. Sobre todo vamos a ver `como hacer los ataques` y `como funcionan las vulnerabilidades`, pero también me parece interesante dar unas `pautas` para intentar `prevenir o arreglar` esas vulnerabilidades.
 
 ## ÍNDICE
 
