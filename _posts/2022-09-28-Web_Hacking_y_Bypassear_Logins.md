@@ -1206,9 +1206,15 @@ El `Content-Length` de la petición introducida ilegalmente indica el `Content-L
 
 ### Bypass Front-end Security Control
 
+Cuando el `front-end` implementa controles para `bloquear el acceso` a un punto final restringido (`endpoint`), como `/admin`. Y el servidor `back-end acepta cada solicitud sin más comprobaciones`. En esta situación, se puede utilizar una vulnerabilidad de `introducción ilegal de peticiones HTTP para eludir los controles de acceso, introduciendo ilegalmente una petición al URL restringida`.
+
+![](/assets/images/login-bypass/Request_Smugglin-attack-2.webp)
+
+En este ejemplo, el servidor proxy de `front-end solo procesa el encabezado de petición de Content-Length`, que es de 129 bytes de largo. Por lo tanto, toda `la petición será enviada al back-end`. Sin embargo, el servidor `back-end` ignora la Content-Length, `solo interpreta el encabezado de petición de Transfer-Encoding`. Cuando el back-end lee 0 seguido de 2 nuevas líneas, considerará que la primera petición se ha completado, dejando la petición restante `GET /admin HTTP/1.1` en el búfer, esperando a que llegue la próxima petición, cuando esta solicitud introducida ilegalmente en la siguiente petición y se procesa, `otorga acceso no autorizado al URL restringido`.
+
+## PREVENCION
 
 
-### 
 
 
 https://medium.com/numen-cyber-labs/http-request-smuggling-how-to-detect-and-attack-c71f6c483e3d
