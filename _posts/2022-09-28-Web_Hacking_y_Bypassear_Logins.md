@@ -23,6 +23,7 @@ En este artículo vamos a ver `distintas formas que hay para bypassear un login`
 ## ÍNDICE
 
 - [OSINT](#1)
+- [Domain Zone Transfere](#DZT)
 - [IDOR](#2)
 - [SQLi](#3)
 - [No SQLi](#4)
@@ -56,6 +57,7 @@ Y otro consejo: buscar la web en `shodan`, ya que puedes encontrar información 
 
 ![](/assets/images/login-bypass/shodan.PNG)
 
+<a id="DTZ"></a>
 ## Domain Zone Transfere
 
 Con esta vulnerabilidad podemos `recopilar un monton de información` de la web que estamos testeando.
