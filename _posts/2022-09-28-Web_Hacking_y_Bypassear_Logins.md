@@ -14,6 +14,22 @@ tags:
   - SQLi
   - OSINT
   - IDOR
+  - Domain Zone Transfere
+  - XSS
+  - Buffer overflow
+  - Password Spraying
+  - SSTI
+  - CSRF
+  - Shell Shock
+  - Bit Flipper Attack
+  - Padding Oracle Attack
+  - Clickjaking
+  - Type Jugglin Attack
+  - XML
+  - XXE
+  - Prototipe Pollution
+  - HTTP Request Smuggling Attack
+  - Deserialization Attack
 ---
 
 # WORK IN PROGRESS
