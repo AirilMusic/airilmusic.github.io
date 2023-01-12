@@ -1235,6 +1235,10 @@ Así que en este artículo veremos esta interesante y compleja vulnerabilidad.
 
 Cabe recalcar que esta vulnerabilidad es una vulnerabilidad muy grave, ya que permite `ejecutar código remoto (RCE)` o hacer ataques de `denegación de servicios (DOS)`.
 
+## ¿QUE ES?
+
+El ataque de contaminación de prototipo `(prototype pollution attack)` es una técnica de seguridad que se utiliza para `manipular objetos JavaScript` en una aplicación web. El ataque se lleva a cabo mediante la `inyección de propiedades o métodos en el prototipo de un objeto`, lo que `puede permitir al atacante ejecutar código malicioso` o tomar el control de la aplicación web. Los desarrolladores pueden mitigar este tipo de ataques mediante la validación y sanitización de datos de entrada, así como mediante la implementación de controles de seguridad adicionales en el lado del servidor.
+
 ## ¿ CUANDO PODEMOS EXPLOTAR ESTA VULNERABILIDAD ?
 
 Esta vulnerabilidad `está presente` en webs que tengan `jQuery` de una `versión menor a la 3.4.0`, es decir, de que `desde jQuery 3.9.0 hacia abajo` son vulnerables a este ataque.
@@ -1492,6 +1496,9 @@ Por eso la vulnerabilidad se llama `Prototype Pollution` porque los usuarios pue
 
 ## ¿ COMO EXPLOTAR LA VULNERABILIDAD ?
 
+Un ejemplo de ataque de contaminación de prototipo podría ser el siguiente:
+
+Un atacante envía una `petición HTTP maliciosa` a una aplicación web que contiene una `inyección de código` que agrega una propiedad llamada `constructor` al prototipo de un objeto `Array`. La propiedad `constructor` contiene un código malicioso que se ejecuta cada vez que se crea un nuevo objeto `Array`. Al aceptar esta solicitud, la aplicación web se ve afectada por el ataque, y el código malicioso se ejecuta cada vez que se crea un nuevo objeto `Array`, permitiendo al atacante tomar el control de la aplicación web.
 
 
 
