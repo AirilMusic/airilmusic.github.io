@@ -1200,7 +1200,9 @@ El objetivo es inferir al servidor back-end para agregar solicitudes de otro usu
 
 ![](/assets/images/login-bypass/Request_Smugglin-attack-1.webp)
 
+En este caso, el reverse-proxy `enviará toda la solicitud al back-end`. Sin embargo, el back-end `solo procesará el 1a (4 bytes)` tal como se indica en el `Content-Length`. Por lo tanto, la siguiente solicitud que comience con `POST /login HTTP/1.1` será tratada como interpretación de `Transfer-Encoding`.
 
+El `Content-Length` de la petición introducida ilegalmente indica el `Content-Length` de la próxima solicitud que se va a agregar al parámetro `x`. Es necesario ajustar el `Content-Length` para capturar los valores sensibles de las siguientes peticiones, en este ataque el objetivo es `capturar la clave de sesión de otros usuarios` y luego usar la clave robada para tomar el control de la cuenta.
 
 ### Bypass Front-end Security Control
 
