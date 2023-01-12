@@ -1164,6 +1164,12 @@ Hay varias formas de prevenirlo, es verdad que en cada lenguaje de programación
 
 Esta es una técnica para `interferir` con la forma en la que un sitio web procesa las secuencias de `peticiones`. Esta es una vulnerabilidad crítica, porque permite al atacante `eludir controles de seguridad`, `obtener acceso a datos confidenciales` o `comprometer directamente a otros usuarios`.
 
+# ¿COMO FUNCIONA?
+
+Este es un ataque de `inyección de petición HTTP`, es una técnica que busca `explotar la desincronización entre los proxies de front-end y los servidores de back-end`. Esta vulnerabilidad permite a los atacantes `inferir el procesamiento de las peticiones HTTP mediante la inyección de una petición ambigua` que puede subvertir la lógica de la aplicación. En términos simples, la petición HTTP se puede `enviar como una sola petición a los proxies de front-end` pero `interpretada como varias peticiones por el servidor de back-end`. De esta manera, una parte de la petición se añade al siguiente, lo que interfere con la forma en que la aplicación procesa la petición, permitiendo al atacante eludir los controles de seguridad, obtener acceso no autorizado a datos sensibles y tomar el control de cuentas.
+
+
+
 // notas para cuando haga esto, versiones vulnerables de nginx: 1.18.0 1.19.0
 https://medium.com/numen-cyber-labs/http-request-smuggling-how-to-detect-and-attack-c71f6c483e3d
 https://portswigger.net/web-security/request-smuggling
