@@ -73,7 +73,7 @@ Y otro consejo: buscar la web en `shodan`, ya que puedes encontrar información 
 
 ![](/assets/images/login-bypass/shodan.PNG)
 
-<a id="DTZ"></a>
+<a id="DZT"></a>
 ## Domain Zone Transfere
 
 Con esta vulnerabilidad podemos `recopilar un monton de información` de la web que estamos testeando.
