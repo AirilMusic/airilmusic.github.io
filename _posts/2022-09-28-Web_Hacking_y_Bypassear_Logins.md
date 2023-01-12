@@ -1214,8 +1214,25 @@ En este ejemplo, el servidor proxy de `front-end solo procesa el encabezado de p
 
 ## PREVENCION
 
+Hay varias medidas que se pueden tomar para intentar prevenir este tipo de ataques:
+
+```
+· Usa HTTP/2 de extremo a extremo y deshabilita la degradación de HTTP si es posible. HTTP/2 utiliza un mecanismo robusto para determinar la longitud de las peticiones y, cuando se utiliza de extremo a extremo, está inherentemente protegido contra la introducción ilegal de peticiones. Si no puedes evitar la degradación de HTTP, asegúrate de validar la petición reescrita contra la especificación HTTP/1.1. Por ejemplo, rechaza las peticiones que contengan nuevas líneas en los encabezados, dos puntos en los nombres de encabezado y espacios en el método de petición.
+· Haz que el servidor front-end normalice las peticiones ambiguas y que el servidor back-end rechace cualquiera que aún sea ambigua, cerrando la conexión TCP en el proceso.
+· Nunca asumas que las peticiones no tendrán un cuerpo. Esta es la causa fundamental tanto de las vulnerabilidades CL.0 como de la desincronización del lado del cliente.
+· Por defecto, descarte la conexión si se activan excepciones a nivel del servidor al manejar las peticiones.
+· Si diriges el tráfico a través de un proxy inverso, asegúrate de habilitar HTTP/2 si es posible.
+```
+
+<a id="18"></a>
+# PROTOTIPE POLLUTION
 
 
 
-https://medium.com/numen-cyber-labs/http-request-smuggling-how-to-detect-and-attack-c71f6c483e3d
-https://portswigger.net/web-security/request-smuggling
+
+
+
+
+
+
+
