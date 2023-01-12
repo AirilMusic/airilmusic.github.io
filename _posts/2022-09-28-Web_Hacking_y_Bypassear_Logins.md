@@ -1188,13 +1188,25 @@ Un ejemplo de como se haría el ataque:
 
 ![](/assets/images/login-bypass/Request_Smugglin_example.webp)
 
-En este ejemplo, HaProxy utiliza `Content-Length` e ignora el `Transfer-Encoding`, en esta situación, todo el cuerpo `POST` será analizado para el `back-end`. La ` (obfuscated Transfer-Encoding:[\x0b] chunked)` se ha interpretado por el servidor de back-end `Gunicorn`, ha `interpretado la petición como si fuesen dos`. Esto se debe a que utiliza el encabezado `Transfer-Encoding` para procesar la solicitud, el 0 seguido de 2 nuevas líneas en blanco divide la solicitud en dos causando que el servidor back-end envíe dos respuestas.
+En este ejemplo, HaProxy utiliza `Content-Length` e ignora el `Transfer-Encoding`, en esta situación, todo el cuerpo `POST` será analizado para el `back-end`. La ` (obfuscated Transfer-Encoding:[\x0b] chunked)` se ha interpretado por el servidor de back-end `Gunicorn`, ha `interpretado la petición como si fuesen dos`. Esto se debe a que utiliza el encabezado `Transfer-Encoding` para procesar la solicitud, el 0 entre 2 líneas en blanco divide la solicitud en dos causando que el servidor back-end envíe dos respuestas.
 
 ## ATAQUES
 
 Con esta vulnerabilidad poemos efectuar varios ataques distintos:
 
+### Acount Takeover Attack
 
+El objetivo es inferir al servidor back-end para agregar solicitudes de otro usuario y redirigirlos al entorno controlado por el atacante.
+
+![](/assets/images/login-bypass/Request_Smugglin-attack-1.webp)
+
+
+
+### Bypass Front-end Security Control
+
+
+
+### 
 
 
 https://medium.com/numen-cyber-labs/http-request-smuggling-how-to-detect-and-attack-c71f6c483e3d
