@@ -75,4 +75,13 @@ OtoAdd = int(8 - len(numeroSin0))        # con esto calculamos cuantos 0 nos fal
 pin = str(numeroSin0.zfill(OtoAdd))      # con esto ñadimos esos 0, dejandolo en 00001001
 ```
 
+# VER QUE TIPO DE VARIABLE ES UNA VARIABLE
+Si tenemos por ejemplo una raiz cuadrada y queremos ver si el output es un número entero necesitamos algun función con la que poder comprobarlo. Realmente esto se puede hacer para todo tipo de variables, pero lo voy a hacer con el ejemplo que he puesto. Para esto utilizaremos la función `isinstance(x, int)`:
 
+```py
+x = 4 ** 0.5
+print(isinstanc(x, int)) # imprime True porque la raiz cuadrada de 4 es 2, osea un número entero
+
+x = 5 ** 0.5
+print(isinstanc(x, int)) # imprimer False porque la raiz cuadrada de 5 es 2,236... 
+```
