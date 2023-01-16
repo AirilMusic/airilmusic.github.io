@@ -63,3 +63,16 @@ for i in num:
     
 print(int(str(nums[0] + nums[1] + nums[2] + nums[3] + nums[4] + nums[5] + nums[6] + nums[7] + nums[8] + nums[9])))
 ```
+
+# RELLENAR DE 00000
+Cuando las variables que utilizamos necesitan ser de la misma longitud, por ejemplo en binario, si tenemos un número con una cantidad de dígitos menor al que necesitamos tenemos que ponerle antes `0000`, es decir, si tenemos `1001` y necesitamos que tenga 8 caracteres, lo tendremos que poner así `00001001`:
+
+```
+numeroSin0 = input("El numero:")         # por ejemplo '1001' 
+
+OtoAdd = int(8 - len(numeroSin0))        # con esto calculamos cuantos 0 nos faltan
+
+pin = str(numeroSin0.zfill(OtoAdd))      # con esto ñadimos esos 0, dejandolo en 00001001
+```
+
+
