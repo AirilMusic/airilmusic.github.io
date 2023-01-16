@@ -80,8 +80,8 @@ Si tenemos por ejemplo una raiz cuadrada y queremos ver si el output es un núme
 
 ```py
 x = 4 ** 0.5
-print(isinstanc(x, int)) # imprime True porque la raiz cuadrada de 4 es 2, osea un número entero
+print(isinstance(x, int)) # imprime True porque la raiz cuadrada de 4 es 2, osea un número entero
 
 x = 5 ** 0.5
-print(isinstanc(x, int)) # imprimer False porque la raiz cuadrada de 5 es 2,236... 
+print(isinstance(x, int)) # imprimer False porque la raiz cuadrada de 5 es 2,236... 
 ```
