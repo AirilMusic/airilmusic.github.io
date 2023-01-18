@@ -16,6 +16,7 @@ tags:
 
 ![](/assets/images/Algoritmia/cluedo-portada.png)
 
+<a id="1"></a>
 # CLUEDO CHEATS
 
 `Código y .exe:` *https://github.com/AirilMusic/Programitas/tree/main/cluedo_cheats_uwu*
@@ -24,15 +25,15 @@ En verano en una casa rural con amigos jugamos al cluedo aunque nosotros eramos 
 
 Esto es un programa que he hecho que dice las `probabilidades` de que cada jugador tenga x carta, tambien te dice la carta mas probabable que tenga, las `mejores preguntas` que puedes hacer y el `asesino, escena del crimen y arma mas probables`.
 
+<a id="2"></a>
 ## ÍNDICE
 
-```
-  - Introducción
-  - Índice
-  - Explicación teórica y de código
-  - Exportar a .exe
-```
+- [INTRODUCCIÓN](#1)
+- [ÍNDICE](#2)
+- [EXPLICACIÓN TEÓRICA y DE CÓDIGO](#3)
+- [EXPORTAR A .exe](#4)
 
+<a id="3"></a>
 ## EXPLICACIÓN TEÓRICA Y DE CÓDIGO
 
 Lo primero importamos la libreria `time` para que al final espere un poquito:
@@ -754,6 +755,7 @@ Y ahora ya ponemos los errores, osea, si no ha metido el input bien y luego le h
 
 Y pues ya estaria uwu
 
+<a id="4"></a>
 ## EXPORTAR A .EXE
 
 Primero si no lo tenemos instalamos el paquete para compilarlo en un `.exe`:
