@@ -85,3 +85,41 @@ print(isinstance(x, int)) # imprime True porque la raiz cuadrada de 4 es 2, osea
 x = 5 ** 0.5
 print(isinstance(x, int)) # imprimer False porque la raiz cuadrada de 5 es 2,236... 
 ```
+
+# BUSQUEDA BINARIA
+
+Es un algoritmo de búsqueda eficiente que se utiliza para encontrar un elemento específico en una matriz ordenada.
+
+
+
+# ORDENAMIENTO
+
+Hay varios algoritmos de ordenamiento, como bubble sort, insertion sort, merge sort, quick sort, entre otros. Es importante conocer al menos uno o dos de estos algoritmos y saber cómo implementarlos en Python.
+
+
+
+# DIJKSTRA y A*
+
+Son algoritmos de búsqueda de rutas que se utilizan para encontrar la ruta más corta entre dos puntos en un grafo.
+
+
+
+# BACKTRACKING
+
+Es un algoritmo de búsqueda que se utiliza para encontrar todas las soluciones posibles a un problema.
+
+
+# TÉCNICAS DE RESOLUCIÓN DE PROBLEMAS
+## DIVIDE Y VENCERÁS
+
+Es una técnica de resolución de problemas en la que un problema grande se divide en problemas más pequeños y más fáciles de resolver.
+
+## PROGRAMACIÓN DINÁMICA
+
+Es una técnica de resolución de problemas que consiste en dividir un problema en subproblemas y almacenar las soluciones a estos subproblemas para evitar tener que volver a resolverlos.
+
+Es muy útil utilizar funciones para esto.
+
+## GREEDY
+
+Es una técnica de resolución de problemas en la que se toma la decisión óptima en cada paso con la esperanza de que esto lleve a una solución global óptima.
