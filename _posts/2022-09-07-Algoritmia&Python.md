@@ -16,6 +16,19 @@ tags:
 
 (según valla utilizando nuevos algoritmos en ejercicios iré añadiendo mas aquí)
 
+# ÍNDICE
+- [SUMATORIOS](#1)
+- [NUMEROS PRIMOS](#2)
+- [PRIMEROS X CARACTERES](#3)
+- [RELLENAR DE 0000](#4)
+- [QUE TIPO DE VARIABLE ES](#5)
+- [BUSQUEDA BINARIA](#6)
+- [ORDENAMIENTO](#7)
+- [DIJKSTRA y A*](#8)
+- [BACKTRACKING](#9)
+- [TÉCNICAS DE RESOLUCIÓN DE PROBLEMAS](#10)
+
+<a id="1"></a>
 # SUMATORIOS
 
 (también son útiles para números triangulares)
@@ -29,6 +42,7 @@ tags:
 1^6 + 2^6 + 3^6 + ... + n^6            -->              x = (n * (n + 1) * (2 * n + 1) * (3 * (n**4) + 6 * (n**3) - 3n + 1))/42
 ```
 
+<a id="2"></a>
 # LISTAR NUMEROS PRIMOS
 
 ## Forma lógica:
@@ -50,6 +64,7 @@ for i in range(3, numMax + 1):
 print(prime)
 ```
 
+<a id="3"></a>
 # PRIMEROS X CARACTERES
 
 Para mostrar los primeros x caracteres de un string o un número (para string hay que hacer un par de pequeños cambios):
@@ -64,6 +79,7 @@ for i in num:
 print(int(str(nums[0] + nums[1] + nums[2] + nums[3] + nums[4] + nums[5] + nums[6] + nums[7] + nums[8] + nums[9])))
 ```
 
+<a id="4"></a>
 # RELLENAR DE 00000
 Cuando las variables que utilizamos necesitan ser de la misma longitud, por ejemplo en binario, si tenemos un número con una cantidad de dígitos menor al que necesitamos tenemos que ponerle antes `0000`, es decir, si tenemos `1001` y necesitamos que tenga 8 caracteres, lo tendremos que poner así `00001001`:
 
@@ -75,6 +91,7 @@ OtoAdd = int(8 - len(numeroSin0))        # con esto calculamos cuantos 0 nos fal
 pin = str(numeroSin0.zfill(OtoAdd))      # con esto ñadimos esos 0, dejandolo en 00001001
 ```
 
+<a id="5"></a>
 # VER QUE TIPO DE VARIABLE ES UNA VARIABLE
 Si tenemos por ejemplo una raiz cuadrada y queremos ver si el output es un número entero necesitamos algun función con la que poder comprobarlo. Realmente esto se puede hacer para todo tipo de variables, pero lo voy a hacer con el ejemplo que he puesto. Para esto utilizaremos la función `isinstance(x, int)`:
 
@@ -86,29 +103,35 @@ x = 5 ** 0.5
 print(isinstance(x, int)) # imprimer False porque la raiz cuadrada de 5 es 2,236... 
 ```
 
+<a id="6"></a>
 # BUSQUEDA BINARIA
 
 Es un algoritmo de búsqueda eficiente que se utiliza para encontrar un elemento específico en una matriz ordenada.
 
 
 
+<a id="7"></a>
 # ORDENAMIENTO
 
 Hay varios algoritmos de ordenamiento, como bubble sort, insertion sort, merge sort, quick sort, entre otros. Es importante conocer al menos uno o dos de estos algoritmos y saber cómo implementarlos en Python.
 
 
 
+<a id="8"></a>
 # DIJKSTRA y A*
 
 Son algoritmos de búsqueda de rutas que se utilizan para encontrar la ruta más corta entre dos puntos en un grafo.
 
 
 
+<a id="9"></a>
 # BACKTRACKING
 
 Es un algoritmo de búsqueda que se utiliza para encontrar todas las soluciones posibles a un problema.
 
 
+
+<a id="10"></a>
 # TÉCNICAS DE RESOLUCIÓN DE PROBLEMAS
 ## DIVIDE Y VENCERÁS
 
