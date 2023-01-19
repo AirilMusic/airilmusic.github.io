@@ -32,7 +32,7 @@ La Proxmark3 Easy es un `dispositivo de auditoría de seguridad RFID` (Radio Fre
 
 Es verdad que una Proxmark3 easy de IcemanCollections es bastante cara, por lo que si solo quieres trastear un poco con ella y no tienes mucho dienro, te recomiendo comprar una copia china en Aliexpress, es lo que he hecho yo.
 
-(Encima pror 2€ mas me añadieron 4 tarjetas blancas y 4 chapitas mas a parte de las 5 con las que venia aunque no lo dijesen en la web)
+(Encima por 2€ mas me añadieron 4 tarjetas blancas y 4 chapitas mas a parte de las 5 con las que venia aunque no lo dijesen en la web)
 
 ![](/assets/images/PM3/miPM3.jpg)
 
