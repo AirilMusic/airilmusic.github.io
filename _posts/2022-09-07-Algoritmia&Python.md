@@ -106,9 +106,34 @@ print(isinstance(x, int)) # imprimer False porque la raiz cuadrada de 5 es 2,236
 <a id="6"></a>
 # BUSQUEDA BINARIA
 
-Es un algoritmo de búsqueda eficiente que se utiliza para encontrar un elemento específico en una matriz ordenada.
+El algoritmo de búsqueda binaria es un algoritmo de `búsqueda eficiente` para encontrar un elemento específico en una `lista ordenada`. Funciona `dividiendo la lista en dos partes` cada vez, comparando el elemento buscado con el elemento del medio de la lista y `eliminando la mitad` de la lista en la que el elemento no puede estar.
 
+En el siguiente ejemplo a una función le metemos una lista `arr` y el objeto que queremos buscar `x`:
 
+```py
+def binary_search(arr, x):
+    low = 0
+    high = len(arr) - 1
+    mid = 0
+
+    while low <= high:
+        mid = (high + low) // 2
+
+        # si x es mayor, ignora el lado izquierdo
+        if arr[mid] < x:
+            low = mid + 1
+
+        # si x es menor, ignora el lado derecho
+        elif arr[mid] > x:
+            high = mid - 1
+
+        # si x esta en el medio
+        else:
+            return(mid)
+
+    # If we reach here, then the element was not present
+    return("El elemento no esta en la lista")
+```
 
 <a id="7"></a>
 # ORDENAMIENTO
