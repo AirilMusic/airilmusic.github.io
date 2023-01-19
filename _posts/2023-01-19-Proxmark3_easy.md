@@ -2,7 +2,7 @@
 layout: single
 title: Proxmark3 Easy
 excerpt: "En este artículo vamos a ver que es y como usar la proxmark3 easy"
-date: 2023-01-19
+date: 2022-11-19
 classes: wide
 header:
   teaser: /assets/images/PM3/PM3.jpg
