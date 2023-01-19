@@ -1,18 +1,35 @@
 ---
 layout: single
-title: Proxmark3 Easy
-excerpt: "En este artículo vamos a ver que es y como usar la proxmark3 easy"
-date: 2022-11-19
+title: Web Hacking y Bypassear Logins
+excerpt: "En este artículo vamos a ver distintas formas de bypassear un login y otros ataques de web hacking."
+date: 2022-09-28
 classes: wide
 header:
-  teaser: /assets/images/PM3/PM3.jpg
+  teaser: /assets/images/login-bypass/portada.jpg
   teaser_home_page: true
   icon: 
 categories:
-  - Radiofrecuence-hacking
+  - Web-Hacking
 tags:  
-  - Proxmark
-  - RFID
+  - SQLi
+  - OSINT
+  - IDOR
+  - Domain Zone Transfere
+  - XSS
+  - Buffer overflow
+  - Password Spraying
+  - SSTI
+  - CSRF
+  - Shell Shock
+  - Bit Flipper Attack
+  - Padding Oracle Attack
+  - Clickjaking
+  - Type Jugglin Attack
+  - XML
+  - XXE
+  - Prototipe Pollution
+  - HTTP Request Smuggling Attack
+  - Deserialization Attack
 ---
 
 ![](/assets/images/PM3/PM3.jpg)
