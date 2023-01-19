@@ -179,6 +179,39 @@ def insertion_sort(arr):
 
 ## MERGE SORT
 
+Merge sort es un algoritmo de ordenamiento basado en la técnica de `dividir y conquistar`. El algoritmo divide una lista en `dos mitades`, ordena cada mitad de forma independiente y luego combina las dos mitades ordenadas en una sola lista ordenada. El proceso de dividir se repite recursivamente `hasta que cada mitad tenga solo un elemento`, lo que significa que está ordenado. A continuación, `se combinan las mitades` ordenadas utilizando un proceso conocido como `merge`, en el cual `se comparan los elementos de ambas mitades` y se colocan en orden en la lista final. El algoritmo merge sort es conocido por ser estable y tener un tiempo de ejecución de `O(n log n)`.
+
+```py
+def merge_sort(arr):
+    if len(arr) <= 1:
+        return arr
+    mid = len(arr) // 2
+    left_half = merge_sort(arr[:mid])
+    right_half = merge_sort(arr[mid:])
+    return merge(left_half, right_half)
+
+def merge(left, right):
+    result = []
+    i = 0
+    j = 0
+    while i < len(left) and j < len(right):
+        if left[i] < right[j]:
+            result.append(left[i])
+            i += 1
+        else:
+            result.append(right[j])
+            j += 1
+    result += left[i:]
+    result += right[j:]
+    return result
+
+arr = [38, 27, 43, 3, 9, 82, 10]
+print(merge_sort(arr))
+# Output: [3, 9, 10, 27, 38, 43, 82]
+```
+
+## QUICK SORT
+
 
 
 <a id="8"></a>
