@@ -212,7 +212,18 @@ print(merge_sort(arr))
 
 ## QUICK SORT
 
+Este es otro algoritmo de ordenamiento de `divide y vencerás`. Funciona dividiendo una lista en `dos sublistas`, `una con elementos menores que` un `pivote` y `otra con elementos mayores`. Luego, `se ordenan recursivamente` las dos sublistas y `se combinan` para obtener la lista ordenada completa. El `pivote se elige` comúnmente como el `primer`, `último` o elemento `medio` de la lista. Quick sort es un algoritmo eficiente en términos de tiempo, con un tiempo de ejecución promedio de `O(n log n)`. Sin embargo, su desempeño puede verse afectado por la elección del pivote y puede ser menos eficiente en caso de listas ya ordenadas o con muchos elementos repetidos.
 
+```py
+def quick_sort(arr):
+    if len(arr) <= 1:
+        return arr
+    pivot = arr[len(arr) // 2]
+    left = [x for x in arr if x < pivot]
+    middle = [x for x in arr if x == pivot]
+    right = [x for x in arr if x > pivot]
+    return(quick_sort(left) + middle + quick_sort(right))
+```
 
 <a id="8"></a>
 # DIJKSTRA y A*
