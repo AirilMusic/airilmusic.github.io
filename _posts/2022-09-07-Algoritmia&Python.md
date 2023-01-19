@@ -138,7 +138,46 @@ def binary_search(arr, x):
 <a id="7"></a>
 # ORDENAMIENTO
 
-Hay varios algoritmos de ordenamiento, como bubble sort, insertion sort, merge sort, quick sort, entre otros. Es importante conocer al menos uno o dos de estos algoritmos y saber cómo implementarlos en Python.
+Hay varios algoritmos de ordenamiento, como `bubble sort`, `insertion sort`, `merge sort`, `quick sort`, entre otros. Es importante conocer al menos uno o dos de estos algoritmos y saber cómo implementarlos en Python.
+
+## BUUBLE SORT
+
+Es un algoritmo de ordenamiento simple que repite a través de una lista de elementos varias veces, `comparando elementos adyacentes` y `intercambiándolos si están en el orden equivocado`. El proceso se repite hasta que no se realizan más intercambios, lo que indica que la lista está ordenada.
+
+En el siguiente ejemplo, la función `bubble_sort()` toma una `lista desordenada` como input y `la devuelver ordenada`:
+
+```py
+def bubble_sort(lista):
+    n = len(lista)
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if lista[j] > lista[j+1]:
+                lista[j], lista[j+1] = lista[j+1], lista[j]
+    return(lista)
+```
+
+## INSERTION SORT
+
+El algoritmo comienza con una `lista vacía` en la cual se va `insertando cada elemento de la lista original` en orden, `comparando y colocando cada elemento en su posición correcta en la lista ordenada`. El proceso `se repite hasta que todos los elementos del arreglo original hayan sido insertados` en la lista ordenada. El tiempo de ejecución del algoritmo es `O(n^2) en el peor caso`, pero `puede ser muy eficiente` en caso de que `la lista ya esté parcialmente ordenada`.
+
+```py
+def insertion_sort(arr):
+    # Recorremos todos los elementos del arreglo
+    for i in range(1, len(arr)):
+        # Asignamos el valor de la posición actual
+        key_item = arr[i]
+        # Asignamos el índice del elemento anterior
+        j = i-1
+        # Mientras el elemento anterior sea mayor que el elemento actual y el índice sea mayor o igual a cero
+        while j >=0 and key_item < arr[j] :
+                arr[j + 1] = arr[j]
+                j -= 1
+        # Colocamos el elemento actual en su posición correcta
+        arr[j + 1] = key_item
+    return(arr)
+```
+
+## MERGE SORT
 
 
 
