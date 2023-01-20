@@ -19,7 +19,7 @@ tags:
 <a id="1"></a>
 # CLUEDO CHEATS
 
-`Código y .exe:` *https://github.com/AirilMusic/Programitas/tree/main/cluedo_cheats_uwu*
+`Código y .exe:` https://github.com/AirilMusic/Programitas/tree/main/cluedo_cheats_uwu
 
 En verano en una casa rural con amigos jugamos al cluedo aunque nosotros eramos las piezas y el tablero era la casa rural. Entonces se me ocurrió hacer ete programa, lo empecé a programar desde el móvil, pero como empezaba a quedar enorme no lo seguí, así que hace unos días me propuse rehacer este proyecto y ha salido bastante bien.
 
