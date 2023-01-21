@@ -10,7 +10,7 @@ Holi, soy Ainhoa Martinez o también conocida como Airil.
 
 Soy una chica del norte de España, mas concretamente de Álava, Pais Vasco. Empecé a adentrerme, interesarme y aprender sobre el mundo de la seguridad informatica ofensifa (pentesting/hacking) con 16 años, pero empecé a hacer esta web con 17. 
 
-Me encanta todo lo relacionado con la informática, los drones, el airsoft, el parkour y sobre todo acrobacias, aprender cosas, reflexionar, el hockey...
+Me encanta todo lo relacionado con la informática, los drones, el airsoft, el tiro con arco (recurvo), el parkour y sobre todo acrobacias, aprender cosas, reflexionar, el hockey...
 
 No se si es un defecto o algo positivo, pero me gusta reflexionar sobre todo e informarme de forma obsesiva sobre todo. Relacionado con eso también me gusta preguntarme el "¿para que?" de todo lo que hago, no me gusta perder el tiempo  haciendo cosas inutilmente, me gusta ser productiva.
 
