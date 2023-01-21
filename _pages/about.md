@@ -27,6 +27,14 @@ Me cuesta madrugar, aunque como los dias se me quedan cortos es verdad que duerm
 
 ![](/assets/images/about/dormilona2.jpg)
 
+También otra característica mia que aunque no me parece importante creo que hay que aclarar. Soy discapacitada visual, tengo una enfermedad rara de la vista llamada `Distrofia Macular Viteliforme` o también conocida como enfermedad de best, por lo que me dieron un 65% de discapacidad. Pero esto no me limita en casi nada, es verdad que no podré sacarme el carné de conducir, y hay cosas que no puedo leer bien, pero por lo demas me apaño bastante bien (de hecho en cosas como tiro con arco hasta 70m y tiro de precision en airsoft tengo una punteria esceptional por ironico que parezca XD).
+
+Un ejemplo de como veo (aunque en mi caso el punto ese eso bastante mas pequeño, mas o menos la mitad de tamaño):
+
+![](/assets/images/about/download.jpg)
+
+Pero es una enfermedad que si no es con aparatos de oftanmologia no se me puede notar a primera vista, luego si que quizas me choco contra algo, no veo bien algo... pero a primera vista no.
+
 ![](/assets/images/about/dormilona3.jpg)
 
 
