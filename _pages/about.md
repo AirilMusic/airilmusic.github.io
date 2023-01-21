@@ -6,7 +6,7 @@ date: 04-07-2022
 
 Holi, soy Ainhoa Martinez o también conocida como Airil.
 
-![](/assets/about/holi.jpg)
+![](/assets/images/about/holi.jpg)
 
 Soy una chica del norte de España, mas concretamente de Álava, Pais Vasco. Empecé a adentrerme, interesarme y aprender sobre el mundo de la seguridad informatica ofensifa (pentesting/hacking) con 16 años, pero empecé a hacer esta web con 17. 
 
