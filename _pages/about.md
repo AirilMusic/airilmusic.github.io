@@ -29,6 +29,12 @@ Y también esta guay estar con los amigos, sobre todo porque soy tan frikis como
 
 ![](/assets/images/about/Insta.png)
 
+Por otra parte, respecto a mi personalidad y forma de ser, si no conozco a la persona con quien este o no le he cogido mucha confianza suelo ser bastante seria, pero cuando cojo confianza me gusta hacer tonterias y quizas alguien me llama furra XD Y sobre todo me encanta intentar ser cute. 
+
+![](/assets/images/about/furra.jpg)
+
+![](/assets/images/about/aehao.jpg)
+
 Me encanta la electronica, hacer inventos, los cohetes y aviones, todo lo que vuele, arreglar cosas rotas...
 
 Entre las cosas que he hecho estan un avion super simple que hice para demostrar a mi profe de teknologia que un avion de 5€ podeia volar solo, no se si se puede considerar mi dron (porque lo compre por piezas y lo monté yo), un invento para hacer RNG manipulation en pokemon que es un a caja cuadrada con un gancho que tiene un palo de nintendo ds2 que se mueve en 3 dimensiones (x,y,z) y pulsa donde le hayas programado, arregle una camara termografica que se rompio en la empresa de mi madre (realmente fue simple porque solo era que un cable no hacia bien contacto) un tunel de viento en miniatura, un ventilador, una guillotina para dedos, un robot saltador, una cinta transportadora que separa basura, un bebedero para pajaros con una IA que distingue que pajaro es, un cohetito que como combustible tiene un tubo lleno de capad diagonales con cabezas de cerillas (por un meme de un grupo), un cohete con estabilizacion automatica, arregle la manija de la puerta de la nevera, un brazo robot que se controlaba desde el ordenador con una raspberry...
@@ -38,13 +44,6 @@ Entre las cosas que he hecho estan un avion super simple que hice para demostrar
 ![](/assets/images/about/guillotina2.jpg)
 ![](/assets/images/about/dron.jpg)
 ![](/assets/images/about/termica.jpg)
-
-Por otra parte, respecto a mi personalidad y forma de ser, si no conozco a la persona con quien este o no le he cogido mucha confianza suelo ser bastante seria, pero cuando cojo confianza me gusta hacer tonterias y quizas alguien me llama furra XD
-
-![](/assets/images/about/furra.jpg)
-
-![](/assets/images/about/aehao.jpg)
-
 
 También otra característica mia que aunque no me parece importante creo que hay que aclarar. Soy discapacitada visual, tengo una enfermedad rara de la vista llamada `Distrofia Macular Viteliforme` o también conocida como enfermedad de best, por lo que me dieron un 65% de discapacidad. Pero esto no me limita en casi nada, es verdad que no podré sacarme el carné de conducir, y hay cosas que no puedo leer bien, pero por lo demas me apaño bastante bien (de hecho en cosas como tiro con arco hasta 70m y tiro de precision en airsoft tengo una punteria esceptional por ironico que parezca XD).
 
