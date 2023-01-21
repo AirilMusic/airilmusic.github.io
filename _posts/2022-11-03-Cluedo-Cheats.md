@@ -76,7 +76,7 @@ while True:
         allSuspicious.append(add.lower())
 ```
 
-Ahora lo que he hecho ha sido crear una `clase: player` y con un `for` meterlo 10 veces en una `lista`. Luego modifico el `atributo: name` para ponerles el nombre de cada jugador y así no tener que memorizar en que posición esta cada uno, sino que puedo filtrarlo por eso o mostrarlos en un menu y luego `instancio las clases en objetos` y los meto en otra lista.
+Ahora lo que he hecho ha sido crear una `clase: player` y con un `for` meterlo 10 veces en una `lista`. Luego modifico el `atributo: name` para ponerles el nombre de cada jugador y así no tener que memorizar en que posición esta cada uno, sino que puedo filtrarlo por el nombre o mostrarlos en un menu y luego `instancio las clases en objetos` y los meto en otra lista.
 
 ```py
 p = []
