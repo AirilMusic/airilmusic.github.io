@@ -19,9 +19,17 @@ Me encantan los animales, tengo tres tortugas a las que les tengo mucho cariño 
 ![](/assets/images/about/tutel.jpg)
 
 
-
-
 También hay videojuegos que me gusta jugar, sobre todo en los que pueda expresar mi creatividad.
+
+Me cuesta madrugar, aunque como los dias se me quedan cortos es verdad que duermo muy poco, ojala los dias tuviesen cincuenta horas XD.
+
+![](/assets/images/about/dormilona.jpg)
+
+![](/assets/images/about/dormilona2.jpg)
+
+![](/assets/images/about/dormilona3.jpg)
+
+
 
 
 
