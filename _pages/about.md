@@ -12,6 +12,10 @@ Soy una chica del norte de España, mas concretamente de Álava, Pais Vasco. Emp
 
 Me encanta todo lo relacionado con la informática, los drones, el airsoft, el tiro con arco (recurvo), el parkour y sobre todo acrobacias, aprender cosas, reflexionar, el hockey...
 
+A principios del año pasado poco antes de cumplir 17 años (estoy escribiendo esto en el 21/01/2023) participe en las olimpiadas informaticas regionales del Pais Vasco, y mi intencion es este año también participar en la OIE, y en la OIFem, e intentar llegar a la final. De hecho guardo el cuadernillo del año pasado para practicar con esos ejercicios poco antes de las competiciones (de momento estoy con los ejercicios de HackerRank y los de la OIFem).
+
+![](/assets/images/about/OIE.jpg)
+
 No se si es un defecto o algo positivo, pero me gusta reflexionar sobre todo e informarme de forma obsesiva sobre todo. Relacionado con eso también me gusta preguntarme el "¿para que?" de todo lo que hago, no me gusta perder el tiempo  haciendo cosas inutilmente, me gusta ser productiva.
 
 Me encantan los animales, tengo tres tortugas a las que les tengo mucho cariño y me encanta cuidarlas, limpiarlas, darles de comer, dejarlas pasear por mi habitacion... Y dentor de un par de añitos me encantaría tener un gatito.
