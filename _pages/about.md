@@ -27,7 +27,7 @@ Me cuesta madrugar, aunque como los dias se me quedan cortos es verdad que duerm
 
 Y también esta guay estar con los amigos, sobre todo porque soy tan frikis como yo y pues eso XD
 
-![](/assets/images/about/insta.jpg)
+![](/assets/images/about/Insta.png)
 
 Me encanta la electronica, hacer inventos, los cohetes y aviones, todo lo que vuele, arreglar cosas rotas...
 
