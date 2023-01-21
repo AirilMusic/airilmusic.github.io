@@ -51,16 +51,6 @@ Entre las cosas que he hecho están un avión súper simple que hice para demost
 ![](/assets/images/about/dron.jpg)
 ![](/assets/images/about/termica.jpg)
 
-También otra característica mía que aunque no me parece importante creo que hay que aclarar. Soy discapacitada visual, tengo una enfermedad rara de la vista llamada `Distrofia Macular Viteliforme` o también conocida como enfermedad de best, por lo que me dieron un 65% de discapacidad. Pero esto no me limita en casi nada, es verdad que no podré sacarme el carné de conducir, y hay cosas que no puedo leer bien, pero por lo demás me apaño bastante bien (de hecho en cosas como tiro con arco hasta 70m y tiro de precisión en airsoft tengo una puntería escepcional por irónico que parezca XD).
-
-Un ejemplo de cómo veo (aunque en mi caso el punto ese bastante más pequeño, más o menos la mitad de tamaño):
-
-![](/assets/images/about/download.jpg)
-
-Pero es una enfermedad que si no es con aparatos de oftanmología no se me puede notar a primera vista, luego sí que quizás me choco contra algo, no veo bien algo... pero a primera vista no.
-
-![](/assets/images/about/discapacidad.jpg)
-
 ![](/assets/images/about/dormilona3.jpg)
 
 Así que esta soy yo uwu
