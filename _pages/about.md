@@ -35,7 +35,7 @@ Entre las cosas que he hecho estan un avion super simple que hice para demostrar
 ![](/assets/images/about/dron.jpg)
 ![](/assets/images/about/termica.jpg)
 
-Si no conozco a la persona con quien este o no le he cogido mucha confianza suelo ser bastante seria, pero cuando cojo confianza me gusta hacer tonterias y quizas alguien me llama furra XD
+Por otra parte, respecto a mi personalidad y forma de ser, si no conozco a la persona con quien este o no le he cogido mucha confianza suelo ser bastante seria, pero cuando cojo confianza me gusta hacer tonterias y quizas alguien me llama furra XD
 
 ![](/assets/images/about/furra.jpg)
 
