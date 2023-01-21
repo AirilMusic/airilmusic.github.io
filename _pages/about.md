@@ -8,32 +8,34 @@ Holi, soy Ainhoa Martinez o también conocida como Airil.
 
 ![](/assets/images/about/holi.jpg)
 
-Soy una chica del norte de España, mas concretamente de Álava, Pais Vasco. Empecé a adentrerme, interesarme y aprender sobre el mundo de la seguridad informatica ofensifa (pentesting/hacking) con 16 años, pero empecé a hacer esta web con 17. 
+Soy una chica del norte de España, más concretamente de Álava, Pais Vasco. Empecé a adentrarme, interesarme y aprender sobre el mundo de la seguridad informática ofensifa (pentesting/hacking) con 16 años, pero empecé a hacer esta web con 17. 
 
 Me encanta todo lo relacionado con la informática, los drones, el airsoft, el tiro con arco (recurvo), el parkour y sobre todo acrobacias, aprender cosas, reflexionar, el hockey...
 
-A principios del año pasado poco antes de cumplir 17 años (estoy escribiendo esto en el 21/01/2023) participe en las olimpiadas informaticas regionales del Pais Vasco, y mi intencion es este año también participar en la OIE, y en la OIFem, e intentar llegar a la final. De hecho guardo el cuadernillo del año pasado para practicar con esos ejercicios poco antes de las competiciones (de momento estoy con los ejercicios de HackerRank y los de la OIFem).
+A principios del año pasado poco antes de cumplir 17 años (estoy escribiendo esto en el 21/01/2023) participé en las olimpiadas informáticas regionales del Pais Vasco, y mi intención es este año también participar en la OIE, y en la OIFem, e intentar llegar a la final. De hecho guardo el cuadernillo del año pasado para practicar con esos ejercicios poco antes de las competiciones (de momento estoy con los ejercicios de HackerRank y los de la OIFem).
 
 ![](/assets/images/about/OIE.jpg)
 
-No se si es un defecto o algo positivo, pero me gusta reflexionar sobre todo e informarme de forma obsesiva sobre todo. Relacionado con eso también me gusta preguntarme el "¿para que?" de todo lo que hago, no me gusta perder el tiempo  haciendo cosas inutilmente, me gusta ser productiva.
+Como vivo en el Pais Vasco se hablar Español y Vasco, que son mis lenguas maternas, pero también hablo bastante bien Inglés y estoy aprendiendo chino por mi cuenta, porque este otro idioma me parece que en los proximos años puede ser útil.
 
-Me encantan los animales, tengo tres tortugas a las que les tengo mucho cariño y me encanta cuidarlas, limpiarlas, darles de comer, dejarlas pasear por mi habitacion... Y dentor de un par de añitos me encantaría tener un gatito.
+No sé si es un defecto o algo positivo, pero me gusta reflexionar sobre todo e informarme de forma obsesiva sobre todo. Relacionado con eso también me gusta preguntarme el "¿para qué?" de todo lo que hago, porque no me gusta perder el tiempo  haciendo cosas inútilmente, me gusta ser productiva.
+
+Me encantan los animales, tengo tres tortugas a las que les tengo mucho cariño y me encanta cuidarlas, limpiarlas, darles de comer, dejarlas pasear por mi habitación... Y dentro de un par de añitos me encantaría tener un gatito.
 
 ![](/assets/images/about/tutel.jpg)
 
 
 También hay videojuegos que me gusta jugar, sobre todo en los que pueda expresar mi creatividad.
 
-Me cuesta madrugar, aunque como los dias se me quedan cortos es verdad que duermo muy poco, ojala los dias tuviesen cincuenta horas XD.
+Me cuesta madrugar, aunque como los días se me quedan cortos es verdad que duermo muy poco, ojalá los días tuviesen cincuenta horas XD.
 
 ![](/assets/images/about/dormilona.jpg)
 
-Y también esta guay estar con los amigos, sobre todo porque soy tan frikis como yo y pues eso XD
+Y también está guay estar con los amigos, sobre todo porque soy tan frikis como yo y pues eso XD
 
 ![](/assets/images/about/Insta.png)
 
-Por otra parte, respecto a mi personalidad y forma de ser, si no conozco a la persona con quien este o no le he cogido mucha confianza suelo ser bastante seria, pero cuando cojo confianza me gusta hacer tonterias y quizas alguien me llama furra XD Y sobre todo me encanta intentar ser cute. 
+Por otra parte, respecto a mi personalidad y forma de ser, si no conozco a la persona con quien esté o no le he cogido mucha confianza suelo ser bastante seria, pero cuando cojo confianza me gusta hacer tonterías y quizás alguien me llama furra XD Y sobre todo me encanta intentar ser cute. 
 
 ![](/assets/images/about/furra.jpg)
 
@@ -41,7 +43,7 @@ Por otra parte, respecto a mi personalidad y forma de ser, si no conozco a la pe
 
 Me encanta la electronica, hacer inventos, los cohetes y aviones, todo lo que vuele, arreglar cosas rotas...
 
-Entre las cosas que he hecho estan un avion super simple que hice para demostrar a mi profe de teknologia que un avion de 5€ podeia volar solo, no se si se puede considerar mi dron (porque lo compre por piezas y lo monté yo), un invento para hacer RNG manipulation en pokemon que es un a caja cuadrada con un gancho que tiene un palo de nintendo ds2 que se mueve en 3 dimensiones (x,y,z) y pulsa donde le hayas programado, arregle una camara termografica que se rompio en la empresa de mi madre (realmente fue simple porque solo era que un cable no hacia bien contacto) un tunel de viento en miniatura, un ventilador, una guillotina para dedos, un robot saltador, una cinta transportadora que separa basura, un bebedero para pajaros con una IA que distingue que pajaro es, un cohetito que como combustible tiene un tubo lleno de capad diagonales con cabezas de cerillas (por un meme de un grupo), un cohete con estabilizacion automatica, arregle la manija de la puerta de la nevera, un brazo robot que se controlaba desde el ordenador con una raspberry...
+Entre las cosas que he hecho están un avión súper simple que hice para demostrar a mi profe de teknología que un avión de 5€ podia volar, no sé si se puede considerar mi dron (porque lo compré por piezas y lo monté yo), un invento para hacer RNG manipulation en pokemon que es un a caja cuadrada con un gancho que tiene un palo de nintendo ds2 que se mueve en 3 dimensiones (x,y,z) y pulsa donde le hayas programado, arreglé una cámara termográfica que se rompió en la empresa de mi madre (realmente fue simple porque solo era que un cable no hacía bien contacto) un túnel de viento en miniatura, un ventilador, una guillotina para dedos, un robot saltador, una cinta transportadora que separa basura, un bebedero para pájaros con una IA que distingue qué pájaro es, un cohetito que como combustible tiene un tubo lleno de capad diagonales con cabezas de cerillas (por un meme de un grupo), un cohete con estabilización automática, arregle la manija de la puerta de la nevera, un brazo robot que se controlaba desde el ordenador con una raspberry...
 
 ![](/assets/images/about/avion.jpg)
 ![](/assets/images/about/guillotina.jpg)
@@ -49,13 +51,13 @@ Entre las cosas que he hecho estan un avion super simple que hice para demostrar
 ![](/assets/images/about/dron.jpg)
 ![](/assets/images/about/termica.jpg)
 
-También otra característica mia que aunque no me parece importante creo que hay que aclarar. Soy discapacitada visual, tengo una enfermedad rara de la vista llamada `Distrofia Macular Viteliforme` o también conocida como enfermedad de best, por lo que me dieron un 65% de discapacidad. Pero esto no me limita en casi nada, es verdad que no podré sacarme el carné de conducir, y hay cosas que no puedo leer bien, pero por lo demas me apaño bastante bien (de hecho en cosas como tiro con arco hasta 70m y tiro de precision en airsoft tengo una punteria esceptional por ironico que parezca XD).
+También otra característica mía que aunque no me parece importante creo que hay que aclarar. Soy discapacitada visual, tengo una enfermedad rara de la vista llamada `Distrofia Macular Viteliforme` o también conocida como enfermedad de best, por lo que me dieron un 65% de discapacidad. Pero esto no me limita en casi nada, es verdad que no podré sacarme el carné de conducir, y hay cosas que no puedo leer bien, pero por lo demás me apaño bastante bien (de hecho en cosas como tiro con arco hasta 70m y tiro de precisión en airsoft tengo una puntería escepcional por irónico que parezca XD).
 
-Un ejemplo de como veo (aunque en mi caso el punto ese eso bastante mas pequeño, mas o menos la mitad de tamaño):
+Un ejemplo de cómo veo (aunque en mi caso el punto ese bastante más pequeño, más o menos la mitad de tamaño):
 
 ![](/assets/images/about/download.jpg)
 
-Pero es una enfermedad que si no es con aparatos de oftanmologia no se me puede notar a primera vista, luego si que quizas me choco contra algo, no veo bien algo... pero a primera vista no.
+Pero es una enfermedad que si no es con aparatos de oftanmología no se me puede notar a primera vista, luego sí que quizás me choco contra algo, no veo bien algo... pero a primera vista no.
 
 ![](/assets/images/about/discapacidad.jpg)
 
