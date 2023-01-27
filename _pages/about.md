@@ -20,6 +20,28 @@ Como vivo en el Pais Vasco se hablar Español y Vasco, que son mis lenguas mater
 
 No sé si es un defecto o algo positivo, pero me gusta reflexionar sobre todo e informarme de forma obsesiva sobre todo. Relacionado con eso también me gusta preguntarme el "¿para qué?" de todo lo que hago, porque no me gusta perder el tiempo  haciendo cosas inútilmente, me gusta ser productiva.
 
+## CERTIFICACIONES:
+
+eJPT:
+
+(el año que viene antes de navidad)
+
+OSCP:
+
+(el año que viene despues de navidad)
+
+Y como no quiero ser programadora sino que pentester y (con 17 años) no tengo apenas dinero, pues de programación solo las de hackerrank:
+
+Python:
+
+https://www.hackerrank.com/certificates/d6253527a853?utm_medium=email&utm_source=mail_template_1393&utm_campaign=hrc_skills_certificate
+
+
+Problem solving:
+
+
+## Aficiones:
+
 Me encantan los animales, tengo tres tortugas a las que les tengo mucho cariño y me encanta cuidarlas, limpiarlas, darles de comer, dejarlas pasear por mi habitación... Y dentro de un par de añitos me encantaría tener un gatito.
 
 ![](/assets/images/about/tutel.jpg)
