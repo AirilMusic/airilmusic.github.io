@@ -54,10 +54,3 @@ Entre las cosas que he hecho están un avión súper simple que hice para demost
 ![](/assets/images/about/dormilona3.jpg)
 
 Así que esta soy yo uwu
-
-![](/assets/images/about/dormilona2.jpg)
-
-
-
-
-
