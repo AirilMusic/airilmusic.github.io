@@ -297,3 +297,9 @@ def twoStrings(s1, s2):
 ```
 
 Y esto agilizó mucho el código.
+
+Esto por curioso que parezca (por lo menos a mi me parecia antiintuitivo porque en los diccionarios se almacena {key}:{value} por lo que en mi lógica debería de tardar mas, pero no es así). Como ya he dicho con la función `set()` los conjuntos de datos se almacenan como `diccionarios` y con `list()` se almacenan como `listas`. 
+
+En los `diccionarios`, se utiliza una `función de hash` para `asignar una clave a cada elemento`, lo que `permite una búsqueda rápida` en `tiempo constante (O(1))` en promedio. Por otro lado, en las `listas`, se debe `recorrer cada elemento` para encontrar un elemento específico, lo que lleva un `tiempo de búsqueda lineal (O(n))` en promedio.
+
+Por lo tanto, si tienes que realizar muchas operaciones de búsqueda, es más eficiente utilizar un diccionario en lugar de una lista. 
