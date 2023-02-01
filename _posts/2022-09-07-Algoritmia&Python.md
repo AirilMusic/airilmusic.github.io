@@ -254,3 +254,8 @@ Es muy útil utilizar funciones para esto.
 ## GREEDY
 
 Es una técnica de resolución de problemas en la que se toma la decisión óptima en cada paso con la esperanza de que esto lleve a una solución global óptima.
+
+# OTRAS FORMAS DE AGILIZAR EL CÓDIGO
+## Utilizar la funcion set() en vez de list()
+
+Por ejemplo:
