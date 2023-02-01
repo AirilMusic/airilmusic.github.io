@@ -27,6 +27,7 @@ tags:
 - [DIJKSTRA y A*](#8)
 - [BACKTRACKING](#9)
 - [TÉCNICAS DE RESOLUCIÓN DE PROBLEMAS](#10)
+- [OTRAS FORMAS DE AGILIZAR EL CÓDIGO](#11)
 
 <a id="1"></a>
 # SUMATORIOS
@@ -255,7 +256,44 @@ Es muy útil utilizar funciones para esto.
 
 Es una técnica de resolución de problemas en la que se toma la decisión óptima en cada paso con la esperanza de que esto lleve a una solución global óptima.
 
+<a id="11"></a>
 # OTRAS FORMAS DE AGILIZAR EL CÓDIGO
-## Utilizar la funcion set() en vez de list()
+## Utilizar la función set() en vez de list()
 
 Por ejemplo:
+En un problema de HR hice este código, pero es demasiado lento, por lo que habia 3 test que no superaba por tiempo:
+
+```py
+def twoStrings(s1, s2):
+    l = list(s1)
+    m = list(s2)
+    b = False
+    if len(l) < len(m):
+        for i in range(len(l)):
+            if l[i] in m:
+                b = True
+                break
+    else:
+        for i in range(len(m)):
+            if m[i] in l:
+                b = True
+                break
+    if b == True:
+        return("YES")
+    else:
+        return("NO")
+```
+
+Por lo que para hacerlo mas rapido y simplificarlo lo hice cambiando la función `list()``  en vez de `set()`:
+
+```py
+def twoStrings(s1, s2):
+    set1 = set(s1)
+    set2 = set(s2)
+    for char in set1:
+        if char in set2:
+            return "YES"
+    return "NO"
+```
+
+Y esto agilizó mucho el código.
