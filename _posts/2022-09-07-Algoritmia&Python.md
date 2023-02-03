@@ -324,3 +324,17 @@ Esto por curioso que parezca (por lo menos a mi me parecia antiintuitivo porque 
 En los `diccionarios`, se utiliza una `función de hash` para `asignar una clave a cada elemento`, lo que `permite una búsqueda rápida` en `tiempo constante (O(1))` en promedio. Por otro lado, en las `listas`, se debe `recorrer cada elemento` para encontrar un elemento específico, lo que lleva un `tiempo de búsqueda lineal (O(n))` en promedio.
 
 Por lo tanto, si tienes que realizar muchas operaciones de búsqueda, es más eficiente utilizar un diccionario en lugar de una lista. 
+
+
+## Forma rapida de ordenar una lista en modo ascendente
+
+En vez de complicaronos la vida con algoritmos que nos pueden dar problemas, podemos utilizar esta función de python:
+
+```py
+arr = [2,1,5,4,3]
+
+arr.sort()
+
+# output: [1,2,3,4,5]
+```
+
