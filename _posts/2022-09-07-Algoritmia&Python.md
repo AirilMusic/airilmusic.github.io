@@ -183,35 +183,24 @@ def insertion_sort(arr):
 Merge sort es un algoritmo de ordenamiento basado en la técnica de `dividir y conquistar`. El algoritmo divide una lista en `dos mitades`, ordena cada mitad de forma independiente y luego combina las dos mitades ordenadas en una sola lista ordenada. El proceso de dividir se repite recursivamente `hasta que cada mitad tenga solo un elemento`, lo que significa que está ordenado. A continuación, `se combinan las mitades` ordenadas utilizando un proceso conocido como `merge`, en el cual `se comparan los elementos de ambas mitades` y se colocan en orden en la lista final. El algoritmo merge sort es conocido por ser estable y tener un tiempo de ejecución de `O(n log n)`.
 
 ```py
-def mergeSort(prices):
-    if len(prices) > 1:
-        mid = len(prices) // 2
-        L = prices[:mid]
-        R = prices[mid:]
+def merge_sort(list):
+    # 1. Store the length of the list
+    list_length = len(list)
 
-        mergeSort(L)
-        mergeSort(R)
+    # 2. List with length less than is already sorted
+    if list_length == 1:
+        return list
 
-        i = j = k = 0
+    # 3. Identify the list midpoint and partition the list into a left_partition and a right_partition
+    mid_point = list_length // 2
 
-        while i < len(L) and j < len(R):
-            if L[i] < R[j]:
-                prices[k] = L[i]
-                i += 1
-            else:
-                prices[k] = R[j]
-                j += 1
-            k += 1
+    # 4. To ensure all partitions are broken down into their individual components,
+    # the merge_sort function is called and a partitioned portion of the list is passed as a parameter
+    left_partition = merge_sort(list[:mid_point])
+    right_partition = merge_sort(list[mid_point:])
 
-        while i < len(L):
-            prices[k] = L[i]
-            i += 1
-            k += 1
-
-        while j < len(R):
-            prices[k] = R[j]
-            j += 1
-            k += 1
+    # 5. The merge_sort function returns a list composed of a sorted left and right partition.
+    return merge(left_partition, right_partition)
 
 arr = [38, 27, 43, 3, 9, 82, 10]
 print(merge_sort(arr))
