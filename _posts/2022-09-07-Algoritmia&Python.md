@@ -19,7 +19,6 @@ tags:
 # ÍNDICE
 - [SUMATORIOS](#1)
 - [NUMEROS PRIMOS](#2)
-- [PRIMEROS X CARACTERES](#3)
 - [RELLENAR DE 0000](#4)
 - [QUE TIPO DE VARIABLE ES](#5)
 - [BUSQUEDA BINARIA](#6)
@@ -63,21 +62,6 @@ for i in range(3, numMax + 1):
 		    prime.append(i)
  
 print(prime)
-```
-
-<a id="3"></a>
-# PRIMEROS X CARACTERES
-
-Para mostrar los primeros x caracteres de un string o un número (para string hay que hacer un par de pequeños cambios):
-
-```py
-num = str(n)
-nums = []
-
-for i in num:
-    nums.append(i)
-    
-print(int(str(nums[0] + nums[1] + nums[2] + nums[3] + nums[4] + nums[5] + nums[6] + nums[7] + nums[8] + nums[9])))
 ```
 
 <a id="4"></a>
