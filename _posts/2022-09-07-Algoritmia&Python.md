@@ -342,7 +342,7 @@ arr.sort()
 
 Cuando tenemos una lista muy grande y por ejemplo tenemos que hacer `la media de los ultimos x números` de la lista, hay que `sumar todos` y `dividorlos` por x, claro, cuando mas grande sea la lista hay que hacer `muchas sumas`, por lo que es `muy costoso`, por lo que `en vez de calcular la suma de toda esa sublista`, podemos `quitarle el primer número` y `añadirle el siguiente`, porque de esta forma `no hacemos todas las sumas` sino que es `una única suma y una única resta` (y luego ya hacerla división).
 
-Para esto `python` tiene una herramienta que lo automatiza, es decir `bisection`.
+Para esto `python` tiene una herramienta que lo automatiza, es decir `bisection` (tambien se puede hacer de forma manual y no seria demasiado complejo, pero lo voy a explicar con bisection).
 
 Ejemplo de código `sin utilizar bisection`, es decir, haciendo todas las sumas:
 
@@ -403,7 +403,7 @@ class SortedDeque:
 			
 
 # ALGORITMO
-def activity_notifications(expenditure: list[int], d: int):
+def activityNotifications(expenditure: list[int], d: int):
 	length = len(expenditure)
 	if length <= d:
 		return 0
