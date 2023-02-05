@@ -24,7 +24,7 @@ tags:
 - [BUSQUEDA BINARIA](#6)
 - [ORDENAMIENTO](#7)
 - [DIJKSTRA y A*](#8)
-- [FLOID MARSHAL](#FM)
+- [FLOID WARSHALL](#FW)
 - [BACKTRACKING](#9)
 - [TÉCNICAS DE RESOLUCIÓN DE PROBLEMAS](#10)
 - [OTRAS FORMAS DE AGILIZAR EL CÓDIGO](#11)
@@ -284,8 +284,8 @@ Este algoritmo hace distintos pasos:
 
 5- Finalmente, la distancia desde el nodo de origen hasta el nodo destino es la distancia más corta.
 
-<a id="FM"></a>
-# FLOID MARSHAL
+<a id="FW"></a>
+# FLOID WARSHALL
 
 Es una `variante de Dijkstra` que se utiliza para cuando tenemos que calcular la distancia minima `entre diversos nodos` de un grafo.
 
