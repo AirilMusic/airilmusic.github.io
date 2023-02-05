@@ -379,6 +379,46 @@ import bisect
 # Esta clase esta creada para manejar mas comodamente el append, pero se puede llamar directamente a la función bisect()
 class SortedDeque:
 	# Se sortea el array al principio
-	def __init__(self, arr) 
+	def __init__(self, arr):
+		self.sorted_arr: list[int] = sorted(arr)
+	
+	# Insertar el valor sin desordenar el array.
+	def append(self, n: int):
+		bisect.insort(self.sorted_arr, n)
+	
+	#Encuentra la posición del valor y lo elimina
+	def pop_value(self, n: int):
+		n_index = bisect.bisect_left(self.sorted_arr, n)
+		self.sorted_arr.pop(n_index)
+	
+	# Devuelve la mediana
+	def get_median(self):
+		length = len(self.sorted_arr)
+		mid = length // 2
+		
+		if length % 2 == 1:
+			return self.sorted_arr[mid]
+		else:
+			return sum(self.sorted_arr[mid - 1: mid + 1]) / 2
+			
 
+# ALGORITMO
+def activity_notifications(expenditure: list[int], d: int):
+	length = len(expenditure)
+	if length <= d:
+		return 0
+	
+	out = 0
+	trailing_days = SortedDeque(expenditure[:d])
+	
+	for ptr in range(d, length):
+		if ptr != d:
+			trailing_days.pop_value(expenditure[ptr - d - 1])
+			trailing_days.append(expenditure[ptr - 1])
+		
+		median = trailing_days.get_median()
+		
+		if expenditure[ptr] >= 2 * median:
+			out += 1
+	return out
 ```
