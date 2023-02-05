@@ -234,8 +234,53 @@ def quick_sort(arr):
 <a id="8"></a>
 # DIJKSTRA y A*
 
-Son algoritmos de búsqueda de rutas que se utilizan para encontrar la ruta más corta entre dos puntos en un grafo.
+Es un algoritmos de búsqueda de rutas que se utiliza para `encontrar la distancia minima entre dos nodos` de un grafo.
 
+```py
+import heapq
+
+def dijkstra(graph, start, end):
+    heap = [(0, start)]
+    visited = set()
+    while heap:
+        (cost, current) = heapq.heappop(heap)
+        if current in visited:
+            continue
+        visited.add(current)
+        if current == end:
+            return cost
+        for (neighbor, weight) in graph[current].items():
+            if neighbor in visited:
+                continue
+            heapq.heappush(heap, (cost + weight, neighbor))
+    return float("inf")
+
+graph = {
+    "A": {"B": 1, "C": 4},
+    "B": {"A": 1, "C": 2, "D": 5},
+    "C": {"A": 4, "B": 2, "D": 1},
+    "D": {"B": 5, "C": 1},
+}
+
+start = "A"
+end = "D"
+cost = dijkstra(graph, start, end)
+```
+
+OUTPUT: `3`
+
+Explicación:
+
+
+
+
+# FLOID MARSHAL
+
+Es una `variante de Dijkstra` que se utiliza para cuando tenemos que calcular la distancia minima `entre diversos nodos` de un grafo.
+
+Claro, para eso podemos utilizar Dijkstra una y otra vez, pero se puede optimizar el tiempo y en algunos jueces puede pasar que esten los tiempos muy ajustados y en esos casos no nos sirve, por lo que tenemos que optimizarlo un poco mas.
+
+Este otro algoritmo tiene otra ventaja a Dijkstra que es que `puede trabajar con números negativos`, algo que `Dijkstra no` puede.
 
 
 <a id="9"></a>
