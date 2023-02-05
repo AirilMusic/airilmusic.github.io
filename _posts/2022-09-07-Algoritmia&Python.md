@@ -337,4 +337,43 @@ arr.sort()
 
 # output: [1,2,3,4,5]
 ```
+ 
+# BISECTION
 
+Cuando tenemos una lista muy grande y por ejemplo tenemos que hacer `la media de los ultimos x números` de la lista, hay que `sumar todos` y `dividorlos` por x, claro, cuando mas grande sea la lista hay que hacer `muchas sumas`, por lo que es `muy costoso`, por lo que `en vez de calcular la suma de toda esa sublista`, podemos `quitarle el primer número` y `añadirle el siguiente`, porque de esta forma `no hacemos todas las sumas` sino que es `una única suma y una única resta` (y luego ya hacerla división).
+
+Para esto `python` tiene una herramienta que lo automatiza, es decir `bisection`.
+
+Ejemplo de código `sin utilizar bisection`, es decir, haciendo todas las sumas:
+
+```py
+def activityNotifications(expenditure, d):
+    if len(expenditure) < d:
+        return(0)
+    else:
+        c = 0
+        fn = 0
+        for i in range(d):
+            fn += expenditure[i]
+        fn = int((fn/d)*2)
+        for i in range(d):
+            if expenditure[i] >= fn:
+                c += 1
+        
+        for i in range(len(expenditure)-d):
+            a = i+d
+            sn = 0
+            for u in range(d):
+                sn += expenditure[a-u-1]
+            sn = int((sn/d)*2)
+            if expenditure[a] >= sn:
+                c += 1
+        return(c)
+```
+
+Ejemplo `con bisection`, es decir, con solamente dos operaciones (una suma y una resta):
+
+```py
+
+
+```
