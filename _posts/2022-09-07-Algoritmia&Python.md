@@ -24,6 +24,7 @@ tags:
 - [BUSQUEDA BINARIA](#6)
 - [ORDENAMIENTO](#7)
 - [DIJKSTRA y A*](#8)
+- [FLOID MARSHAL](#FM)
 - [BACKTRACKING](#9)
 - [TÉCNICAS DE RESOLUCIÓN DE PROBLEMAS](#10)
 - [OTRAS FORMAS DE AGILIZAR EL CÓDIGO](#11)
@@ -269,11 +270,21 @@ cost = dijkstra(graph, start, end)
 
 OUTPUT: `3`
 
-Explicación:
+## Explicación
 
+Este algoritmo hace distintos pasos:
 
+1- Inicialmente, se establece la distancia desde el nodo de origen hasta sí mismo en `cero`, y la distancia desde el nodo de origen hasta todos los demás nodos en el grafo se establece en `infinito`.
 
+2- Se selecciona el nodo con la distancia mínima que aún no ha sido visitado, y se marca como visitado.
 
+3- Se actualiza la distancia desde el nodo de origen hasta cada uno de los vecinos del nodo seleccionado que aún no han sido visitados, utilizando la fórmula `distancia_a_vecino = distancia_a_nodo_seleccionado + peso_arista`.
+
+4- Se repiten los pasos 2 y 3 hasta que se hayan visitado todos los nodos o hasta que se haya encontrado el nodo destino.
+
+5- Finalmente, la distancia desde el nodo de origen hasta el nodo destino es la distancia más corta.
+
+<a id="FM"></a>
 # FLOID MARSHAL
 
 Es una `variante de Dijkstra` que se utiliza para cuando tenemos que calcular la distancia minima `entre diversos nodos` de un grafo.
