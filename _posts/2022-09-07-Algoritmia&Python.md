@@ -338,7 +338,7 @@ arr.sort()
 # output: [1,2,3,4,5]
 ```
  
-# BISECTION
+## BISECTION
 
 Cuando tenemos una lista muy grande y por ejemplo tenemos que hacer `la media de los ultimos x números` de la lista, hay que `sumar todos` y `dividorlos` por x, claro, cuando mas grande sea la lista hay que hacer `muchas sumas`, por lo que es `muy costoso`, por lo que `en vez de calcular la suma de toda esa sublista`, podemos `quitarle el primer número` y `añadirle el siguiente`, porque de esta forma `no hacemos todas las sumas` sino que es `una única suma y una única resta` (y luego ya hacerla división).
 
@@ -374,6 +374,11 @@ def activityNotifications(expenditure, d):
 Ejemplo `con bisection`, es decir, con solamente dos operaciones (una suma y una resta):
 
 ```py
+import bisect
 
+# Esta clase esta creada para manejar mas comodamente el append, pero se puede llamar directamente a la función bisect()
+class SortedDeque:
+	# Se sortea el array al principio
+	def __init__(self, arr) 
 
 ```
