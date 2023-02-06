@@ -217,6 +217,51 @@ print(merge_sort(arr))
 # Output: [3, 9, 10, 27, 38, 43, 82]
 ```
 
+Esto funciona muy bien si lo que queremos es que nos devuelva la lista ordenada, pero si queremos saber `el numero minimo de cambios` que ha hecho para eso podemos hacerlo de esta otra forma:
+
+```py
+def countInversions(arr):
+    def mergeSort(arr, temp, left, right):
+        inv_count = 0
+        if left < right:
+            mid = (left + right)//2
+            inv_count = mergeSort(arr, temp, left, mid)
+            inv_count += mergeSort(arr, temp, mid + 1, right)
+            inv_count += merge(arr, temp, left, mid, right)
+        return inv_count
+
+    def merge(arr, temp, left, mid, right):
+        i = left
+        j = mid + 1
+        k = left
+        inv_count = 0
+        while i <= mid and j <= right:
+            if arr[i] <= arr[j]:
+                temp[k] = arr[i]
+                i += 1
+                k += 1
+            else:
+                temp[k] = arr[j]
+                inv_count += (mid - i + 1)
+                j += 1
+                k += 1
+        while i <= mid:
+            temp[k] = arr[i]
+            i += 1
+            k += 1
+        while j <= right:
+            temp[k] = arr[j]
+            j += 1
+            k += 1
+        for i in range(left, right + 1):
+            arr[i] = temp[i]
+        return inv_count
+    
+    n = len(arr)
+    temp = [0] * n
+    return mergeSort(arr, temp, 0, n - 1)
+```
+
 ## QUICK SORT
 
 Este es otro algoritmo de ordenamiento de `divide y vencerás`. Funciona dividiendo una lista en `dos sublistas`, `una con elementos menores que` un `pivote` y `otra con elementos mayores`. Luego, `se ordenan recursivamente` las dos sublistas y `se combinan` para obtener la lista ordenada completa. El `pivote se elige` comúnmente como el `primer`, `último` o elemento `medio` de la lista. Quick sort es un algoritmo eficiente en términos de tiempo, con un tiempo de ejecución promedio de `O(n log n)`. Sin embargo, su desempeño puede verse afectado por la elección del pivote y puede ser menos eficiente en caso de listas ya ordenadas o con muchos elementos repetidos.
