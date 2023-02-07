@@ -19,6 +19,7 @@ tags:
 # ÍNDICE
 - [SUMATORIOS](#1)
 - [NUMEROS PRIMOS](#2)
+- [CONVERION BINARIO DECIMAL](#3)
 - [RELLENAR DE 0000](#4)
 - [QUE TIPO DE VARIABLE ES](#5)
 - [BUSQUEDA BINARIA](#6)
@@ -63,6 +64,19 @@ for i in range(3, numMax + 1):
 		    prime.append(i)
  
 print(prime)
+```
+
+<a id="3"></a>
+# BINARO A DECIMAL
+
+```py
+decimal = sum(2**i for i, d in enumerate(reversed(binary_number)) if d == '1')
+```
+
+# DECIMAL A BINARIO
+
+```py
+binary = bin(int(decimal_number))[2:].zfill(32)
 ```
 
 <a id="4"></a>
