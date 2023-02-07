@@ -387,9 +387,27 @@ Esto nos devuelve una matriz `arr[nodo1][nodo2]` con todas las distancias, luego
 <a id="9"></a>
 # BACKTRACKING
 
-Es un algoritmo de búsqueda que se utiliza para encontrar todas las soluciones posibles a un problema.
+Backtracking es un `algoritmo de búsqueda de soluciones` que se basa en `explorar una serie de soluciones posibles` y `retroceder en el camino si se llega a una solución inválida`. Se utiliza en problemas de programación en los que se deben encontrar todas las soluciones posibles o una solución óptima en un espacio de búsqueda muy grande. Es una técnica eficiente para resolver problemas como laberintos, juegos de mesa y problemas de satisfacción de restricciones.
 
+Un ejemplo:
 
+```py
+def backtrack(tareas, asignacion, disponibles):
+    if len(asignacion) == len(tareas):
+        print(asignacion)
+        return
+
+    for i in range(len(tareas)):
+        if i not in asignacion and all(x in asignacion.values() for x in tareas[i]):
+            asignacion[i] = next((x for x in tareas[i] if x not in asignacion.values()), None)
+            backtrack(tareas, asignacion, disponibles)
+            del asignacion[i]
+
+tareas = [[1, 2], [3], [3], [4]]
+backtrack(tareas, {}, [1, 2, 3, 4])
+```
+
+En este ejemplo, `tareas` es una lista de tareas y sus requisitos, `asignacion` es un diccionario que mantiene la asignación actual de tareas a recursos y `disponibles` es una lista de recursos disponibles. La función `backtrack` utiliza la recursión para explorar todas las asignaciones posibles de tareas a recursos hasta que se encuentra una solución válida o se agotan todas las opciones.
 
 <a id="10"></a>
 # TÉCNICAS DE RESOLUCIÓN DE PROBLEMAS
