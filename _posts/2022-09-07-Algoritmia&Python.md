@@ -66,6 +66,22 @@ for i in range(3, numMax + 1):
 print(prime)
 ```
 
+## Forma rapida
+
+La función actual puede ser optimizada utilizando una técnica conocida como `detección temprana` de divisiones, lo que implica `detener la búsqueda en cuanto se encuentre un divisor`. Una forma de hacerlo es cambiar el rango en la iteración, desde `2` hasta la `raiz cuadrada de n`:
+
+```py
+def primality(n):
+    if n <= 1:
+        return "Not prime"
+
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return "Not prime"
+    
+    return "Prime"
+```
+
 <a id="3"></a>
 # BINARO A DECIMAL
 
