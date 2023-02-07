@@ -368,6 +368,21 @@ Claro, para eso podemos utilizar Dijkstra una y otra vez, pero se puede optimiza
 
 Este otro algoritmo tiene otra ventaja a Dijkstra que es que `puede trabajar con números negativos`, algo que `Dijkstra no` puede.
 
+El algoritmo de Floyd-Warshall se basa en el `cálculo de todas las distancias mínimas entre cualquier par de nodos` de un grafo con pesos. Es un algoritmo de programación dinámica que `utiliza una matriz de distancias` para ir actualizando los valores hasta obtener la matriz final que `contiene todas las distancias mínimas`. Este algoritmo es útil para resolver problemas de camino mínimo en grafos con pesos y `se puede aplicar a grafos con ciclos y grafos negativos`.
+
+Para saber `todas las distancias minimas` entre todos los nodos:
+
+```py
+def floyd_warshall(graph):
+    n = len(graph)
+    for k in range(n):
+        for i in range(n):
+            for j in range(n):
+                graph[i][j] = min(graph[i][j], graph[i][k] + graph[k][j])
+    return graph
+```
+
+Esto nos devuelve una matriz `arr[nodo1][nodo2]` con todas las distancias, luego solo tenemos que ir a los nodos que queramos en esa matriz.
 
 <a id="9"></a>
 # BACKTRACKING
