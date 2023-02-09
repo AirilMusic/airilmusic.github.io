@@ -577,6 +577,7 @@ def activityNotifications(expenditure: list[int], d: int):
 
 ## INPUTS
 
+### caso 1
 Muchas vece los inputs los dan algo así:
 
 ```
@@ -597,5 +598,28 @@ while inp != "0":
     if inp != "0":
         arrs.append(inp.split()) 
         
+print(arrs)
+```
+
+### caso 2
+
+En este otro caso en la primera línea nos dan las partidas que se ván a jugar, y cada partida tendrá dos líeneas como inputs. En la primera nos dan las variables (no voy a especificar para que son porque no nos importa para la explicación) `S` y `n`. Y en la siguiente linea hay n `items`:
+
+```
+2
+10 6
+2 7 4 3 4 8
+20 1
+7
+```
+
+Esto lo podemos agrupar en un array que tenga el número que nos dan en la primera línea. Luego dentro de cada uno de esos arrays habra otros dos que tengan las dos lineas de cada partida y dentro de esas estaran los datos `[[['10', '6'], ['2', '7', '4', '3', '4', '8']], [['20', '1'], ['7']]]`:
+
+```py
+arrs = []
+
+for i in range(int(input())):
+    arrs.append([input().split(),input().split()])
+
 print(arrs)
 ```
