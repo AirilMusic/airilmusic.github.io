@@ -29,6 +29,7 @@ tags:
 - [BACKTRACKING](#9)
 - [TÉCNICAS DE RESOLUCIÓN DE PROBLEMAS](#10)
 - [OTRAS FORMAS DE AGILIZAR EL CÓDIGO](#11)
+- [OTRAS COSAS ÚTILES PARA LA OIE](#12)
 
 <a id="1"></a>
 # SUMATORIOS
@@ -569,4 +570,32 @@ def activityNotifications(expenditure: list[int], d: int):
 		if expenditure[ptr] >= 2 * median:
 			out += 1
 	return out
+```
+
+<a id="12"></a>
+# OTRAS COSAS ÚTILES
+
+## INPUTS
+
+Muchas vece los inputs los dan algo así:
+
+```
+20 2 3
+10 3 2
+23 11 7
+0
+```
+
+`0` indica que el input ya se ha terminado, pero no hay que tenerlo en cuenta. Claro, esto lo tenemos que `convertir en algo interpretable`, porque es un `string` que no podemos utilizar para nada. Para eso una forma es `meter todas las lineas` en un `array` y luego en cada uno de esos `sub arrays` meter los items de cada linea, ejemplo `[['20','2','3'],['10','3','2'],['23','11','7']]` (luego ya podríamos cambiar el tipo de variable y eso):
+
+```py
+inp = ""
+arrs = []
+
+while inp != "0":
+    inp = input()
+    if inp != "0":
+        arrs.append(inp.split()) 
+        
+print(arrs)
 ```
