@@ -27,6 +27,7 @@ tags:
 - [DIJKSTRA y A*](#8)
 - [FLOID WARSHALL](#FW)
 - [BACKTRACKING](#9)
+- [KRUSCAL (ENCONTRAR ARBOLES DE EXPANSION MINIMA)](#KURSK)
 - [TÉCNICAS DE RESOLUCIÓN DE PROBLEMAS](#10)
 - [OTRAS FORMAS DE AGILIZAR EL CÓDIGO](#11)
 - [OTRAS COSAS ÚTILES PARA LA OIE](#12)
@@ -409,6 +410,25 @@ backtrack(tareas, {}, [1, 2, 3, 4])
 ```
 
 En este ejemplo, `tareas` es una lista de tareas y sus requisitos, `asignacion` es un diccionario que mantiene la asignación actual de tareas a recursos y `disponibles` es una lista de recursos disponibles. La función `backtrack` utiliza la recursión para explorar todas las asignaciones posibles de tareas a recursos hasta que se encuentra una solución válida o se agotan todas las opciones.
+
+<a id="KURSK"></a>
+# KURSKAL (para encontrar el árbol de expansión mínimo)
+
+Kruskal es un algoritmo que se utiliza para encontrar el `MST` en un `grafo no dirigido` y `conexo`, es decir, un grafo en el que existe un camino entre cualquier par de vértices y en el que los bordes tienen pesos asociados a ellos.
+
+Funciona así:
+
+```
+1- Ordenamos todas las aristas por su peso de menor a mayor
+2- Para cada arista, si los nodos a los que conecta ya están conectados en el MST actual, la descartamos. De lo contrario, añadimos la arista al MST.
+3- Repetimos el proceso hasta que el MST tenga n-1 aristas, donde n es el número de nodos en el grafo.
+```
+
+Ejemplo en python:
+
+```py
+
+```
 
 <a id="10"></a>
 # TÉCNICAS DE RESOLUCIÓN DE PROBLEMAS
