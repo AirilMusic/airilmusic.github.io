@@ -427,7 +427,65 @@ Funciona así:
 Ejemplo en python:
 
 ```py
-
+class Grafo:
+    def __init__(self, vertices):
+        self.V = vertices
+        self.grafo = []
+ 
+    def agregarArista(self, u, v, w):
+        self.grafo.append([u, v, w])
+ 
+    def encontrar(self, padre, i):
+        if padre[i] == i:
+            return i
+        return self.encontrar(padre, padre[i])
+ 
+    def unir(self, padre, rank, x, y):
+        xroot = self.encontrar(padre, x)
+        yroot = self.encontrar(padre, y)
+ 
+        if rank[xroot] < rank[yroot]:
+            padre[xroot] = yroot
+        elif rank[xroot] > rank[yroot]:
+            padre[yroot] = xroot
+        else :
+            padre[yroot] = xroot
+            rank[xroot] += 1
+ 
+    def Kruskal(self):
+        resultado =[] 
+        i = 0
+        e = 0
+ 
+        self.grafo = sorted(self.grafo,key=lambda item: item[2])
+ 
+        padre = [] ; rank = []
+ 
+        for node in range(self.V):
+            padre.append(node)
+            rank.append(0)
+        while e < self.V -1 :
+            u,v,w = self.grafo[i]
+            i = i + 1
+            x = self.encontrar(padre, u)
+            y = self.encontrar(padre, v)
+ 
+            if x != y:
+                e = e + 1     
+                resultado.append([u,v,w])
+                self.unir(padre, rank, x, y) 
+ 
+        for u,v,weight  in resultado:
+            print ("%d - %d: %d" % (u,v,weight))
+ 
+g = Grafo(4)
+g.agregarArista(0, 1, 10)
+g.agregarArista(0, 2, 6)
+g.agregarArista(0, 3, 5)
+g.agregarArista(1, 3, 15)
+g.agregarArista(2, 3, 4)
+ 
+g.Kruskal()
 ```
 
 <a id="10"></a>
