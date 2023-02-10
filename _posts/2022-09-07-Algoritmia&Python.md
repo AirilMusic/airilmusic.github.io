@@ -623,3 +623,39 @@ for i in range(int(input())):
 
 print(arrs)
 ```
+
+### caso 3
+
+En este caso nos dan un input en el que la primera linea tiene las variables `n` y `m`. En la segunda nos dan un array `c` y luego hay `m` lineas de input en los que nos dan `[X, Y, C]` donde `X = nodo1`, `Y = nodo2` y `C = costo del camino entre los nodos`. Y no se para hasta que se pone `0 0`:
+
+```
+4 4
+100 100 100 100
+1 2 10
+2 3 30
+4 1 40
+4 3 20
+5 3
+1000 2000 1000 1000 3000
+4 5 10
+1 2 20
+3 2 30
+0 0
+```
+
+Este caso es un poco mas complejo. Lo primero que tenemos que hacer es que `se ejecute hasta` que el input sea `0 0`. Luego cada vez que se ejecuta tenemos que primero guardar las variables `n`y `m`. Y también la lista `c`. Y por ultimo tenemos que hacer la lista de los caminios entre nodos y sus costes, así `[[X, Y, C], [X, Y, C], [X, Y, C], ...]`:
+
+```py
+inp = ""
+
+while inp != "0 0":
+    inp = input()
+    if inp != "0 0":
+        n, m = [int(x) for x in list(inp.split())] #n = numero de localidades, m = numero de autopistas
+        c = list(input().split()) #costes un aeropuerto en la localidad [i]
+        a = [] #autopistas, [X,Y,C] --> X, Y son las dos localidades y C es el costo de la carretera entre ellas
+        for i in range(m):
+            a.append(list(int(x) for x in list(input().split())))
+        
+        print(a)  
+```
