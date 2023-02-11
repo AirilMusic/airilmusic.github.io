@@ -1,7 +1,7 @@
 ---
 layout: single
 title: Apuntes algoritmia & python
-excerpt: "Visto que en 5 meses más o menos hay de nuevo Olimpiadas informáticas de nivel regional con las que te puedes clasificar para estatal (y obviamente si puedo iré por segunda vez). Se me ha ocurrido poner aquí apuntes de algoritmos que me resultan interesantes y útiles."
+excerpt: "Se me ha ocurrido poner aquí apuntes de algoritmos que me resultan interesantes y útiles."
 date: 2022-09-07
 classes: wide
 header:
