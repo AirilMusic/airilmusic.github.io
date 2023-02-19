@@ -434,7 +434,25 @@ for i in range(l):
         arr[i], arr[a] = arr[a], arr[i]
 ```
 
-En este ejemplo, `tareas` es una lista de tareas y sus requisitos, `asignacion` es un diccionario que mantiene la asignación actual de tareas a recursos y `disponibles` es una lista de recursos disponibles. La función `backtrack` utiliza la recursión para explorar todas las asignaciones posibles de tareas a recursos hasta que se encuentra una solución válida o se agotan todas las opciones.
+Pero también podemos cortar ramas, es decir, que si no cumplen x requisito no se siga por ese camino, por ejemplo, eso se puede hacer con un if, un ejemplo simple es este:
+
+```py
+m, n = map(int, input().split())
+arr = list(map(int, input().split()))
+pos = [0]
+
+for i in range(n):
+    pos2 = []
+    for a in pos:
+        if a + arr[i] <= m:
+            pos2.append(a + arr[i])
+        if a - arr[i] >= -m:
+            pos2.append(a - arr[i])
+    pos = pos2
+
+for p in pos:
+    print(p)
+```
 
 <a id="KURSK"></a>
 # KURSKAL (para encontrar el árbol de expansión mínimo)
