@@ -391,22 +391,45 @@ Esto nos devuelve una matriz `arr[nodo1][nodo2]` con todas las distancias, luego
 
 Backtracking es un `algoritmo de búsqueda de soluciones` que se basa en `explorar una serie de soluciones posibles` y `retroceder en el camino si se llega a una solución inválida`. Se utiliza en problemas de programación en los que se deben encontrar todas las soluciones posibles o una solución óptima en un espacio de búsqueda muy grande. Es una técnica eficiente para resolver problemas como laberintos, juegos de mesa y problemas de satisfacción de restricciones.
 
-Un ejemplo:
+## GENERAR TODAS LAS COMBINACIONES
 
 ```py
-def backtrack(tareas, asignacion, disponibles):
-    if len(asignacion) == len(tareas):
-        print(asignacion)
-        return
+import itertools
 
-    for i in range(len(tareas)):
-        if i not in asignacion and all(x in asignacion.values() for x in tareas[i]):
-            asignacion[i] = next((x for x in tareas[i] if x not in asignacion.values()), None)
-            backtrack(tareas, asignacion, disponibles)
-            del asignacion[i]
+n = int(input())
+arr = list(input().split())
+out = []
 
-tareas = [[1, 2], [3], [3], [4]]
-backtrack(tareas, {}, [1, 2, 3, 4])
+for i in range(1, len(arr)+1):
+    c = itertools.combinations(arr, i)
+    for a in c:
+        out.append(a)
+
+o=set(out)
+for i in o:
+    print(' '.join(i))
+```
+
+## GENERAR TODAS LAS PERMUTACIONES
+
+```py
+n = int(input())
+arr = []
+for i in range(1, n+1):
+    arr.append(i)
+
+l = len(arr)
+
+for i in range(l):
+    for a in range(i+1, l):
+        arr[i], arr[a] = arr[a], arr[i]
+        print(arr)
+        for k in range(i+1, l):
+            for u in range(k+1, l):
+                arr[k], arr[u] = arr[u], arr[k]
+                print(arr)
+                arr[k], arr[u] = arr[u], arr[k]
+        arr[i], arr[a] = arr[a], arr[i]
 ```
 
 En este ejemplo, `tareas` es una lista de tareas y sus requisitos, `asignacion` es un diccionario que mantiene la asignación actual de tareas a recursos y `disponibles` es una lista de recursos disponibles. La función `backtrack` utiliza la recursión para explorar todas las asignaciones posibles de tareas a recursos hasta que se encuentra una solución válida o se agotan todas las opciones.
