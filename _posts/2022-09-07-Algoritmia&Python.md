@@ -389,6 +389,8 @@ Esto nos devuelve una matriz `arr[nodo1][nodo2]` con todas las distancias, luego
 <a id="9"></a>
 # BACKTRACKING
 
+![](/assets/images/Algoritmia/backtracking.jpg)
+
 Backtracking es un `algoritmo de búsqueda de soluciones` que se basa en `explorar una serie de soluciones posibles` y `retroceder en el camino si se llega a una solución inválida`. Se utiliza en problemas de programación en los que se deben encontrar todas las soluciones posibles o una solución óptima en un espacio de búsqueda muy grande. Es una técnica eficiente para resolver problemas como laberintos, juegos de mesa y problemas de satisfacción de restricciones.
 
 ## GENERAR TODAS LAS COMBINACIONES
