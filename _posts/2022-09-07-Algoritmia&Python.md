@@ -434,6 +434,8 @@ for i in range(l):
         arr[i], arr[a] = arr[a], arr[i]
 ```
 
+## RECORTAR RAMAS
+
 Pero también podemos cortar ramas, es decir, que si no cumplen x requisito no se siga por ese camino, por ejemplo, eso se puede hacer con un if, un ejemplo simple es este:
 
 ```py
