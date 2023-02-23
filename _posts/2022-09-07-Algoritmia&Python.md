@@ -393,6 +393,23 @@ Esto nos devuelve una matriz `arr[nodo1][nodo2]` con todas las distancias, luego
 
 Backtracking es un `algoritmo de búsqueda de soluciones` que se basa en `explorar una serie de soluciones posibles` y `retroceder en el camino si se llega a una solución inválida`. Se utiliza en problemas de programación en los que se deben encontrar todas las soluciones posibles o una solución óptima en un espacio de búsqueda muy grande. Es una técnica eficiente para resolver problemas como laberintos, juegos de mesa y problemas de satisfacción de restricciones.
 
+## TERIA (paso a paso)
+
+(Esto lo estoy escribiendo unos cuantos dias mas tarde que los ejemplos que hay después y tras resolver problemas mas complejos como el de las n-reinas..., por lo que puede cambiar un poquito)
+
+[https://github.com/AirilMusic/Programitas/blob/main/prepOIE/N-reinas.py](https://github.com/AirilMusic/Programitas/blob/main/prepOIE/N-reinas.py)
+
+Según lo que he ido aprendiendo a lo largo de los ejercicios, hay un metodo que se repite y puede facilitarte mucho el trabajo (a mi manera, sin utilizar recursiovidad), a continuación están los pasos para programar esta técnica.
+
+```
+1 - Encontrar los casos base, es decir, si tenemos que poner las posibles combinaciones (o las que cumplan x condición) de ["uwu", "awa", "owo"] los casos base son "uwu", "awa", "owo".
+2 - Hacer un bucle que se repita la longitud maxima de las posibilidades que nos piden (en caso de que pidan todas las posibilidades con distinto número de items, simplemente en vez de borrar el array (arr) donde estemos guardadando los caos para luego añadirle los actualizados, simplemente no lo borramos y le añadimos mas, pero tenemos que tener en cuenta que si el caso que queremos añadir esta en la lista que no lo añada)
+3 - Un bucle que se repita la cantidad de items de la lista (arr), para modificarlos todos
+4 - Un bucle que se repita la cantidad de casos base que hay, para que a cada elemento de arr le añada (o le intente añadir) un caso base para generar otra posible combinación. 
+5 - Ahora dentro de este blucle es donde entran las condiciones, si no hay ninguna pues directamente añadimos al array (arr) el elemento del array que estamos utilizando + el elemento de este ultimo bucle. Sino, ponemos que solo si cumple x condición que lo añada. Para facilitarlo lo que hago es crear un segundo array (arr2) y en este meto todas las combinaciones hasta que el bucle que recorre (arr) haya dado una vuelta completa, y ahi se lo añado a (arr) o borro lo que haya y se lo añado, depende de lo que nos pidan. 
+6 - Y ya solo nos quedaría printear la lista (arr)
+```
+
 ## GENERAR TODAS LAS COMBINACIONES
 
 ```py
