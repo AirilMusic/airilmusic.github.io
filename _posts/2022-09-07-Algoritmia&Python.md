@@ -403,7 +403,7 @@ Backtracking es un `algoritmo de búsqueda de soluciones` que se basa en `explor
 Según lo que he ido aprendiendo a lo largo de los ejercicios, hay un metodo que se repite y puede facilitarte mucho el trabajo (a mi manera, sin utilizar recursiovidad), a continuación están los pasos para programar esta técnica.
 
 ```
-1 - Encontrar los casos base, es decir, si tenemos que poner las posibles combinaciones (o las que cumplan x condición) de ["uwu", "awa", "owo"] los casos base son "uwu", "awa", "owo".
+1 - Encontrar los casos base, es decir, si tenemos que poner las posibles combinaciones (o las que cumplan x condición) de ["uwu", "awa", "owo"] los casos base son "uwu", "awa", "owo". (son las que tendra (arr) en la primera vuelta, osea, al inicio)
 2 - Hacer un bucle que se repita la longitud maxima de las posibilidades que nos piden (en caso de que pidan todas las posibilidades con distinto número de items, simplemente en vez de borrar el array (arr) donde estemos guardadando los caos para luego añadirle los actualizados, simplemente no lo borramos y le añadimos mas, pero tenemos que tener en cuenta que si el caso que queremos añadir esta en la lista que no lo añada)
 3 - Un bucle que se repita la cantidad de items de la lista (arr), para modificarlos todos
 4 - Un bucle que se repita la cantidad de casos base que hay, para que a cada elemento de arr le añada (o le intente añadir) un caso base para generar otra posible combinación. 
