@@ -397,6 +397,7 @@ Backtracking es un `algoritmo de búsqueda de soluciones` que se basa en `explor
 
 (Esto lo estoy escribiendo unos cuantos dias mas tarde que los ejemplos que hay después y tras resolver problemas mas complejos como el de las n-reinas..., por lo que puede cambiar un poquito)
 
+[https://github.com/AirilMusic/Programitas/blob/main/prepOIE/Libros-de-Julia.py](https://github.com/AirilMusic/Programitas/blob/main/prepOIE/Libros-de-Julia.py)
 [https://github.com/AirilMusic/Programitas/blob/main/prepOIE/N-reinas.py](https://github.com/AirilMusic/Programitas/blob/main/prepOIE/N-reinas.py)
 
 Según lo que he ido aprendiendo a lo largo de los ejercicios, hay un metodo que se repite y puede facilitarte mucho el trabajo (a mi manera, sin utilizar recursiovidad), a continuación están los pasos para programar esta técnica.
