@@ -39,6 +39,7 @@ https://www.hackerrank.com/certificates/d6253527a853?utm_medium=email&utm_source
 
 Problem solving:
 
+https://www.hackerrank.com/certificates/3a8c7421da71?utm_medium=email&utm_source=mail_template_1393&utm_campaign=hrc_skills_certificate
 
 ## Aficiones:
 
