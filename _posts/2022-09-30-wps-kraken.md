@@ -71,6 +71,10 @@ Aquí dejo un video donde se muestra `como funciona` la herramienta de forma muy
 
 https:// cuando lo suba a youtube lo pongo XD
 
+Y también dejo el código:
+
+[https://github.com/AirilMusic/Pentesting-Hacking/blob/main/wifi_hacking/wps_cracker/exploit.py](https://github.com/AirilMusic/Pentesting-Hacking/blob/main/wifi_hacking/wps_cracker/exploit.py)
+
 Y por último y por si acaso, tengo que poner este mensaje:
 
 `[NO ME HAGO RESPONSABLE DEL MAL USO QUE SE LE PUEDA DAR A ESTA HERRAMIENTA O A ESTA INFORMACIÓN]`
