@@ -193,6 +193,6 @@ def change_mac(iface, option):
         call(["ifconfig", iface, "up"], stdout=DN, stderr=DN)
 ```
 
-
+Lo primero que hace es con el comando ifconfig, guardar la MAC que actualmente tengamos en la interfaz de red que hayamos seleccionado. 
 
 
