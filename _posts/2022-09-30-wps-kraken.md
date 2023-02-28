@@ -85,6 +85,7 @@ EL protocolo `WPS (Wi-Fi Protected Setup)` es un protocolo que `facilita la cone
 
 El objetivo de este protocolo es `simplificar el proceso de configuración de seguridad` de una red, lo que permite no tener que memorizar contraseña, y una `conexión mas rápida`. Para esto hay dos formas de conectarse, una forma es `apretando un boton` que suele haber en los routers (aunque a veces esta escondido), de esta forma una vez hemos apretado el boton dependiendo de como esta configurado el `AP (Acces Point)` tines `60 o 120 segundos` para conectarte `sin proporcionar credenciales`. Y la otra forma es proporcionandole un `PIN` de 8 dígitos al AP, claro, esto es mas facil de explotar con fuerza bruta que una contraseña (aunque aún y todo lleva mucho tiempo) por lo que algunas compañías implementan medidas de seguridad como `tras x intentos fallidos bloquear la conexión vía WPS` durante X tiempo o hasta que se reinicie el router, por lo que antes que ponernos a hacer fuerza bruta como si no hubiese un mañana es recomendable probar otras técnicas como pueden ser probar pines con los que vienen `por defecto` los routers o la vulnerabilidad `Pixie Dust`. 
 
+<a id="3"></a>
 ## Pixie Dust
 
 ![](/assets/images/wps_kraken/pixie_dust_diagram.png)
@@ -101,5 +102,6 @@ En los routers afectados por la vulnerabilidad, el `M2 se genera de fo`rma prede
 
 La técnica de Pixie Dust aprovecha precisamente esta vulnerabilidad para obtener el PIN de acceso al AP `en un tiempo mucho menor` al necesario con fuerza bruta.
 
-
+<a id="SEG"></a>
+# MEDIDAS DE SEGURIDAD
 
