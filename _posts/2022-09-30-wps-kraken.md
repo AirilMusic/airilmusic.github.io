@@ -105,3 +105,14 @@ La técnica de Pixie Dust aprovecha precisamente esta vulnerabilidad para obtene
 <a id="SEG"></a>
 # MEDIDAS DE SEGURIDAD
 
+Para `prevenir` vulnerabiliades de seguridad relacionadas con el protocolo WPS hay varias medidas que podemos tomar (a parte de las que las compañias de wifis pueden tomar):
+
+La primera y la mas importante es que a menos que sea 100% necesario `DESACTIVA EL WPS`, ya que no hace falta, con la forma tradicional de contraseña (handshake y todo eso) es mas que suficiente y la seguridad es considerablemente superior (aunque la mayoria de protocolos de seguridad (incluso WPA3) tienen vulnerabilidades).
+
+Otra medida de seguridad muy importante que podemos tomar es `mantener actualizados todos los equipos` que tenemos (no solo nuestros ordenadores, moviles... sino que también los routers...), ya que asi si han `parcheado` las vulnerabilidades, podemos solucionar vulnerabilidades como pasa con `Pixie Dust`.
+
+Otra medida en la que no tenemos tanto control pero si podemos mirar compañias que tomen esta medida, es que se pueden `limitar el numero de intentos erroneos de conectarte via WPS`. Así `evitamos ataques de fuerza bruta`. 
+
+Y también es importante mirar que `nuestro router no tenga un PIN WPS genérico`, osea, de fábrica, como pueden ser `("00000000", "11111111", "12345670", "12349876", "98765432", "12345678")` y que sea un PIN aleatorio. 
+
+
