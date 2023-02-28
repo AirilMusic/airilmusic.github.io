@@ -74,3 +74,10 @@ Y por último y por si acaso, tengo que poner este mensaje:
 `[NO ME HAGO RESPONSABLE DEL MAL USO QUE SE LE PUEDA DAR A ESTA HERRAMIENTA O A ESTA INFORMACIÓN]`
 
 # EXPLICACIÓN TEÓRICA
+
+## Protocolo WPS
+
+EL protocolo `WPS (Wi-Fi Protected Setup)` es un protocolo que `facilita la conexión` de un dispositivo a una red inalambrica (wifi). 
+
+El objetivo de este protocolo es `simplificar el proceso de configuración de seguridad` de una red, lo que permite no tener que memorizar contraseña, y una `conexión mas rápida`. Para esto hay dos formas de conectarse, un 
+
