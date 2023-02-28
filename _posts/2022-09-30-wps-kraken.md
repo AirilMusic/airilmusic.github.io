@@ -26,7 +26,7 @@ tags:
 - [PROTOCOLO WPS](#WPS)
 - [PIXIE DUST](#3)
 - [MEDIAS DE SEGURIDAD](#SEG)
-- [EXPLICACIÓN DEL CÓDIGO](#4)
+- [EXPLICACIÓN DEL CÓDIGO Y DEL FUNCIONAMIENTO](#4)
 
 ```
                     ⠀⠀⠀⠀⠀⠀ ⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -114,5 +114,18 @@ Otra medida de seguridad muy importante que podemos tomar es `mantener actualiza
 Otra medida en la que no tenemos tanto control pero si podemos mirar compañias que tomen esta medida, es que se pueden `limitar el numero de intentos erroneos de conectarte via WPS`. Así `evitamos ataques de fuerza bruta`. 
 
 Y también es importante mirar que `nuestro router no tenga un PIN WPS genérico`, osea, de fábrica, como pueden ser `("00000000", "11111111", "12345670", "12349876", "98765432", "12345678")` y que sea un PIN aleatorio. 
+
+<a id="4"></a>
+# EXPLICACIÓN DEL CÓDIGO Y DEL FUNCIONAMIENTO
+
+En este artículo no voy a explicar línea por línea (o casi) como hice en el de `"Cluedo Cheats"`, ya que lo mas interesante es saber el porque de cada cosa y sinó esto se haría eterno. 
+
+Para eso explicare un poco el funcionamientro, la lógica de ejecución, y luego solamente las funciones:
+
+## FUNCIONAMIENTO
+
+
+
+## PARTES
 
 
