@@ -1,8 +1,8 @@
 ---
 layout: single
 title: WPS Kraken
-excerpt: "En este artículo muestro la herramienta que he creado para pentesting de redes con wps y explico como funciona."
-date: 2023-01-19
+excerpt: "En este artículo muestro la herramienta que he creado para pentesting de redes con wps y la explicación de como funciona."
+date: 2023-02-28
 classes: wide
 header:
   teaser: /assets/images/wps_kraken/wps_kraken.JPG
