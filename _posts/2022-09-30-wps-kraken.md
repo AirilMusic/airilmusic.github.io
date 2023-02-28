@@ -160,4 +160,39 @@ Y la última opción es salir, es decir, `cierra el programa de una forma segura
 
 ## PARTES
 
+## CAMBIAR LA MAC
+
+```py
+def change_mac(iface, option):
+    ifconfig_result2 = subprocess.check_output(["ifconfig", iface])
+    macSearch2 = re.search(r"\w\w:\w\w:\w\w:\w\w:\w\w:\w\w", str(ifconfig_result2))
+    realMac2 = ""
+    if macSearch2:
+        realMac2 = macSearch2.group(0)
+    
+    if option == "new" and realMac2 == realMac:
+        print("\n" + colored("[+]", 'green'), "Setting a new MAC...")
+        chars = ["0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"]
+        newMAC = "00:"
+        for i in range(4):
+            for a in range(2):
+                newMAC += chars[random.randint(0,15)]
+            newMAC += ":"
+        for a in range(2):
+            newMAC += chars[random.randint(0,15)]
+        print(colored("[+]", 'green'), "new temporal MAC:", colored(str(newMAC), 'cyan'))
+        
+        call(["ifconfig", iface, "down"], stdout=DN, stderr=DN)
+        call(["ifconfig", iface, "hw", "ether", newMAC])
+        call(["ifconfig", iface, "up"], stdout=DN, stderr=DN)
+    
+    elif option == "old":
+        print(colored("[+]", 'green'), "Setting old MAC...")
+        call(["ifconfig", iface, "down"], stdout=DN, stderr=DN)
+        call(["ifconfig", iface, "hw", "ether", realMac], stdout=DN, stderr=DN)
+        call(["ifconfig", iface, "up"], stdout=DN, stderr=DN)
+```
+
+
+
 
