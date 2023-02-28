@@ -124,7 +124,33 @@ Para eso explicare un poco el funcionamientro, la lógica de ejecución, y luego
 
 ## FUNCIONAMIENTO
 
+Lo primero que necesitamos para que funcione es una `tarjeta de red`, recomiendo la `tplink` porque es la que utilizo (y aunque hace chanel hopping no afecta en el funcionamiento del programa) y solo he testeado la herramienta con eso, pero supongo que se podria utilizar otra (también es importante mencionar que lo he probado en `Parrot Security`, por lo que supongo que en otras distribuciones de linux como `Kali` también funcionara, pero no estoy segura):
 
+![](/assets/images/Wifi-Hacking/TPL-TL-WN722N.jpg)
+
+Ahora la conectamos y al ejecutar el script lo primero que hace es `mostrarnos las interfaces de red disponibles`, como no sabia como automatizar la detección de la interfaz de la tarjeta lo puse de forma manual, por lo tanto lo primero que tenemos que hacer es `seleccionar cual es la interfaz` de red de la tarjeta.
+
+Luego lo que hace es `guardar` la dirección `MAC original`, para que se nos vuelva a poner una vez salgamos del programa sin necesidad de desconectar y volver a conectar la tarjeta, y le `cambia la MAC a una aleatoria`.
+
+Y ahora `checkea` que estemos ejecutando el programa en `Linux` y como el usuario `root o con permisos suid` y entra en un bucle que no se parará hasta que se cierre el programa. Dentro de este bucle se repiten las siguientes acciones y opciones:
+
+Primero se muestran todas las redes disponibles.
+
+Una vez las ha mostrado se pone en `modo monitor`.
+
+Y ahora nos da cuatro opciones: `ataques`, `cambiar la mac`, `ayuda` y `salir`.
+
+La primera opción nos da otras dos opciones: `ataques pasivos` y `ataqes activos`:
+
+La primera opción sirve para `intentar conectarte` durante x tiempo cuando quieres que `la víctima le de al boton` o tú o quien sea, para conectarte de forma en la que no tengas que hacer ningún ataque, lo que `minimiza el ruido` que haces pero a la vez es mas complicado de efectuar. 
+
+La segunda opción es mas compleja, es para `conectarte proporcionando el PIN WPS`, para esto dispone de varias fases, la primera es probar si puede obtener el PIN mediante `Pyxye Dust`, si no lo ha logrado prueba con `PINes genericos` que suelen tener varios routers, y por último ya hace `fuerza bruta`. Esto es así para mínimizar el número de intentos, lo que aumenta las posibilidades de éxito. 
+
+La segunda opción del primer menú, nos da la posibilidad de volver a `cambiar la MAC`, por si queresmos seguir haciendo ataques pero para hacer menos ruido preferimos cambiarnos a otra MAC.
+
+La tercera opción no creo que haga falta explicarla, porque basicamente son explicaciones muy por encima de como funciona la herramienta.
+
+Y la última opción es salir, es decir, `cierra el programa de una forma segura`, primero `desactiva el modo monitor`, `vuelve a poner la MAC original` y cierra el programa. 
 
 ## PARTES
 
