@@ -132,6 +132,8 @@ Ahora la conectamos y al ejecutar el script lo primero que hace es `mostrarnos l
 
 Luego lo que hace es `guardar` la dirección `MAC original`, para que se nos vuelva a poner una vez salgamos del programa sin necesidad de desconectar y volver a conectar la tarjeta, y le `cambia la MAC a una aleatoria`.
 
+Seguidamente ckeckea que todos los programas necesarios esten instalados y si no lo están, los instala automaticamente: `wireshark`, `aircrack-ng`, `wpa_supplicant` 
+
 Y ahora `checkea` que estemos ejecutando el programa en `Linux` y como el usuario `root o con permisos suid` y entra en un bucle que no se parará hasta que se cierre el programa. Dentro de este bucle se repiten las siguientes acciones y opciones:
 
 Primero se muestran todas las redes disponibles.
