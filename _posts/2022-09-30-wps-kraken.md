@@ -5,7 +5,7 @@ excerpt: "En este artículo muestro la herramienta que he creado para pentesting
 date: 2023-02-28
 classes: wide
 header:
-  teaser: /assets/images/wps_kraken/wps_kraken.JPG
+  teaser: /assets/images/wps_kraken/portada.png
   teaser_home_page: true
   icon: /assets/images/Wifi-Hacking/wifi.webp
 categories:
