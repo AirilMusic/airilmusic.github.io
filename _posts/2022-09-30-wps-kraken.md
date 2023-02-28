@@ -193,6 +193,53 @@ def change_mac(iface, option):
         call(["ifconfig", iface, "up"], stdout=DN, stderr=DN)
 ```
 
-Lo primero que hace es con el comando ifconfig, guardar la MAC que actualmente tengamos en la interfaz de red que hayamos seleccionado. 
+Lo primero que hace es con el comando ifconfig, `guardar la MAC` que actualmente tengamos en la interfaz de red que hayamos seleccionado. 
 
+Luego dependiendo lo que queremos hacer hay dos opciones (poner una `nueva MAC`, o reestablecer la `MAC original`). La primera cambia la MAC por una nueva generada de forma `aleatoria`, la segunda basicamente `pone la MAC original` que el programa ha guardado al principio de su ejecución.
 
+## PONER LA TARJETA DE RED EN MODO MONITOR
+
+```py
+def enable_monitor_mode(iface):
+    print("\n" + colored("[+]", 'green'), "Starting monitor mode...")
+    change_mac(iface, "new")
+    call(['airmon-ng', 'start', iface], stdout=DN, stderr=DN)
+    call(['iw', 'reg', 'set', 'BO'], stdout=DN, stderr=DN)
+```
+
+Esto basicamente `pone en modo monitor` la tarjeta de red con `airmong-ng` que es parte de `aircrack-ng`. Lo he hecho de esta forma para no complicarme demasiado haciendolo manualmente.
+
+## DESACTIVAR EL MODO MONITOR
+
+```py
+def disable_monitor_mode(iface):
+    print(colored("[+]", 'green'), "Disabling monitor mode...")
+    call(['airmon-ng', 'stop', iface], stdout=DN, stderr=DN)
+    call(["service", "network-manager", "start"], stdout=DN, stderr=DN)
+    change_mac(iface, "old")
+```
+
+Esto es lo mismo que lo anterior pero para apagar el modo monitor.
+
+## CHECKS
+
+```py
+def checks():
+    print("\n" + colored("[+]", 'green'), "Checking requeriments... ")
+    if str(subprocess.check_output(["which", "aircrack-ng"])) != "":
+        print(colored("[+]", 'green'), "Aircrack installed")
+    else:
+        print(colored("[+]", 'green'), "Instaling aircrack-ng...")
+        call(["apt-get", "install", "aircrack-ng", "-Y"])
+        print(colored("[+]", 'green'), "Aircrack installed")
+    if str(subprocess.check_output(["which", "wireshark"])) != "":
+        print(colored("[+]", 'green'), "Wireshark installed")
+    else:
+        print(colored("[+]", 'green'), "Instaling wireshark...")
+        call(["apt-get", "install", "wireshark", "-Y"])
+    if str(subprocess.check_output(["which", "wpa_supplicant"])) != "":
+        print(colored("[+]", 'green'), "WPA_Supplicant installed")
+    else:
+        print(colored("[+]", 'green'), "Instaling WPA_Supplicant...")
+        call(["apt-get", "install", "wpasupplicant", "-Y"])
+```
