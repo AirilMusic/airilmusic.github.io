@@ -73,7 +73,7 @@ https:// cuando lo suba a youtube lo pongo XD
 
 Y también dejo el código:
 
-[https://github.com/AirilMusic/Pentesting-Hacking/blob/main/wifi_hacking/wps_cracker/exploit.py](https://github.com/AirilMusic/Pentesting-Hacking/blob/main/wifi_hacking/wps_cracker/exploit.py)
+[https://github.com/AirilMusic/Pentesting-Hacking/tree/main/wifi_hacking/wps_cracker](https://github.com/AirilMusic/Pentesting-Hacking/tree/main/wifi_hacking/wps_cracker)
 
 Y por último y por si acaso, tengo que poner este mensaje:
 
