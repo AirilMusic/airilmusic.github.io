@@ -89,3 +89,7 @@ El objetivo de este protocolo es `simplificar el proceso de configuración de se
 
 ![](/assets/images/wps_kraken/pixie_dust_diagram.png)
 
+`Pixie Dust` es una técnica que permite explotar una vulnerabilidad en el protocolo `WPS` para obtener el `PIN` de acceso al `AP` en un `tiempo mucho menor` al necesario con fuerza bruta. Pero hay que aclarar que esta vulnerabilidad `fue corregida en el 2017` por lo que aunque sigue habiendo bastantes redes vulnerables, ya hay muchas que no se pueden explotar con esta técnica.
+
+Esta técnica aprovecha un `defecto en la generación del PIN` de algunos routers que utilizan `chipsets Broadcom` y algunos `Realtek`.
+
