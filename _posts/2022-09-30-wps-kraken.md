@@ -93,5 +93,13 @@ El objetivo de este protocolo es `simplificar el proceso de configuración de se
 
 Esta técnica aprovecha un `defecto en la generación del PIN` de algunos routers que utilizan `chipsets Broadcom` y algunos `Realtek`.
 
+La vulnerabilidad explotada por la técnica de `Pixie Dust` se encuentra en `la forma en que algunos routers generan el PIN` de conexión WPS.
+
+Cuando un dispositivo intenta conectarse a un AP utilizando WPS, `se envía una solicitud` de conexión al AP. El `AP responde` con una petición de `autenticación`, que incluye un `nonce` y un `M1`, que son enviados al dispositivo para que genere un `M2`.
+
+En los routers afectados por la vulnerabilidad, el `M2 se genera de fo`rma predecible, lo que permite a un atacante con acceso al `M1` y al `nonce` `descubrir el PIN` en un corto periodo de tiempo, utilizando técnicas de `fuerza bruta` para encontrar el valor del `M2` correspondiente.
+
+La técnica de Pixie Dust aprovecha precisamente esta vulnerabilidad para obtener el PIN de acceso al AP `en un tiempo mucho menor` al necesario con fuerza bruta.
+
 
 
