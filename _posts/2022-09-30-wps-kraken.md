@@ -130,7 +130,7 @@ Para eso explicare un poco el funcionamientro, la lógica de ejecución, y luego
 
 Lo primero que necesitamos para que funcione es una `tarjeta de red`, recomiendo la `tplink` porque es la que utilizo (y aunque hace chanel hopping no afecta en el funcionamiento del programa) y solo he testeado la herramienta con eso, pero supongo que se podria utilizar otra (también es importante mencionar que lo he probado en `Parrot Security`, por lo que supongo que en otras distribuciones de linux como `Kali` también funcionara, pero no estoy segura):
 
-![](/assets/images/Wifi-Hacking/TPL-TL-WN722N.jpg)
+![](/assets/images/wps_kraken/tarjeta_de_red.jpg)
 
 Ahora la conectamos y al ejecutar el script lo primero que hace es `mostrarnos las interfaces de red disponibles`, como no sabia como automatizar la detección de la interfaz de la tarjeta lo puse de forma manual, por lo tanto lo primero que tenemos que hacer es `seleccionar cual es la interfaz` de red de la tarjeta.
 
