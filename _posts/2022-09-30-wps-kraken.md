@@ -69,7 +69,7 @@ También me parece recalcable (sobre todo si alguién quiere criticarme o yo que
 
 Aquí dejo un video donde se muestra `como funciona` la herramienta de forma muy resumida y la estética que tiene:
 
-https:// cuando lo suba a youtube lo pongo XD
+[https://www.youtube.com/watch?v=fy_JU9MM2Os](https://www.youtube.com/watch?v=fy_JU9MM2Os)
 
 Y también dejo el código:
 
