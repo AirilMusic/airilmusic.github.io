@@ -443,9 +443,10 @@ def brute_force_WPS(target, conected):
         return("NOPE")
 ```
 
+La función toma dos argumentos de entrada: `target` y `connected`. El primero es la dirección MAC o el `BSSID` del dispositivo de la red Wi-Fi objetivo y el argumento `connected` es una `variable booleana` que indica si se ha logrado establecer una conexión con la red Wi-Fi objetivo.
 
+En primer lugar, la función define una cadena de caracteres `checker2` que se utilizará más adelante para `verificar si se ha establecido una conexión` con éxito (sería lo mismo a un mensaje de error al conectarnos a la red, por lo que si da ese mensaje significa que no hemos podido conectarnos). Luego, se define una lista de posibles `PINS genéricos` y se realiza una prueba de conexión utilizando estos PINs. `Si se logra establecer una conexión`, la variable connected se establece como True y `se muestra el PIN` utilizado para la conexión.
 
+`Si no` se logra establecer una conexión utilizando los PINs genéricos, la función comienza una prueba de `fuerza bruta` utilizando un rango de `1 a 99999999` como `posibles PINs`. Se comprueba si se ha establecido una conexión con cada PIN probado y si se encuentra un PIN válido, se establece la variable connected como True y se devuelve el PIN utilizado para la conexión.
 
-
-
-
+Y luego en otra función hace una petición que al proporcionar el PIN, el AP nos devuelve la contraseña. 
