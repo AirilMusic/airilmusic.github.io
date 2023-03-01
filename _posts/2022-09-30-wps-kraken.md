@@ -397,6 +397,19 @@ def pixieDust(target, iface, SSID):
         return("-1")
 ```
 
+La función recibe tres argumentos: `target`, que es la dirección MAC o `BSSID` del AP; `iface`, que es la `interfaz de red` a través de la cual se envían y reciben los paquetes; y `SSID`, que es el nombre de la red Wi-Fi.
+
+La función utiliza varias librerías de Python, como `subprocess`, `re`, `hashlib`, `uuid`, `wifi`, `scapy` y `wpa_supplicant`, para recivir, crear y enviar una serie de paquetes que `aprovechan dicha vulnerabilidad` en el protocolo WPS para obtener la contraseña de la red.
+
+También intenta `obtener información` de forma automatizada sobre la `interfaz de red` y la `versión del protocolo WPS` utilizando las librerías subprocess y wpa_supplicant. Y utilizando la librería `wifi` para buscar la red objetivo e interactuar con ella, también obtiene el `uuid` de la red, osea, el identificador único, y a partir de esto crea un paquete de datos `pixie_data`.
+
+Y luego va `capturando` y `enviando` paquetes como se muestra en la foto de la explicación de este ataque, `utilizando la información de los paquetes anteriores` que ha recibido. Y en el paquete `M4` que es donde viaja el `PIN`, lo extrae. 
+
+Ya luego continua con la secuencia de paquetes para conectarse a la red y `extrae la contraseña del paquete M8`. 
+
+
+
+
 
 
 
