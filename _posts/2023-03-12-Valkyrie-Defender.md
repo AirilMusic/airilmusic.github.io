@@ -82,6 +82,8 @@ I have put few options to simplify the configuration, since most of it is automa
 Badwords:
 This is a list of sanctioned words on the server. Every time a user without the 'valkyrie_admin' role uses one of these words, they will receive a warning (with 3 warnings they will be sanctioned once).
 
+![](/assets/images/valkyrie_defender/bw-3.JPG)
+
 To view the list of badwords (all users can do it):
 
 ```
@@ -90,7 +92,11 @@ To view the list of badwords (all users can do it):
 
 If the list is empty, this message will appear:
 
+![](/assets/images/valkyrie_defender/bw-1.JPG)
+
 But if not, it will display the list:
+
+![](/assets/images/valkyrie_defender/bw-5.JPG)
 
 To add a badword to the list (only users with the 'valkyrie_admin' role can execute this command):
 
@@ -98,11 +104,15 @@ To add a badword to the list (only users with the 'valkyrie_admin' role can exec
 *add_badword {word}
 ```
 
+![](/assets/images/valkyrie_defender/bw-2.JPG)
+
 To remove a badword from the list:
 
 ```
 *remove_badword {word}
 ```
+
+![](/assets/images/valkyrie_defender/bw-4.JPG)
 
 Ban blacklisted users:
 
