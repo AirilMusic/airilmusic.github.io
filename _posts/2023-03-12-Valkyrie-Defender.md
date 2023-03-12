@@ -5,7 +5,7 @@ excerpt: "This is a guide of my discord servers security bot."
 date: 2023-03-12
 classes: wide
 header:
-  teaser: /assets/images/
+  teaser: /assets/images/valkyrie_defender/miniatura.png
   teaser_home_page: true
   icon:
 categories:
@@ -14,7 +14,7 @@ tags:
   - Python
 ---
 
-![](/assets/images/wps_kraken/portada.png)
+![](/assets/images/valkyrie_defender/portada.png)
 
 ## INDEX
 
