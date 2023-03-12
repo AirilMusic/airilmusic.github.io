@@ -104,15 +104,11 @@ To add a badword to the list (only users with the 'valkyrie_admin' role can exec
 *add_badword {word}
 ```
 
-![](/assets/images/valkyrie_defender/bw-2.JPG)
-
 To remove a badword from the list:
 
 ```
 *remove_badword {word}
 ```
-
-![](/assets/images/valkyrie_defender/bw-4.JPG)
 
 Ban blacklisted users:
 
