@@ -14,7 +14,7 @@ tags:
   - Python
 ---
 
-![](/assets/images/valkyrie_defender/portada.png)
+![](/assets/images/valkyrie_defender/miniatura.png)
 
 ## INDEX
 
