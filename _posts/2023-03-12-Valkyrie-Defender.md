@@ -25,6 +25,8 @@ tags:
 <a id="1"></a>
 # INTRODUCTION
 
+![](/assets/images/valkyrie_defender/bot.JPG)
+
 This is a bot to automate and improve discord servers security. The bot has a lot of functions, punishment system, detection spam, malicious links and files, NSFW content, adminstration commands... And with a configuration that can be adapted to each server individually.
 
 Also, the different servers share a blacklist of banned users, which allows you to know if a new user has been banned in another Discord and why. And if you want, you can automate the banning of blacklisted users from the configuration, all through simple commands that automate everything possible.
@@ -49,3 +51,14 @@ Donations:
 
 <a id="ADMIN"></a>
 # ADMINISTRATION CHANNEL AND ROLE
+
+For the administration of this bot, there is an 'valkyrie_admin' administrator role that has some permissions such as the ability to use exclusive commands. The bot notifies these users of important alerts and they can interact with it fully. To do this, you need to manually create this role from the server configuration.
+
+![](/assets/images/valkyrie_defender/role.JPG)
+
+It also has an administration channel that needs to be created for the bot to report incidents through that channel 'valkyrie'.
+
+![](/assets/images/valkyrie_defender/channel.JPG)
+
+
+
