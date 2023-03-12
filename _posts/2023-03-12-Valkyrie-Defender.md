@@ -114,6 +114,8 @@ To remove a badword from the list:
 
 By default, this option will be False, which will cause blacklisted users in the blacklist shared by all servers that have this bot not to be automatically banned when they first enter the server, but it will notify users with the 'valkyrie_admin' role through the 'valkyrie' administration channel that a blacklisted user has entered.
 
+![](/assets/images/valkyrie_defender/blacklisted_warn.JPG)
+
 But if it is activated, if a blacklisted user enters, they will be automatically banned.
 
 Enable this option:
@@ -131,6 +133,8 @@ Disable this option:
 ## User verification:
 
 This option is disabled by default, so when a new user enters, it does nothing, but it can be activated so that when a new user enters, the bot will send them a message in private that they will have to respond to with the word "verify" within a minute to be able to enter the server, otherwise they will be kicked. This can be useful to prevent bot attacks.
+
+![](/assets/images/valkyrie_defender/user_verification.JPG)
 
 Enable the option:
 
