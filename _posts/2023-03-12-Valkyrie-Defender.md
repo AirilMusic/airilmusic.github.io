@@ -19,8 +19,10 @@ tags:
 ## INDEX
 
 - [INTRODUCTION AND URL](#1)
+- [ADMINISTRATION CHANNEL AND ROLE](#ADMIN)
+- [HELP](#HELP)
 
-
+<a id="1"></a>
 # INTRODUCTION
 
 This is a bot to automate and improve discord servers security. The bot has a lot of functions, punishment system, detection spam, malicious links and files, NSFW content, adminstration commands... And with a configuration that can be adapted to each server individually.
@@ -45,4 +47,5 @@ Donations:
 
 
 
-#
+<a id="ADMIN"></a>
+# ADMINISTRATION CHANNEL AND ROLE
