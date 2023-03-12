@@ -21,7 +21,7 @@ tags:
 - [INTRODUCTION AND URL](#1)
 - [ADMINISTRATION CHANNEL AND ROLE](#ADMIN)
 - [SERVER CONFIG](#CONFIG)
-- [PENALIZATION SISTEM](#SANCTIONS)
+- [PENALTY SYSTEM](#SANCTIONS)
 - [HELP](#HELP)
 - [USER COMMANDS](#USERCOMMANDS)
 - [MEMBER INFO](#MINFO)
@@ -79,7 +79,7 @@ The configuration is saved as follows:
 
 I have put few options to simplify the configuration, since most of it is automated, but if necessary in the future, I will add more to adapt the bot to the needs of each server.
 
-Badwords:
+## Badwords:
 This is a list of sanctioned words on the server. Every time a user without the 'valkyrie_admin' role uses one of these words, they will receive a warning (with 3 warnings they will be sanctioned once).
 
 ![](/assets/images/valkyrie_defender/bw-3.JPG)
@@ -110,7 +110,7 @@ To remove a badword from the list:
 *remove_badword {word}
 ```
 
-Ban blacklisted users:
+## Ban blacklisted users:
 
 By default, this option will be False, which will cause blacklisted users in the blacklist shared by all servers that have this bot not to be automatically banned when they first enter the server, but it will notify users with the 'valkyrie_admin' role through the 'valkyrie' administration channel that a blacklisted user has entered.
 
@@ -128,7 +128,7 @@ Disable this option:
 *ban_blacklisted_OFF
 ```
 
-User verification:
+## User verification:
 
 This option is disabled by default, so when a new user enters, it does nothing, but it can be activated so that when a new user enters, the bot will send them a message in private that they will have to respond to with the word "verify" within a minute to be able to enter the server, otherwise they will be kicked. This can be useful to prevent bot attacks.
 
@@ -144,3 +144,5 @@ Disable the option:
 *new_member_verification_OFF
 ```
 
+<a id="SANCTIONS"></a>
+# PENALTY SYSTEM
