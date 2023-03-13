@@ -223,3 +223,22 @@ See banned members list:
 
 ## BLACKLIST
 
+When a user is banned on a server, that user is added to a blacklist that is shared among all servers where the bot is present. Every time a new user enters a server, the bot checks if that user is in the blacklist, and if so, it warns users with the 'valkyrie_admin' role through the 'valkyrie' channel. If the server configuration option is set to ban users who are on the blacklist, new users on the blacklist are banned.
+
+The information about the blacklist is saved like this:
+
+```py
+{user_id:[reasons_list]}
+```
+
+<a id="SANCTIONS"></a>
+# HELP
+
+The bot has a command to help users know which commands they can use and what they do:
+
+```
+*Help
+```
+
+
+
