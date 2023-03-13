@@ -165,4 +165,23 @@ This bot has a penalty system. The first thing is that there is a warning system
 1 Penalty --> BAN, and this user will be added to a multiserver blacklist
 ```
 
+Every time someone is penalized, users with the 'valkyrie_admin' role will be notified through the 'valkyrie' channel, mentioning the user, the sanction, and the reason. When someone is banned, those members will be mentioned to pay more attention to that message to avoid mistakes...
+
+The information about the penalties is saved like this:
+
+```py
+{server_id:{user_id:[reasons_list]}}
+```
+
+And the information about the warnings is something similar.
+
+To see the sanctions that a user has (any user can do it):
+
+```
+*check_sanctions 
+```
+
+![](/assets/images/valkyrie_defender/check_sanctions.JPG)
+
+Users with the 'valkyrie_admin' role can also execute some commands to apply and remove these sanctions (and many other things such as spam detection, banned words, etc. that apply these sanctions automatically):
 
