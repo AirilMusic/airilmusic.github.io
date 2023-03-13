@@ -299,4 +299,123 @@ HELP: to see all commands and their fuctions
 <a id="ADMINCOMMANDS"></a>
 # ADMIN COMMANDS
 
+## Server management commands:
+
+Delete las x messages:
+
+```
+*delete {num}
+```
+
+Disconnecta a user from a voice call:
+
+```
+*disconnect @user
+```
+
+Mute a user in a voice call:
+
+```
+*mute @user
+```
+
+Unmute a user in a voice call:
+
+```
+*unmute @user
+```
+
+Deafen a user in a voice call:
+
+```
+*deafen @user
+```
+
+Undeafen a user in a voice call:
+
+```
+*undeafen @user
+```
+
+## Penalty system:
+
+To warn a user:
+
+```
+*warn @user {reason}
+```
+
+Apply a penalty to a user:
+
+```
+*penalize @user {reason}
+```
+
+Clear a user's penalties:
+
+```
+*clear_sanctions @user
+```
+
+Ban a user:
+
+```
+*ban @user
+```
+
+Show banned users:
+
+```
+*banned_members
+```
+
+Unban a user:
+
+```
+*unban @user
+```
+
+## Server config:
+
+Forbidden words (badwords):
+
+Add a badword:
+
+```
+*add_badword {word}
+```
+
+Remove a badword:
+
+```
+*remove_badword {word}
+```
+
+Ban new blacklisted users:
+
+Enable:
+
+```
+*ban_blacklisted_ON
+```
+
+Disable:
+
+```
+*ban_blacklisted_OFF
+```
+
+New member verification:
+
+Enable:
+
+```
+*new_member_verification_ON
+```
+
+Disable:
+
+```
+*new_member_verification_OFF
+```
 
