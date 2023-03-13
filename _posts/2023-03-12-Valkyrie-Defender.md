@@ -24,9 +24,7 @@ tags:
 - [PENALTY SYSTEM and BLACKLIST](#SANCTIONS)
 - [HELP](#HELP)
 - [USER COMMANDS](#USERCOMMANDS)
-- [MEMBER INFO](#MINFO)
-- [SERVER INFO](#SINFO)
-- 
+- [ADMIN COMMANDS](#ADMINCOMMANDS)
 
 <a id="1"></a>
 # INTRODUCTION
@@ -244,3 +242,56 @@ The bot has a command to help users know which commands they can use and what th
 
 <a id="USERCOMMANDS"></a>
 # USER COMMANDS
+
+These are the commands that all users can execute, regardless of their role.
+
+SERVER INFO: displays server information
+
+```
+*server_info
+```
+
+![](/assets/images/valkyrie_defender/)
+
+MEMBER INFO: displays information about a user
+
+```
+*member_info @user
+```
+
+![](/assets/images/valkyrie_defender/)
+
+CHECK SANCTIONS: to see how many penalties a user has
+
+```
+*check_sanctions @user
+```
+
+![](/assets/images/valkyrie_defender/)
+
+SHOW BADWORDS: to see server sancioned words list
+
+``` 
+*show_badwords
+```
+
+![](/assets/images/valkyrie_defender/)
+
+PING: to check if the bot is working 
+
+```
+*ping
+```
+
+![](/assets/images/valkyrie_defender/)
+
+HELP: to see all commands and their fuctions
+
+```
+*Help
+```
+
+<a id="ADMINCOMMANDS"></a>
+# ADMIN COMMANDS
+
+
