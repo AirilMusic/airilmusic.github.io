@@ -30,7 +30,6 @@ tags:
 - [NSFW content detection (with AI)](#NSFW)
 - [URL CHECKER](#URL)
 - [FILE CHECKER](#FILES)
-- 
 
 <a id="1"></a>
 # INTRODUCTION
