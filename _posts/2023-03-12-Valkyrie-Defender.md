@@ -427,3 +427,8 @@ This bot has a spam detection and blocking system based on counting how many tim
 ![](/assets/images/valkyrie_defender/spam-1.JPG)
 
 ![](/assets/images/valkyrie_defender/spam-2.JPG)
+
+<a id="INFO"></a>
+# SENSIBLE INFO AND PHISHING CHECKER
+
+
