@@ -185,3 +185,41 @@ To see the sanctions that a user has (any user can do it):
 
 Users with the 'valkyrie_admin' role can also execute some commands to apply and remove these sanctions (and many other things such as spam detection, banned words, etc. that apply these sanctions automatically):
 
+Warn:
+
+```
+*warn @user {reason}
+```
+
+Apply a penalty:
+
+```
+*penalize @user {reason}
+```
+
+Clear penaltys:
+
+```
+*clear_sanctions
+```
+
+Ban a user:
+
+```
+*ban @user {reason}
+```
+
+Unban a user:
+
+```
+*unban @user
+```
+
+See banned members list:
+
+```
+*banned_members
+```
+
+## BLACKLIST
+
