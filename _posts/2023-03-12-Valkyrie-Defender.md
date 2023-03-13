@@ -21,7 +21,7 @@ tags:
 - [INTRODUCTION AND URL](#1)
 - [ADMINISTRATION CHANNEL AND ROLE](#ADMIN)
 - [SERVER CONFIG](#CONFIG)
-- [PENALTY SYSTEM](#SANCTIONS)
+- [PENALTY SYSTEM and BLACKLIST](#SANCTIONS)
 - [HELP](#HELP)
 - [USER COMMANDS](#USERCOMMANDS)
 - [MEMBER INFO](#MINFO)
@@ -149,4 +149,20 @@ Disable the option:
 ```
 
 <a id="SANCTIONS"></a>
-# PENALTY SYSTEM
+# PENALTY SYSTEM and BLACKLIST
+
+## PENALTY SYSTEM
+
+This bot has a penalty system. The first thing is that there is a warning system, which is like a notice that is not too important, but every 3 accumulated warnings result in a penalty. Each penalty has a different punishment, and the more you have, the stronger the punishment is. If you have 5 penalties, you will be banned.
+
+```
+3 Warns --> 1 Penalty
+
+1 Penalty --> An hour of timeout
+1 Penalty --> A day of timeout
+1 Penalty --> Two days of timeout
+1 Penalty --> A week of timeout
+1 Penalty --> BAN, and this user will be added to a multiserver blacklist
+```
+
+
