@@ -242,4 +242,5 @@ The bot has a command to help users know which commands they can use and what th
 
 ![](/assets/images/valkyrie_defender/help.JPG)
 
-
+<a id="USERCOMMANDS"></a>
+# USER COMMANDS
