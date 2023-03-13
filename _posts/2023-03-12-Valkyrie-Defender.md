@@ -419,3 +419,10 @@ Disable:
 *new_member_verification_OFF
 ```
 
+<a id="SPAM"></a>
+# SPAM LOCKER
+
+This bot has a spam detection and blocking system based on counting how many times a user has repeated the same message in a row. If the user repeats the same message 4 times in a row, they are warned to stop spamming. If they repeat the same message again, i.e. they send it 5 times, a penalty is applied. This is done to avoid confusion, but also to encourage users or bots who engage in spamming to send as few messages as possible.
+
+
+
