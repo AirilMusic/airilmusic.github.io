@@ -240,5 +240,6 @@ The bot has a command to help users know which commands they can use and what th
 *Help
 ```
 
+![](/assets/images/valkyrie_defender/help.JPG)
 
 
