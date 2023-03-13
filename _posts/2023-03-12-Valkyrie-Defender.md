@@ -431,4 +431,6 @@ This bot has a spam detection and blocking system based on counting how many tim
 <a id="INFO"></a>
 # SENSIBLE INFO AND PHISHING CHECKER
 
+The bot has a sensitive information and possible spam detection system to detect when someone has posted a message that may contain sensitive information about themselves or another person or organization, or also for basic phishing attempts. For this, the bot has a list of keywords such as (password, ID number, bank account number...) and when a message is sent through any channel, it checks if it contains any of these keywords. If it does, it alerts the administrators through the 'valkyrie_admin' channel.
 
+In response to that message, you can choose to delete the message it is referring to or to ignore it. This can be done directly in the bot's administration channel, without the need to search for the message, for greater convenience and efficiency in the administrators' work.
