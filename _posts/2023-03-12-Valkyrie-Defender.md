@@ -251,7 +251,7 @@ SERVER INFO: displays server information
 *server_info
 ```
 
-![](/assets/images/valkyrie_defender/)
+![](/assets/images/valkyrie_defender/server_info.JPG)
 
 MEMBER INFO: displays information about a user
 
@@ -259,7 +259,7 @@ MEMBER INFO: displays information about a user
 *member_info @user
 ```
 
-![](/assets/images/valkyrie_defender/)
+![](/assets/images/valkyrie_defender/member_info.JPG)
 
 CHECK SANCTIONS: to see how many penalties a user has
 
@@ -267,7 +267,7 @@ CHECK SANCTIONS: to see how many penalties a user has
 *check_sanctions @user
 ```
 
-![](/assets/images/valkyrie_defender/)
+![](/assets/images/valkyrie_defender/check_sanctions.JPG)
 
 SHOW BADWORDS: to see server sancioned words list
 
@@ -275,7 +275,7 @@ SHOW BADWORDS: to see server sancioned words list
 *show_badwords
 ```
 
-![](/assets/images/valkyrie_defender/)
+![](/assets/images/valkyrie_defender/show_badwords.JPG)
 
 PING: to check if the bot is working 
 
@@ -283,7 +283,7 @@ PING: to check if the bot is working
 *ping
 ```
 
-![](/assets/images/valkyrie_defender/)
+![](/assets/images/valkyrie_defender/ping.JPG)
 
 HELP: to see all commands and their fuctions
 
