@@ -275,7 +275,7 @@ SHOW BADWORDS: to see server sancioned words list
 *show_badwords
 ```
 
-![](/assets/images/valkyrie_defender/show_badwords.JPG)
+![](/assets/images/valkyrie_defender/bw-5.JPG)
 
 PING: to check if the bot is working 
 
