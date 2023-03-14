@@ -446,8 +446,10 @@ When an image is sent, the bot first checks if the channel it was sent through i
 
 To do this, it takes into account various parameters (example):
 
+```
 {'status': 'success', 'request': {'id': 'req_dFK8YIgPauzcJRlz31dee', 'timestamp': 1678752517.095992, 'operations': 1}, 'nudity': {'sexual_activity': 0.01, 'sexual_display': 0.01, 'erotica': 0.01, 'suggestive': 0.01, 'suggestive_classes': {'bikini': 0.01, 'cleavage': 0.01, 'male_chest': 0.01, 'lingerie': 0.01, 'miniskirt':
 0.01}, 'none': 0.98}, 'media': {'id': 'med_dFK89WumOD116bin9EhH1', 'uri': 'media'}}
+```
 
 However, it mainly takes into account the 'sexual_display' and 'sexual_activity' parameters, as well as the overall mixture of all parameters that determines the probability that the image is NOT NSFW, which is indicated by the 'none' parameter. The first two parameters can be configured from the API's website.
 
