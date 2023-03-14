@@ -234,7 +234,7 @@ The information about the blacklist is saved like this:
 {user_id:[reasons_list]}
 ```
 
-<a id="SANCTIONS"></a>
+<a id="HELP"></a>
 # HELP
 
 The bot has a command to help users know which commands they can use and what they do:
