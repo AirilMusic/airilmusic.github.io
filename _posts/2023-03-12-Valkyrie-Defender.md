@@ -470,3 +470,6 @@ And if the URL is flagged as potentially dangerous by the VirusTotal API, the bo
 But it doesn't delete them because they can be a mistake or in certain computer-related servers, especially in cybersecurity, there may be URLs that have code fragments that may be interpreted as malicious but are, for example, pentesting cheat sheets...
 
 ![](/assets/images/valkyrie_defender/url-checker.JPG)
+
+<a id="FILES"></a>
+# FILE CHECKER
