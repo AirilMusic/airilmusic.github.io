@@ -31,7 +31,6 @@ tags:
 - [URL CHECKER](#URL)
 - [FILE CHECKER](#FILES)
 
-<a id="1"></a>
 # INTRODUCTION
 
 ![](/assets/images/valkyrie_defender/bot.JPG)
@@ -458,3 +457,16 @@ However, it mainly takes into account the 'sexual_display' and 'sexual_activity'
 So, if the bot detects that an image has NSFW content in an inappropriate channel, it will delete the image and notify that it's not the appropriate channel. If the image is not NSFW or it's in an appropriate channel, the bot will do nothing.
 
 ![](/assets/images/valkyrie_defender/nsfw.JPG)
+
+<a id="URL"></a>
+# URL CHECKER
+
+When a message is sent, the bot also checks if it contains a URL, and if it does, it uses the VirusTotal API to try to evaluate the URL to determine if it might be dangerous or not.
+
+[https://www.virustotal.com](https://www.virustotal.com/gui/home/upload)
+
+And if the URL is flagged as potentially dangerous by the VirusTotal API, the bot will notify both normal users and administrators to exercise caution and take necessary measures if needed.
+
+But it doesn't delete them because they can be a mistake or in certain computer-related servers, especially in cybersecurity, there may be URLs that have code fragments that may be interpreted as malicious but are, for example, pentesting cheat sheets...
+
+![](/assets/images/valkyrie_defender/url-checker.JPG)
