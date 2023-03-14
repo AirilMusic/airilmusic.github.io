@@ -473,3 +473,9 @@ But it doesn't delete them because they can be a mistake or in certain computer-
 
 <a id="FILES"></a>
 # FILE CHECKER
+
+It also checks if the message contains a file, and if it does, it uses the VirusTotal API again to determine if it might be dangerous.
+
+[https://www.virustotal.com](https://www.virustotal.com/gui/home/upload)
+
+If the file is flagged as potentially dangerous by the VirusTotal API, the bot will notify both normal users and administrators to exercise caution and take necessary measures if needed. However, similar to the previous function, the bot will not automatically delete the file since there may be false positives or cases where the file is a legitimate script, exploit, pentesting tool, or something else that triggers a positive result but is not actually harmful.
