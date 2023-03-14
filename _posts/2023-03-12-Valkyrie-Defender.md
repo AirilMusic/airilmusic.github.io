@@ -436,3 +436,9 @@ The bot has a sensitive information and possible spam detection system to detect
 ![](/assets/images/valkyrie_defender/info.JPG)
 
 In response to that message, you can choose to delete the message it is referring to or to ignore it. This can be done directly in the bot's administration channel, without the need to search for the message, for greater convenience and efficiency in the administrators' work.
+
+<a id="NSFW"></a>
+# NSFW content detection (with AI)
+
+
+
