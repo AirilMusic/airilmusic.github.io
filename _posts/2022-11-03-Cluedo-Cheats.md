@@ -14,7 +14,7 @@ tags:
   - Python
 ---
 
-![](/assets/images/Algoritmia/cluedo-portada.png)
+![](/assets/images/Algoritmia/cluedo-portada2.png)
 
 <a id="1"></a>
 # CLUEDO CHEATS
