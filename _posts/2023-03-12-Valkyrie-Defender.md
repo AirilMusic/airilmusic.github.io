@@ -493,5 +493,16 @@ Also for example when an administrator bans, mutates, ... another user, in the l
 
 ## LOGS EXAMPLES
 
+![](/assets/images/valkyrie_defender/logs/new_user.JPG)
 
+![](/assets/images/valkyrie_defender/logs/member_leave.JPG)
 
+![](/assets/images/valkyrie_defender/logs/voice_conection.JPG)
+
+![](/assets/images/valkyrie_defender/logs/voice_control.JPG)
+
+![](/assets/images/valkyrie_defender/logs/ban.JPG)
+
+![](/assets/images/valkyrie_defender/logs/clean_sanctions.JPG)
+
+![](/assets/images/valkyrie_defender/logs/delete.JPG)
