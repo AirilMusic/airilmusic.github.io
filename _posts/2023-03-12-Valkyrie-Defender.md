@@ -162,10 +162,10 @@ This bot has a penalty system. The first thing is that there is a warning system
 3 Warns --> 1 Penalty
 
 1 Penalty --> An hour of timeout
-1 Penalty --> A day of timeout
-1 Penalty --> Two days of timeout
-1 Penalty --> A week of timeout
-1 Penalty --> BAN, and this user will be added to a multiserver blacklist
+2 Penalty --> A day of timeout
+3 Penalty --> Two days of timeout
+4 Penalty --> A week of timeout
+5 Penalty --> BAN, and this user will be added to a multiserver blacklist
 ```
 
 Every time someone is penalized, users with the 'valkyrie_admin' role will be notified through the 'valkyrie' channel, mentioning the user, the sanction, and the reason. When someone is banned, those members will be mentioned to pay more attention to that message to avoid mistakes...
