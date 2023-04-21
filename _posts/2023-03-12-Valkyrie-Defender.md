@@ -484,3 +484,14 @@ If the file is flagged as potentially dangerous by the VirusTotal API, the bot w
 
 <a id="LOGS"></a>
 # LOGS CHANNEL
+
+This bot has a `log history channel`. If you want to use it, you can make a channel with the name `valkyrie-logs` and the bot will detect it automatically and start sending the logs through that channel, for example, when a new user joins to the server or when they leave, when someone is banned, when someone enters or leaves a call ...
+
+If the channel does not exist, it will not show the logs anywhere (except those that go through the valkyrie channel).
+
+Also for example when an administrator bans, mutates, ... another user, in the log will mention both users, to keep track in case you need to know who has been.
+
+## LOGS EXAMPLES
+
+
+
