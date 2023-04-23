@@ -512,5 +512,26 @@ Also for example when an administrator bans, mutates, ... another user, in the l
 <a id="REMEMBER"></a>
 # REMINDERS
 
+This bot has a reminder system, for example, if you have to remember something when you finish a call, you can set a reminder to pop up when you end the call.
 
+(For now, the only option available is to notify you when you enter or exit a call, because I haven't thought of anything else that the bot can do to remind you.)
+
+How to set a reminder:
+
+```
+*remember @user event text
+```
+
+For example:
+
+
+
+And when you exit a call:
+
+
+Possible events:
+
+```
+
+```
 
