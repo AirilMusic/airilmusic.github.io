@@ -540,7 +540,7 @@ And when you exit from the call, the bot sends me a message:
 
 The information is saved like this:
 
-```json
+```
 {server_id : {user_id : {event : text}}}
 ```
 
