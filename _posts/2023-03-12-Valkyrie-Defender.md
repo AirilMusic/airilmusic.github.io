@@ -524,14 +524,30 @@ How to set a reminder:
 
 For example:
 
+![](/assets/images/valkyrie_defender/remember1.JPG)
 
+Then I join and exit from a voice call:
 
-And when you exit a call:
+![](/assets/images/valkyrie_defender/remember2.JPG)
 
+![](/assets/images/valkyrie_defender/remember3.JPG)
+
+And when you exit from the call, the bot sends me a message:
+
+![](/assets/images/valkyrie_defender/remember4.JPG)
+
+![](/assets/images/valkyrie_defender/remember5.JPG)
+
+The information is saved like this:
+
+```json
+{server_id : {user_id : {event : text}}}
+```
 
 Possible events:
 
 ```
-
+connect      <-- also acept conect
+disconnect   <-- also acept disconect
 ```
 
