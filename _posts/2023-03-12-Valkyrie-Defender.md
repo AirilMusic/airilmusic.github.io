@@ -31,6 +31,7 @@ tags:
 - [URL CHECKER](#URL)
 - [FILE CHECKER](#FILES)
 - [LOG CHANNEL](#LOGS)
+- [REMIINDERS](#REMEMBER)
 
 # INTRODUCTION
 
@@ -506,3 +507,10 @@ Also for example when an administrator bans, mutates, ... another user, in the l
 ![](/assets/images/valkyrie_defender/logs/clean_sanctions.JPG)
 
 ![](/assets/images/valkyrie_defender/logs/delete.JPG)
+
+
+<a id="REMEMBER"></a>
+# REMINDERS
+
+
+
