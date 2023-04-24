@@ -302,7 +302,7 @@ HELP: to see all commands and their fuctions
 
 ## Server management commands:
 
-Delete las x messages:
+Delete last x messages:
 
 ```
 *delete {num}
