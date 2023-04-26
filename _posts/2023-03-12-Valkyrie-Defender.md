@@ -32,6 +32,7 @@ tags:
 - [FILE CHECKER](#FILES)
 - [LOG CHANNEL](#LOGS)
 - [REMIINDERS](#REMEMBER)
+- [REPORT BUGS, SEND IDEAS...](#CONTACT)
 
 # INTRODUCTION
 
@@ -562,4 +563,7 @@ Possible events:
 connect      <-- also acept conect
 disconnect   <-- also acept disconect
 ```
+
+<a id="CONTACT"></a>
+# REPORT BUGS, SEND IDEAS...
 
