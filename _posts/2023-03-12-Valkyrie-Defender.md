@@ -575,6 +575,12 @@ In case you find any bugs, have any ideas that can be added to the bot, or want 
 
 Example:
 
+User:
 
+![](/assets/images/valkyrie_defender/message-1.JPG)
+
+My MD with the bot (bot developer / creator):
+
+![](/assets/images/valkyrie_defender/message-2.JPG)
 
 The message is sent to me with the date, the full username, and the server. This is so that in case I need to, I can easily contact you.
