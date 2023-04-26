@@ -55,9 +55,9 @@ Video:
 
 
 
-Donations:
+Donations (now are for my operation, but there will be for the bot hosting):
 
-
+https://www.gofundme.com/f/ayuda-con-un-poquito-de-dinero-para-mi-operacion?utm_source=customer&utm_medium=copy_link&utm_campaign=p_cf+share-flow-1
 
 <a id="ADMIN"></a>
 # ADMINISTRATION CHANNEL AND ROLE
