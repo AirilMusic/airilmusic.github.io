@@ -261,6 +261,14 @@ SERVER INFO: displays server information
 
 ![](/assets/images/valkyrie_defender/server_info.JPG)
 
+BOT INFO: displays information about the bot
+
+```
+*bot_info
+```
+
+![](/assets/images/valkyrie_defender/bot_info.JPG)
+
 MEMBER INFO: displays information about a user
 
 ```
