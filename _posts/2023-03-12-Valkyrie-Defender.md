@@ -567,3 +567,14 @@ disconnect   <-- also acept disconect
 <a id="CONTACT"></a>
 # REPORT BUGS, SEND IDEAS...
 
+In case you find any bugs, have any ideas that can be added to the bot, or want to tell me (the creator) anything, you can do so through a command with which the bot will send me your message via DM:
+
+```
+*message text
+```
+
+Example:
+
+
+
+The message is sent to me with the date, the full username, and the server. This is so that in case I need to, I can easily contact you.
