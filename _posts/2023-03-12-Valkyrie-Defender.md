@@ -50,7 +50,7 @@ Invite the bot to your Discord server:
 
 Bot code:
 
-[https://github.com/AirilMusic/bots/blob/main/Valkyrie%20Defender/main.py](https://github.com/AirilMusic/bots/blob/main/Valkyrie%20Defender/main.py)
+[https://github.com/AirilMusic/bots/blob/main/Valkyrie%20Defender](https://github.com/AirilMusic/bots/blob/main/Valkyrie%20Defender)
 
 Video:
 
