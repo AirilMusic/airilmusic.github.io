@@ -23,6 +23,7 @@ tags:
 - [SERVER CONFIG](#CONFIG)
 - [PENALTY SYSTEM and BLACKLIST](#SANCTIONS)
 - [HELP](#HELP)
+- [DICTIONARY](#DIC)
 - [USER COMMANDS](#USERCOMMANDS)
 - [ADMIN COMMANDS](#ADMINCOMMANDS)
 - [SPAM LOCKER](#SPAM)
@@ -33,6 +34,7 @@ tags:
 - [LOG CHANNEL](#LOGS)
 - [REMIINDERS](#REMEMBER)
 - [REPORT BUGS, SEND IDEAS...](#CONTACT)
+- [DEVELOPER COMMANDS](#DEV)
 
 # INTRODUCTION
 
@@ -54,6 +56,7 @@ Bot code:
 
 Video:
 
+[https://www.youtube.com/watch?v=cgxJghWGZBY&t=1s](https://www.youtube.com/watch?v=cgxJghWGZBY&t=1s)
 
 
 Donations (now are for my operation, but there will be for the bot hosting):
@@ -248,6 +251,39 @@ The bot has a command to help users know which commands they can use and what th
 ![](/assets/images/valkyrie_defender/help.JPG)
 
 (this image is outdated, now it is longer, because there are more commands)
+
+<a id="DIC"></a>
+# DICTIONARY
+
+This bot also has a dictionary for words and terms that you don't know. There's a predefined list and you can add more words to it.
+
+## Ask about the meaning of a word
+
+```
+*dictionary {word}
+```
+
+![](/assets/images/valkyrie_defender/dictionary.JPG)
+
+Also you can ask about more than one word:
+
+```
+*dictionary {word} {word} {...}
+```
+
+![](/assets/images/valkyrie_defender/dictionary4.JPG)
+
+## Show all words of the dictionary
+
+```
+*show_dictionary
+```
+
+![](/assets/images/valkyrie_defender/dictionary3.JPG)
+
+## Add word to the dictionary
+
+![](/assets/images/valkyrie_defender/dictionary2.JPG)
 
 <a id="USERCOMMANDS"></a>
 # USER COMMANDS
