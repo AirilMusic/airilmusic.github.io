@@ -652,6 +652,16 @@ My MD with the bot (bot developer / creator):
 The message is sent to me with the date, the full username, and the server. This is so that in case I need to, I can easily contact you.
 
 <a id="CONTACT"></a>
-# Developer Commands
+# DEVELOPER COMMANDS
+
+This bot also has especial commands for developers, so, for me :3 jeje.
+
+I can see wich servers are using this bot, but only i can execute this command for more privacity:
+
+```
+*show_servers
+```
+![](/assets/images/valkyrie_defender/dev_commands.JPG)
+
 
 
