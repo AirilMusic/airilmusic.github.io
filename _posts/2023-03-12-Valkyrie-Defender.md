@@ -283,7 +283,17 @@ Also you can ask about more than one word:
 
 ## Add word to the dictionary
 
+```
+*add_word {word} eng: {meaning in english} esp: {meaning in spanish}
+```
+
 ![](/assets/images/valkyrie_defender/dictionary2.JPG)
+
+## Remove word from the dictionary (only I can use this command)
+
+```
+*remove_word {word}
+```
 
 <a id="USERCOMMANDS"></a>
 # USER COMMANDS
@@ -520,6 +530,26 @@ But it doesn't delete them because they can be a mistake or in certain computer-
 
 ![](/assets/images/valkyrie_defender/url-checker.JPG)
 
+Also if some web is detected like a threat, but is secure, you can add it to a whitelist:
+
+## Show whitelisted webs
+
+```
+*show_whitelisted_webs
+```
+
+## Add a web to the whitelist
+
+```
+*add_web {web}
+```
+
+## Remove web from the whitelist
+
+```
+*remove_web {web}
+```
+
 <a id="FILES"></a>
 # FILE CHECKER
 
@@ -620,3 +650,8 @@ My MD with the bot (bot developer / creator):
 ![](/assets/images/valkyrie_defender/message-2.JPG)
 
 The message is sent to me with the date, the full username, and the server. This is so that in case I need to, I can easily contact you.
+
+<a id="CONTACT"></a>
+# Developer Commands
+
+
