@@ -663,5 +663,16 @@ I can see wich servers are using this bot, but only i can execute this command f
 ```
 ![](/assets/images/valkyrie_defender/dev_commands.JPG)
 
+To avoid bothering a friend who is hosting the bot, and in case it is necessary, I have also added some commands that only I can use. With these commands, I can reset the saved files of the blacklist, sanctions, warnings, etc.
 
+```
+*reset_blacklist
+```
 
+```
+*reset_warns
+```
+
+```
+*reset_sanctions
+```
