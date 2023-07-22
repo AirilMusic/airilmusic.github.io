@@ -177,8 +177,6 @@ Y ya una vez terminada la `ROM`, quedaría así:
 
 Y una pequeña cosa extra, `para poder mandar datos a la RAM` hay que hacer un pequeño apaño. Hay que `dividir el reset` en dos para poder moverse hacia adelante y hacia atrás en los bytes de la memoria sin que se borre la memória (la parte del select, es decir la nueva parte del reset es el cable amarillo):
 
-![](/assets/images/CPU/memorias10.png)
-
 Y vistos algunos fallos he hecho algún que otro apaño mas, pero no quiero escribir mas XD
 
 ### VERSIÓN ACTUALIZADA
