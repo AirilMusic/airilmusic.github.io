@@ -125,6 +125,8 @@ Claro, hay un problema, `en los últimos 4 digitos todos los numeros son siempre
 
 ## ROM
 
+**(ESTA VERSIÓN DE LAS MEMÓRIAS NO ES LA MAS ACTUALIZADA, LA ACTUAL ESTA MAS ADELANTE PERO YA QUE ESTE FUE EL PRIMER DISEÑO HE DECIDIDO DEJARLO)**
+
 Voy a poner `un máximo de 10 slots en los que puedas añadir, borrar, editar o leer textos`. (En este caso voy a utilizar esta memória solo para textos, pero que la podría utilizar para almacenar cualquier otro tipo de datos)
 
 Estos textos tendrán un máximo de `40 caracteres` (quizás mas). Para eso voy a utilizar un concepto de memória bastante básico, basicamente si quiero que almacene informacion activo el `dropper` y meta un item en el `hopper`, de esta forma se mantendra en el hopper hasta que lo desbloqueemos, y eso lo podemos detectar:
@@ -178,6 +180,14 @@ Y una pequeña cosa extra, `para poder mandar datos a la RAM` hay que hacer un p
 ![](/assets/images/CPU/memorias10.png)
 
 Y vistos algunos fallos he hecho algún que otro apaño mas, pero no quiero escribir mas XD
+
+### VERSIÓN ACTUALIZADA
+
+Ya que la versión anterior es muy voluminosa a la hora de agrupar varios modulos uno tras otro, mediante prueba y error he estado intentando hacer una versión mas compacta y este es el resultado:
+
+![](/assets/images/CPU/memorias11.png)
+
+![](/assets/images/CPU/memorias12.png)
 
 ## RAM
 
