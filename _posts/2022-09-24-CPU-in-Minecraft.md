@@ -185,9 +185,9 @@ Y vistos algunos fallos he hecho algún que otro apaño mas, pero no quiero escr
 
 Ya que la versión anterior es muy voluminosa a la hora de agrupar varios modulos uno tras otro, mediante prueba y error he estado intentando hacer una versión mas compacta y este es el resultado:
 
-![](/assets/images/CPU/memorias11.png)
+![](/assets/images/CPU/memorias10.png)
 
-![](/assets/images/CPU/memorias12.png)
+![](/assets/images/CPU/memorias11.png)
 
 ## RAM
 
