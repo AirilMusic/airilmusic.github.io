@@ -187,6 +187,12 @@ Ya que la versión anterior es muy voluminosa a la hora de agrupar varios modulo
 
 ![](/assets/images/CPU/memorias11.png)
 
+Y quedaría de este tamaño, en total son **640 bytes**:
+
+![](/assets/images/CPU/memorias12.png)
+
+![](/assets/images/CPU/memorias13.png)
+
 ## RAM
 
 La idea es tener `una memória en la que puedas gardar cosas temporalmente`, entonces conectare `los outputs de las otras memórias al input de la ram`, y `el otput de esta, al input de las memórias` (para por ejemplo la opción de pegar texto ya copiado). También tengo que tener en cuenta la cantidad de caracteres y algunas cosas más, pero no me quiero extender.
