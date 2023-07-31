@@ -20,19 +20,19 @@ Y en el 2023 quedé tercera del País Vasco y La Rioja.
 
 ![](/assets/images/about/oifem-diploma.PNG)
 
-Como vivo en el Pais Vasco se hablar Español y Vasco, que son mis lenguas maternas, pero también hablo bastante bien Inglés y estoy aprendiendo chino por mi cuenta, porque este otro idioma me parece que en los proximos años puede ser útil.
+Como vivo en el Pais Vasco se hablar Español y Euskera, que son mis lenguas maternas, pero también hablo bastante bien Inglés (puedo mantener conversaciones sin problemas) y estoy aprendiendo un poquito de chino por mi cuenta, porque este otro idioma me parece que en los proximos años puede ser útil.
 
-No sé si es un defecto o algo positivo, pero me gusta reflexionar sobre todo e informarme de forma obsesiva sobre todo. Relacionado con eso también me gusta preguntarme el "¿para qué?" de todo lo que hago, porque no me gusta perder el tiempo  haciendo cosas inútilmente, me gusta ser productiva.
+No sé si es un defecto o algo positivo, pero me gusta reflexionar sobre todo e informarme de forma obsesiva sobre todo. Relacionado con eso también me gusta preguntarme el "¿para qué?" de todo lo que hago, porque no me gusta perder el tiempo haciendo cosas inútilmente.
 
 ## CERTIFICACIONES:
 
 eJPT:
 
-(el año que viene antes de navidad)
+(preparandolo)
 
 OSCP:
 
-(el año que viene despues de navidad)
+(despues de navidad)
 
 Y como no quiero ser programadora sino que pentester y (con 17 años) no tengo apenas dinero, pues de programación solo las de hackerrank:
 
@@ -47,22 +47,22 @@ https://www.hackerrank.com/certificates/3a8c7421da71?utm_medium=email&utm_source
 
 ## Aficiones:
 
-Me encantan los animales, tengo tres tortugas a las que les tengo mucho cariño y me encanta cuidarlas, limpiarlas, darles de comer, dejarlas pasear por mi habitación... Y dentro de un par de añitos me encantaría tener un gatito.
+Me encantan los animales, tengo tres tortugas a las que les tengo mucho cariño y me encanta cuidarlas, limpiarlas, darles de comer, dejarlas pasear por mi habitación... Y dentro de un par de añitos me encantaría tener un gatito. (actualización, tengo una gatita llamada nala uwu)
 
 ![](/assets/images/about/tutel.jpg)
 
 
-También hay videojuegos que me gusta jugar, sobre todo en los que pueda expresar mi creatividad.
+También hay videojuegos que me gusta jugar, sobre todo en los que pueda expresar mi creatividad o los que tienen una buena historia, aunque también los de estrategia.
 
 Me cuesta madrugar, aunque como los días se me quedan cortos es verdad que duermo muy poco, ojalá los días tuviesen cincuenta horas XD.
 
 ![](/assets/images/about/dormilona.jpg)
 
-Y también está guay estar con los amigos, sobre todo porque soy tan frikis como yo y pues eso XD
+Y también está guay estar con los amigos, sobre todo porque son tan frikis como yo y pues eso XD
 
 ![](/assets/images/about/Insta.png)
 
-Por otra parte, respecto a mi personalidad y forma de ser, si no conozco a la persona con quien esté o no le he cogido mucha confianza suelo ser bastante seria, pero cuando cojo confianza me gusta hacer tonterías y quizás alguien me llama furra XD Y sobre todo me encanta intentar ser cute. 
+Por otra parte, respecto a mi personalidad y forma de ser, si no conozco a la persona con quien esté o no le he cogido mucha confianza suelo ser bastante tímida, pero cuando cojo confianza me gusta hacer tonterías y quizás alguien me llama furr XD Y aunque lo hago de forma inconsciente suelo intentar ser lo más cute posible XD. 
 
 ![](/assets/images/about/furra.jpg)
 
