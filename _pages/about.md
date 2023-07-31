@@ -18,6 +18,8 @@ A principios del año pasado poco antes de cumplir 17 años (estoy escribiendo e
 
 Y en el 2023 quedé tercera del País Vasco y La Rioja.
 
+![](/assets/images/about/oifem-diploma.JPG)
+
 Como vivo en el Pais Vasco se hablar Español y Vasco, que son mis lenguas maternas, pero también hablo bastante bien Inglés y estoy aprendiendo chino por mi cuenta, porque este otro idioma me parece que en los proximos años puede ser útil.
 
 No sé si es un defecto o algo positivo, pero me gusta reflexionar sobre todo e informarme de forma obsesiva sobre todo. Relacionado con eso también me gusta preguntarme el "¿para qué?" de todo lo que hago, porque no me gusta perder el tiempo  haciendo cosas inútilmente, me gusta ser productiva.
