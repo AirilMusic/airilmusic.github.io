@@ -18,7 +18,7 @@ A principios del año pasado poco antes de cumplir 17 años (estoy escribiendo e
 
 Y en el 2023 quedé tercera del País Vasco y La Rioja.
 
-![](/assets/images/about/oifem-diploma.JPG)
+![](/assets/images/about/oifem-diploma.jpg)
 
 Como vivo en el Pais Vasco se hablar Español y Vasco, que son mis lenguas maternas, pero también hablo bastante bien Inglés y estoy aprendiendo chino por mi cuenta, porque este otro idioma me parece que en los proximos años puede ser útil.
 
