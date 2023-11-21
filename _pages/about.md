@@ -66,8 +66,6 @@ Por otra parte, respecto a mi personalidad y forma de ser, si no conozco a la pe
 
 ![](/assets/images/about/furra.jpg)
 
-![](/assets/images/about/aehao.jpg)
-
 Me encanta la electronica, hacer inventos, los cohetes y aviones, todo lo que vuele, arreglar cosas rotas...
 
 Entre las cosas que he hecho están un avión súper simple que hice para demostrar a mi profe de teknología que un avión de 5€ podia volar, no sé si se puede considerar mi dron (porque lo compré por piezas y lo monté yo), un invento para hacer RNG manipulation en pokemon que es un a caja cuadrada con un gancho que tiene un palo de nintendo ds2 que se mueve en 3 dimensiones (x,y,z) y pulsa donde le hayas programado, arreglé una cámara termográfica que se rompió en la empresa de mi madre (realmente fue simple porque solo era que un cable no hacía bien contacto) un túnel de viento en miniatura, un ventilador, una guillotina para dedos, un robot saltador, una cinta transportadora que separa basura, un bebedero para pájaros con una IA que distingue qué pájaro es, un cohetito que como combustible tiene un tubo lleno de capad diagonales con cabezas de cerillas (por un meme de un grupo), un cohete con estabilización automática, arregle la manija de la puerta de la nevera, un brazo robot que se controlaba desde el ordenador con una raspberry...
