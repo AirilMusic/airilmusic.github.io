@@ -16,11 +16,12 @@ tags:
 
 ![](/assets/images/web-hacking/prototype-pollution/prototype-pollution.png)
 
-En un programa de `bug bounty` me he encontrado que una web tiene la version de `jQuery 3.2.1` y buscando que vulnerabilidades tiene esa versión me he encontrado con dos: `XSS` y `Prototype Pollution`
-Claro, en ese programa la vulnerabilidad de `XSS` no estaba en el scope, entonces me he decidido por el `Prototype Pollution`, y pensando que habría algún exploit y no seria del otro mundo, me he encontrado con esta vulnerabilidad que es muy compleja y no muchos entienden, así que a la vez que yo voy aprendiendo sobre ella se me ha ocurrido escribir este artículo con la finalidad de que tanto yo como cualquier otra persona pueda `entender en que consiste` y `como explotar esta vulnerabilidad`.
+En un programa de bug bounty me he encontrado que una web tiene la version de `jQuery 3.2.1` y buscando que vulnerabilidades tiene esa versión me he encontrado con dos: **XSS** y **Prototype Pollution**
+En ese programa la vulnerabilidad de **XSS** no estaba en el scope, entonces me he decidido por el **Prototype Pollution**, y pensando que habría algún exploit y no seria del otro mundo, me he encontrado con esta vulnerabilidad que me ha parecido curiosa y un poquito compleja, así que a la vez que yo voy aprendiendo sobre ella se me ha ocurrido escribir este artículo con la finalidad de que tanto yo como cualquier otra persona pueda entender en que consiste y como explotar esta vulnerabilidad.
+
 Así que en este artículo veremos esta interesante y compleja vulnerabilidad.
 
-Cabe recalcar que esta vulnerabilidad es una vulnerabilidad muy grave, ya que permite `ejecutar código remoto (RCE)` o hacer ataques de `denegación de servicios (DOS)`.
+Cabe recalcar que esta vulnerabilidad es una vulnerabilidad muy grave, ya que permite *ejecutar código remoto (RCE)* o hacer ataques de **denegación de servicios (DOS)**.
 
 ## ¿QUE ES?
 
