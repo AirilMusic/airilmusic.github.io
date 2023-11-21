@@ -105,27 +105,3 @@ Claro, eso no se puede hacer siempre, porque puede suponer mucho trabajo rehacer
 
 · Usar sistemas operativos modernos y actualizados.
 ```
-
-# ETERNALBLUE
-
-![](/assets/images/web-hacking/Buffer-overflow/eternalblue.png)
-
-Como extra y ya que es un exploit que utiliza este tipo de vulnerabilidad para tomar acceso de una máquina Windows antigua mediante SMBv1 se me ha ocurrido explicar este famoso exploit.
-
-Primero, como dato curioso y de historia, tengo que mencionar que el `eternalblue` fue un `exploit` creado por la `NSA` y robado por el grupo de hackers `Shadow Breackers`. El `nombre` tècnico de este exploit es: `MS17-010` por `Microsoft` y el `nombre tècnico` de la vulnerabilidad es: `CVE-2017-0144`.
-
-## Funcionamiento:
-
-Explotando `Buffer overflow` (entre otras vulnerabilidades) se consigue meter `código malicioso` en la máquina víctima aprovechando esas vulnerabilidades que presenta `SMBv1` y con ello se consigue `acceso total` a la máquina víctima.
-
-
-## Explotación:
-
-Para ver si podemos explotarla tenemos que ver que el dispositivo sea `windows 7 (o inferior)` y tenga el puerto `445/tcp` abierto. En caso que por ese puerto este corriendo `SMBv1` nuestro exploit tendra efecto y nos dara el completo control de esa máquina.
-
-Entonces es tan fácil como hacer un `search eternalblue` en `metasploit` y listo, y sino también hay muchos `exploits` públicos y privados en internet.
-
-
-## Prevención:
-
-Para prevenir esta vulnerabilidad es tan fácil como tener los equipos y los programas `actualizados`.
