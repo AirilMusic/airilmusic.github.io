@@ -64,6 +64,10 @@ Hay muchas estrategias para explotar el buffer overflow, pero las dos **más com
 -**Heap overflow attack**: Esto pasa cuando el buffer donde es guardada la información tiene mucha más memoria asignada de la necesaria. Para explotar esto se corrompen los datos almacenados para que la aplicación o la web sobreescriban las estructuras internas. Este tipo de ataques se dirigen a los datos del grupo de memoria abierto conocido como montón (heap).
 
 
+** CUANDO ESTUDIE BIEN LA EXPLOTACIÓN DE BUFFER OVERFLOW PONDRE AQUI LA EXPLICACIÓN **
+
+
+
 # EXPLICACIÓN DE CÓDIGO
 
 El buffer overflow suele ocurrir porque los programadores no detectan e impiden que se **introduzca más información de la permitida**. Para solucionarlo, los programadores deberían prestarle más atención sobre todo a las líneas del código relacionadas con el buffer.
