@@ -6,7 +6,7 @@ date: 2022-09-09
 classes: wide
 header:
   teaser: /assets/images/Bitcoin-AI/Diagrama.png
-  teaser_home_page: true
+  teaser_home_page: false
   icon: 
 categories:
   - AI
