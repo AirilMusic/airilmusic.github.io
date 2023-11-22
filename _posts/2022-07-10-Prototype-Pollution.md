@@ -31,23 +31,25 @@ En JavaScript, la propiedad “prototype” se utiliza para definir las propieda
 
 ## ¿ CUANDO PODEMOS EXPLOTAR ESTA VULNERABILIDAD ?
 
-Esta vulnerabilidad `está presente` en webs que tengan `jQuery` de una `versión menor a la 3.4.0`, es decir, de que `desde jQuery 3.9.0 hacia abajo` son vulnerables a este ataque.
+Esta vulnerabilidad está presente en webs que tengan `jQuery` de una `versión menor a la 3.4.0`, es decir, de que desde `jQuery 3.9.0 hacia abajo` son vulnerables a este ataque. Y algunas versiones de `PHP` también son vulnerables a dicha vulnerabilidad.
+
+Encontrar una web con una versión vulnerable es mas o menos fácil, sin embargo lo dificil es explotarlas, porque tenemos que conocer los objetos de los usuarios o de lo que queramos modificar, para poder modificarlo, y como lo normal es que no se puedan conocer hay que probar a fuerza bruta si hay campos tipicos como `rol`, `isAdmin`... o si mediante esos objetos se almacena información como puntos o dinero también se podría modificar, pero tenemos que saber si existe y como se llama el campo que queremos modificar. Por eso es una vulnerabilidad que se suele reportar que hay una versión vulnerable pero no se suele explotar. 
 
 ## TIPOS DE ATAQUE
 
 # Ejecución remota de codigo (External Code Execution):
   
-Aqui cabe aclarar que la ejecución remota de código normalmente solo es posible en los casos en que la base de código `evalúa un atributo específico de un objeto y luego ejecuta esa evaluación`.
+Aqui cabe aclarar que la ejecución remota de código normalmente solo es posible en los casos en que la base de código **evalúa un atributo específico de un objeto y luego ejecuta esa evaluación**.
 
 Por ejemplo: eval(someobject.someattr) . En este caso, si el atacante contamina Object.prototype.someattr, es probable que pueda aprovechar esto para ejecutar el código.
 
 # Inyección de propiedades:
 
-El atacante `contamina las propiedades` en las que se basa el código base por su valor informativo, incluidas `propiedades de seguridad` como `cookies` o `tokens`.
+El atacante **modifica propiedades de un objeto mediante el prototypo**, incluidas propiedades de seguridad como cookies o tokens, roles, puntos...
 
 Por ejemplo: si una base de código verifica los privilegios someuser.isAdmin, entonces, cuando el atacante contamine Object.prototype.isAdmin y lo iguale true, podrá obtener privilegios de administrador.
 
-Esto `afecta` tanto a `servidores de aplicaciones` como a `servidores web`
+Esto afecta tanto a servidores de aplicaciones como a servidores web.
 
 # Denegacion de Servicios (DoS):
 
