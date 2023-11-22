@@ -27,7 +27,7 @@ Cabe recalcar que esta vulnerabilidad es una vulnerabilidad muy grave, ya que pe
 
 El ataque de contaminación de prototipo **(prototype pollution attack)** es una técnica de seguridad que se utiliza para **manipular objetos JavaScript** en una aplicación web. El ataque se lleva a cabo mediante la **inyección de propiedades o métodos en el prototipo de un objeto**, lo que puede permitir al atacante ejecutar código malicioso o tomar el control de la aplicación web. Los desarrolladores pueden mitigar este tipo de ataques mediante la validación y sanitización de datos de entrada, así como mediante la implementación de controles de seguridad adicionales en el lado del servidor.
 
-En JavaScript, la propiedad “prototype” se utiliza para definir las propiedades y métodos de un objeto. Los atacantes pueden explotarlo para modificar las propiedades y métodos de un objeto y tomar el control de la aplicación. Por ejemplo, si somos un usuario normal, sin privilegios, y el usuario tiene una propiedad `rol`, que puede ser por ejemplo `user`, podríamos llegar a utilizar el **prototipo para cambiar dicha propiedad** a `admin` y convertirnos en administradores sin necesidad de proveer credenciales. 
+En JavaScript, la propiedad “prototype” se utiliza para definir las propiedades y métodos de un objeto. Los atacantes pueden explotarlo para modificar las propiedades y métodos de un objeto y tomar el control de la aplicación. Por ejemplo, si somos un usuario normal, sin privilegios, y el usuario tiene una propiedad **rol**, que puede ser por ejemplo user, podríamos llegar a utilizar el **prototipo para cambiar dicha propiedad** a admin y convertirnos en administradores sin necesidad de proveer credenciales. 
 
 ## ¿ CUANDO PODEMOS EXPLOTAR ESTA VULNERABILIDAD ?
 
