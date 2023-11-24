@@ -53,19 +53,19 @@ Esto afecta tanto a servidores de aplicaciones como a servidores web.
 
 # Denegacion de Servicios (DoS):
 
-Este es el ataque `más probable`. DoS ocurre cuando `Object contiene funciones genéricas` que se `llaman implícitamente para varias operaciones` (por ejemplo, toStringy valueOf).
+Este es el ataque más probable. DoS ocurre cuando el objeto contiene **funciones genéricas** que se **llaman implícitamente para varias operaciones** (por ejemplo, toStringy valueOf).
 
-El atacante `contamina Object.prototype.someattry` `altera su estado` a un `valor inesperado` como Into Object. En este caso, `el código falla` y es probable que cause una denegación de servicio.
+El atacante contamina `Object.prototype.someattry` altera su estado a un **valor inesperado** como Into Object. En este caso, **el código falla** y es probable que cause una denegación de servicio.
 
-Por ejemplo: si un atacante contamina Object.prototype.toString definiéndolo como un número entero, si el código base en algún punto dependiera de someobject.toString()él, fallaría.
+Por ejemplo: si un atacante contamina `Object.prototype.toString` definiéndolo como un número entero, si el código base en algún punto dependiera de `someobject.toString()` él, fallaría.
 
 ## ¿ EN QUE CONSISTE ?
 
-Es importante saber que es una vulnerabilidad que `solo afecta a JavaScript`. Para explicarlo primero voy a utilizar la terminal del navegador.
+Es importante saber que es una vulnerabilidad que **solo afecta a JavaScript**. Para explicarlo primero voy a utilizar la terminal del navegador.
 
-Primero vamos a `crear un objeto`:
+Primero vamos a **crear un objeto**:
 
-```
+```js
 > obj = {airil: 1}
 
 - airil: 1
