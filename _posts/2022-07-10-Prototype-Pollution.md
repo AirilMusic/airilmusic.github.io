@@ -63,6 +63,8 @@ Por ejemplo: si un atacante contamina `Object.prototype.toString` definiéndolo 
 
 Es importante saber que es una vulnerabilidad que **solo afecta a JavaScript**. Para explicarlo primero voy a utilizar la terminal del navegador.
 
+*(Puede que aquí no se entienda bien, luego en la explotación se entiende mucho mejor)*
+
 Primero vamos a **crear un objeto**:
 
 ```js
