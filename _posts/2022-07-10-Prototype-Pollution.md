@@ -290,9 +290,95 @@ Por eso la vulnerabilidad se llama **Prototype Pollution** porque los usuarios p
 
 ## ¿ COMO EXPLOTAR LA VULNERABILIDAD ?
 
+Para esta explicación haré uso del siguiente laboratorio de prueba:
 
+- **SKF-LABS**: [https://github.com/blabla1337/skf-labs](https://github.com/blabla1337/skf-labs)
 
+De primeras nos encontramos con esto:
 
+![](/assets/images/web-hacking/prototype-pollution/prototype-pollution-1.png)
+
+Nos registramos y nos permite mandar un mensaje supuestamente al usuario administrador:
+
+![](/assets/images/web-hacking/prototype-pollution/prototype-pollution-2.png)
+
+Probamos a mandar y no pone nada, (como spoiler: en caso de que consigamos logearnos como admin, un poquito mas arriba nos pondrá `Admin: True`)
+
+Entonces, ¿ahora como lo esplotamos?
+
+Si nos fijamos en el código, esta utilizando un `merge()` para combinar dos objetos, el mensaje que mandamos (email y mensaje) y nuestra IP:
+
+![](/assets/images/web-hacking/prototype-pollution/prototype-pollution-3.png)
+
+Resuldato:
+
+```js
+{
+	email: 'test@test.com',
+	msg: 'Hola esto es una prueba',
+	ipAddress: '127.0.0.1'
+}
+```
+
+Esto es una práctica que se puede hacer en programación, pero que a la vez puede traer algunos problemas y fallos de seguridad (sobre todo es vulnerable a `Prototype-Pollution)`.
+
+Vamos a hacer un script de ejemplo `script.js` simulando lo que esta haciendo con el mensaje enviado para ver como vamos a poder explotarlo:
+
+```js
+var merge = function(target, source) {
+	for(var attr in source) {
+		if(typeof(target[attr]) === "object" && typeof(source[attr]) === "object") {
+			merge(target[attr], source[attr]);
+		} else {
+			target[attr] = source[attr];
+		}
+	}
+	return target;
+};
+
+var usuario = {"name": "Nombre", "age":"27"}
+var admin = {"name": "Jon Doe", "age":57, "isAdmin":true}
+
+var body = JSON.parse('{"email": "test@test.com", "msg": "Hola esto es una prueba"}');
+
+console.log(merge({"ipAddress": "127.0.0.1"}, body));
+```
+
+Todo funciona igual (con la diferencia de que hemos creado dos objetos iguales pero uno de ellos tiene la propiedad de que es admin).
+
+Si probamos a ver si el objeto `admin` tiene admin nos va a decir `true`, porque tiene la propiedad `"isAdmin": tue`:
+
+```js
+console.log("¿El usuario admin es administrador? -> " + admin.isAdmin);
+```
+
+Pero en cambio si probamos con el objeto `usuario` nos dice `undefined`, porque no tiene la propiedad `isAdmin` definida:
+
+```js
+console.log("¿El usuario usuario es administrador? -> " + usuario.isAdmin);
+```
+
+Aquí es donde entra el `Prototype`, porque cuando un objeto no tiene una propiedad asignada lo que hace es mirar por su `Prototype` que es de donde hereda ciertas propiedades.
+
+Entonces si no esta sanitizado podemos cambiar la petición con `burpsuite` y declarar un prototipo con la propiedad que queremos para que al mirar al prototipo, como nuestro usuario no tiene la propiedad `isAdmin` que se la asigne.
+
+En este código de ejemplo sería como hacer algo como esto:
+
+```js
+var body = JSON.parse('{"email": "test@test.com", "msg": "Hola esto es una prueba", "__proto__": {"isAdmin": true}}');
+```
+
+Y nos daría admin, porque como no tenemos esa propiedad va a mirar al prototipo que hemos creado, y como en el prototipo que hemos creado esta `"isAdmin": true` vamos a heredar esa propiedad, lo que nos convierte en administradores.
+
+Entonces ahora pasamos el ejemplo "real" es decir la web del laboratorio de prueba. Lo que sabemos (tras ver el código) es que hay una propiedad que es `admin` que esta en true si eres admin y false si no lo eres. Por lo que si conseguimos contaminar el prototipo para crear una propiedad que sea `admin` y la seteamos a `true` por defecto, entonces nuestro usuario heredará esa propiedad para convertirse en administrador.
+
+Entonces vamos a capturar la petición y vamos a probar a cambiar el `Content-Type` a `application/json` y representaremos la data en JSON. Nos lo da por bueno, así que también vamos a probar a meterle el nuevo prototipo con la propiedad `"admin": true` por defecto:
+
+![](/assets/images/web-hacking/prototype-pollution/prototype-pollution-4.png)
+
+Y listo nos daria admin uwu
+
+![](/assets/images/web-hacking/prototype-pollution/prototype-pollution-5.png)
 
 
 ## ¿ COMO ARREGLAR LA VULNERABILIDAD ?
