@@ -71,25 +71,25 @@ Primero vamos a **crear un objeto**:
 - airil: 1
 ```
 
-Ahora para acceder a esta propiedad podemos usar el `operador del punto` o `indexarlo` de la siguiente manera:
+Ahora para acceder a esta propiedad podemos usar el operador del punto o **indexarlo** de la siguiente manera:
 
-```
+```js
 > obj.airil
 
 1
 ```
 
-Y tambien sabemos que si intentamos acceder a una `propiedad que no existe` nos devolvera `indefinido`.
+Y tambien sabemos que si intentamos acceder a una **propiedad que no existe** nos devolvera **indefinido**.
 
-```
+```js
 > obj.uwu
 
 undefined
 ```
 
-Ahora vamos a inspeccionar nuestro objeto y vamos a ver que tiene algunas `propiedades` y `metodos` que `no hemos definido`.
+Ahora vamos a inspeccionar nuestro objeto y vamos a ver que tiene algunas **propiedades** y **metodos** que **no hemos definido**.
 
-```php
+```js
 > obj
 
 - airil: 1
@@ -110,9 +110,9 @@ Ahora vamos a inspeccionar nuestro objeto y vamos a ver que tiene algunas `propi
     - set __proto__: ƒ __proto__()
 ```
 
-Esto pasa porque `cuando se crean nuevos objetos`, heredan `las propiedades de un objeto especial` (de hecho en lo que nos responde pone que es del "[[Prototype]]:") y ese objeto especial se puede llamar como el objeto prototipo, realmente es como cualquier otro objeto, asi que podemos verlo:
+Esto pasa porque **cuando se crean nuevos objetos, heredan las propiedades de un objeto especial llamado prototipo** (de hecho en lo que nos responde pone que es del "[[Prototype]]:"), que realmente es como cualquier otro objeto, asi que podemos verlo:
 
-```php
+```js
 > Object.getPrototypeOf(obj)
 
 · {constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, …}
@@ -132,9 +132,9 @@ Esto pasa porque `cuando se crean nuevos objetos`, heredan `las propiedades de u
   - set __proto__: ƒ __proto__()
 ```
 
-Podemos ver que ambos objetos contienen las mismas cosas. Y si ponemos un numero en vez de "obj" nos da esto de vuelta:
+Podemos ver que ambos objetos contienen las mismas cosas. Y si ponemos un numero en vez de `obj` nos da esto de vuelta:
 
-```php
+```js
 > Object.getPrototypeOf(1)
 
 · Number {0, constructor: ƒ, toExponential: ƒ, toFixed: ƒ, toPrecision: ƒ, …}
@@ -151,7 +151,7 @@ Podemos ver que ambos objetos contienen las mismas cosas. Y si ponemos un numero
 
 Y si probamos a poner un caracter o un string nos da algo parecido:
 
-```php
+```js
 > Object.getPrototypeOf("a")
 
 · String {'', constructor: ƒ, anchor: ƒ, at: ƒ, big: ƒ, …}
@@ -212,25 +212,25 @@ Y si probamos a poner un caracter o un string nos da algo parecido:
 
 Pero hay otras formas de acceder al `Prototype`:
 
-```php
+```js
 > Object.prototype
 ```
 
-Y hay otras dos formas que utilizan `métodos especiales de Js` al llamar a nuestro objeto:
+Y hay otras dos formas que utilizan **métodos especiales de Js** al llamar a nuestro objeto:
 
-```php
+```js
 > obj.__proto__
 ```
 
-```php
+```js
 > obj.constructor.prototype
 ```
 
 Esas tres opciones te darán el mismo resultado.
 
-Así podremos `modificar o añadir propiedades` a cualquier objeto. Por ejemplo:
+Así podremos **modificar o añadir propiedades** a cualquier objeto. Por ejemplo:
 
-```php
+```js
 > Object.prototype.new = 'added'
   'added'  
   
@@ -255,13 +255,13 @@ Así podremos `modificar o añadir propiedades` a cualquier objeto. Por ejemplo:
   - set __proto__: ƒ __proto__()
 ```
 
-Y veremos qué hemos `añadido` una nueva propiedad.
+Y veremos qué hemos **añadido una nueva propiedad**.
 
-¿Pero qué pasa si intentamos `modificar` una propiedad `existente`?
+¿Pero qué pasa si intentamos **modificar una propiedad existente**?
 
 Por ejemplo, vamos a crear una función y vamos a intentar modificarla y luego ejecutarla:
 
-```php
+```js
 > obj.toString()
 
 >Object.prototype.toString = 1
@@ -273,7 +273,7 @@ Por ejemplo, vamos a crear una función y vamos a intentar modificarla y luego e
 
 Pero que pasa si hacemos una función que por ejemplo ponga un pop-up de una alerta (pero puede ser cualquier otra cosa) y se lo añadimos a nuestro método `toString`:
 
-```php
+```js
 > function hacked() {alert('hacked')}
 
 > Object.prototype.toString = hacked
@@ -281,9 +281,9 @@ Pero que pasa si hacemos una función que por ejemplo ponga un pop-up de una ale
 > obj.toString()
 ```
 
-Pues nos aparece el pop up, esto significa que hemos conseguido modificarla y poder ejecutarla. Claro, aquí esto no supone un problema, pero si alguien de forma maliciosa `puede inyectar código` JavaScript, se pueden hacer cosas no tan inofensivas. 
+Pues nos aparece el pop up, esto significa que hemos conseguido modificarla y poder ejecutarla. Claro, aquí esto no supone un problema, pero si alguien de forma maliciosa puede **inyectar código** JavaScript, se pueden hacer cosas no tan inofensivas. 
 
-Por eso la vulnerabilidad se llama `Prototype Pollution` porque los usuarios pueden `contaminar el prototype` inyectándole código y así modificar el funcionamiento de aplicaciones o sitios web.
+Por eso la vulnerabilidad se llama **Prototype Pollution** porque los usuarios pueden **contaminar el prototype** inyectándole código y así modificar el funcionamiento de aplicaciones o sitios web.
 
 
 ## ¿ COMO EXPLOTAR LA VULNERABILIDAD ?
@@ -299,9 +299,8 @@ Más que como arreglar la vulnerabilidad explicaré que se puede hacer para inte
 
 Para esto cirtas medidas que son recomendables tomar son las siguientes:
 
-- Conjelar el `Prototype`: es decir que es recomendable utilizar `Object.freeze (Object.prototype)`.
-- Hacer que se requiera la `validación del esquema` de la `entrada JSON`.
-- `Evitar` usar `funciones de combinación recursivas inseguras`.
-- Tambien es recomendable utilizar `objetos sin Prototype`, por ejemplo: Object.create(null). Y de esta forma se `rompe la cadena de contaminación` y hace que en caso de ataque, que sea mas leve.
-- Otra cosa que es recomendable es utilizar `Maplugar de Object`.
-
+- **Conjelar el Prototype**: es decir que es recomendable utilizar `Object.freeze (Object.prototype)`.
+- Hacer que se requiera la **validación del esquema** de la **entrada JSON**.
+- **Evitar** usar **funciones de combinación recursivas inseguras**.
+- Tambien es recomendable utilizar **objetos sin Prototype**, por ejemplo: Object.create(null). Y de esta forma se **rompe la cadena de contaminación** y hace que en caso de ataque, que sea mas leve.
+- Otra cosa que es recomendable es utilizar **Maplugar de Object**.
