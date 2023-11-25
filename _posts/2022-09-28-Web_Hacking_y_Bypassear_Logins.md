@@ -193,7 +193,7 @@ Vemos que nos hace redirect al login, por lo tanto vamos a intentar acceder sin 
 
 ![](/assets/images/login-bypass/IDOR-4.PNG)
 
-Una vez capturada le daremos a `Forward` y veremos que nos pone la **respuesta del servidor**. Vemos que nos pone `302 Found`:
+Una vez capturada le daremos a `Forward` y veremos que nos pone la **respuesta del servidor**. Vemos que nos pone `302 Found` (nos podemos encontrar esta vuln con 301, 302, en general redirects que podemos evitar):
 
 ![](/assets/images/login-bypass/IDOR-5.PNG)
 
