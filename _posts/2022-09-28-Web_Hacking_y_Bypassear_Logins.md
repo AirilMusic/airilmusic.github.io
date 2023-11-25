@@ -147,9 +147,9 @@ Ejemplo de como puede viajar la petición:
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Y `la forma un poco mas compleja`, `mas común` y que es `mas peligrosa`, ya que `nos permite acceso total`: 
+Y otra forma un poquito mas compleja, no se si mas o menos común y que es **mas peligrosa**, ya que nos permite acceso total: 
 
-Esta vulnerabilidad sobre todo se da cuando `intentamos entrar` a un directorio (por ejemplo /admin) y `nos redirige` a un login. Entonces la forma mas facil de detectarla es hacer `Wfuzzing` a una web y ver si nos redirige. Sobre todo si el codigo de `la respuesta de la web` es `301` es bastante probable que `sea vulnerable`.
+Esta vulnerabilidad sobre todo se da cuando intentamos entrar a un directorio (por ejemplo `/admin`) y **nos redirige** a un login o a cualquier otro lado. Entonces la forma mas facil de detectarla es hacer **fuzzing** a una web ***y ver si nos redirige**. Sobre todo si el codigo de la respuesta de la web es **301** es bastante probable que sea vulnerable.
 
 Como ejemplo voy a poner el Fortress Acerva, ya que aunque ese login era un rabit hole, se podia bypassear con un IDOR:
 
@@ -177,27 +177,27 @@ ID           Response   Lines    Word       Chars       Payload
 000095524:   403        9 L      28 W       276 Ch      "server-status"      
 ```
 
-Primero hice Wfuzzing a su web, y uy, el directorio `/wp-admin` da `301` (entre otros) y si intentamos acceder `nos redirige a un login`, asi que apesta a `IDOR`. Por lo tanto voy a intentar `capturar la petición` con `burpsuit` de cuando intento acceder a `/wp-admin`.
+Primero hice Wfuzzing a su web, y uy, el directorio `/wp-admin` da **301** (entre otros) y si intentamos acceder **nos redirige a un login**, asi que apesta a **IDOR**. Por lo tanto voy a intentar capturar la petición con `burpsuit` de cuando intento acceder a `/wp-admin`.
 
-Antes de nada necesitamos `modificar` la `configuración` de burpsuit `para interceptar la respuesta del lado del servidor`. Así que nos vamos a la configuración y cambiamos estas dos opciones:
+Antes de nada necesitamos **modificar la configuración** de burpsuit **para interceptar la respuesta del lado del servidor**. Así que nos vamos a la configuración y cambiamos estas dos opciones:
 
 ![](/assets/images/login-bypass/IDOR-3.PNG)
 
 Y ahora ya podemos continuar.
 
-Primero voy a intentar acceder sin usar el `proxy para burp`, para que veais el `redirect`:
+Primero voy a intentar acceder sin usar el proxy para burp, para que veais el redirect:
 
 ![](/assets/images/login-bypass/IDOR-2.PNG)
 
-Vemos que nos hace redirect al login, por lo tanto vamos a intentar acceder sin proporcionar credenciales. Para eso lo primero que tenemos que hacer es `activar el proxy con foxy proxy` y `capturar la petición` al intentar acceder a `/wp-admin`:
+Vemos que nos hace redirect al login, por lo tanto vamos a intentar acceder sin proporcionar credenciales. Para eso vamos a capturar la petición al intentar acceder a `/wp-admin`:
 
 ![](/assets/images/login-bypass/IDOR-4.PNG)
 
-Una vez capturada le daremos a `Forward` y veremos que nos pone la `respuesta del servidor`. Vemos que nos pone `302 Found`:
+Una vez capturada le daremos a `Forward` y veremos que nos pone la **respuesta del servidor**. Vemos que nos pone `302 Found`:
 
 ![](/assets/images/login-bypass/IDOR-5.PNG)
 
-Claro, nosotros no queremos que nos haga un redirect, porque eso significa el codigo 302 (osea, todos los 300 algo), por lo tanto `vamos a cambiarlo` a ver que pasa:
+Claro, nosotros no queremos que nos haga un redirect, porque eso significa el codigo 302 (osea, todos los 300 algo), por lo tanto **vamos a cambiarlo** a ver que pasa:
 
 ![](/assets/images/login-bypass/IDOR-6.PNG)
 
@@ -205,13 +205,10 @@ Le damos de nuevo a `Forward` y:
 
 ![](/assets/images/login-bypass/IDOR-7.PNG)
 
-(no se ve nada porque en esa máquina es un rabit hole, pero en hemos logrado acceso, en caso de que hubiese algo tendriamos acceso a eso, y eso es lo que importa)
+(no se ve nada porque en esa máquina es un rabit hole, pero en hemos logrado acceso, en caso de que hubiese algo tendriamos acceso a eso, aunque hay máquinas en las que funciona, pero no me acuerdo en cual XD)
 
-Y aquí esta lo gracioso y absurdo de este ataque. `Hemos conseguido acceso` a un directorio en el cual no deberíamos estar XD. Claro, ahora `según hagamos alguna acción` nos va a `detectar` y nos va a mandar al `redirect`, asi que mientras no tengamos un usuario con la capacidad de estar ahí, deberemos `hacer esto para cada cosa que hagamos`.
+Y aquí esta lo gracioso y absurdo de este ataque. **Hemos conseguido acceso** a un directorio en el cual no deberíamos estar XD. Claro, ahora **según hagamos alguna acción nos va a detectar y nos va a mandar al redirect**, asi que mientras no tengamos un usuario con la capacidad de estar ahí, deberemos **hacer esto para cada cosa que hagamos** (burp tiene una opcion para automatizar este tipo de cosas).
 
-## PORQUE PASA ESTO Y COMO EVITARLO
-
-Esta vulnerabilidad puede ocurrir cuando un servidor web recibe `input del usuario` para recuperar objetos (archivos, datos, documentos…). Si se pone mucha `confianza en los datos suministrados` en la petición, y `no se validan en la parte de servidor` para `confirmar que el objeto pertenece al usuario que lo pide`, puede darse una `IDOR`.
 
 <a id="3"></a>
 # SQLi
@@ -1535,11 +1532,3 @@ Para esto cirtas medidas que son recomendables tomar son las siguientes:
 - `Evitar` usar `funciones de combinación recursivas inseguras`.
 - Tambien es recomendable utilizar `objetos sin Prototype`, por ejemplo: Object.create(null). Y de esta forma se `rompe la cadena de contaminación` y hace que en caso de ataque, que sea mas leve.
 - Otra cosa que es recomendable es utilizar `Maplugar de Object`.
-
-
-
-
-
-
-
-
