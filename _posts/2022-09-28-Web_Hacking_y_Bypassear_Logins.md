@@ -131,15 +131,21 @@ Voy a poner dos ejemplos de formas típicas que nos podemos encontrar, el primer
 
 Por ejemplo, nos hemos registrado en una web y queremos cambiar la información del perfil. Para eso, hacemos clic en `http://online-service.thm/profile?user_id=1305` y vemos nuestra información. Pero claro, podemos **cambiarnos** el `id` a otro. En este punto si la web esta bien hecha no nos debería dejar, pero **si no se ha tenido en cuenta que esto pues podríamos acceder a la información de otro perfil**. 
 
+Y por ejemplo podemos utilizar `wfuzz` o cualquier otra herramienta o script de fuzzing para identificar que id-s contienen información, por ejemplo:
+
+```
+wfuzz -c -t 200 -z range,1-20000 'https://url.com/user_id=FUZZ'
+```
+
 Claro, el ejemplo anterior **se puede complicar** un poco, por ejemplo que al acceder a una página se mande una petición con la id, y aún se puede complicar mas, porque la id puede viajar hasheada. Para eso **es tan facil como capturar la petición y cambiar la id**, y si esta hasheada pues descifrar el algoritmo de encriptado (en webs los mas comunes son base64 y md5) y hashear la nueva id de esa forma antes de cambiarla en la petición. (también nos podemos encontrar la id en cookies, consultas xml, peticiones con json...) 
 
 Ejemplo de como puede viajar la petición:
 
 ![](/assets/images/login-bypass/IDOR-1.png)
 
-....................................................................................................................................................................................................................................................................................................................................................................................................
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-....................................................................................................................................................................................................................................................................................................................................................................................................
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Y `la forma un poco mas compleja`, `mas común` y que es `mas peligrosa`, ya que `nos permite acceso total`: 
 
