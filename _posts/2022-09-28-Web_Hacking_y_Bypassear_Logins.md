@@ -119,19 +119,19 @@ Pero el mas útil es el AXFR ya que nos da la información completa.
 <a id="2"></a>
 # IDOR
 
-Pongo esto como el primer método de bypassing, porque es mi favorito, es super gracioso, porque `es absurdo a mas no poder`. Y no es tan conocido, por ejemplo en bug bounty pasa una cosa bastante graciosa que es que la mayoría de personas buscan `XSS` o `SQLi`, pero se olvidan de esta vulnerabilidad tan graciosa. Y por otra parte, hace unos meses le esneñé esta vuln a un amigo que es programador de backend y se sorprendio porque no la conocia y es muy absurda. 
+Pongo esto como el primer método de bypassing, porque es mi favorito, es super gracioso, porque **es absurdo a mas no poder**. Y no es tan conocido, por ejemplo en bug bounty pasa una cosa bastante graciosa que es que la mayoría de personas buscan XSS o SQLi, pero se olvidan de esta vulnerabilidad tan graciosa. Y por otra parte, hace unos meses le esneñé esta vuln a un amigo que es programador de backend y se sorprendio porque no la conocia y es muy absurda. 
 
 ![](/assets/images/login-bypass/idor_vs_xss.JPG)
 
-Primero explicaré como se hace y luego el porqué: 
+Las **Insecure Direct Object References** (**IDOR**) son un tipo de vulnerabilidad que se dan cuando una web utiliza identificadores internos (numéricos o nombres) que se exponen de forma pública y son modificables. Esta vulnerabilidad se da cuando al modificar este tipo de identificadores (por ejemplo en la url) podemos acceder a recursos que no nos son accesibles de ninguna otra forma y no deberian ser accesibles para nosotros.
 
-## COMO EXPLOTAR ESTA VULNERABILIDAD  
+## EXPLOTACIÓN  
 
-Hay `dos formas`, `la básica`, y la menos común de encontrar, pero que no por ello tiene menos importancia:
+Voy a poner dos ejemplos de formas típicas que nos podemos encontrar, el primero básico, y el segundo un poquito menos común de encontrar pero sobre todo no tan conocido pero que no por ello tiene menos importancia (de echo a mi me parece muy gracioso):
 
-Por ejemplo, nos hemos registrado en una web y queremos cambiar la información del perfil. Para eso, hacemos clic en `http://online-service.thm/profile?user_id=1305` y vemos nuestra información. Pero claro, podemos cambiarnos el `id` a otro. En este punto `si la web esta bien hecha no nos debería dejar`, pero `si no se ha tenido en cuenta que esto pues podríamos acceder a la información de otro perfil`. 
+Por ejemplo, nos hemos registrado en una web y queremos cambiar la información del perfil. Para eso, hacemos clic en `http://online-service.thm/profile?user_id=1305` y vemos nuestra información. Pero claro, podemos **cambiarnos** el `id` a otro. En este punto si la web esta bien hecha no nos debería dejar, pero **si no se ha tenido en cuenta que esto pues podríamos acceder a la información de otro perfil**. 
 
-Claro, el ejemplo anterior `se puede complicar` un poco, por ejemplo que al acceder a una página `se mande una petición con la id`, y ahum se puede complicar mas, porque `la id puede viajar hasheada`. Para eso es tan facil como `capturar la petición y cambiar la id`, y si esta hasheada pues descifrar el algoritmo de encriptado (en webs los mas comunes son base64 y md5) y `hashear la nueva id` de esa forma antes de cambiarla en la petición. 
+Claro, el ejemplo anterior **se puede complicar** un poco, por ejemplo que al acceder a una página se mande una petición con la id, y aún se puede complicar mas, porque la id puede viajar hasheada. Para eso **es tan facil como capturar la petición y cambiar la id**, y si esta hasheada pues descifrar el algoritmo de encriptado (en webs los mas comunes son base64 y md5) y hashear la nueva id de esa forma antes de cambiarla en la petición. (también nos podemos encontrar la id en cookies, consultas xml, peticiones con json...) 
 
 Ejemplo de como puede viajar la petición:
 
