@@ -32,7 +32,7 @@ tags:
   - Deserialization Attack
 ---
 
-En este artículo vamos a ver distintas `vulnerabilidades y ataques` a aplicacciones web. Sobre todo vamos a ver `como hacer los ataques` y `como funcionan las vulnerabilidades`, pero también me parece interesante dar unas `pautas` para intentar `prevenir o arreglar` esas vulnerabilidades.
+En este artículo vamos a ver distintas **vulnerabilidades y ataques** a aplicacciones **web**. Sobre todo vamos a ver como hacer los ataques y como funcionan las vulnerabilidades, pero también me parece interesante dar unas pautas para intentar prevenir o arreglar esas vulnerabilidades.
 
 ## ÍNDICE
 
@@ -59,13 +59,13 @@ En este artículo vamos a ver distintas `vulnerabilidades y ataques` a aplicacci
 <a id="1"></a>
 # OSINT
 
-Puede parecer gracioso pero `no es raro encontrar credenciales validas en internet`. 
+Puede parecer gracioso pero **no es raro encontrar credenciales validas en internet**. 
 
-Lo primero que tenemos que comprobar es sí para el servicio o la tecnología que esten utilizando hay `credenciales por defecto`, es decir, que tu al comprar eso tienes unas credenciales ya predefinidas, (por ejemplo en las raspberry pi es pi, o en mi instituto la del gmail es aniturri1234). Obviamente eso es lo primero que hay que cambiar cuando nos creamos una cuenta en algún lado... pero `a mucha gente se le olvida o no sabe` que ese usuario o entrada por defecto eso existe (y me va a matar cuando lea esto, pero otro ejemplo es la empresa de un amigo en el que en un panel de loggin tienen como credenciales `user=admin` `password=admin`).
+Lo primero que tenemos que comprobar es sí para el servicio o la tecnología que esten utilizando hay **credenciales por defecto**, es decir, que tu al comprar eso tienes unas credenciales ya predefinidas, (por ejemplo en las raspberry pi es pi, o en mi instituto la del gmail es aniturri1234). Obviamente eso es lo primero que hay que cambiar cuando nos creamos una cuenta en algún lado... pero a mucha gente se le olvida o no sabe que ese usuario o entrada por defecto eso existe (y me va a matar cuando lea esto, pero otro ejemplo es la empresa de un amigo en el que en un panel de loggin tienen como credenciales `user=admin` `password=admin`).
 
-Otra forma que hay es mirar repositorios de `github`, preguntas en `stack overflow`... relacionados con la web que estamos testeando, ya que muchas veces durante el dessarrollo se publican partes del código y sin darse cuenta hay credenciales en ese código. `Parece estúpido pero es muy común XD`.
+Otra forma que hay es mirar repositorios de `github`, preguntas en `stack overflow`... relacionados con la web que estamos testeando, ya que muchas veces durante el dessarrollo se publican partes del código y sin darse cuenta hay credenciales en ese código. **Parece estúpido pero es muy común XD**.
 
-Y pues luego también `mirar si se han filtrado anteriormente credenciales` de esa web o de posibles usuarios de la web. 
+Y pues luego también **mirar si se han filtrado anteriormente credenciales** de esa web o de posibles usuarios de la web. 
 
 Y otro consejo: buscar la web en `shodan`, ya que puedes encontrar información interesante y que te será util. 
 
@@ -74,31 +74,47 @@ Y otro consejo: buscar la web en `shodan`, ya que puedes encontrar información 
 <a id="DZT"></a>
 ## Domain Zone Transfere
 
-Con esta vulnerabilidad podemos `recopilar un monton de información` de la web que estamos testeando.
+Con este tipo de ataque podemos **recopilar información** interesante acerca de una web, subdominios, correos... mediante los servicios **DNS (Domain Name System)** del servidor. 
 
-La vulnerabilidad `domain zone transfer` se refiere a una técnica utilizada para `copiar la configuración completa de un servidor DNS` (Domain Name System) a otro servidor. Esto se logra mediante el uso del `protocolo DNS`, que permite a los servidores DNS intercambiar información sobre los registros de nombres de dominio en una zona específica.
+Los servidores DNS son responsables de convertir los nombres de dominio legibles para humanos, en direcciones IP que las máquinas pueden utilizar. Los ataques de tipo **AXFR** posibilitan que los atacantes **accedan a los datos de los registros DNS** en un servidor DNS.
 
-Un atacante puede realizar una `domain zone transfer no autorizada` (`AXFR`) para `obtener información confidencial` sobre una red o para descubrir oportunidades para ataques adicionales. Por ejemplo, un atacante podría utilizar la información obtenida de una transferencia de zona de dominio no autorizada para identificar dominios de una web, todos los dispositivos conectados a una red, así como sus direcciones IP y configuraciones.
+Este tipo de ataque, el AXFR, se efectúa mediante el envío de una **petición de transferencia de zona desde un servidor DNS fraudulento a uno legítimo**. Esta petición se hace a través del protocolo de transferencia de zona DNS (AXFR), empleado por los servidores DNS para mover los registros DNS de un servidor a otro.
+
+Si el servidor DNS legítimo no está adecuadamente configurado, puede acabar respondiendo a esta petición y revelar al atacante detalles de los registros DNS del servidor. Esto puede incluir datos como nombres de dominio, direcciones IP, servidores de correo y otra información crítica que podría ser empleada en ataques futuros.
 
 Al ser un vulnerabilidad de `DNS` esto suele ir por el puerto `53/tcp` o por el `53/udp`.
 
-Listar `sub-dominios`:
+Para este tipo de ataque podemos utilizar la herramienta `dig`:
 
 ```
-> dig @{ip victima} {dominio web} axfr
+dig {tipo de ataque} @{ip} {dominio}
 ```
+
+Como atacantes podemos hacer dos tipo de ataques, las **AXFR** (que son la trasferencia de zona **completa**) y las **IXFR** (que son las transferencias de zona **incrementales**, ósea parciales **desde de la ultima transferencia** que se hizo), pero las mas comunes son las primeras.
+
+```
+dig axfr @{ip} dominio.com
+```
+
+```
+dig ixfr @{ip} dominio.com
+```
+
+Y a su vez podemos enumerar alguna información de forma individual:
 
 Listar los servidores `DNS`:
 
 ```
-> dig @{ip victima} {dominio web (por ejemplo google.com)} ns
+> dig @{ip} dominio.com ns
 ```
 
 Listar los servidores de correo:
 
 ```
-> dig @{ip victima} {dominio web} mx
+> dig @{ip} dominio.com mx
 ```
+
+Pero el mas útil es el AXFR ya que nos da la información completa.
 
 <a id="2"></a>
 # IDOR
