@@ -18,11 +18,13 @@ tags:
 
 ![](/assets/images/ThunderDragon/ThunderDragon.webp)
 
-## ÍNDICE
+## INDEX
 
-- [INTRODUCCION](#1)
-- [EXPLICACIÓN TEÓRICA](#2)
-- [PROTOCOLO WPS](#WPS)
-- [PIXIE DUST](#3)
-- [MEDIAS DE SEGURIDAD](#SEG)
-- [EXPLICACIÓN DEL CÓDIGO Y DEL FUNCIONAMIENTO](#4)
+- [INTRODUCTION](#introduction)
+- [HOW TO USE](#how)
+- [ENUMERATION](#enumeration)
+- [AUTOMATIC](#auto)
+- [ATTACKS](#attacks)
+- [WIFI HACKING](#wifi)
+- [BLUETHOOD HACKING](#bluethood)
+- [OTHER FUNCTIONS](#other)
