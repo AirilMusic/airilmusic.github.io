@@ -43,4 +43,19 @@ All designed with an intuitive user interface that streamlines complex tasks.
 <a id="how"></a>
 ## HOW TO USE
 
+Before starting to use this tool, we need to download it and install the requirements. To do this, we can download it manually and install the requirements found in requirements.txt using pip, or more quickly through the console in the following way:
 
+Linux:
+
+```bash
+git clone https://github.com/AirilMusic/Pentesting-Hacking/tree/main/ThunderDragon
+cd ThunderDragon
+pip install -r requirements.txt
+python3 main.py
+```
+
+Windows:
+
+```
+
+```
