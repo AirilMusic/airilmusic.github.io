@@ -32,9 +32,11 @@ tags:
 <a id="introduction"></a>
 ## INTRODUCTION
 
-My intention with this tool is to automate enumeration, attacks, and various other tasks in a simple, comfortable, and quick way, so that both experts and people who are starting out can use it easily and comfortably. The idea is to develop it little by little, and it's a project that will take many years to complete, so I apologize if there are missing features or errors.
+My goal with this tool is to simplify and automate the processes of enumeration, attacks, and other cybersecurity tasks, making them accessible and user-friendly for both seasoned professionals and novices alike. Designed to evolve gradually, this project is a long-term endeavor, and I appreciate your patience and understanding for any initial shortcomings or errors.
 
-For greater accessibility, this tool is made to work on both Linux and Windows, although there might be some features that only work on Linux. This way, it can also be easily used to teach basic pentesting, vulnerabilities, and other practical skills in computer science classes, thus demonstrating the fundamental importance of cybersecurity and risk management. Additionally, it serves to quickly check things from Windows environments.
+For enhanced accessibility, the tool supports both Linux and Windows platforms, although certain features might be Linux-exclusive. This dual-platform compatibility ensures the tool's utility in a wide range of educational settings, from teaching basic pentesting and vulnerability assessment in computer science classes to demonstrating the critical importance of cybersecurity and risk management.
+
+All designed with an intuitive user interface that streamlines complex tasks. 
 
 **I do not take responsibility for the misuse that may be made of this tool.**
 
