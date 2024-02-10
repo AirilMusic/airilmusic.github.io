@@ -74,3 +74,5 @@ And now we can use the help command to see the options we can use (the image is 
 
 And from here, it would just be a matter of following the instructions provided by the tool.
 
+<a id="enumeration"></a>
+## ENUMERATION
