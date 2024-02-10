@@ -28,3 +28,10 @@ tags:
 - [WIFI HACKING](#wifi)
 - [BLUETHOOD HACKING](#bluethood)
 - [OTHER FUNCTIONS](#other)
+
+<a id="1"></a>
+## INTRODUCTION
+
+
+My intention with this tool is to automate enumeration, attacks, and various other tasks in a simple, comfortable, and quick way, so that both experts and people who are starting out can use it easily and comfortably. The idea is to develop it little by little, and it's a project that will take many years to complete, so I apologize if there are missing features or errors.
+
