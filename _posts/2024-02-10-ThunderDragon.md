@@ -51,11 +51,21 @@ Linux:
 git clone https://github.com/AirilMusic/Pentesting-Hacking/tree/main/ThunderDragon
 cd ThunderDragon
 pip install -r requirements.txt
-python3 main.py
 ```
 
 Windows:
 
 ```
+git clone https://github.com/AirilMusic/Pentesting-Hacking/tree/main/ThunderDragon
+cd ThunderDragon
+pip install -r requirements.txt
+pip3 install -r requirements.txt
+```
+
+And now we can run the tool:
 
 ```
+python main.py
+```
+
+
