@@ -25,7 +25,15 @@ tags:
   - Padding Oracle Attack
   - HTTP Request Smuggling Attack
   - WPS
-  - 
+  - SQLi
+  - Windows
+  - WordPress
+  - SSH
+  - XSS
+  - Shell Shock
+  - XXE
+  - DNS
+  - IDOR
 ---
 
 ![](/assets/images/wps_kraken/portada.png)
