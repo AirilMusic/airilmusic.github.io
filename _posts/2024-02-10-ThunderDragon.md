@@ -5,7 +5,7 @@ excerpt: "This is the user guide of my pentesting tool Thunder dragon."
 date: 2024-02-10
 classes: wide
 header:
-  teaser: /assets/images/wps_kraken/portada.png
+  teaser: /assets/images/ThunderDragon/ThunderDragon.webp
   teaser_home_page: true
   icon: 
 categories:
@@ -36,7 +36,7 @@ tags:
   - IDOR
 ---
 
-![](/assets/images/wps_kraken/portada.png)
+![](/assets/images/ThunderDragon/ThunderDragon.webp)
 
 ## ÍNDICE
 
