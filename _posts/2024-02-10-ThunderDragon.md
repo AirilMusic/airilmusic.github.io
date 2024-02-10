@@ -70,3 +70,4 @@ python main.py
 
 And now we can use the help command to see the options we can use (the image is just a reference, because over time I will be adding more options):
 
+![](/assets/images/ThunderDragon/help.png)
