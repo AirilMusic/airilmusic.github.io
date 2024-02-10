@@ -89,4 +89,6 @@ And from here, it would just be a matter of following the instructions provided 
 - [IP LOOKUP](#e10)
 - [CHECK CVE](#e11)
 
+### WHOIS
 
+The whois function is used to obtain and display detailed information about a specific domain. This information includes the domain name, the owner, the creation, expiration, and last update dates, the name servers, the domain status (DNS), associated email addresses, the owning organization, physical address, city, state, country, postal code, and contact phone number.
