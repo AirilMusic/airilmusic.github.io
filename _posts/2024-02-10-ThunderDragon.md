@@ -76,3 +76,17 @@ And from here, it would just be a matter of following the instructions provided 
 
 <a id="enumeration"></a>
 ## ENUMERATION
+
+- [WHOIS](#e1)
+- [PORT SCAN](#e2)
+- [SCAN LOCALNET](#e3)
+- [SUBDOMAINS](#e4)
+- [FUZZING](#e5)
+- [DIRECTORY MAP](#e6)
+- [TEC ENUM](#e7)
+- [WEBDAV ENUM](#e8)
+- [SHOW METADATA](#e9)
+- [IP LOOKUP](#e10)
+- [CHECK CVE](#e11)
+
+
