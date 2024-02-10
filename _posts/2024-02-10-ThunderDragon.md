@@ -13,27 +13,7 @@ categories:
   - Web-Hacking
   - Programacion
 tags:  
-  - Wifi-Hacking
-  - TCP
-  - Password spraying
-  - Eternalblue
   - Python
-  - LFI
-  - Domain Zone Transfere
-  - CSRF
-  - XML
-  - Padding Oracle Attack
-  - HTTP Request Smuggling Attack
-  - WPS
-  - SQLi
-  - Windows
-  - WordPress
-  - SSH
-  - XSS
-  - Shell Shock
-  - XXE
-  - DNS
-  - IDOR
 ---
 
 ![](/assets/images/ThunderDragon/ThunderDragon.webp)
