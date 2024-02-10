@@ -40,7 +40,7 @@ All designed with an intuitive user interface that streamlines complex tasks.
 
 **I do not take responsibility for the misuse that may be made of this tool.**
 
-<a id="who"></a>
+<a id="how"></a>
 ## HOW TO USE
 
 
