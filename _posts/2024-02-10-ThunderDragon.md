@@ -32,6 +32,8 @@ tags:
 <a id="introduction"></a>
 ## INTRODUCTION
 
+TOOL: [https://github.com/AirilMusic/Pentesting-Hacking/tree/main/ThunderDragon](https://github.com/AirilMusic/Pentesting-Hacking/tree/main/ThunderDragon)
+
 My goal with this tool is to simplify and automate the processes of enumeration, attacks, and other cybersecurity tasks, making them accessible and user-friendly for both seasoned professionals and novices alike. Designed to evolve gradually, this project is a long-term endeavor, and I appreciate your patience and understanding for any initial shortcomings or errors.
 
 For enhanced accessibility, the tool supports both Linux and Windows platforms, although certain features might be Linux-exclusive. This dual-platform compatibility ensures the tool's utility in a wide range of educational settings, from teaching basic pentesting and vulnerability assessment in computer science classes to demonstrating the critical importance of cybersecurity and risk management.
