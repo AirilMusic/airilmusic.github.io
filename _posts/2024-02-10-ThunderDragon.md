@@ -137,3 +137,7 @@ Following this initial phase, the tool employs an active strategy, utilizing bru
 <a id="e6"></a>
 ### DIRECTORY MAP
 
+This option is similar to the previous one, however, what it does is that, upon finding a directory, it automatically analyzes whether there are more directories or files within it in a recursive manner, mapping the existing directories on the web through active fuzzing techniques. That is, testing directories and files via brute force and recursively.
+
+
+
