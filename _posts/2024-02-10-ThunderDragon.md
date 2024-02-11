@@ -125,7 +125,7 @@ For a more aggressive discovery, the tool performs brute-force attacks, generati
 
 ![](/assets/images/ThunderDragon/subdomains.PNG)
 
-<a id="e4"></a>
+<a id="e5"></a>
 ### FUZZING
 
 The functionality in question starts by passively identifying directories through a website's robots.txt and sitemap.xml files, which often contain valuable information about the structure of the site. By parsing these files, the tool extracts directory paths that are explicitly listed, which can include both publicly accessible and restricted areas of the website. This passive method allows for the quick discovery of directories without sending numerous requests to the server, thus reducing the likelihood of detection.
@@ -133,3 +133,7 @@ The functionality in question starts by passively identifying directories throug
 Following this initial phase, the tool employs an active strategy, utilizing brute force to uncover additional directories. This involves systematically generating and testing potential directory paths against the website by appending entries from a predefined wordlist to the base URL and monitoring the server's response to each request. Unlike the passive approach, brute-forcing aggressively probes the website for directories that might not be listed in robots.txt or sitemap.xml, potentially revealing hidden or overlooked paths. This combination of passive analysis and active probing provides a comprehensive overview of the website's directory structure, offering insights into its organization and content.
 
 ![](/assets/images/ThunderDragon/fuzzing.PNG)
+
+<a id="e6"></a>
+### DIRECTORY MAP
+
