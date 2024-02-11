@@ -1,20 +1,3 @@
----
-layout: single
-title: Bitcoin AI
-excerpt: "Este es el primer proyecto que he hecho con redes neuronales y trata de predecir el precio del bitcoin del día siguiente y de dentro de dos."
-date: 2022-09-09
-classes: wide
-header:
-  teaser: /assets/images/Bitcoin-AI/Diagrama.png
-  teaser_home_page: false
-  icon: 
-categories:
-  - AI
-  - Programacion
-tags:  
-  - Python
-  - Virtual Network
----
 
 Este es el primer proyecto que he hecho con redes neuronales y trata de predecir el precio del bitcoin del día siguiente y de dentro de dos.
 
