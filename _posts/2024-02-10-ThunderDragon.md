@@ -92,13 +92,24 @@ And from here, it would just be a matter of following the instructions provided 
 <a id="e1"></a>
 ### WHOIS
 
-The whois function is used to obtain and display detailed information about a specific domain. This information includes the domain name, the owner, the creation, expiration, and last update dates, the name servers, the domain status (DNS), associated email addresses, the owning organization, physical address, city, state, country, postal code, and contact phone number.
+The `whois` function is used to obtain and display detailed information about a specific domain. This information includes the domain name, the owner, the creation, expiration, and last update dates, the name servers, the domain status (DNS), associated email addresses, the owning organization, physical address, city, state, country, postal code, and contact phone number.
 
 ![](/assets/images/ThunderDragon/whois.PNG)
 
 <a id="e2"></a>
 ### POR SCAN
 
-The "port_scan" option is used to perform a port scan on a specific IP address. By selecting it, you can specify a range of ports to scan, but you can also specify that all ports be scanned with "all" or, if you have not specified anything, the most common ports will be scanned. To make the scan a little less noisy, fragment the packets and, instead of completing the connection by returning an ACK, close the connection by sending an RST (SYN --> SYN ACK --> RST instead of ACK).
+The `port_scan` option is used to perform a port scan on a specific IP address. By selecting it, you can specify a range of ports to scan, but you can also specify that all ports be scanned with "all" or, if you have not specified anything, the most common ports will be scanned. To make the scan a little less noisy, fragment the packets and, instead of completing the connection by returning an ACK, close the connection by sending an RST (SYN --> SYN ACK --> RST instead of ACK).
 
 ![](/assets/images/ThunderDragon/port_scan.PNG)
+
+<a id="e3"></a>
+### SCAN LOCALNET
+
+The `scan_localnet` function performs a scan of the local network to identify active devices, using an IP address and its CIDR notation as input. It operates by sending pings to each possible IP address within the specified range, logging those addresses that respond successfully as active hosts. To know the CIDR and the IP of the network, it first displays all the networks we have access to, so we can see the IP, network mask, etc.
+
+As a quick guide to what CIDR is, here's this table (although there are more possible CIDRs, this is quite general)
+
+![](/assets/images/ThunderDragon/cidr.PNG)
+
+![](/assets/images/ThunderDragon/scan_localnet.PNG)
