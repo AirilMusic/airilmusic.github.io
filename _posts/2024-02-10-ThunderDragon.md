@@ -121,5 +121,7 @@ The functionality described is a multifaceted approach for discovering subdomain
 
 For a more aggressive discovery, the tool performs brute-force attacks, generating subdomain names by combining a predefined list of potential names with the target domain and checking for their existence through HTTP(S) requests. This process is designed to identify active subdomains by evaluating the server's response to these requests.
 
+![](/assets/images/ThunderDragon/subdomains.PNG)
+
 
 
