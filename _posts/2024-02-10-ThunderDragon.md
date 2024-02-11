@@ -113,3 +113,13 @@ As a quick guide to what CIDR is, here's this table (although there are more pos
 ![](/assets/images/ThunderDragon/cidr.PNG)
 
 ![](/assets/images/ThunderDragon/scan_localnet.PNG)
+
+<a id="e4"></a>
+### SUBDOMAINS
+
+The functionality described is a multifaceted approach for discovering subdomains of a specified domain, incorporating both passive and active scanning techniques. Initially, it employs passive methods by exploiting SSL certificate transparency logs to uncover subdomains without actively querying the target domain. This is complemented by attempts at DNS zone transfers, where the tool queries the domain's nameservers for a complete list of subdomains, a method that relies on potential misconfigurations in nameserver permissions.
+
+For a more aggressive discovery, the tool performs brute-force attacks, generating subdomain names by combining a predefined list of potential names with the target domain and checking for their existence through HTTP(S) requests. This process is designed to identify active subdomains by evaluating the server's response to these requests.
+
+
+
