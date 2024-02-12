@@ -154,3 +154,19 @@ After identifying the technologies and their versions, it tries to find known vu
 
 The `webdav_enum` function is designed for enumerating WebDAV resources and methods at a given URL, with optional depth, username, and password parameters for authentication and search depth customization. Initially, it verifies available methods through an HTTP OPTIONS request; if 'PROPFIND' is allowed, it further sends a 'PROPFIND' request to list resources. The function gracefully handles and reports any errors encountered during these steps, highlighting both allowed methods and issues in fetching resources, ensuring users are well-informed about the server's capabilities and any potential problems.
 
+![](/assets/images/ThunderDragon/webdav_enum.PNG)
+
+<a id="e9"></a>
+### SHOW METADATA
+
+![](/assets/images/ThunderDragon/show_metadata.PNG)
+
+<a id="e10"></a>
+### IP LOOKUP
+
+![](/assets/images/ThunderDragon/ip_lookup.PNG)
+
+<a id="e11"></a>
+### CHECK CVE
+
+![](/assets/images/ThunderDragon/check_cve.PNG)
