@@ -141,11 +141,16 @@ This option is similar to the previous one, however, what it does is that, upon 
 
 ![](/assets/images/ThunderDragon/directory_map.PNG)
 
-<a id="e6"></a>
+<a id="e7"></a>
 ### TEC ENUM
 
-The "tec_enum" option identifies the web technologies used and their respective versions. Once identified, it attempts to search for possible vulnerabilities and exploits for these technologies. 
+The `tec_enum` option identifies the web technologies used and their respective versions. Once identified, it attempts to search for possible vulnerabilities and exploits for these technologies. 
 After identifying the technologies and their versions, it tries to find known vulnerabilities for the given technology and version, by querying the National Vulnerability Database (NVD). Then, for each vuln founded, it searches the same database for related "Common Vulnerabilities and Exposures" (CVEs) and limits the results to two for brevity. Additionally, it attempts to find proof of concept (PoCs) on GitHub for each identified CVE, as well as download links related to the technology on Packet Storm Security.
 
 ![](/assets/images/ThunderDragon/tec_enum.PNG)
+
+<a id="e8"></a>
+### WEBDAV ENUM
+
+The `webdav_enum` function is designed for enumerating WebDAV resources and methods at a given URL, with optional depth, username, and password parameters for authentication and search depth customization. Initially, it verifies available methods through an HTTP OPTIONS request; if 'PROPFIND' is allowed, it further sends a 'PROPFIND' request to list resources. The function gracefully handles and reports any errors encountered during these steps, highlighting both allowed methods and issues in fetching resources, ensuring users are well-informed about the server's capabilities and any potential problems.
 
