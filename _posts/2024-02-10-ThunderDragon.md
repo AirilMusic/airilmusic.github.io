@@ -176,3 +176,11 @@ The `ip_lookup` function retrieves and displays information about a given IP add
 First you have to set the tecnologie and it's version, and then it tries to find known vulnerabilities for the given technology and version, by querying the National Vulnerability Database (NVD). Then, for each vuln founded, it searches the same database for related "Common Vulnerabilities and Exposures" (CVEs) and limits the results to two for brevity. Additionally, it attempts to find proof of concept (PoCs) on GitHub for each identified CVE, as well as download links related to the technology on Packet Storm Security.
 
 ![](/assets/images/ThunderDragon/check_cve.PNG)
+
+<a id="auto"></a>
+## AUTOMATIC
+
+### AUTO RECOGNITION
+
+The `auto_recognition` option performs automatic and customized recognition of a machine. My intention in the future is to incorporate the ability to create preset configurations to carry out these scans more quickly and conveniently.
+
