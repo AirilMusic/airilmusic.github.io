@@ -159,14 +159,20 @@ The `webdav_enum` function is designed for enumerating WebDAV resources and meth
 <a id="e9"></a>
 ### SHOW METADATA
 
+The `show_metadata` function extracts and displays metadata for a specified file, including its name, directory, type, size, creation and modification dates, permissions, and creator information.
+
 ![](/assets/images/ThunderDragon/show_metadata.PNG)
 
 <a id="e10"></a>
 ### IP LOOKUP
 
+The `ip_lookup` function retrieves and displays information about a given IP address, such as location, hostname, and ISP, by querying the "ipinfo.io" API and presenting the data in a user-friendly format.
+
 ![](/assets/images/ThunderDragon/ip_lookup.PNG)
 
 <a id="e11"></a>
 ### CHECK CVE
+
+First you have to set the tecnologie and it's version, and then it tries to find known vulnerabilities for the given technology and version, by querying the National Vulnerability Database (NVD). Then, for each vuln founded, it searches the same database for related "Common Vulnerabilities and Exposures" (CVEs) and limits the results to two for brevity. Additionally, it attempts to find proof of concept (PoCs) on GitHub for each identified CVE, as well as download links related to the technology on Packet Storm Security.
 
 ![](/assets/images/ThunderDragon/check_cve.PNG)
