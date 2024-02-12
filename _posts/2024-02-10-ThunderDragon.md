@@ -141,3 +141,11 @@ This option is similar to the previous one, however, what it does is that, upon 
 
 ![](/assets/images/ThunderDragon/directory_map.PNG)
 
+<a id="e6"></a>
+### TEC ENUM
+
+The "tec_enum" option identifies the web technologies used and their respective versions. Once identified, it attempts to search for possible vulnerabilities and exploits for these technologies. 
+After identifying the technologies and their versions, it tries to find known vulnerabilities for the given technology and version, by querying the National Vulnerability Database (NVD). Then, for each vuln founded, it searches the same database for related "Common Vulnerabilities and Exposures" (CVEs) and limits the results to two for brevity. Additionally, it attempts to find proof of concept (PoCs) on GitHub for each identified CVE, as well as download links related to the technology on Packet Storm Security.
+
+
+
