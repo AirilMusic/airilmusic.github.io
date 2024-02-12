@@ -195,7 +195,13 @@ The `auto_recognition` option performs automatic and customized recognition of a
 <a id="a1"></a>
 ### SHELL SHOCK
 
+The Shellshock vulnerability occurs in the Bash command interpreter, which is used by many Unix and Linux operating systems to execute shell scripts. The problem lies in the way Bash handles environment variables. Attackers can inject malicious code into these environment variables, which Bash executes without questioning their origin or content.
 
+Attackers can exploit this vulnerability through different attack vectors. One of them is through the User-Agent. Attackers can manipulate the User-Agent to include malicious commands, which the web server will execute upon receiving the request.
+
+This is normally done when a `/cgi-bin` directory is found and can work when the version of Bash is old.
+
+![](/assets/images/ThunderDragon/shellshock.PNG)
 
 <a id="a2"></a>
 ### XSS SCRIPTS
