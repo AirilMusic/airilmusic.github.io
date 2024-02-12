@@ -184,3 +184,4 @@ First you have to set the tecnologie and it's version, and then it tries to find
 
 The `auto_recognition` option performs automatic and customized recognition of a machine. My intention in the future is to incorporate the ability to create preset configurations to carry out these scans more quickly and conveniently.
 
+![](/assets/images/ThunderDragon/auto_recognition.png)
